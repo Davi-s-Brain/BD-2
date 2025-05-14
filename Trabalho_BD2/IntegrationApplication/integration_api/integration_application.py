@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from integration_api.api.routes import router as integration_router
-from integration_api.core.db import init_db
-from integration_api.core.error_handlers import register_handlers
-from integration_api.core.limiter import limiter
-from integration_api.core.security_manager import SecurityManager
+from Trabalho_BD2.IntegrationApplication.integration_api.api.routes import router as integration_router
+from Trabalho_BD2.IntegrationApplication.integration_api.core.db import init_db
+from Trabalho_BD2.IntegrationApplication.integration_api.core.error_handlers import register_handlers
+from Trabalho_BD2.IntegrationApplication.integration_api.core.limiter import limiter
+from Trabalho_BD2.IntegrationApplication.integration_api.core.security_manager import SecurityManager
 from slowapi.middleware import SlowAPIMiddleware
 
 # Configuração do SecurityManager

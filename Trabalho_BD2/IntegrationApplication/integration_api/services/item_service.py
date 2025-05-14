@@ -1,5 +1,5 @@
-from integration_api.models.item_model import ItemModel
-from integration_api.schemas.item import ItemCreate, ItemUpdate
+from Trabalho_BD2.IntegrationApplication.integration_api.models.item_model import ItemModel
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate
 
 class ItemService:
     def __init__(self):

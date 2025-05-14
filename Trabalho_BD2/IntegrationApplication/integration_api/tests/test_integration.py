@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from integration_api.integration_application import app
+from Trabalho_BD2.IntegrationApplication.integration_api.integration_application import app
 
 client = TestClient(app)
 

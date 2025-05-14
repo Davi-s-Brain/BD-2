@@ -1,4 +1,4 @@
-from integration_api.core.db import get_connection
+from Trabalho_BD2.IntegrationApplication.integration_api.core.db import get_connection
 
 class ItemModel:
     def insert(self, name, description):

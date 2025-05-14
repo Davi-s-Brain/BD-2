@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Request, Depends
-from integration_api.schemas.item import ItemCreate, ItemUpdate
-from integration_api.services.item_service import ItemService
-from integration_api.core.limiter import limiter
-from integration_api.core.security_manager import SecurityManager
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate
+from Trabalho_BD2.IntegrationApplication.integration_api.services.item_service import ItemService
+from Trabalho_BD2.IntegrationApplication.integration_api.core.limiter import limiter
+from Trabalho_BD2.IntegrationApplication.integration_api.core.security_manager import SecurityManager
 
 security = SecurityManager()
 

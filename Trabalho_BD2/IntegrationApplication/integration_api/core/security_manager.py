@@ -1,6 +1,6 @@
 from fastapi import Request, HTTPException
 from starlette.status import HTTP_401_UNAUTHORIZED
-from integration_api.core.secret_manager import SecretManager
+from Trabalho_BD2.IntegrationApplication.integration_api.core.secret_manager import SecretManager
 
 class SecurityManager:
     def __init__(self):

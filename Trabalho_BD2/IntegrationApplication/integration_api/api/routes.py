@@ -37,6 +37,28 @@ async def login(request: Request, user_data: UserLogin):
         )
     access_token = security.create_access_token(data={"sub": user_data.username})
     return {"access_token": access_token, "token_type": "bearer"}
+@auth_router.post("/register", response_model=Token)
+@limiter.limit("5/minute")
+async def register(request: Request, user_data: UserLogin):
+    # Verifica se o usuário já existe no banco de dados
+    existing_user = security.authenticate_user(user_data.username,user_data.password)
+    if existing_user:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Usuário já existe",
+        )
+
+    # Cria o novo usuário no banco de dados
+    new_user = security.create_user(user_data.username, user_data.password)
+    if not new_user:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Erro ao criar usuário",
+        )
+
+    # Autentica o novo usuário (opcional, mas útil para já retornar o token)
+    access_token = security.create_access_token(data={"sub": user_data.username})
+    return {"access_token": access_token, "token_type": "bearer"}
 
 @auth_router.post("/token", response_model=Token)
 @limiter.limit("5/minute")

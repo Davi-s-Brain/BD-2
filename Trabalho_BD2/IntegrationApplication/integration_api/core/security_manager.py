@@ -1,3 +1,4 @@
+import logging
 import os
 from datetime import datetime, timedelta
 from typing import Optional, Dict
@@ -20,8 +21,20 @@ class SecurityManager:
             }
         }
 
+    def create_user(self, username: str, password: str):
+        try:
+
+            novo_usuario = {
+                "username": username,
+                "password": password
+            }
+            self._users_db[username] = novo_usuario
+
+            return novo_usuario
+        except Exception as e:
+            print(f"Erro ao criar usuário: {e}")
+            return None
     def authenticate_user(self, username: str, password: str) -> Optional[Dict]:
-        """Authenticate a user with username and password"""
         user = self._users_db.get(username)
         if user and user["password"] == password:
             return user

@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from starlette.middleware.cors import CORSMiddleware
+
 from Trabalho_BD2.IntegrationApplication.integration_api.api.routes import router as integration_router, auth_router  # Adicionando auth_router
 from Trabalho_BD2.IntegrationApplication.integration_api.core.db import init_db
 from Trabalho_BD2.IntegrationApplication.integration_api.core.error_handlers import register_handlers
@@ -11,6 +13,19 @@ SECURITY = SecurityManager()
 
 def create_app() -> FastAPI:
     app = FastAPI(title="Integration API")
+    origins = [
+        "http://localhost:5500",  # coloque aqui o endereço/porta do seu front
+        "http://localhost:3000",  # adicione outras origens se usar
+        "http://localhost:8000",
+    ]
+
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=origins,  # ou ["*"] para liberar geral (não recomendado em produção)
+        allow_credentials=True,
+        allow_methods=["*"],  # Permite GET, POST, PUT, DELETE, OPTIONS etc.
+        allow_headers=["*"],
+    )
 
     # Middleware
     app.state.limiter = limiter

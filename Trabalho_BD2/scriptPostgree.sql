@@ -51,11 +51,11 @@ create table Avaliacao (
 
 create table Bebida (
      Indice_prod serial not null,
-     Marca varchar(30) not null,
-     Sabor varchar(30) not null,
-     Gelo_e_limao boolean default true,
-     Quer_destruir_o_planeta_com_canudo boolean default false,
+     Marca varchar(20) not null,
+     Sabor varchar(15) not null,
+     Tipo varchar(10) not null,
      Indice_estoq serial not null,
+     E_Alcolico boolean not null,
      constraint ID_Bebid_Produ_ID primary key (Indice_prod));
 
 create table Ingrediente (
@@ -102,19 +102,20 @@ create table Lanche (
      Ingredientes varchar(10) not null,
      Tamanho_lanche varchar(10) not null,
      Acompanhamento varchar(10) not null,
+     Sobremesa varchar(10) not null,
      constraint ID_Lanch_Produ_ID primary key (Indice_prod));
 
 create table Funcionario (
      Id_func numeric(10) not null,
      Nome_func varchar(50) not null,
-     CPF numeric(1) UNIQUE not null,
+     CPF numeric(11) UNIQUE not null,
      Data_nasc_func date not null,
      Cargo varchar(10) not null,
      Salario float(10) not null,
      Data_admissao date not null,
      Turno varchar(10) not null,
      Tipo_de_contrato varchar(10) not null,
-     Status varchar(10) not null,
+     Status_func varchar(10) not null,
      Id_franquia serial not null,
      constraint ID_Funcionario_ID primary key (Id_func));
 

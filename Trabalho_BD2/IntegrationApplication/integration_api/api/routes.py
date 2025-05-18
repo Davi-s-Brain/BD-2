@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Request, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import UserLogin, Token, User
 from Trabalho_BD2.IntegrationApplication.integration_api.services.item_service import ItemService
 from Trabalho_BD2.IntegrationApplication.integration_api.core.limiter import limiter
@@ -23,6 +24,29 @@ async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
             headers={"WWW-Authenticate": "Bearer"},
         )
     return User(**user)
+@router.get("/estoque")
+@limiter.limit("10/minute")
+async def listar_estoque(request: Request):
+    return service.listar_estoque()
+
+@router.post("/estoque/{produto}/alterar")
+@limiter.limit("5/minute")
+async def alterar_estoque(request: Request, produto: str, acao: str, quantity: int):
+    estoque = service.listar_estoque()
+    if not estoque:
+        raise HTTPException(status_code=400, detail="Estoque vazio")
+    if service.get_item(name=produto) is None:
+        raise HTTPException(status_code=404, detail="Item inexistente")
+    if acao == "adicionar":
+        service.alterar_estoque(produto, quantity)
+    elif acao == "remover":
+        if not estoque:
+            raise HTTPException(status_code=400, detail="Estoque já está zerado")
+        service.alterar_estoque(produto, quantity)
+    else:
+        raise HTTPException(status_code=400, detail="Ação inválida")
+
+    return service.get_item(name=produto)
 
 # Authentication endpoints
 @auth_router.post("/login", response_model=Token)
@@ -60,6 +84,13 @@ async def register(request: Request, user_data: UserLogin):
     access_token = security.create_access_token(data={"sub": user_data.username})
     return {"access_token": access_token, "token_type": "bearer"}
 
+@router.post("/order/create")
+@limiter.limit("5/minute")
+async def register(request: Request, order: CreateOrder):
+    service.create_order(order)
+    return {"status": "created"}
+
+
 @auth_router.post("/token", response_model=Token)
 @limiter.limit("5/minute")
 async def login_with_form(request: Request, form_data: OAuth2PasswordRequestForm = Depends()):
@@ -80,27 +111,24 @@ async def read_users_me(current_user: User = Depends(get_current_user)):
 # Integration endpoints
 @router.get("/")
 @limiter.limit("10/minute")
-async def get_items(request: Request, current_user: User = Depends(get_current_user)):
+async def get_items(request: Request):
     service.get_all_items()
-    return {"status": "received", "user": current_user.username}
+    return {"status": "received"}
 
 @router.post("/")
 @limiter.limit("5/minute")
 async def create_item(
     request: Request,
     item: ItemCreate, 
-    current_user: User = Depends(get_current_user)
 ):
     service.create_item(item)
-    return {"status": "received", "user": current_user.username}
-
+    return {"status": "received"}
 @router.put("/{item_id}")
 @limiter.limit("5/minute")
 async def update_item(
     request: Request,
-    item_id: int, 
     item: ItemUpdate, 
     current_user: User = Depends(get_current_user)
 ):
-    service.update_item(item_id, item)
-    return {"status": "received", "user": current_user.username}
+    service.update_item(item)
+    return {"status": "received"}

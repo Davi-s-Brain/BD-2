@@ -46,5 +46,3 @@ Sistema que utiliza FastAPI para controle de estoque, cadastro de usuários e au
 - O banco de dados padrão é local (`sqlite`), mas pode ser facilmente adaptado para PostgreSQL, MySQL, etc.
 
 ---
-
-Sinta-se livre para adaptar o readme conforme seu público e a evolução do projeto! Caso queira um exemplo completo de uso dos endpoints ou doc com Swagger, posso detalhar também.

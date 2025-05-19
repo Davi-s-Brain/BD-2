@@ -30,7 +30,7 @@ Sistema que utiliza FastAPI para controle de estoque, cadastro de usuários e au
 
 2. **Inicie o servidor**:
     ```bash
-    uvicorn IntegrationApplication.integration_api.integration_application:app --reload
+    uvicorn Trabalho_BD2.IntegrationApplication.integration_api.integration_application:app --reload
     ```
     - Altere o caminho acima conforme a estrutura do seu projeto.
 

@@ -10,17 +10,6 @@
 
 
 -- Database Section
--- ________________ 
-
---create database SCRIPT;
-
---DROP DATABASE IF EXISTS "RanBurguer";
-
---CREATE DATABASE "RanBurguer";
-
-
--- DBSpace Section
--- _______________
 
 
 -- Tables Section
@@ -58,6 +47,16 @@ create table Bebida (
      E_Alcolico boolean not null,
      constraint ID_Bebid_Produ_ID primary key (Indice_prod));
 
+create table Sobremesa (
+     Indice_prod serial not null,
+     Indice_estoq serial not null,
+     constraint ID_Sobrem_Produ_ID primary key (Indice_prod));
+
+create table Acompanhamento (
+     Indice_prod serial not null,
+     Indice_estoq serial not null,
+     constraint ID_Acomp_Produ_ID primary key (Indice_prod));
+
 create table Ingrediente (
      Id_ingred numeric(10) not null,
      Tipo_ingred varchar(10) not null,
@@ -82,8 +81,7 @@ create table Ambiente (
      constraint SID_Ambie_Estoq_ID unique (Indice_estoq));
 
 create table Pedido (
-     Id_pedido numeric(10) not null,
-     Number_pedido serial not null,
+     Id_pedido serial not null,
      Data_pedido date not null,
      Hora_pedido varchar(10) not null,
      Valor_total_pedido float(10) not null,
@@ -106,7 +104,7 @@ create table Lanche (
      constraint ID_Lanch_Produ_ID primary key (Indice_prod));
 
 create table Funcionario (
-     Id_func numeric(10) not null,
+     Id_func serial not null,
      Nome_func varchar(50) not null,
      CPF numeric(11) UNIQUE not null,
      Data_nasc_func date not null,
@@ -172,6 +170,8 @@ create table Produto (
      Categoria varchar(10) not null,
      Lanche boolean default false,
      Bebida boolean default false,
+     Sobremesa boolean default false,
+     Acompanhamento boolean default false,
      constraint ID_Produto_ID primary key (Indice_prod));
 
 create table Franquia (
@@ -221,6 +221,11 @@ create table L_Contem_I (
      Indice_prod serial not null,
      constraint ID_L_Contem_I_ID primary key (Id_ingred, Indice_prod));
 
+-- Insert Section
+-- ______________ 
+
+
+
 
 -- Constraints Section
 -- ___________________ 
@@ -247,6 +252,14 @@ create table L_Contem_I (
 
 -- alter table Bebida add constraint REF_Bebid_Estoq_FK
 --      foreign key (Indice_estoq)
+--      references Estoque;
+
+-- alter table Sobremesa add constraint ID_Sobrem_Produ_FK
+--      foreign key (Indice_prod) 
+--      references Estoque;
+
+-- alter table Acompanhamento add constraint ID_Acomp_Produ_FK
+--      foreign key (Indice_prod)
 --      references Estoque;
 
 -- alter table Ingrediente add constraint REF_Ingre_Estoq_FK

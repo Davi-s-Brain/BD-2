@@ -1,4 +1,4 @@
-INSERT INTO Cliente (
+INSERT INTO public.cliente (
     Id_cliente,
     Primeiro_nome_client,
     Ultimo_nome_client,
@@ -112,7 +112,6 @@ INSERT INTO Cliente (
 (97, 'Juliana', 'Nunes', '1990-05-19', '98991039122', '21987654321', 'juliana.nunes@gmail.com', '2023-09-12', 'F', FALSE, TRUE, TRUE, FALSE),
 (98, 'Rafael', 'Carvalho', '1988-08-24', '99001139232', '31912345678', 'rafael.carvalho@mail.com', '2023-06-30', 'M', FALSE, FALSE, FALSE, TRUE),
 (99, 'Carla', 'Martins', '1992-02-15', '10010113934', '41987654321', 'carla.martins@gmail.com', '2023-11-18', 'F', TRUE, FALSE, TRUE, FALSE),
-(99, 'Carla', 'Martins', '1992-02-15', '10010113934', '41987654321', 'carla.martins@gmail.com', '2023-11-18', 'F', TRUE, FALSE, TRUE, FALSE),
 (100, 'Gabriel', 'Santana', '1990-04-12', '11122233344', '11987654321', 'gabriel.santana@example.com', '2023-02-15', 'M', FALSE, FALSE, TRUE, FALSE),
 (101, 'Fernanda', 'Oliveira', '1985-11-30', '55566677788', '21998765432', 'fernanda.oliveira@example.com', '2022-12-01', 'F', FALSE, TRUE, FALSE, FALSE),
 (102, 'Matheus', 'Ribeiro', '1992-07-19', '99988877766', '31912345678', 'matheus.ribeiro@example.com', '2023-03-20', 'M', TRUE, FALSE, FALSE, FALSE),
@@ -212,8 +211,8 @@ INSERT INTO Cliente (
 (196, 'Priscila', 'Dias', '1991-12-15', '19123456789', '61912345678', 'priscila.dias@mail.com', '2027-08-02', 'F', TRUE, FALSE, TRUE, FALSE),
 (197, 'Quintino', 'Moreira', '1987-03-04', '29134567890', '11987654321', 'quintino.moreira@mail.com', '2027-08-28', 'M', FALSE, TRUE, FALSE, TRUE),
 (198, 'Raquel', 'Rocha', '1992-06-21', '39145678901', '21912345678', 'raquel.rocha@mail.com', '2027-09-23', 'F', TRUE, FALSE, TRUE, FALSE),
-(199, 'Clara', 'Monteiro', '1990-12-15', '59167890123', '41987654321', 'clara.monteiro@mail.com', '2027-11-14', 'F', TRUE, FALSE, TRUE, FALSE)
-(200, 'Sérgio', 'Cavalcante', '1988-09-08', '49156789012', '31987654321', 'sergio.cavalcante@mail.com', '2027-10-19', 'M', FALSE, TRUE, FALSE, TRUE)
+(199, 'Clara', 'Monteiro', '1990-12-15', '59167890123', '41987654321', 'clara.monteiro@mail.com', '2027-11-14', 'F', TRUE, FALSE, TRUE, FALSE),
+(200, 'Sérgio', 'Cavalcante', '1988-09-08', '49156789012', '31987654321', 'sergio.cavalcante@mail.com', '2027-10-19', 'M', FALSE, TRUE, FALSE, TRUE),
 (201, 'Tainá', 'Pereira', '1993-12-25', '59167890123', '41987654321', 'taina.pereira@mail.com', '2027-11-14', 'F', TRUE, FALSE, TRUE, FALSE),
 (202, 'Ubiratan', 'Barbosa', '1989-03-13', '69178901234', '51912345678', 'ubiratan.barbosa@mail.com', '2027-12-10', 'M', FALSE, TRUE, FALSE, TRUE),
 (203, 'Vanessa', 'Moura', '1992-06-30', '79189012345', '61987654321', 'vanessa.moura@mail.com', '2028-01-05', 'F', TRUE, FALSE, TRUE, FALSE),

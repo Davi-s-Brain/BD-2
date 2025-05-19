@@ -28,12 +28,12 @@
 
 create table Cliente (
      Id_cliente numeric(10) not null,
-     Primeiro_nome_client varchar(10) not null,
-     Ultimo_nome_client varchar(15) not null,
+     Primeiro_nome_client varchar(15) not null,
+     Ultimo_nome_client varchar(20) not null,
      Data_nascimento_client date not null,
      CPF_client numeric(11) not null,
      Telefone_client numeric(12) not null,
-     E_mail_client varchar(20) not null,
+     E_mail_client varchar(50) not null,
      Data_cadastro_client date not null,
      Genero_client varchar(10) not null,
      E_intolerante_lactose boolean default false,

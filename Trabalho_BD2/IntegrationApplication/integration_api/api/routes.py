@@ -42,7 +42,7 @@ async def alterar_estoque(request: Request, produto: str, acao: str, quantity: i
     elif acao == "remover":
         if not estoque:
             raise HTTPException(status_code=400, detail="Estoque já está zerado")
-        service.alterar_estoque(produto, quantity)
+        service.alterar_estoque(produto, - quantity)
     else:
         raise HTTPException(status_code=400, detail="Ação inválida")
 

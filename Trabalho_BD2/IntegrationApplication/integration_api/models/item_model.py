@@ -16,12 +16,12 @@ class ItemModel:
             cursor.execute("SELECT name, description, quantity, value FROM items")
             return cursor.fetchall()
 
-    def update(self, name, description, quantity, value):
+    def update(self, names, description, quantity, value):
         with get_connection() as conn:
             cursor = conn.cursor()
             cursor.execute(
-                "UPDATE items SET name = ?, description = ?, quantity = ?, value = ? WHERE id = ?",
-                (name, description, quantity, value)
+                "UPDATE items SET description = ?, quantity = ?, value = ? WHERE name = ?",
+                (description, quantity, value, name)
             )
             conn.commit()
 

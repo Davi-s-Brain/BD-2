@@ -3,7 +3,7 @@ from typing import List
 from fastapi import APIRouter, Request, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate, ItemDelete
-from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder, GetOrder
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import UserLogin, Token, User
 from Trabalho_BD2.IntegrationApplication.integration_api.services.funcionario_service import FuncionarioService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.item_service import ItemService
@@ -160,6 +160,10 @@ async def register(request: Request, user_data: UserLogin):
 async def register(request: Request, order: CreateOrder):
     service.create_order(order)
     return {"status": "created"}
+@router.post("/order/all")
+@limiter.limit("500/minute")
+async def register(request: Request):
+    return service.get_orders()
 
 
 @auth_router.post("/token", response_model=Token)

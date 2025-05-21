@@ -7,3 +7,8 @@ class CreateOrder(BaseModel):
     id: int
     product: str
     quantity: int
+class GetOrder(BaseModel):
+    name: str
+    id: int
+    product: str
+    quantity: int

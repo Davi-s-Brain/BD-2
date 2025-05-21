@@ -60,3 +60,23 @@ class ItemModel:
             )
         pass
 
+    def get_all_orders(self):
+        with get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT name, product, quantity FROM orders")
+            return cursor.fetchall()
+
+    def create_func(self, data):
+        with get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute(
+                """INSERT INTO funcionario
+                (Nome_func, CPF, Data_nasc_func, Cargo, Salario, 
+                Data_admissao, Turno, Tipo_de_contrato, Status_func, Id_franquia) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                (data.Nome_func, data.CPF, data.Data_nasc_func, data.Cargo,
+                 data.Salario, data.Data_admissao, data.Turno,
+                 data.Tipo_de_contrato, data.Status_func, data.Id_franquia)
+            )
+            conn.commit()
+            return cursor.lastrowid

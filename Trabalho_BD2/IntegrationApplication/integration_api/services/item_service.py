@@ -38,3 +38,8 @@ class ItemService:
     def delete(self,item):
         self.model.delete_item(item)
 
+    def get_orders(self):
+        return self.model.get_all_orders()
+
+    def create(self, data):
+        return self.model.create_func(data)

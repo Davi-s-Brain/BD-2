@@ -50,3 +50,13 @@ class ItemModel:
                 (name, product_id, product, quantity)
             )
             conn.commit()
+
+    def delete_item(self, item):
+        with get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute(
+                "DELETE FROM items WHERE name = ?",
+                (item,)
+            )
+        pass
+

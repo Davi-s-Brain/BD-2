@@ -34,3 +34,7 @@ class ItemService:
 
     def get_item(self,name):
         return self.model.get_item(name)
+
+    def delete(self,item):
+        self.model.delete_item(item)
+

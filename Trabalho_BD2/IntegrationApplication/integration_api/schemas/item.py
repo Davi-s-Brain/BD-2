@@ -12,6 +12,11 @@ class ItemUpdate(BaseModel):
     description: Optional[str] = None
     quantity: int
     value: int
+class ItemDelete(BaseModel):
+    name: str
+    description: Optional[str] = None
+    quantity: int
+    value: int
 
 class ItemOut(BaseModel):
     name: str

@@ -21,6 +21,21 @@ def init_db():
             quantity INTEGER NOT NULL
         )
         """)
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS funcionario (
+            Id_func INTEGER PRIMARY KEY AUTOINCREMENT,
+            Nome_func TEXT NOT NULL,
+            CPF TEXT NOT NULL UNIQUE,
+            Data_nasc_func TEXT NOT NULL,
+            Cargo TEXT NOT NULL,
+            Salario REAL NOT NULL,
+            Data_admissao TEXT NOT NULL,
+            Turno TEXT NOT NULL,
+            Tipo_de_contrato TEXT NOT NULL,
+            Status_func TEXT NOT NULL,
+            Id_franquia INTEGER
+        )
+        """)
 
         conn.commit()
 

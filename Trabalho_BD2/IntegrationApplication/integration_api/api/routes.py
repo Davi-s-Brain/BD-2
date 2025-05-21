@@ -1,19 +1,89 @@
+from typing import List
+
 from fastapi import APIRouter, Request, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
-from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate, ItemDelete
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import UserLogin, Token, User
+from Trabalho_BD2.IntegrationApplication.integration_api.services.funcionario_service import FuncionarioService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.item_service import ItemService
 from Trabalho_BD2.IntegrationApplication.integration_api.core.limiter import limiter
 from Trabalho_BD2.IntegrationApplication.integration_api.core.security_manager import SecurityManager
-
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.funcionario import (
+    FuncionarioCreate,
+    FuncionarioUpdate,
+    FuncionarioOut,
+)
+service = ItemService()
 security = SecurityManager()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 
 # Routers
 router = APIRouter(prefix="/integration", tags=["Integration"])
 auth_router = APIRouter(prefix="/auth", tags=["Authentication"])
-service = ItemService()
+func_router = APIRouter(
+    prefix="/funcionarios",
+    tags=["Funcionario"],
+)
+
+funcService = FuncionarioService()
+
+@func_router.post(
+    "/",
+    response_model=FuncionarioOut,
+    status_code=status.HTTP_201_CREATED
+)
+async def create_funcionario(data: FuncionarioCreate):
+    new_id = service.create(data)
+    return funcService.get_by_id(new_id)
+
+@func_router.get(
+    "/",
+    response_model=List[FuncionarioOut]
+)
+async def list_funcionarios():
+    return funcService.get_all()
+
+@func_router.get(
+    "/{func_id}",
+    response_model=FuncionarioOut
+)
+async def get_funcionario(func_id: int):
+    func = funcService.get_by_id(func_id)
+    if not func:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Funcionário não encontrado"
+        )
+    return func
+
+@func_router.put(
+    "/{func_id}",
+    response_model=FuncionarioOut
+)
+async def update_funcionario(
+    func_id: int,
+    data: FuncionarioUpdate
+):
+    updated = funcService.update(func_id, data)
+    if not updated:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Funcionário não encontrado"
+        )
+    return service.get_by_id(func_id)
+
+@func_router.delete(
+    "/{func_id}",
+    status_code=status.HTTP_204_NO_CONTENT
+)
+async def delete_funcionario(func_id: int):
+    deleted = funcService.delete(func_id)
+    if not deleted:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Funcionário não encontrado"
+        )
 
 async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
     user = security.get_current_user(token)
@@ -84,6 +154,7 @@ async def register(request: Request, user_data: UserLogin):
     access_token = security.create_access_token(data={"sub": user_data.username})
     return {"access_token": access_token, "token_type": "bearer"}
 
+
 @router.post("/order/create")
 @limiter.limit("5/minute")
 async def register(request: Request, order: CreateOrder):
@@ -114,6 +185,12 @@ async def read_users_me(current_user: User = Depends(get_current_user)):
 async def get_items(request: Request):
     service.get_all_items()
     return {"status": "received"}
+@router.delete("/")
+@limiter.limit("10/minute")
+async def get_item(request: Request, item: ItemDelete):
+    service.delete(item)
+    return {"status": "deleted"}
+
 
 @router.post("/")
 @limiter.limit("5/minute")

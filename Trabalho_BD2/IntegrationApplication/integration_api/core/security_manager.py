@@ -17,6 +17,13 @@ class SecurityManager:
         self._users_db = {
             "admin": {
                 "username": "admin",
+                "password": "admin"  # Using API_KEY as admin password
+            }
+        }
+
+        self._func_db = {
+            "admin": {
+                "username": "admin",
                 "password": self.secret_manager.get_secret("API_KEY")  # Using API_KEY as admin password
             }
         }
@@ -36,6 +43,24 @@ class SecurityManager:
             return None
     def authenticate_user(self, username: str, password: str) -> Optional[Dict]:
         user = self._users_db.get(username)
+        if user and user["password"] == password:
+            return user
+        return None
+    def create_func(self, username: str, password: str):
+        try:
+
+            novo_usuario = {
+                "username": username,
+                "password": password
+            }
+            self._func_db[username] = novo_usuario
+
+            return novo_usuario
+        except Exception as e:
+            print(f"Erro ao criar funcionário: {e}")
+            return None
+    def authenticate_func(self, username: str, password: str) -> Optional[Dict]:
+        user = self._func_db.get(username)
         if user and user["password"] == password:
             return user
         return None
@@ -106,3 +131,7 @@ class SecurityManager:
             )
 
         return user
+
+    def update(self, user_data):
+
+     pass

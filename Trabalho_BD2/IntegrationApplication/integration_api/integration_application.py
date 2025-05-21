@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from Trabalho_BD2.IntegrationApplication.integration_api.api.routes import router as integration_router, auth_router  # Adicionando auth_router
+from Trabalho_BD2.IntegrationApplication.integration_api.api.routes import router as integration_router, auth_router, \
+    func_router  # Adicionando auth_router
 from Trabalho_BD2.IntegrationApplication.integration_api.core.db import init_db
 from Trabalho_BD2.IntegrationApplication.integration_api.core.error_handlers import register_handlers
 from Trabalho_BD2.IntegrationApplication.integration_api.core.limiter import limiter
@@ -33,6 +34,7 @@ def create_app() -> FastAPI:
 
     # Incluir os routers
     app.include_router(integration_router)
+    app.include_router(func_router)
     app.include_router(auth_router)  # Adicionando o router de autenticação
     register_handlers(app)
 

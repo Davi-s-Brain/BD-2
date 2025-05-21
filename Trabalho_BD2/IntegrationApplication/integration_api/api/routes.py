@@ -128,7 +128,6 @@ async def create_item(
 async def update_item(
     request: Request,
     item: ItemUpdate, 
-    current_user: User = Depends(get_current_user)
 ):
     service.update_item(item)
     return {"status": "received"}

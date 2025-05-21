@@ -21,7 +21,7 @@ class ItemModel:
             cursor = conn.cursor()
             cursor.execute(
                 "UPDATE items SET description = ?, quantity = ?, value = ? WHERE name = ?",
-                (description, quantity, value, name)
+                (description, quantity, value, names)
             )
             conn.commit()
 

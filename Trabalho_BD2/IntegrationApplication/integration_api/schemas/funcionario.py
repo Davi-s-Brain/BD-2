@@ -3,6 +3,7 @@ from typing import Optional
 from datetime import date
 
 class FuncionarioBase(BaseModel):
+    Id_func : str = Field (..., example= 1)
     Nome_func: str = Field(..., example="João Silva")
     CPF: str = Field(..., example="123.456.789-00")
     Data_nasc_func: date = Field(..., example="1990-05-20")
@@ -20,6 +21,7 @@ class FuncionarioCreate(FuncionarioBase):
 
 class FuncionarioUpdate(BaseModel):
     """Schema para atualização parcial de funcionário."""
+    Id_func : Optional[str] = None
     Nome_func: Optional[str] = None
     CPF: Optional[str] = None
     Data_nasc_func: Optional[date] = None

@@ -5,6 +5,15 @@ DB_NAME = "local.db"
 def init_db():
     with sqlite3.connect(DB_NAME) as conn:
         cursor = conn.cursor()
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS items (
+            name TEXT NOT NULL PRIMARY KEY,
+            description TEXT,
+            quantity INTEGER NOT NULL,
+            value REAL NOT NULL
+        )
+        """)
+
 
         # Tabela de Bebidas
         cursor.execute("""
@@ -16,7 +25,14 @@ def init_db():
             E_Alcolico BOOLEAN NOT NULL
         )
         """)
-
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS orders (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            product TEXT NOT NULL,
+            quantity INTEGER NOT NULL
+        )
+        """)
         # Tabela de Cliente
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS Cliente (
@@ -133,6 +149,7 @@ def init_db():
             Preco_compra_mercado REAL NOT NULL
         )
         """)
+
 
         # Tabela de Ingredientes_Lanche (relacionamento entre Ingrediente e Lanche)
         cursor.execute("""

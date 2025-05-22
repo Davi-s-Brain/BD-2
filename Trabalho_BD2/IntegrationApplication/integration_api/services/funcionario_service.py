@@ -11,6 +11,7 @@ class FuncionarioService:
     def create(self, data: FuncionarioCreate) -> int:
         """Insere um novo funcionário e retorna o id gerado."""
         return Funcionario.create(
+            Id_func = data.Id_func,
             Nome_func=data.Nome_func,
             CPF=data.CPF,
             Data_nasc_func=data.Data_nasc_func.isoformat(),

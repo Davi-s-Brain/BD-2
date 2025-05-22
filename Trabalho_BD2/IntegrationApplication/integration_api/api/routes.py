@@ -1,11 +1,15 @@
-from typing import List
+from typing import List, Dict, Any
 
 from fastapi import APIRouter, Request, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
+
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.ingrediente_schemas import IngredienteOut, \
+    IngredienteCreate, IngredienteUpdate
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate, ItemDelete
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder, GetOrder
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import UserLogin, Token, User
 from Trabalho_BD2.IntegrationApplication.integration_api.services.funcionario_service import FuncionarioService
+from Trabalho_BD2.IntegrationApplication.integration_api.services.ingrediente_service import IngredienteService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.item_service import ItemService
 from Trabalho_BD2.IntegrationApplication.integration_api.core.limiter import limiter
 from Trabalho_BD2.IntegrationApplication.integration_api.core.security_manager import SecurityManager
@@ -27,6 +31,84 @@ func_router = APIRouter(
 )
 
 funcService = FuncionarioService()
+# Router para Ingredientes
+ingrediente_router = APIRouter(
+    prefix="/ingredientes",
+    tags=["Ingrediente"],
+)
+
+
+
+ingredienteService = IngredienteService()
+
+@ingrediente_router.post(
+    "/",
+    response_model=IngredienteOut,
+    status_code=status.HTTP_201_CREATED
+)
+async def create_ingrediente(data: IngredienteCreate):
+    """Cria um novo ingrediente"""
+    new_id = ingredienteService.create(
+        Tipo_ingred=data.Tipo_ingred,
+        Nome_ingred=data.Nome_ingred,
+        Preco_venda_cliente=data.Preco_venda_cliente,
+        Peso_ingred=data.Peso_ingred,
+        Indice_estoq=data.Indice_estoq
+    )
+    return ingredienteService.get_by_id(new_id)
+
+@ingrediente_router.get(
+    "/",
+    response_model=List[Dict[str, Any]]
+)
+async def list_ingredientes():
+    """Lista todos os ingredientes"""
+    return ingredienteService.get_all()
+
+@ingrediente_router.get(
+    "/{ingrediente_id}",
+    response_model=Dict[str, Any]
+)
+async def get_ingrediente(ingrediente_id: int):
+    """Obtém um ingrediente específico pelo ID"""
+    ingrediente = ingredienteService.get_by_id(ingrediente_id)
+    if not ingrediente:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Ingrediente não encontrado"
+        )
+    return ingrediente
+
+@ingrediente_router.put(
+    "/{ingrediente_id}",
+    response_model=Dict[str, Any]
+)
+async def update_ingrediente(
+    ingrediente_id: int,
+    data: IngredienteUpdate
+):
+    """Atualiza um ingrediente existente"""
+    dados_atualizacao = {k: v for k, v in data.dict(exclude_unset=True).items()}
+    atualizado = ingredienteService.update(ingrediente_id, dados_atualizacao)
+    if not atualizado:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Ingrediente não encontrado"
+        )
+    return ingredienteService.get_by_id(ingrediente_id)
+
+@ingrediente_router.delete(
+    "/{ingrediente_id}",
+    status_code=status.HTTP_204_NO_CONTENT
+)
+async def delete_ingrediente(ingrediente_id: int):
+    """Remove um ingrediente"""
+    deleted = ingredienteService.delete(ingrediente_id)
+    if not deleted:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Ingrediente não encontrado"
+        )
 
 @func_router.post(
     "/",

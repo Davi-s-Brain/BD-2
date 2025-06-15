@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "ep_bd",
+            "group": "lindas",
+            "database": "RanBurguer",
+            "username": "as_lindas"
+        }
+    ]
+}

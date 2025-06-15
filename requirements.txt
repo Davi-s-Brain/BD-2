@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+python-multipart
+passlib[bcrypt]
+python-jose[cryptography]
+slowapi
+sqlite-utils
+python-magic  # ou python-magic-bin no Windows

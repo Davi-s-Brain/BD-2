@@ -9,5 +9,3 @@ slowapi==0.1.8
 
 pydantic==2.7.1
 wrapt==1.16.0  # usado internamente por algumas libs, útil manter
-
-python-magic-bin==0.4.14

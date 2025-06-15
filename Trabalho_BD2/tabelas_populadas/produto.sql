@@ -4,7 +4,7 @@ INSERT INTO Produto (
     Preco_prod,
     Peso_prod,
     Unidade_medida,
-    Categoria,
+    Restricao_alimentar,
     Lanche,
     Bebida,
     Sobremesa,

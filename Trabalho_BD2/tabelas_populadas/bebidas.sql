@@ -25,3 +25,31 @@ VALUES
     ('Suco Del Valle', 'Laranja', 18, FALSE),
     ('Suco Del Valle', 'Uva', 19, FALSE),
     ('Red Bull', 'Original', 20, FALSE);
+
+INSERT INTO bebida (
+        Indice_prod,
+        Marca,
+        Sabor,
+        Indice_estoq,
+        E_Alcolico)
+        VALUES
+        (1, 'Coca-Cola', 'Original', 1, FALSE),
+        (2, 'Coca-Cola', 'Zero', 2, FALSE),
+        (3, 'Pepsi', 'Original', 3, FALSE),
+        (4, 'Pepsi', 'Zero', 4, FALSE),
+        (5, 'Guaraná Antarctica', 'Original', 5, FALSE),
+        (6, 'Guaraná Antarctica', 'Zero', 6, FALSE),
+        (7, 'Fanta', 'Laranja', 7, FALSE),
+        (8, 'Fanta', 'Uva', 8, FALSE),
+        (9, 'Sprite', 'Original', 9, FALSE),
+        (10, 'Bonafont', 'Sem Gás', 10, FALSE),
+        (11, 'Crystal', 'Com Gás', 11, FALSE),
+        (12, 'Heineken', 'Original', 12, TRUE),
+        (13, 'Brahma', 'Original', 13, TRUE),
+        (14, 'Skol', 'Original', 14, TRUE),
+        (15, 'Budweiser', 'Original', 15, TRUE),
+        (16, 'Chá Lipton', 'Pêssego', 16, FALSE),
+        (17, 'Chá Lipton', 'Limão', 17, FALSE),
+        (18, 'Suco Del Valle', 'Laranja', 18, FALSE),
+        (19, 'Suco Del Valle', 'Uva', 19, FALSE),
+        (20, 'Red Bull', 'Original', 20, FALSE);

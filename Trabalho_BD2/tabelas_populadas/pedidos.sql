@@ -28,5 +28,5 @@ INSERT INTO Pedido (
     (16, '2024-06-30', '12:20', 120.00, 'Cartao', FALSE, 'Pedido normal', 16, 1),
     (17, '2024-07-01', '13:30', 150.50, 'Dinheiro', TRUE, 'Pedido especial', 17, 2),
     (18, '2024-07-02', '14:50', 110.75, 'Pix', FALSE, 'Sem observações', 18, 3),
-    (19, '2024-07-03', '16:00', 230.00, 'Cartao', TRUE, 'Cliente novo', 19, 4)
+    (19, '2024-07-03', '16:00', 230.00, 'Cartao', TRUE, 'Cliente novo', 19, 4),
     (20, '2024-07-04', '16:15', 125.00, 'Dinheiro', FALSE, 'Pedido rápido', 20, 5);

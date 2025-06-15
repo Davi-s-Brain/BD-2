@@ -32,10 +32,11 @@ create table Acompanhamento (
 
 create table Ambiente (
      Id_Amb numeric(5) not null,
-     Tamanho_ambiente float(1) not null,
+     Id_franquia numeric(5) not null,
+     Tamanho_ambiente float(3)not null,
      Quantidade_desse_ambiente float(1) not null,
      Nivel_limpeza varchar(20) not null,
-     Detetizado char not null,
+     Detetizado boolean not null,
      Salao boolean,
      Cozinha boolean,
      constraint Id_Ambiente_ID primary key (Id_Amb));
@@ -51,7 +52,7 @@ create table Bebida (
      Indice_prod numeric(5) not null,
      Marca varchar(50) not null,
      Sabor varchar(50) not null,
-     E_Alcoolico char not null,
+     E_Alcoolico boolean not null,
      Indice_estoq serial,
      constraint ID_Bebid_Produ_ID primary key (Indice_prod));
 
@@ -63,10 +64,12 @@ create table Brinde (
      constraint ID_Brinde_ID primary key (Id_brinde),
      constraint SID_Brind_Lanch_ID unique (Indice_prod));
 
-create table C_Escolhe_P (
-     Id_cliente numeric(11) not null,
+create table Ped_Escolhe_Prod (
+     Id_Pedido serial,
      Indice_prod numeric(5) not null,
-     constraint ID_C_Escolhe_P_ID primary key (Indice_prod, Id_cliente));
+     Quantidade numeric(2) not null,
+     constraint ID_Ped_Escolhe_Prod_ID primary key (Id_Pedido, Indice_prod)
+     constraint ID_Pedido_ID foreign key (Id_Pedido));
 
 create table C_Registra_A (
      Id_pedido uuid not null,
@@ -86,10 +89,10 @@ create table Cliente (
      E_mail_client varchar(50) not null,
      Data_cadastro_client date not null,
      Genero_client varchar(10) not null,
-     E_intolerante_lactose char not null,
-     E_celiaco char not null,
-     E_vegetariano char not null,
-     E_vegano char not null,
+     E_intolerante_lactose boolean not null,
+     E_celiaco boolean not null,
+     E_vegetariano boolean not null,
+     E_vegano boolean not null,
      constraint ID_Cliente_ID primary key (Id_cliente));
 
 create table Cozinha (
@@ -128,7 +131,7 @@ create table Franquia ( --ok
      constraint ID_Franquia_ID primary key (Id_franquia));
      --alter table foreing key
 
-create table Funcionario ( --ok
+create table Funcionario ( --depois
      Id_func numeric(5) not null,
      Nome_func varchar(50) not null,
      CPF numeric(11) not null,
@@ -140,6 +143,7 @@ create table Funcionario ( --ok
      Tipo_de_contrato varchar(20) not null,
      Status_func varchar(20) not null,
      Id_franquia serial not null,
+     Senha varchar(4),
      constraint ID_Funcionario_ID primary key (Id_func));
 
 create table Ingrediente (  --ok
@@ -156,31 +160,32 @@ create table L_Contem_I ( --ok
      Indice_prod numeric(5) not null,
      constraint ID_L_Contem_I_ID primary key (Id_ingred, Indice_prod));
 
-create table Lanche ( --ok mas tem que confirmar com o Davi
+create table Lanche ( --ok
      Indice_prod numeric(5) not null,
-     Ingredientes varchar(50) not null,
+     Ingredientes varchar(100) not null,
      Tamanho_lanche varchar(20) not null,
      constraint ID_Lanch_Produ_ID primary key (Indice_prod));
 
 create table Pedido (
-     Id_pedido uuid not null,
+     Id_pedido serial not null,
      Data_pedido date not null,
      Hora_pedido varchar(5) not null,
      Valor_total_pedido float(1) not null,
      Forma_pagamento varchar(20) not null,
-     E_delivery char not null,
+     E_delivery boolean not null,
      Observacao varchar(200) not null,
      Id_func numeric(1) not null,
      Id_cliente numeric(11) not null,
      constraint ID_Pedido_ID primary key (Id_pedido));
 
-create table Produto (
+create table Produto (--ok
      Indice_prod numeric(5) not null,
      Nome_prod varchar(50) not null,
      Preco_prod float(1) not null,
      Peso_prod float(1) not null,
      Unidade_medida varchar(2) not null,
      Restricao_alimentar varchar(50) not null,
+     Categoria varchar(50) not null,
      Sobremesa boolean,
      Lanche boolean,
      Bebida boolean,
@@ -196,7 +201,7 @@ create table Salao (
      Quant_lixeiras float(1) not null,
      constraint ID_Salao_Ambie_ID primary key (Id_Amb));
 
-create table Sobremesa (
+create table Sobremesa (--ok
      Indice_prod numeric(5) not null,
      Tipo_sobremesa varchar(50) not null,
      Sabor varchar(50) not null,

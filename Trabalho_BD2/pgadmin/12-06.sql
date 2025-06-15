@@ -12,6 +12,7 @@
 -- Database Section
 -- ________________ 
 
+DROP database if exists SQL;
 --create database SQL;
 
 
@@ -23,14 +24,13 @@
 -- _____________ 
 
 create table Acompanhamento (
-     Indice_prod numeric(2) not null,
+     Indice_prod numeric(5) not null,
      Tipo_acompanhamento varchar(50) not null,
      Indice_estoq serial,
      constraint ID_Acomp_Produ_ID primary key (Indice_prod));
 
 create table Ambiente (
-     ID_Amb numeric(10) not null,
-     Id_ambiente numeric(1) not null,
+     Id_Amb numeric(5) not null,
      Indice_estoq serial,
      Tamanho_ambiente float(1) not null,
      Quantidade_desse_ambiente float(1) not null,
@@ -38,19 +38,18 @@ create table Ambiente (
      Detetizado char not null,
      Salao numeric(10),
      Cozinha numeric(10),
-     constraint ID_Ambiente_ID primary key (ID_Amb),
-     constraint SID_Ambiente_ID unique (Id_ambiente),
-     constraint SID_Ambie_Estoq_ID unique (Indice_estoq));
+     constraint Id_Ambiente_ID primary key (Id_Amb),
+     constraint SId_Ambie_Estoq_ID unique (Indice_estoq));
 
 create table Avaliacao (
-     Indice_av numeric(1) not null,
+     Indice_av numeric(5) not null,
      NPS float(1) not null,
      Campo_texto varchar(200) not null,
      Data_av date not null,
      constraint ID_Avaliacao_ID primary key (Indice_av));
 
 create table Bebida (
-     Indice_prod numeric(1) not null,
+     Indice_prod numeric(5) not null,
      Marca varchar(50) not null,
      Sabor varchar(50) not null,
      E_Alcoolico char not null,
@@ -58,7 +57,7 @@ create table Bebida (
      constraint ID_Bebid_Produ_ID primary key (Indice_prod));
 
 create table Brinde (
-     Id_brinde numeric(8) not null,
+     Id_brinde numeric(5) not null,
      Indice_prod serial not null,
      Tipo_brinde varchar(1) not null,
      Indice_estoq serial not null,
@@ -66,20 +65,20 @@ create table Brinde (
      constraint SID_Brind_Lanch_ID unique (Indice_prod));
 
 create table C_Escolhe_P (
-     Id_cliente numeric(1) not null,
-     Indice_prod numeric(1) not null,
+     Id_cliente numeric(11) not null,
+     Indice_prod numeric(5) not null,
      constraint ID_C_Escolhe_P_ID primary key (Indice_prod, Id_cliente));
 
 create table C_Registra_A (
-     Id_pedido numeric(1) not null,
-     Id_cliente numeric(1) not null,
-     Indice_av serial not null,
+     Id_pedido numeric(5) not null,
+     Id_cliente numeric(11) not null,
+     Indice_av n not null,
      constraint ID_C_Reg_Pedid_ID primary key (Id_pedido),
      constraint SID_C_Reg_Clien_ID unique (Id_cliente),
      constraint SID_C_Reg_Avali_ID unique (Indice_av));
 
 create table Cliente (
-     Id_cliente numeric(1) not null,
+     Id_cliente numeric(11) not null,
      Primeiro_nome_client varchar(50) not null,
      Ultimo_nome_client varchar(50) not null,
      Data_nascimento_client date not null,
@@ -95,15 +94,15 @@ create table Cliente (
      constraint ID_Cliente_ID primary key (Id_cliente));
 
 create table Cozinha (
-     ID_Amb numeric(10) not null,
+     Id_Amb numeric(5) not null,
      Quant_geladeira float(1) not null,
      Quant_chapas float(1) not null,
      Quant_fogao float(1) not null,
      Quant_fritadeira float(1) not null,
-     constraint ID_Cozin_Ambie_ID primary key (ID_Amb));
+     constraint ID_Cozin_Ambie_ID primary key (Id_Amb));
 
 create table Estoque (
-     Indice_estoq numeric(1) not null,
+     Indice_estoq serial not null,
      Nome_produto varchar(50) not null,
      Quantidade float(1) not null,
      Unidade_medida varchar(2) not null,
@@ -114,9 +113,9 @@ create table Estoque (
      constraint ID_Estoque_ID primary key (Indice_estoq));
 
 create table F_CompostaPor_A (
-     ID_Amb numeric(10) not null,
-     Id_franquia numeric(1) not null,
-     constraint ID_F_CompostaPor_A_ID primary key (Id_franquia, ID_Amb));
+     Id_Amb numeric(5) not null,
+     Id_franquia numeric(5) not null,
+     constraint ID_F_CompostaPor_A_ID primary key (Id_franquia, Id_Amb));
 
 create table F_Vende_P (
      Id_franquia serial not null,
@@ -124,7 +123,7 @@ create table F_Vende_P (
      constraint ID_F_Vende_P_ID primary key (Indice_prod, Id_franquia));
 
 create table Franquia (
-     Id_franquia numeric(1) not null,
+     Id_franquia numeric(5) not null,
      Nome_franquia varchar(50) not null,
      CNPJ numeric(14) not null,
      Endereco_franq varchar(50) not null,
@@ -133,7 +132,7 @@ create table Franquia (
      constraint ID_Franquia_ID primary key (Id_franquia));
 
 create table Funcionario (
-     Id_func numeric(1) not null,
+     Id_func numeric(5) not null,
      Nome_func varchar(50) not null,
      CPF numeric(11) not null,
      Data_nasc_func date not null,
@@ -147,7 +146,7 @@ create table Funcionario (
      constraint ID_Funcionario_ID primary key (Id_func));
 
 create table Ingrediente (
-     Id_ingred numeric(1) not null,
+     Id_ingred numeric(5) not null,
      Tipo_ingred varchar(50) not null,
      Nome_ingred varchar(50) not null,
      Preco_venda_cliente float(1) not null,
@@ -156,7 +155,7 @@ create table Ingrediente (
      constraint ID_Ingrediente_ID primary key (Id_ingred));
 
 create table L_Contem_I (
-     Id_ingred numeric(1) not null,
+     Id_ingred numeric(5) not null,
      Indice_prod serial not null,
      constraint ID_L_Contem_I_ID primary key (Id_ingred, Indice_prod));
 
@@ -175,11 +174,11 @@ create table Pedido (
      E_delivery char not null,
      Observacao varchar(200) not null,
      Id_func numeric(1) not null,
-     Id_cliente numeric(1) not null,
+     Id_cliente numeric(11) not null,
      constraint ID_Pedido_ID primary key (Id_pedido));
 
 create table Produto (
-     Indice_prod numeric(1) not null,
+     Indice_prod numeric(5) not null,
      Nome_prod varchar(50) not null,
      Preco_prod float(1) not null,
      Peso_prod float(1) not null,
@@ -192,13 +191,13 @@ create table Produto (
      constraint ID_Produto_ID primary key (Indice_prod));
 
 create table Salao (
-     ID_Amb numeric(10) not null,
+     Id_Amb numeric(5) not null,
      Quant_cadeira float(1) not null,
      Quant_mesa float(1) not null,
      Quant_caixa_atend float(1) not null,
      Quant_totens_atend float(1) not null,
      Quant_lixeiras float(1) not null,
-     constraint ID_Salao_Ambie_ID primary key (ID_Amb));
+     constraint ID_Salao_Ambie_ID primary key (Id_Amb));
 
 create table Sobremesa (
      Indice_prod serial not null,
@@ -219,9 +218,9 @@ create table Sobremesa (
 --      foreign key (Indice_estoq)
 --      references Estoque;
 
--- alter table Ambiente add constraint ID_Ambiente_CHK
+-- alter table Ambiente add constraint Id_Ambiente_CHK
 --      check(exists(select * from F_CompostaPor_A
---                   where F_CompostaPor_A.ID_Amb = ID_Amb)); 
+--                   where F_CompostaPor_A.Id_Amb = Id_Amb)); 
 
 -- alter table Ambiente add constraint EXCL_Ambiente
 --      check((Cozinha is not null and Salao is null and Indice_estoq is null)
@@ -229,7 +228,7 @@ create table Sobremesa (
 --            or (Cozinha is null and Salao is null and Indice_estoq is not null)
 --            or (Cozinha is null and Salao is null and Indice_estoq is null)); 
 
--- alter table Ambiente add constraint SID_Ambie_Estoq_FK
+-- alter table Ambiente add constraint SId_Ambie_Estoq_FK
 --      foreign key (Indice_estoq)
 --      references Estoque;
 
@@ -282,7 +281,7 @@ create table Sobremesa (
 --                   where Pedido.Id_cliente = Id_cliente)); 
 
 -- alter table Cozinha add constraint ID_Cozin_Ambie_FK
---      foreign key (ID_Amb)
+--      foreign key (Id_Amb)
 --      references Ambiente;
 
 -- alter table Estoque add constraint ID_Estoque_CHK
@@ -294,7 +293,7 @@ create table Sobremesa (
 --      references Franquia;
 
 -- alter table F_CompostaPor_A add constraint EQU_F_Com_Ambie_FK
---      foreign key (ID_Amb)
+--      foreign key (Id_Amb)
 --      references Ambiente;
 
 -- alter table F_Vende_P add constraint EQU_F_Ven_Produ
@@ -361,7 +360,7 @@ create table Sobremesa (
 --            or (Acompanhamento is null and Sobremesa is null and Lanche is null and Bebida is null)); 
 
 -- alter table Salao add constraint ID_Salao_Ambie_FK
---      foreign key (ID_Amb)
+--      foreign key (Id_Amb)
 --      references Ambiente;
 
 -- alter table Sobremesa add constraint REF_Sobre_Estoq_FK
@@ -382,13 +381,13 @@ create table Sobremesa (
 -- create index REF_Acomp_Estoq_IND
 --      on Acompanhamento (Indice_estoq);
 
--- create unique index ID_Ambiente_IND
---      on Ambiente (ID_Amb);
+-- create unique index Id_Ambiente_IND
+--      on Ambiente (Id_Amb);
 
--- create unique index SID_Ambiente_IND
+-- create unique index SId_Ambiente_IND
 --      on Ambiente (Id_ambiente);
 
--- create unique index SID_Ambie_Estoq_IND
+-- create unique index SId_Ambie_Estoq_IND
 --      on Ambiente (Indice_estoq);
 
 -- create unique index ID_Avaliacao_IND
@@ -428,16 +427,16 @@ create table Sobremesa (
 --      on Cliente (Id_cliente);
 
 -- create unique index ID_Cozin_Ambie_IND
---      on Cozinha (ID_Amb);
+--      on Cozinha (Id_Amb);
 
 -- create unique index ID_Estoque_IND
 --      on Estoque (Indice_estoq);
 
 -- create unique index ID_F_CompostaPor_A_IND
---      on F_CompostaPor_A (Id_franquia, ID_Amb);
+--      on F_CompostaPor_A (Id_franquia, Id_Amb);
 
 -- create index EQU_F_Com_Ambie_IND
---      on F_CompostaPor_A (ID_Amb);
+--      on F_CompostaPor_A (Id_Amb);
 
 -- create unique index ID_F_Vende_P_IND
 --      on F_Vende_P (Indice_prod, Id_franquia);
@@ -482,7 +481,7 @@ create table Sobremesa (
 --      on Produto (Indice_prod);
 
 -- create unique index ID_Salao_Ambie_IND
---      on Salao (ID_Amb);
+--      on Salao (Id_Amb);
 
 -- create index REF_Sobre_Estoq_IND
 --      on Sobremesa (Indice_estoq);

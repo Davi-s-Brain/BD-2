@@ -314,10 +314,11 @@ INSERT INTO sobremesa (
 
 INSERT INTO acompanhamento (
     Indice_prod,
+    Tipo_acompanhamento,
     Indice_estoq) VALUES
-        (51, 91),
-        (52, 92),
-        (53, 93),
-        (54, 94),
-        (55, 95);
+        (51, 'Assado', 91),
+        (52, 'Frito', 92),
+        (53, 'Frito', 93),
+        (54, 'Frito', 94),
+        (55, 'Salada', 95);
 

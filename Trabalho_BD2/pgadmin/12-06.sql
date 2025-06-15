@@ -12,8 +12,8 @@
 -- Database Section
 -- ________________ 
 
-DROP database if exists SQL;
---create database SQL;
+DROP database if exists RanBurguer;
+create database RanBurguer;
 
 
 -- DBSpace Section
@@ -23,6 +23,7 @@ DROP database if exists SQL;
 -- Tables Section
 -- _____________ 
 
+--Saritcha amor da minha vida
 create table Acompanhamento (
      Indice_prod numeric(5) not null,
      Tipo_acompanhamento varchar(50) not null,
@@ -31,15 +32,13 @@ create table Acompanhamento (
 
 create table Ambiente (
      Id_Amb numeric(5) not null,
-     Indice_estoq serial,
      Tamanho_ambiente float(1) not null,
      Quantidade_desse_ambiente float(1) not null,
      Nivel_limpeza varchar(20) not null,
      Detetizado char not null,
-     Salao numeric(10),
-     Cozinha numeric(10),
-     constraint Id_Ambiente_ID primary key (Id_Amb),
-     constraint SId_Ambie_Estoq_ID unique (Indice_estoq));
+     Salao boolean,
+     Cozinha boolean,
+     constraint Id_Ambiente_ID primary key (Id_Amb));
 
 create table Avaliacao (
      Indice_av numeric(5) not null,
@@ -58,7 +57,7 @@ create table Bebida (
 
 create table Brinde (
      Id_brinde numeric(5) not null,
-     Indice_prod serial not null,
+     Indice_prod numeric(5) not null,
      Tipo_brinde varchar(1) not null,
      Indice_estoq serial not null,
      constraint ID_Brinde_ID primary key (Id_brinde),
@@ -70,9 +69,9 @@ create table C_Escolhe_P (
      constraint ID_C_Escolhe_P_ID primary key (Indice_prod, Id_cliente));
 
 create table C_Registra_A (
-     Id_pedido numeric(5) not null,
+     Id_pedido uuid not null,
      Id_cliente numeric(11) not null,
-     Indice_av n not null,
+     Indice_av numeric(5) not null,
      constraint ID_C_Reg_Pedid_ID primary key (Id_pedido),
      constraint SID_C_Reg_Clien_ID unique (Id_cliente),
      constraint SID_C_Reg_Avali_ID unique (Indice_av));
@@ -101,7 +100,8 @@ create table Cozinha (
      Quant_fritadeira float(1) not null,
      constraint ID_Cozin_Ambie_ID primary key (Id_Amb));
 
-create table Estoque (
+--Rafa amor da vida da Sarah
+create table Estoque ( --ok
      Indice_estoq serial not null,
      Nome_produto varchar(50) not null,
      Quantidade float(1) not null,
@@ -109,20 +109,16 @@ create table Estoque (
      Data_fabricacao date not null,
      Data_validade date not null,
      Lote numeric(8) not null,
-     Preco_compra_mercado float(1) not null,
-     constraint ID_Estoque_ID primary key (Indice_estoq));
+     Preco_compra_mercado float(1) not null
+     constraint ID_Estoque_ID primary key (Indice_estoq)
+     );
 
-create table F_CompostaPor_A (
-     Id_Amb numeric(5) not null,
+create table F_Vende_P (--depois
      Id_franquia numeric(5) not null,
-     constraint ID_F_CompostaPor_A_ID primary key (Id_franquia, Id_Amb));
-
-create table F_Vende_P (
-     Id_franquia serial not null,
-     Indice_prod serial not null,
+     Indice_prod numeric(5) not null,
      constraint ID_F_Vende_P_ID primary key (Indice_prod, Id_franquia));
 
-create table Franquia (
+create table Franquia ( --ok
      Id_franquia numeric(5) not null,
      Nome_franquia varchar(50) not null,
      CNPJ numeric(14) not null,
@@ -130,8 +126,9 @@ create table Franquia (
      E_mail_franq varchar(50) not null,
      Data_inauguracao_franq date not null,
      constraint ID_Franquia_ID primary key (Id_franquia));
+     --alter table foreing key
 
-create table Funcionario (
+create table Funcionario ( --ok
      Id_func numeric(5) not null,
      Nome_func varchar(50) not null,
      CPF numeric(11) not null,
@@ -141,11 +138,11 @@ create table Funcionario (
      Data_admissao date not null,
      Turno varchar(20) not null,
      Tipo_de_contrato varchar(20) not null,
-     Status varchar(20) not null,
+     Status_func varchar(20) not null,
      Id_franquia serial not null,
      constraint ID_Funcionario_ID primary key (Id_func));
 
-create table Ingrediente (
+create table Ingrediente (  --ok
      Id_ingred numeric(5) not null,
      Tipo_ingred varchar(50) not null,
      Nome_ingred varchar(50) not null,
@@ -154,19 +151,19 @@ create table Ingrediente (
      Indice_estoq serial,
      constraint ID_Ingrediente_ID primary key (Id_ingred));
 
-create table L_Contem_I (
+create table L_Contem_I ( --ok
      Id_ingred numeric(5) not null,
-     Indice_prod serial not null,
+     Indice_prod numeric(5) not null,
      constraint ID_L_Contem_I_ID primary key (Id_ingred, Indice_prod));
 
-create table Lanche (
-     Indice_prod serial not null,
+create table Lanche ( --ok mas tem que confirmar com o Davi
+     Indice_prod numeric(5) not null,
      Ingredientes varchar(50) not null,
      Tamanho_lanche varchar(20) not null,
      constraint ID_Lanch_Produ_ID primary key (Indice_prod));
 
 create table Pedido (
-     Id_pedido UUID not null,
+     Id_pedido uuid not null,
      Data_pedido date not null,
      Hora_pedido varchar(5) not null,
      Valor_total_pedido float(1) not null,
@@ -200,7 +197,7 @@ create table Salao (
      constraint ID_Salao_Ambie_ID primary key (Id_Amb));
 
 create table Sobremesa (
-     Indice_prod serial not null,
+     Indice_prod numeric(5) not null,
      Tipo_sobremesa varchar(50) not null,
      Sabor varchar(50) not null,
      Indice_estoq serial,
@@ -383,9 +380,6 @@ create table Sobremesa (
 
 -- create unique index Id_Ambiente_IND
 --      on Ambiente (Id_Amb);
-
--- create unique index SId_Ambiente_IND
---      on Ambiente (Id_ambiente);
 
 -- create unique index SId_Ambie_Estoq_IND
 --      on Ambiente (Indice_estoq);

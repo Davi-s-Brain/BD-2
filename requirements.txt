@@ -1,8 +1,17 @@
-fastapi
-uvicorn
-python-multipart
-passlib[bcrypt]
-python-jose[cryptography]
-slowapi
-sqlite-utils
-python-magic  # ou python-magic-bin no Windows
+fastapi==0.111.0
+uvicorn==0.30.1
+
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.9
+
+slowapi==0.1.8
+
+pydantic==2.7.1
+wrapt==1.16.0  # usado internamente por algumas libs, útil manter
+
+# Apenas uma das duas libs abaixo, conforme o SO:
+# Se estiver no Linux/macOS:
+python-magic==0.4.27
+# Ou, se estiver no Windows:
+# python-magic-bin==0.4.14

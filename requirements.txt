@@ -1,0 +1,7 @@
+fastapi[standard]
+uvicorn[standard]==0.20.0
+pydantic==1.10.12
+python-jose[cryptography]==3.3.0
+slowapi==0.1.9
+wrapt==1.16.0
+python-multipart==0.0.9

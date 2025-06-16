@@ -7,7 +7,7 @@ create table Brinde (
      constraint SID_Brind_Lanch_ID unique (Indice_prod));
 
 INSERT INTO Brinde (Id_brinde, Indice_prod, Tipo_brinde, Indice_estoq) VALUES
-(1, 57, 'carrinho', 97),
-(2, 58, 'boneca', 98),
-(3, 59, 'pelucia', 99),
-(4, 60, 'jogo', 100);
+(1, 30, 'carrinho', 97),
+(2, 31, 'boneca', 98),
+(3, 32, 'pelucia', 99),
+(4, 33, 'jogo', 100);

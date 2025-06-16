@@ -66,11 +66,8 @@ INSERT INTO Produto (
         (53, 'Batata Smile', 6.00, 100, 'gr','não', 'Frito', FALSE, FALSE, FALSE, TRUE),
         (54, 'Onion Rings', 9.00, 90, 'gr', 'não', 'Frito', FALSE, FALSE, FALSE, TRUE),
         (55, 'Salada Fresca', 10.00, 80, 'gr','não', 'Salada', FALSE, FALSE, FALSE, TRUE),
-        (56, 'Nuggets', 9.90, 80, 'gr','não', 'Frango', FALSE, FALSE, FALSE, TRUE),
-        (57,'Carrinho Hot Weels', 20, 'un', '2025-01-01', '2027-12-31', 317, 2.00),
-        (58,'Barbir Girl', 20, 'un', '2025-01-01', '2027-12-31', 318, 2.00),
-        (59,'Ursinho Puff', 20, 'un', '2025-01-01', '2027-12-31', 319, 2.00),
-        (60,'Ioio', 20, 'un', '2025-01-01', '2027-12-31', 320, 2.00);
+        (56, 'Nuggets', 9.90, 80, 'gr','não', 'Frango', FALSE, FALSE, FALSE, TRUE);
+
 
 
 INSERT INTO Ingrediente 

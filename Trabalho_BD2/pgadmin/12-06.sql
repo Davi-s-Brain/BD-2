@@ -24,13 +24,13 @@ create database RanBurguer;
 -- _____________ 
 
 --Saritcha amor da minha vida
-create table Acompanhamento (
+create table Acompanhamento (--ok
      Indice_prod numeric(5) not null,
      Tipo_acompanhamento varchar(50) not null,
      Indice_estoq serial,
      constraint ID_Acomp_Produ_ID primary key (Indice_prod));
 
-create table Ambiente (
+create table Ambiente (--ok
      Id_Amb numeric(5) not null,
      Id_franquia numeric(5) not null,
      Tamanho_ambiente float(3)not null,
@@ -41,14 +41,14 @@ create table Ambiente (
      Cozinha boolean,
      constraint Id_Ambiente_ID primary key (Id_Amb));
 
-create table Avaliacao (
+create table Avaliacao (--ok
      Indice_av numeric(5) not null,
      NPS float(1) not null,
      Campo_texto varchar(200) not null,
      Data_av date not null,
      constraint ID_Avaliacao_ID primary key (Indice_av));
 
-create table Bebida (
+create table Bebida (--ok
      Indice_prod numeric(5) not null,
      Marca varchar(50) not null,
      Sabor varchar(50) not null,
@@ -56,22 +56,22 @@ create table Bebida (
      Indice_estoq serial,
      constraint ID_Bebid_Produ_ID primary key (Indice_prod));
 
-create table Brinde (
+create table Brinde (--ok
      Id_brinde numeric(5) not null,
      Indice_prod numeric(5) not null,
-     Tipo_brinde varchar(1) not null,
+     Tipo_brinde varchar(20) not null,
      Indice_estoq serial not null,
      constraint ID_Brinde_ID primary key (Id_brinde),
      constraint SID_Brind_Lanch_ID unique (Indice_prod));
 
-create table Ped_Escolhe_Prod (
+create table Ped_Escolhe_Prod (--NÃO
      Id_Pedido serial,
      Indice_prod numeric(5) not null,
      Quantidade numeric(2) not null,
      constraint ID_Ped_Escolhe_Prod_ID primary key (Id_Pedido, Indice_prod)
      constraint ID_Pedido_ID foreign key (Id_Pedido));
 
-create table C_Registra_A (
+create table C_Registra_A (--NÃO
      Id_pedido uuid not null,
      Id_cliente numeric(11) not null,
      Indice_av numeric(5) not null,
@@ -79,7 +79,7 @@ create table C_Registra_A (
      constraint SID_C_Reg_Clien_ID unique (Id_cliente),
      constraint SID_C_Reg_Avali_ID unique (Indice_av));
 
-create table Cliente (
+create table Cliente (--ok
      Id_cliente numeric(11) not null,
      Primeiro_nome_client varchar(50) not null,
      Ultimo_nome_client varchar(50) not null,
@@ -93,9 +93,11 @@ create table Cliente (
      E_celiaco boolean not null,
      E_vegetariano boolean not null,
      E_vegano boolean not null,
-     constraint ID_Cliente_ID primary key (Id_cliente));
+     Senha_cliente varchar(20) not null,
+     constraint ID_Cliente_ID primary key (Id_cliente),
+     constraint CPF_client unique (CPF_client));
 
-create table Cozinha (
+create table Cozinha (--ok
      Id_Amb numeric(5) not null,
      Quant_geladeira float(1) not null,
      Quant_chapas float(1) not null,
@@ -104,7 +106,7 @@ create table Cozinha (
      constraint ID_Cozin_Ambie_ID primary key (Id_Amb));
 
 --Rafa amor da vida da Sarah
-create table Estoque ( --ok
+create table Estoque (--ok
      Indice_estoq serial not null,
      Nome_produto varchar(50) not null,
      Quantidade float(1) not null,
@@ -116,12 +118,12 @@ create table Estoque ( --ok
      constraint ID_Estoque_ID primary key (Indice_estoq)
      );
 
-create table F_Vende_P (--depois
+create table F_Vende_P (--NÃO
      Id_franquia numeric(5) not null,
      Indice_prod numeric(5) not null,
      constraint ID_F_Vende_P_ID primary key (Indice_prod, Id_franquia));
 
-create table Franquia ( --ok
+create table Franquia (--ok
      Id_franquia numeric(5) not null,
      Nome_franquia varchar(50) not null,
      CNPJ numeric(14) not null,
@@ -131,7 +133,7 @@ create table Franquia ( --ok
      constraint ID_Franquia_ID primary key (Id_franquia));
      --alter table foreing key
 
-create table Funcionario ( --depois
+create table Funcionario (--ok
      Id_func numeric(5) not null,
      Nome_func varchar(50) not null,
      CPF numeric(11) not null,
@@ -143,10 +145,10 @@ create table Funcionario ( --depois
      Tipo_de_contrato varchar(20) not null,
      Status_func varchar(20) not null,
      Id_franquia serial not null,
-     Senha varchar(4),
+     Senha_Func varchar(20) not null,
      constraint ID_Funcionario_ID primary key (Id_func));
 
-create table Ingrediente (  --ok
+create table Ingrediente (--ok
      Id_ingred numeric(5) not null,
      Tipo_ingred varchar(50) not null,
      Nome_ingred varchar(50) not null,
@@ -155,18 +157,18 @@ create table Ingrediente (  --ok
      Indice_estoq serial,
      constraint ID_Ingrediente_ID primary key (Id_ingred));
 
-create table L_Contem_I ( --ok
+create table L_Contem_I (--NÃO
      Id_ingred numeric(5) not null,
      Indice_prod numeric(5) not null,
      constraint ID_L_Contem_I_ID primary key (Id_ingred, Indice_prod));
 
-create table Lanche ( --ok
+create table Lanche (--ok
      Indice_prod numeric(5) not null,
      Ingredientes varchar(100) not null,
      Tamanho_lanche varchar(20) not null,
      constraint ID_Lanch_Produ_ID primary key (Indice_prod));
 
-create table Pedido (
+create table Pedido (--ok
      Id_pedido serial not null,
      Data_pedido date not null,
      Hora_pedido varchar(5) not null,
@@ -192,7 +194,7 @@ create table Produto (--ok
      Acompanhamento boolean,
      constraint ID_Produto_ID primary key (Indice_prod));
 
-create table Salao (
+create table Salao (--ok
      Id_Amb numeric(5) not null,
      Quant_cadeira float(1) not null,
      Quant_mesa float(1) not null,

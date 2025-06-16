@@ -66,7 +66,11 @@ INSERT INTO Produto (
         (53, 'Batata Smile', 6.00, 100, 'gr','não', 'Frito', FALSE, FALSE, FALSE, TRUE),
         (54, 'Onion Rings', 9.00, 90, 'gr', 'não', 'Frito', FALSE, FALSE, FALSE, TRUE),
         (55, 'Salada Fresca', 10.00, 80, 'gr','não', 'Salada', FALSE, FALSE, FALSE, TRUE),
-        (56, 'Nuggets', 9.90, 80, 'gr','não', 'Frango', FALSE, FALSE, FALSE, TRUE);
+        (56, 'Nuggets', 9.90, 80, 'gr','não', 'Frango', FALSE, FALSE, FALSE, TRUE),
+        (57,'Carrinho Hot Weels', 20, 'un', '2025-01-01', '2027-12-31', 317, 2.00),
+        (58,'Barbir Girl', 20, 'un', '2025-01-01', '2027-12-31', 318, 2.00),
+        (59,'Ursinho Puff', 20, 'un', '2025-01-01', '2027-12-31', 319, 2.00),
+        (60,'Ioio', 20, 'un', '2025-01-01', '2027-12-31', 320, 2.00);
 
 
 INSERT INTO Ingrediente 
@@ -93,9 +97,9 @@ INSERT INTO Ingrediente
     (14, 'Vegetal', 'Manjericão', 1.50, 0.03, 34),
     (15, 'Carne', 'Hambúrguer de Picanha', 8.00, 0.15, 35),
     (16, 'Carne', 'Hambúrguer de Fraldinha', 8.00, 0.15, 36),
-    (17, 'Carne', 'Hambúrguer de Frango', 7.50, 0.13, 37),
+    (17, 'Carne', 'Hambúrguer Veggie', 7.50, 0.13, 37),
     (18, 'Carne', 'Bacon', 3.00, 0.05, 38),
-    (19, 'Carne', 'Presgrto', 2.50, 0.04, 39),
+    (19, 'Carne', 'Peito de Peru', 2.50, 0.04, 39),
     (20, 'Carne', 'Linguiça Calabresa', 3.20, 0.06, 40),
     (21, 'Carne', 'Linguiça Toscana', 4.00, 0.10, 41),
     (22, 'Carne', 'Hambúrguer de Costela', 6.00, 0.20, 42),
@@ -137,9 +141,9 @@ INSERT INTO Ingrediente
     (58, 'Pão', 'Pão Sírio', 3.00, 0.10, 78),
     (59, 'Pão', 'Pão de Milho', 3.50, 0.12, 79),
     (60, 'Pão', 'Pão de Centeio', 4.00, 0.11, 80),
-    (1001, 'Carne', 'Frango desfiado temperado', 6.00, 40, 37),
-    (1002, 'Molho', 'Maionese Heinz', 2.00, 10, 65),
-    (1003, 'Pão', 'Pão de forma integral', 1.50, 30, 79);
+    (61, 'Carne', 'Pastrami', 6.00, 40, 37),
+    (62, 'Carne', 'Steak', 2.00, 10, 65),
+    (63, 'Pão', 'Pão de forma integral', 1.50, 30, 79);
 
 INSERT INTO Estoque (
     Indice_estoq,
@@ -189,7 +193,7 @@ INSERT INTO Estoque (
     (36, 'Fraldinha', 50, 'gr', '2023-01-01', '2023-12-31', 216, 6.50),
     (37, 'Frango', 60, 'gr', '2023-01-01', '2023-12-31', 217, 6.00),
     (38, 'Steak', 70, 'gr', '2023-01-01', '2023-12-31', 218, 2.50),
-    (39, 'Presgrto', 80, 'gr', '2023-01-01', '2023-12-31', 219, 2.00),
+    (39, 'Peito de Peru', 80, 'gr', '2023-01-01', '2023-12-31', 219, 2.00),
     (40, 'Linguiça Calabresa', 60, 'gr', '2023-01-01', '2023-12-31', 220, 2.80),
     (41, 'Linguiça Toscana', 50, 'gr', '2023-01-01', '2023-12-31', 221, 3.50),
     (42, 'Costela', 40, 'gr', '2023-01-01', '2023-12-31', 222, 5.00),
@@ -246,7 +250,11 @@ INSERT INTO Estoque (
     (93, 'Batata Smile', 80, 'gr', '2025-01-01', '2025-12-31', 313, 3.00),
     (94, 'Onion Rings', 60, 'gr', '2025-01-01', '2025-12-31', 314, 4.50),
     (95, 'Salada Fresca', 30, 'gr', '2025-01-01', '2025-12-31', 315, 5.00),
-    (96, 'Nuggets', 80, 'gr', '2025-01-01', '2025-12-31', 316, 4.00);
+    (96, 'Nuggets', 80, 'gr', '2025-01-01', '2025-12-31', 316, 4.00),
+    (97,'Carrinho Hot Weels', 20, 'un', '2025-01-01', '2027-12-31', 317, 2.00),
+    (98,'Barbir Girl', 20, 'un', '2025-01-01', '2027-12-31', 318, 2.00),
+    (99,'Ursinho Puff', 20, 'un', '2025-01-01', '2027-12-31', 319, 2.00),
+    (100,'Ioio', 20, 'un', '2025-01-01', '2027-12-31', 320, 2.00);
 
 
 INSERT INTO Bebida (
@@ -333,3 +341,48 @@ INSERT INTO Acompanhamento (
     (54, 'Frito', 94),
     (55, 'Salada', 95),
     (56, 'Frito', 96);
+
+INSERT INTO L_Contem_I(
+    Id_ingred,
+    Indice_prod)
+    VALUES
+    (54, 21),
+    (23, 21),
+    (55, 22),
+    (23, 22),
+    (56, 23),
+    (26, 23),
+    (55, 24),
+    (23, 24),
+    (55, 25),
+    (23, 25),
+    (56, 26),
+    (19, 26),
+    (56, 27),
+    (61, 27),
+    (55, 28),
+    (62, 28),
+    (54, 29),
+    (24, 29),
+    (55, 30),
+    (15, 30),
+    (55, 31),
+    (16, 31),
+    (55, 32),
+    (23, 32),
+    (55, 33),
+    (22, 33),
+    (54, 34),
+    (17, 34),
+    (55, 35),
+    (15, 35),
+    (55, 36),
+    (15, 36),
+    (55, 37),
+    (23, 37),
+    (55, 38),
+    (16, 38),
+    (55, 39),
+    (22, 39),
+    (55, 40),
+    (18, 40);

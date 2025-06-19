@@ -71,7 +71,7 @@ create table Ped_Escolhe_Prod (--ok
      constraint ID_Ped_Escolhe_Prod_ID primary key (Id_Pedido, Indice_prod)
      constraint ID_Pedido_ID foreign key (Id_Pedido));
 
-create table C_Registra_A (--NÃO
+create table C_Registra_A (--ok
      Id_pedido uuid not null,
      Id_cliente numeric(11) not null,
      Indice_av numeric(5) not null,

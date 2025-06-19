@@ -65,7 +65,7 @@ create table Brinde (--ok
      constraint SID_Brind_Lanch_ID unique (Indice_prod));
 
 create table Ped_Escolhe_Prod (--NÃO
-     Id_Pedido serial,
+     Id_Pedido serial, --TEM QUE SER UM INTEIRO NÉ?
      Indice_prod numeric(5) not null,
      Quantidade numeric(2) not null,
      constraint ID_Ped_Escolhe_Prod_ID primary key (Id_Pedido, Indice_prod)
@@ -97,7 +97,7 @@ create table Cliente (--ok
      constraint ID_Cliente_ID primary key (Id_cliente),
      constraint CPF_client unique (CPF_client));
 
-create table Cozinha (--ok
+create table Cozinha (--NÃO
      Id_Amb numeric(5) not null,
      Quant_geladeira float(1) not null,
      Quant_chapas float(1) not null,
@@ -194,7 +194,7 @@ create table Produto (--ok
      Acompanhamento boolean,
      constraint ID_Produto_ID primary key (Indice_prod));
 
-create table Salao (--ok
+create table Salao (--NÃO
      Id_Amb numeric(5) not null,
      Quant_cadeira float(1) not null,
      Quant_mesa float(1) not null,

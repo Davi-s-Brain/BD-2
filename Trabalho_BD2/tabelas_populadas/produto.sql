@@ -253,7 +253,7 @@ INSERT INTO Estoque (
     (99,'Ursinho Puff', 20, 'un', '2025-01-01', '2027-12-31', 319, 2.00),
     (100,'Ioio', 20, 'un', '2025-01-01', '2027-12-31', 320, 2.00);
 
-
+--verificar
 INSERT INTO Bebida (
         Indice_prod,
         Marca,

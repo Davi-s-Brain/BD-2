@@ -24,13 +24,13 @@ create database RanBurguer;
 -- _____________ 
 
 --Saritcha amor da minha vida
-create table Acompanhamento (--ok
+create table Acompanhamento (--ok ok
      Indice_prod numeric(5) not null,
      Tipo_acompanhamento varchar(50) not null,
-     Indice_estoq serial,
+     Indice_estoq integer,
      constraint ID_Acomp_Produ_ID primary key (Indice_prod));
 
-create table Ambiente (--ok
+create table Ambiente (--ok ok
      Id_Amb numeric(5) not null,
      Id_franquia numeric(5) not null,
      Tamanho_ambiente float(3)not null,
@@ -41,7 +41,7 @@ create table Ambiente (--ok
      Cozinha boolean,
      constraint Id_Ambiente_ID primary key (Id_Amb));
 
-create table Avaliacao (--ok
+create table Avaliacao (--ok ok
      Indice_av numeric(5) not null,
      NPS float(1) not null,
      Campo_texto varchar(200) not null,
@@ -53,23 +53,22 @@ create table Bebida (--ok
      Marca varchar(50) not null,
      Sabor varchar(50) not null,
      E_Alcoolico boolean not null,
-     Indice_estoq serial,
+     Indice_estoq integer,
      constraint ID_Bebid_Produ_ID primary key (Indice_prod));
 
 create table Brinde (--ok
      Id_brinde numeric(5) not null,
      Indice_prod numeric(5) not null,
      Tipo_brinde varchar(20) not null,
-     Indice_estoq serial not null,
+     Indice_estoq integer not null,
      constraint ID_Brinde_ID primary key (Id_brinde),
      constraint SID_Brind_Lanch_ID unique (Indice_prod));
 
 create table Ped_Escolhe_Prod (--ok
-     Id_Pedido serial, --TEM QUE SER UM INTEIRO NÉ?
+     Id_Pedido integer not null,
      Indice_prod numeric(5) not null,
      Quantidade numeric(2) not null,
-     constraint ID_Ped_Escolhe_Prod_ID primary key (Id_Pedido, Indice_prod)
-     constraint ID_Pedido_ID foreign key (Id_Pedido));
+     constraint ID_Ped_Escolhe_Prod_ID primary key (Id_Pedido, Indice_prod));
 
 create table C_Registra_A (--ok
      Id_pedido uuid not null,
@@ -114,9 +113,8 @@ create table Estoque (--ok
      Data_fabricacao date not null,
      Data_validade date not null,
      Lote numeric(8) not null,
-     Preco_compra_mercado float(1) not null
-     constraint ID_Estoque_ID primary key (Indice_estoq)
-     );
+     Preco_compra_mercado float(1) not null,
+     constraint ID_Estoque_ID primary key (Indice_estoq));
 
 create table F_Vende_P (--ok
      Id_franquia numeric(5) not null,
@@ -144,7 +142,7 @@ create table Funcionario (--ok
      Turno varchar(20) not null,
      Tipo_de_contrato varchar(20) not null,
      Status_func varchar(20) not null,
-     Id_franquia serial not null,
+     Id_franquia integer not null,
      Senha_Func varchar(20) not null,
      constraint ID_Funcionario_ID primary key (Id_func));
 
@@ -154,7 +152,7 @@ create table Ingrediente (--ok
      Nome_ingred varchar(50) not null,
      Preco_venda_cliente float(1) not null,
      Peso_ingred float(1) not null,
-     Indice_estoq serial,
+     Indice_estoq integer,
      constraint ID_Ingrediente_ID primary key (Id_ingred));
 
 create table L_Contem_I (--ok
@@ -207,7 +205,7 @@ create table Sobremesa (--ok
      Indice_prod numeric(5) not null,
      Tipo_sobremesa varchar(50) not null,
      Sabor varchar(50) not null,
-     Indice_estoq serial,
+     Indice_estoque integer,
      constraint ID_Sobre_Produ_ID primary key (Indice_prod));
 
 
@@ -256,11 +254,11 @@ create table Sobremesa (--ok
 --      foreign key (Indice_estoq)
 --      references Estoque;
 
--- alter table C_Escolhe_P add constraint REF_C_Esc_Produ
+-- alter table Ped_Escolhe_Prod add constraint REF_C_Esc_Produ
 --      foreign key (Indice_prod)
 --      references Produto;
 
--- alter table C_Escolhe_P add constraint EQU_C_Esc_Clien_FK
+-- alter table Ped_Escolhe_Prod add constraint EQU_C_Esc_Clien_FK
 --      foreign key (Id_cliente)
 --      references Cliente;
 

@@ -1,4 +1,3 @@
-
 INSERT INTO Avaliacao(
     Indice_av,
     NPS,

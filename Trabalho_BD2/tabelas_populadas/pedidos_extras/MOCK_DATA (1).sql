@@ -1,1000 +1,1000 @@
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-12', '15:10', 133.95, 'Pix', true, 'Com pimenta', 130, 111);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-06', '18:07', 158.25, 'Cartao', true, 'Ketchup adicional', 385, 74);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-25', '17:46', 86.96, 'Pix', true, 'Guardanapo adicional', 626, 56);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-09', '12:55', 169.94, 'Pix', true, 'Sem cebola', 50, 156);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-23', '18:17', 159.49, 'Dinheiro', false, 'Sem molhos', 717, 57);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-26', '13:37', 85.32, 'Cartao', false, 'Cliente fiel', 363, 195);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-29', '11:23', 70.16, 'Cartao', true, 'Ketchup adicional', 626, 18);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-02', '19:46', 160.31, 'Cartao', false, 'Para viagem', 362, 10);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-18', '17:35', 98.25, 'Dinheiro', true, 'Guardanapo adicional', 452, 61);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-27', '17:11', 64.95, 'Pix', false, 'Com pimenta', 713, 80);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-14', '12:35', 32.72, 'Cartao', true, 'Cliente fiel', 718, 169);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-08', '23:19', 194.6, 'Dinheiro', true, 'Ketchup adicional', 110, 46);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-13', '19:48', 137.95, 'Dinheiro', true, 'Sem picles', 496, 134);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-02', '12:30', 144.56, 'Pix', false, 'Cliente fiel', 184, 118);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-04', '16:24', 111.82, 'Pix', true, 'Com pimenta', 282, 83);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-18', '13:04', 88.11, 'Pix', true, 'Sem molhos', 418, 15);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-20', '20:36', 154.32, 'Cartao', false, 'Para viagem', 227, 100);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-28', '17:04', 93.82, 'Dinheiro', true, 'Sem observações', 433, 3);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-29', '14:47', 26.2, 'Pix', false, 'Sem picles', 99, 27);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-15', '12:24', 28.03, 'Pix', false, 'Sem molhos', 341, 24);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-20', '20:26', 106.42, 'Dinheiro', true, 'Sem picles', 416, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-19', '16:56', 185.05, 'Pix', false, 'Guardanapo adicional', 369, 183);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-07', '19:03', 177.36, 'Dinheiro', false, 'Sem molhos', 149, 49);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-22', '19:21', 113.45, 'Dinheiro', false, 'Para viagem', 178, 157);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-11', '21:15', 90.28, 'Cartao', true, 'Ketchup adicional', 308, 52);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-10', '15:14', 188.78, 'Dinheiro', false, 'Guardanapo adicional', 394, 77);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-06', '11:08', 27.15, 'Cartao', true, 'Sem observações', 522, 118);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-18', '20:48', 34.65, 'Cartao', true, 'Sem molhos', 301, 103);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-02', '19:46', 174.4, 'Cartao', false, 'Ketchup adicional', 625, 64);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-17', '13:28', 31.29, 'Cartao', true, 'Guardanapo adicional', 634, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-31', '19:00', 95.07, 'Cartao', true, 'Ketchup adicional', 158, 85);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-18', '18:06', 127.78, 'Dinheiro', true, 'Sem molhos', 725, 94);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-28', '17:59', 139.34, 'Cartao', false, 'Com pimenta', 358, 118);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-18', '19:35', 116.22, 'Cartao', true, 'Para viagem', 308, 37);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-05', '16:08', 174.61, 'Pix', true, 'Cliente fiel', 428, 132);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-22', '22:23', 28.21, 'Cartao', true, 'Com pimenta', 51, 196);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-03', '18:04', 61.15, 'Cartao', true, 'Guardanapo adicional', 85, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-30', '14:53', 102.93, 'Dinheiro', true, 'Para viagem', 498, 102);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-23', '23:46', 57.42, 'Cartao', true, 'Ketchup adicional', 235, 9);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-09', '20:25', 41.21, 'Pix', true, 'Sem observações', 200, 10);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-27', '16:31', 165.23, 'Pix', true, 'Sem molhos', 634, 186);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-10', '17:53', 148.62, 'Pix', false, 'Ketchup adicional', 711, 114);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-24', '17:27', 101.98, 'Cartao', false, 'Sem picles', 282, 80);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-16', '23:08', 76.17, 'Pix', false, 'Guardanapo adicional', 649, 26);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-25', '19:26', 86.24, 'Dinheiro', false, 'Guardanapo adicional', 196, 123);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-08', '20:49', 164.15, 'Cartao', true, 'Sem picles', 26, 160);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-13', '12:18', 84.92, 'Pix', false, 'Cliente fiel', 5, 106);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-08', '18:34', 77.16, 'Cartao', false, 'Com pimenta', 294, 82);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-09', '23:21', 42.34, 'Dinheiro', false, 'Cliente fiel', 614, 99);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-03', '17:19', 60.1, 'Pix', true, 'Com pimenta', 733, 182);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-16', '12:13', 108.28, 'Dinheiro', false, 'Para viagem', 140, 98);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-12', '15:54', 104.58, 'Dinheiro', false, 'Guardanapo adicional', 46, 190);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-16', '14:18', 63.39, 'Cartao', false, 'Sem cebola', 724, 104);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-07', '21:57', 165.58, 'Cartao', false, 'Cliente fiel', 35, 71);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-17', '18:09', 164.06, 'Dinheiro', false, 'Guardanapo adicional', 179, 127);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-24', '12:00', 168.36, 'Cartao', false, 'Ketchup adicional', 227, 45);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-15', '20:55', 94.97, 'Pix', false, 'Sem picles', 256, 116);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-07', '11:22', 113.03, 'Cartao', false, 'Sem observações', 97, 183);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-16', '16:22', 40.85, 'Cartao', true, 'Sem picles', 285, 153);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-24', '21:26', 157.94, 'Pix', false, 'Ketchup adicional', 182, 60);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-11', '16:20', 180.63, 'Cartao', false, 'Para viagem', 706, 63);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-15', '18:19', 40.05, 'Pix', true, 'Guardanapo adicional', 645, 194);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-02', '20:03', 125.73, 'Cartao', false, 'Guardanapo adicional', 74, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-22', '15:20', 86.08, 'Cartao', true, 'Cliente fiel', 160, 3);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-30', '18:09', 154.11, 'Dinheiro', false, 'Sem molhos', 508, 4);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-07', '19:41', 120.62, 'Dinheiro', false, 'Sem molhos', 249, 129);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-03', '11:46', 46.63, 'Pix', true, 'Sem cebola', 248, 177);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-06', '15:16', 134.79, 'Cartao', false, 'Guardanapo adicional', 190, 63);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-28', '16:51', 180.4, 'Dinheiro', false, 'Com pimenta', 2, 132);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-28', '13:40', 150.33, 'Cartao', true, 'Sem cebola', 64, 17);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-18', '20:17', 141.25, 'Pix', false, 'Sem cebola', 739, 98);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-23', '11:14', 111.69, 'Pix', true, 'Com pimenta', 380, 60);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-12', '17:22', 197.42, 'Cartao', false, 'Sem cebola', 70, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-05', '14:23', 29.69, 'Pix', true, 'Sem cebola', 46, 159);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-05', '16:07', 96.64, 'Dinheiro', true, 'Guardanapo adicional', 475, 116);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-28', '16:42', 162.85, 'Dinheiro', false, 'Com pimenta', 455, 159);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-01', '11:36', 106.38, 'Cartao', true, 'Sem cebola', 317, 35);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-02', '16:49', 166.89, 'Pix', false, 'Sem observações', 150, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-14', '16:07', 77.34, 'Cartao', true, 'Cliente fiel', 358, 19);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-20', '13:40', 173.73, 'Cartao', false, 'Guardanapo adicional', 711, 116);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-08', '23:22', 31.79, 'Cartao', false, 'Cliente fiel', 138, 5);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-24', '20:08', 94.23, 'Cartao', true, 'Sem observações', 40, 168);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-13', '18:10', 93.22, 'Cartao', true, 'Sem observações', 662, 18);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-10', '12:11', 197.37, 'Dinheiro', false, 'Cliente fiel', 45, 15);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-28', '13:50', 177.49, 'Cartao', true, 'Sem observações', 458, 119);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-12', '23:17', 56.51, 'Cartao', true, 'Sem molhos', 720, 152);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-06', '11:15', 187.39, 'Pix', false, 'Sem cebola', 165, 141);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-05', '22:02', 145.79, 'Cartao', true, 'Sem molhos', 367, 28);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-06', '16:11', 169.54, 'Pix', true, 'Sem observações', 253, 22);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-17', '18:45', 109.64, 'Cartao', true, 'Com pimenta', 114, 134);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-26', '11:48', 169.52, 'Cartao', true, 'Ketchup adicional', 689, 22);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-22', '13:28', 25.09, 'Pix', false, 'Para viagem', 221, 197);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-23', '15:12', 122.33, 'Pix', true, 'Sem picles', 158, 193);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-05', '22:05', 149.48, 'Pix', false, 'Guardanapo adicional', 408, 45);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-15', '14:28', 33.64, 'Cartao', false, 'Com pimenta', 200, 187);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-25', '20:12', 42.7, 'Cartao', false, 'Sem molhos', 433, 90);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-03', '12:22', 125.46, 'Cartao', false, 'Com pimenta', 743, 28);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-15', '14:05', 47.93, 'Pix', true, 'Sem cebola', 316, 11);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-18', '19:29', 68.19, 'Pix', false, 'Cliente fiel', 80, 128);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-22', '13:18', 119.28, 'Cartao', false, 'Para viagem', 98, 143);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-22', '17:37', 111.18, 'Cartao', true, 'Sem cebola', 429, 29);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-02', '21:02', 180.01, 'Dinheiro', true, 'Guardanapo adicional', 611, 180);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-12', '12:06', 63.92, 'Cartao', false, 'Para viagem', 43, 63);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-14', '21:55', 137.38, 'Pix', true, 'Para viagem', 592, 150);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-24', '14:29', 183.65, 'Dinheiro', false, 'Sem picles', 328, 146);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-01', '15:26', 59.18, 'Dinheiro', true, 'Sem cebola', 236, 30);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-01', '16:41', 29.53, 'Pix', false, 'Sem molhos', 284, 23);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-03', '12:41', 32.24, 'Dinheiro', false, 'Sem cebola', 35, 164);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-14', '23:05', 94.46, 'Dinheiro', false, 'Sem cebola', 577, 102);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-16', '18:21', 42.46, 'Cartao', false, 'Com pimenta', 110, 50);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-22', '23:10', 37.21, 'Pix', false, 'Para viagem', 229, 56);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-06', '23:55', 169.7, 'Cartao', true, 'Para viagem', 525, 111);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-29', '11:50', 115.51, 'Dinheiro', true, 'Ketchup adicional', 297, 169);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-05', '18:49', 51.61, 'Cartao', false, 'Cliente fiel', 515, 111);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-22', '23:31', 171.71, 'Cartao', true, 'Cliente fiel', 706, 196);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-20', '16:29', 163.29, 'Dinheiro', false, 'Sem observações', 442, 25);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-01', '23:22', 183.64, 'Cartao', true, 'Sem observações', 594, 137);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-15', '16:37', 25.63, 'Cartao', false, 'Para viagem', 445, 185);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-24', '21:57', 95.68, 'Dinheiro', false, 'Sem cebola', 473, 110);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-04', '22:28', 168.7, 'Dinheiro', true, 'Com pimenta', 44, 157);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-01', '11:57', 141.33, 'Pix', true, 'Para viagem', 83, 165);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-16', '16:29', 180.48, 'Cartao', false, 'Com pimenta', 517, 96);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-11', '23:39', 178.76, 'Pix', false, 'Ketchup adicional', 661, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-24', '19:02', 109.1, 'Pix', true, 'Sem picles', 129, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-26', '12:19', 104.23, 'Cartao', false, 'Sem molhos', 343, 166);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-15', '14:34', 101.02, 'Cartao', false, 'Para viagem', 34, 144);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-21', '21:34', 87.37, 'Cartao', false, 'Sem cebola', 527, 175);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-26', '12:21', 139.18, 'Cartao', false, 'Sem observações', 547, 48);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-12', '20:46', 199.07, 'Cartao', true, 'Sem cebola', 211, 141);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-01', '12:22', 114.31, 'Cartao', false, 'Ketchup adicional', 579, 55);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-22', '17:33', 172.16, 'Cartao', false, 'Cliente fiel', 570, 96);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-28', '19:52', 76.72, 'Dinheiro', false, 'Para viagem', 279, 182);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-10', '15:57', 38.21, 'Pix', false, 'Guardanapo adicional', 34, 123);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-02', '22:38', 157.05, 'Cartao', true, 'Para viagem', 221, 99);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-19', '11:41', 175.27, 'Pix', false, 'Sem picles', 56, 69);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-27', '15:37', 31.69, 'Dinheiro', true, 'Sem molhos', 344, 194);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-21', '19:08', 71.56, 'Dinheiro', false, 'Ketchup adicional', 390, 162);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-27', '18:21', 53.36, 'Cartao', false, 'Guardanapo adicional', 663, 107);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-29', '17:43', 135.86, 'Dinheiro', false, 'Sem observações', 307, 37);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-01', '11:46', 173.87, 'Pix', false, 'Para viagem', 407, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-28', '23:08', 89.18, 'Pix', false, 'Sem cebola', 171, 46);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-04', '11:59', 179.98, 'Cartao', false, 'Ketchup adicional', 700, 78);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-12', '15:44', 76.68, 'Dinheiro', false, 'Sem observações', 4, 91);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-06', '23:54', 114.0, 'Dinheiro', true, 'Ketchup adicional', 273, 17);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-29', '23:13', 45.56, 'Dinheiro', true, 'Guardanapo adicional', 88, 99);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-25', '12:23', 56.01, 'Cartao', true, 'Com pimenta', 217, 115);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-06', '16:54', 93.38, 'Pix', false, 'Guardanapo adicional', 60, 130);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-04', '23:20', 115.64, 'Pix', true, 'Guardanapo adicional', 43, 134);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-26', '22:15', 73.52, 'Cartao', true, 'Ketchup adicional', 449, 89);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-13', '11:09', 134.94, 'Pix', true, 'Cliente fiel', 183, 11);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-23', '16:27', 30.19, 'Dinheiro', true, 'Ketchup adicional', 124, 7);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-16', '21:21', 117.78, 'Dinheiro', true, 'Para viagem', 265, 49);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-08', '17:55', 184.08, 'Cartao', false, 'Cliente fiel', 645, 20);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-03', '21:19', 93.24, 'Pix', false, 'Sem cebola', 393, 30);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-27', '17:26', 76.5, 'Cartao', true, 'Para viagem', 233, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-05', '12:49', 187.36, 'Pix', true, 'Ketchup adicional', 295, 133);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-02', '16:54', 179.06, 'Pix', false, 'Guardanapo adicional', 581, 175);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-06', '20:58', 95.42, 'Cartao', true, 'Sem observações', 565, 130);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-02', '18:55', 131.91, 'Pix', true, 'Para viagem', 571, 117);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-12', '20:41', 34.97, 'Dinheiro', true, 'Guardanapo adicional', 146, 182);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-17', '14:31', 63.54, 'Dinheiro', false, 'Com pimenta', 58, 126);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-01', '22:17', 83.6, 'Dinheiro', true, 'Guardanapo adicional', 274, 57);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-03', '13:58', 134.87, 'Dinheiro', true, 'Cliente fiel', 170, 43);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-25', '16:23', 194.71, 'Pix', false, 'Sem cebola', 416, 126);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-27', '11:42', 67.21, 'Pix', true, 'Sem observações', 713, 149);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-09', '23:09', 85.95, 'Cartao', true, 'Sem cebola', 266, 151);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-13', '17:22', 32.25, 'Pix', true, 'Com pimenta', 688, 143);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-30', '20:51', 42.03, 'Cartao', true, 'Para viagem', 195, 63);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-08', '20:33', 117.37, 'Dinheiro', false, 'Sem molhos', 1, 18);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-25', '20:27', 91.2, 'Cartao', true, 'Para viagem', 577, 116);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-29', '17:02', 53.68, 'Cartao', false, 'Sem observações', 573, 136);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-09', '12:42', 117.09, 'Dinheiro', true, 'Sem molhos', 500, 117);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-01', '19:05', 160.73, 'Cartao', true, 'Com pimenta', 226, 36);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-11', '18:00', 82.85, 'Cartao', false, 'Cliente fiel', 246, 137);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-29', '21:22', 97.57, 'Cartao', false, 'Guardanapo adicional', 123, 47);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-03', '13:29', 114.12, 'Dinheiro', true, 'Sem molhos', 102, 102);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-20', '17:13', 151.67, 'Pix', false, 'Cliente fiel', 660, 199);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-29', '12:55', 77.97, 'Dinheiro', false, 'Sem picles', 2, 60);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-15', '11:44', 135.5, 'Pix', true, 'Sem cebola', 583, 43);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-22', '14:23', 96.74, 'Pix', false, 'Sem observações', 452, 134);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-21', '21:29', 173.26, 'Cartao', true, 'Cliente fiel', 526, 198);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-03', '23:53', 102.82, 'Pix', true, 'Sem molhos', 695, 117);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-17', '13:11', 48.71, 'Cartao', false, 'Sem cebola', 32, 70);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-15', '15:15', 49.72, 'Dinheiro', true, 'Com pimenta', 187, 179);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-01', '11:24', 54.51, 'Cartao', true, 'Sem picles', 150, 55);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-27', '22:37', 154.96, 'Cartao', true, 'Sem cebola', 743, 96);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-27', '16:19', 132.68, 'Dinheiro', true, 'Ketchup adicional', 183, 107);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-13', '23:53', 147.29, 'Pix', true, 'Para viagem', 304, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-31', '14:35', 197.58, 'Dinheiro', true, 'Para viagem', 349, 195);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-06', '17:20', 38.23, 'Cartao', true, 'Para viagem', 602, 65);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-09', '11:48', 52.98, 'Cartao', true, 'Sem picles', 604, 143);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-13', '23:16', 85.36, 'Cartao', true, 'Para viagem', 176, 164);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-29', '21:39', 40.49, 'Cartao', true, 'Cliente fiel', 72, 149);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-20', '22:19', 108.64, 'Dinheiro', false, 'Com pimenta', 416, 45);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-10', '20:39', 159.76, 'Dinheiro', true, 'Sem observações', 182, 88);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-24', '23:22', 198.35, 'Dinheiro', false, 'Sem observações', 726, 138);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-16', '12:38', 152.56, 'Dinheiro', false, 'Sem observações', 522, 21);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-23', '22:27', 104.38, 'Dinheiro', true, 'Ketchup adicional', 147, 139);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-14', '17:27', 107.87, 'Pix', true, 'Ketchup adicional', 721, 122);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-27', '21:05', 70.42, 'Cartao', false, 'Cliente fiel', 691, 85);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-13', '11:53', 73.04, 'Dinheiro', false, 'Sem molhos', 133, 23);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-09', '13:54', 41.3, 'Dinheiro', false, 'Com pimenta', 294, 135);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-17', '21:19', 183.1, 'Dinheiro', false, 'Cliente fiel', 385, 2);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-27', '20:09', 28.17, 'Cartao', false, 'Para viagem', 229, 108);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-17', '13:01', 110.57, 'Dinheiro', true, 'Sem observações', 39, 13);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-07', '21:37', 91.8, 'Dinheiro', false, 'Sem molhos', 66, 29);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-12', '20:52', 147.27, 'Cartao', true, 'Ketchup adicional', 691, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-05', '23:45', 93.73, 'Cartao', false, 'Cliente fiel', 615, 197);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-13', '23:21', 27.05, 'Dinheiro', true, 'Para viagem', 24, 13);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-08', '19:39', 35.63, 'Cartao', true, 'Cliente fiel', 419, 184);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-08', '17:14', 138.28, 'Dinheiro', false, 'Sem molhos', 708, 99);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-13', '13:10', 44.69, 'Cartao', false, 'Sem molhos', 520, 193);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-02', '20:58', 26.47, 'Cartao', true, 'Cliente fiel', 489, 101);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-20', '15:54', 142.04, 'Cartao', false, 'Sem observações', 605, 100);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-03', '20:56', 111.74, 'Pix', true, 'Ketchup adicional', 392, 66);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-16', '19:39', 135.85, 'Dinheiro', true, 'Sem observações', 286, 153);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-14', '16:38', 66.07, 'Pix', true, 'Guardanapo adicional', 608, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-12', '13:08', 47.97, 'Cartao', true, 'Sem observações', 624, 188);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-27', '15:07', 123.08, 'Dinheiro', true, 'Sem observações', 451, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-04', '19:04', 120.51, 'Dinheiro', false, 'Cliente fiel', 710, 72);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-23', '19:31', 40.52, 'Cartao', true, 'Para viagem', 656, 132);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-18', '15:54', 50.54, 'Dinheiro', false, 'Com pimenta', 520, 110);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-11', '17:49', 175.45, 'Cartao', false, 'Sem picles', 511, 121);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-16', '13:53', 30.68, 'Dinheiro', false, 'Para viagem', 689, 74);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-26', '22:40', 102.43, 'Pix', true, 'Cliente fiel', 166, 110);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-30', '12:30', 39.61, 'Pix', true, 'Guardanapo adicional', 190, 184);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-14', '14:52', 84.59, 'Dinheiro', true, 'Ketchup adicional', 383, 137);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-24', '11:37', 162.98, 'Cartao', true, 'Sem observações', 145, 159);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-31', '15:12', 175.24, 'Dinheiro', true, 'Cliente fiel', 1, 189);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-04', '20:44', 156.42, 'Pix', true, 'Sem observações', 316, 195);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-10', '21:31', 49.57, 'Dinheiro', true, 'Sem molhos', 17, 29);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-14', '19:34', 100.39, 'Pix', false, 'Para viagem', 713, 2);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-02', '20:35', 108.52, 'Cartao', false, 'Cliente fiel', 597, 120);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-16', '22:20', 126.98, 'Dinheiro', false, 'Sem cebola', 425, 50);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-20', '22:58', 60.69, 'Pix', true, 'Cliente fiel', 693, 166);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-05', '18:41', 192.15, 'Pix', false, 'Para viagem', 46, 11);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-21', '19:36', 166.73, 'Dinheiro', false, 'Sem molhos', 479, 2);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-10', '22:03', 118.25, 'Cartao', true, 'Sem cebola', 225, 157);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-05', '20:13', 127.58, 'Dinheiro', true, 'Sem picles', 248, 150);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-03', '19:49', 155.65, 'Cartao', false, 'Cliente fiel', 277, 73);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-31', '19:58', 75.71, 'Dinheiro', false, 'Com pimenta', 424, 5);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-17', '11:03', 60.37, 'Dinheiro', false, 'Sem picles', 330, 129);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-24', '18:48', 79.06, 'Dinheiro', false, 'Com pimenta', 361, 188);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-16', '20:21', 116.4, 'Pix', true, 'Sem picles', 695, 74);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-23', '11:07', 186.65, 'Pix', false, 'Sem molhos', 660, 87);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-06', '18:59', 71.32, 'Dinheiro', false, 'Sem molhos', 488, 81);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-22', '18:06', 39.4, 'Cartao', false, 'Com pimenta', 511, 7);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-28', '16:47', 64.71, 'Cartao', true, 'Sem cebola', 440, 3);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-29', '15:26', 95.31, 'Pix', true, 'Guardanapo adicional', 625, 39);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-07', '12:09', 152.49, 'Dinheiro', false, 'Guardanapo adicional', 163, 66);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-29', '21:52', 174.73, 'Cartao', true, 'Para viagem', 562, 190);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-13', '20:08', 193.32, 'Pix', true, 'Para viagem', 203, 57);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-30', '23:07', 177.5, 'Pix', true, 'Sem observações', 546, 52);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-25', '11:35', 123.84, 'Cartao', true, 'Cliente fiel', 704, 64);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-08', '21:02', 175.81, 'Pix', true, 'Sem cebola', 144, 127);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-26', '15:40', 86.13, 'Pix', true, 'Sem molhos', 135, 78);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-15', '22:01', 124.56, 'Cartao', true, 'Ketchup adicional', 447, 141);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-18', '16:00', 84.91, 'Cartao', false, 'Para viagem', 490, 184);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-12', '18:34', 167.35, 'Cartao', true, 'Para viagem', 673, 71);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-31', '14:26', 198.77, 'Dinheiro', false, 'Sem cebola', 688, 163);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-24', '11:47', 159.51, 'Cartao', true, 'Sem molhos', 67, 131);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-22', '23:50', 95.79, 'Cartao', true, 'Guardanapo adicional', 650, 17);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-07', '11:50', 144.36, 'Cartao', true, 'Ketchup adicional', 488, 150);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-01', '16:43', 156.06, 'Pix', false, 'Ketchup adicional', 14, 69);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-03', '20:14', 49.83, 'Dinheiro', true, 'Com pimenta', 743, 139);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-13', '13:56', 94.13, 'Pix', true, 'Sem picles', 303, 15);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-06', '16:02', 155.2, 'Cartao', false, 'Sem picles', 94, 109);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-10', '18:28', 74.69, 'Pix', false, 'Sem cebola', 591, 180);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-08', '14:38', 184.66, 'Dinheiro', true, 'Sem picles', 240, 15);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-28', '11:49', 123.67, 'Cartao', false, 'Sem picles', 567, 142);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-21', '14:26', 134.96, 'Pix', true, 'Para viagem', 739, 178);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-14', '19:13', 120.79, 'Cartao', true, 'Para viagem', 544, 126);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-16', '14:46', 123.88, 'Cartao', true, 'Com pimenta', 503, 114);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-04', '17:08', 180.2, 'Pix', false, 'Com pimenta', 304, 146);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-18', '13:40', 90.83, 'Pix', false, 'Sem molhos', 280, 47);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-10', '20:46', 182.79, 'Dinheiro', false, 'Com pimenta', 663, 145);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-28', '22:05', 111.84, 'Pix', true, 'Sem cebola', 209, 99);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-14', '16:57', 86.28, 'Pix', false, 'Ketchup adicional', 511, 36);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-01', '15:19', 94.58, 'Cartao', true, 'Cliente fiel', 60, 30);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-12', '13:55', 32.27, 'Pix', false, 'Cliente fiel', 273, 186);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-30', '12:38', 103.75, 'Cartao', false, 'Com pimenta', 568, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-21', '22:36', 46.74, 'Pix', false, 'Ketchup adicional', 719, 63);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-06', '12:58', 151.2, 'Cartao', false, 'Para viagem', 295, 165);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-05', '20:50', 157.68, 'Cartao', true, 'Para viagem', 484, 30);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-16', '20:29', 180.64, 'Pix', false, 'Cliente fiel', 302, 104);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-27', '12:25', 71.11, 'Cartao', true, 'Ketchup adicional', 604, 186);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-16', '19:26', 147.06, 'Dinheiro', true, 'Ketchup adicional', 413, 28);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-22', '17:22', 41.59, 'Pix', false, 'Cliente fiel', 392, 148);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-07', '19:35', 50.5, 'Cartao', false, 'Sem cebola', 32, 133);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-29', '18:34', 39.13, 'Cartao', false, 'Para viagem', 216, 94);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-22', '19:57', 181.99, 'Cartao', true, 'Sem observações', 484, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-03', '21:16', 137.74, 'Dinheiro', true, 'Sem picles', 666, 33);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-03', '20:53', 27.64, 'Pix', false, 'Sem observações', 752, 185);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-14', '11:31', 168.46, 'Dinheiro', true, 'Para viagem', 389, 134);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-28', '17:34', 124.24, 'Dinheiro', true, 'Cliente fiel', 206, 196);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-27', '15:37', 162.55, 'Pix', false, 'Com pimenta', 634, 7);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-23', '21:27', 76.37, 'Cartao', false, 'Sem molhos', 683, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-06', '13:28', 59.44, 'Dinheiro', true, 'Sem molhos', 234, 61);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-30', '19:22', 100.49, 'Cartao', true, 'Com pimenta', 422, 51);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-18', '14:39', 106.65, 'Cartao', true, 'Guardanapo adicional', 468, 121);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-22', '21:31', 32.03, 'Dinheiro', false, 'Sem picles', 21, 58);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-14', '15:28', 158.42, 'Pix', false, 'Com pimenta', 479, 66);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-18', '15:34', 57.89, 'Pix', true, 'Para viagem', 598, 174);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-31', '11:30', 40.51, 'Cartao', false, 'Para viagem', 317, 64);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-11', '12:40', 27.69, 'Dinheiro', true, 'Para viagem', 99, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-15', '23:58', 114.59, 'Cartao', true, 'Ketchup adicional', 375, 126);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-18', '23:13', 170.02, 'Cartao', true, 'Guardanapo adicional', 192, 112);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-31', '23:54', 195.3, 'Dinheiro', false, 'Sem observações', 734, 199);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-28', '18:31', 187.28, 'Cartao', false, 'Para viagem', 106, 131);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-20', '17:20', 53.37, 'Pix', false, 'Sem picles', 718, 35);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-11', '16:19', 26.26, 'Pix', false, 'Sem molhos', 98, 85);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-04', '21:01', 172.15, 'Dinheiro', true, 'Com pimenta', 692, 62);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-15', '16:53', 137.71, 'Pix', true, 'Com pimenta', 447, 118);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-05', '19:55', 28.85, 'Pix', true, 'Ketchup adicional', 308, 38);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-14', '17:57', 66.27, 'Dinheiro', true, 'Guardanapo adicional', 185, 114);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-14', '19:49', 90.19, 'Cartao', true, 'Com pimenta', 86, 67);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-14', '20:36', 151.87, 'Pix', true, 'Sem molhos', 271, 48);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-05', '11:41', 77.45, 'Pix', true, 'Ketchup adicional', 346, 102);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-20', '21:07', 191.3, 'Dinheiro', true, 'Sem cebola', 48, 194);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-21', '21:18', 95.78, 'Pix', true, 'Guardanapo adicional', 98, 113);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-02', '18:48', 101.86, 'Cartao', false, 'Guardanapo adicional', 579, 149);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-07', '23:24', 175.49, 'Cartao', false, 'Com pimenta', 143, 96);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-20', '21:58', 184.68, 'Cartao', true, 'Sem observações', 686, 55);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-10', '11:24', 97.15, 'Pix', true, 'Sem molhos', 642, 50);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-27', '22:46', 59.87, 'Cartao', false, 'Guardanapo adicional', 225, 136);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-10', '19:21', 75.47, 'Pix', true, 'Sem observações', 673, 102);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-23', '20:17', 49.04, 'Cartao', false, 'Sem molhos', 620, 152);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-30', '13:51', 35.91, 'Pix', false, 'Com pimenta', 112, 167);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-06', '13:30', 108.51, 'Pix', false, 'Cliente fiel', 590, 92);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-04', '12:23', 160.77, 'Dinheiro', true, 'Sem observações', 113, 23);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-09', '23:07', 129.46, 'Pix', true, 'Para viagem', 109, 98);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-09', '18:42', 53.0, 'Cartao', false, 'Sem molhos', 206, 71);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-27', '21:49', 179.27, 'Pix', false, 'Cliente fiel', 513, 154);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-21', '15:58', 156.53, 'Dinheiro', false, 'Guardanapo adicional', 34, 97);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-26', '17:20', 171.53, 'Dinheiro', true, 'Cliente fiel', 628, 94);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-20', '21:31', 182.66, 'Cartao', true, 'Ketchup adicional', 21, 128);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-28', '20:05', 176.57, 'Pix', true, 'Ketchup adicional', 359, 92);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-20', '23:13', 196.93, 'Pix', true, 'Ketchup adicional', 101, 148);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-26', '22:23', 122.08, 'Cartao', false, 'Ketchup adicional', 281, 81);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-08', '11:20', 103.39, 'Pix', true, 'Com pimenta', 297, 86);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-15', '14:17', 171.81, 'Pix', false, 'Sem molhos', 751, 48);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-06', '12:06', 74.41, 'Pix', true, 'Com pimenta', 234, 58);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-25', '13:05', 57.61, 'Pix', true, 'Ketchup adicional', 18, 143);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-10', '18:25', 67.51, 'Pix', true, 'Ketchup adicional', 205, 28);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-11', '16:12', 121.4, 'Dinheiro', false, 'Para viagem', 394, 185);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-06', '11:56', 45.06, 'Dinheiro', true, 'Guardanapo adicional', 174, 88);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-03', '22:32', 147.76, 'Dinheiro', false, 'Sem molhos', 13, 137);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-06', '11:06', 160.82, 'Cartao', false, 'Guardanapo adicional', 278, 85);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-14', '18:41', 82.84, 'Cartao', true, 'Sem molhos', 321, 133);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-27', '21:53', 183.19, 'Cartao', false, 'Cliente fiel', 111, 181);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-17', '15:07', 140.88, 'Cartao', false, 'Sem molhos', 395, 47);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-08', '11:07', 43.73, 'Cartao', false, 'Ketchup adicional', 707, 39);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-15', '23:23', 146.68, 'Cartao', false, 'Com pimenta', 553, 108);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-14', '14:30', 197.69, 'Cartao', false, 'Sem picles', 385, 7);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-16', '15:04', 159.23, 'Cartao', false, 'Sem cebola', 701, 53);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-04', '19:14', 170.58, 'Pix', true, 'Sem picles', 297, 152);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-22', '18:17', 34.55, 'Cartao', false, 'Sem cebola', 677, 135);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-12', '11:44', 104.43, 'Pix', false, 'Sem picles', 648, 168);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-16', '15:40', 131.85, 'Dinheiro', true, 'Com pimenta', 45, 35);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-06', '15:16', 61.88, 'Dinheiro', false, 'Sem molhos', 726, 15);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-19', '18:54', 73.68, 'Dinheiro', false, 'Ketchup adicional', 502, 159);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-24', '11:33', 53.37, 'Cartao', false, 'Sem observações', 497, 84);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-05', '13:33', 53.49, 'Pix', false, 'Sem picles', 564, 63);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-16', '23:01', 121.97, 'Dinheiro', true, 'Ketchup adicional', 709, 86);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-17', '23:08', 28.77, 'Cartao', false, 'Para viagem', 734, 49);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-26', '18:22', 108.28, 'Dinheiro', true, 'Sem observações', 475, 23);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-13', '20:46', 102.86, 'Pix', true, 'Para viagem', 427, 128);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-11', '20:34', 102.19, 'Dinheiro', false, 'Com pimenta', 85, 123);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-05', '23:52', 128.9, 'Cartao', false, 'Sem observações', 544, 77);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-18', '17:47', 92.49, 'Dinheiro', false, 'Com pimenta', 461, 56);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-16', '21:16', 32.45, 'Pix', false, 'Sem picles', 436, 133);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-10', '23:27', 26.6, 'Cartao', true, 'Sem molhos', 750, 147);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-12', '18:25', 84.07, 'Pix', true, 'Guardanapo adicional', 568, 88);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-04', '20:02', 119.36, 'Pix', true, 'Cliente fiel', 657, 186);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-13', '22:42', 75.99, 'Dinheiro', false, 'Sem molhos', 409, 16);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-18', '20:36', 156.05, 'Dinheiro', true, 'Sem molhos', 747, 14);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-23', '11:55', 196.09, 'Cartao', false, 'Ketchup adicional', 226, 192);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-13', '14:50', 114.02, 'Dinheiro', true, 'Guardanapo adicional', 232, 102);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-08', '11:31', 123.14, 'Pix', true, 'Com pimenta', 640, 80);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-29', '17:09', 103.08, 'Dinheiro', false, 'Sem molhos', 448, 25);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-01', '22:13', 33.55, 'Pix', true, 'Ketchup adicional', 298, 134);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-28', '12:06', 73.21, 'Cartao', false, 'Sem molhos', 444, 155);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-16', '21:36', 93.29, 'Pix', true, 'Sem cebola', 721, 129);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-21', '19:12', 161.23, 'Cartao', true, 'Para viagem', 465, 10);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-04', '19:24', 28.73, 'Cartao', true, 'Para viagem', 197, 72);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-07', '14:34', 105.55, 'Dinheiro', true, 'Sem molhos', 143, 38);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-19', '16:27', 25.13, 'Pix', false, 'Com pimenta', 470, 155);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-13', '18:48', 41.91, 'Dinheiro', false, 'Com pimenta', 603, 107);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-23', '16:22', 44.78, 'Dinheiro', false, 'Para viagem', 189, 17);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-09', '23:25', 66.98, 'Dinheiro', true, 'Com pimenta', 104, 2);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-03', '13:52', 131.57, 'Dinheiro', false, 'Sem observações', 440, 124);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-01', '21:40', 86.75, 'Pix', true, 'Sem cebola', 492, 94);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-30', '18:59', 29.4, 'Dinheiro', false, 'Para viagem', 622, 137);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-21', '12:41', 188.66, 'Pix', false, 'Sem molhos', 75, 117);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-12', '20:47', 99.14, 'Cartao', false, 'Sem molhos', 96, 139);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-05', '22:07', 124.29, 'Pix', true, 'Para viagem', 712, 11);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-02', '17:00', 158.77, 'Cartao', true, 'Sem picles', 277, 124);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-02', '22:26', 88.19, 'Dinheiro', true, 'Sem observações', 625, 147);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-12', '14:26', 88.02, 'Pix', true, 'Sem cebola', 424, 95);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-20', '22:45', 55.0, 'Dinheiro', false, 'Sem picles', 251, 5);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-02', '23:14', 176.68, 'Cartao', false, 'Sem observações', 708, 61);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-14', '14:06', 179.55, 'Dinheiro', true, 'Sem cebola', 539, 125);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-13', '19:30', 110.18, 'Cartao', false, 'Ketchup adicional', 242, 56);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-30', '16:50', 165.17, 'Pix', false, 'Sem observações', 138, 189);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-11', '13:27', 90.06, 'Pix', false, 'Cliente fiel', 126, 78);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-26', '13:05', 64.24, 'Dinheiro', false, 'Para viagem', 73, 116);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-30', '21:35', 199.48, 'Pix', false, 'Cliente fiel', 534, 153);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-15', '12:46', 179.43, 'Dinheiro', false, 'Ketchup adicional', 670, 97);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-08', '19:56', 78.07, 'Dinheiro', false, 'Guardanapo adicional', 16, 104);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-31', '12:24', 164.99, 'Dinheiro', false, 'Sem observações', 675, 50);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-24', '11:17', 145.02, 'Dinheiro', false, 'Com pimenta', 659, 186);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-29', '21:47', 150.13, 'Cartao', true, 'Sem observações', 612, 106);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-24', '17:59', 27.52, 'Pix', true, 'Guardanapo adicional', 723, 12);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-12', '22:45', 103.9, 'Pix', false, 'Sem observações', 236, 77);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-05', '11:38', 57.94, 'Pix', true, 'Com pimenta', 333, 185);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-12', '14:28', 72.06, 'Cartao', false, 'Cliente fiel', 679, 68);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-08', '21:13', 53.1, 'Pix', false, 'Sem cebola', 132, 16);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-20', '20:11', 177.44, 'Pix', true, 'Para viagem', 428, 129);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-28', '12:16', 70.73, 'Cartao', false, 'Sem cebola', 30, 103);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-08', '13:58', 113.38, 'Dinheiro', false, 'Com pimenta', 743, 46);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-01', '11:15', 72.41, 'Cartao', false, 'Com pimenta', 285, 167);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-03', '16:25', 150.15, 'Pix', false, 'Para viagem', 421, 16);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-24', '20:25', 58.59, 'Pix', true, 'Sem picles', 588, 200);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-29', '12:48', 82.88, 'Cartao', false, 'Com pimenta', 191, 113);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-19', '17:35', 152.32, 'Dinheiro', true, 'Com pimenta', 724, 23);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-06', '13:15', 167.1, 'Cartao', false, 'Guardanapo adicional', 329, 83);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-12', '12:27', 197.15, 'Cartao', false, 'Ketchup adicional', 55, 46);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-16', '18:21', 105.6, 'Dinheiro', false, 'Com pimenta', 675, 103);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-16', '18:52', 106.34, 'Cartao', false, 'Sem cebola', 567, 46);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-24', '19:03', 164.02, 'Pix', true, 'Guardanapo adicional', 482, 144);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-01', '12:49', 42.26, 'Cartao', false, 'Com pimenta', 615, 120);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-05', '22:54', 176.55, 'Dinheiro', false, 'Para viagem', 710, 32);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-19', '14:29', 106.65, 'Cartao', false, 'Sem observações', 224, 91);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-27', '19:53', 55.24, 'Dinheiro', false, 'Sem observações', 329, 174);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-02', '14:35', 28.23, 'Dinheiro', true, 'Sem cebola', 148, 169);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-13', '11:30', 117.27, 'Pix', false, 'Com pimenta', 528, 175);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-10', '13:10', 174.33, 'Pix', false, 'Com pimenta', 302, 12);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-30', '11:19', 71.67, 'Pix', false, 'Guardanapo adicional', 394, 122);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-02', '14:46', 42.8, 'Dinheiro', true, 'Sem observações', 116, 173);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-08', '21:07', 100.67, 'Dinheiro', true, 'Com pimenta', 254, 196);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-22', '18:12', 53.64, 'Pix', true, 'Cliente fiel', 558, 181);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-17', '13:51', 63.41, 'Pix', false, 'Sem cebola', 631, 44);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-11', '13:41', 136.73, 'Dinheiro', false, 'Sem picles', 564, 40);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-17', '16:42', 123.32, 'Dinheiro', false, 'Sem picles', 554, 51);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-02', '15:41', 102.3, 'Cartao', true, 'Para viagem', 400, 182);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-22', '23:32', 138.32, 'Pix', true, 'Sem molhos', 195, 6);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-09', '15:40', 110.07, 'Dinheiro', true, 'Ketchup adicional', 703, 38);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-28', '12:20', 125.66, 'Dinheiro', true, 'Guardanapo adicional', 454, 107);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-06', '14:05', 82.17, 'Cartao', false, 'Cliente fiel', 632, 159);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-13', '16:04', 91.18, 'Pix', true, 'Guardanapo adicional', 672, 103);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-26', '14:43', 55.94, 'Cartao', true, 'Ketchup adicional', 251, 65);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-10', '11:30', 189.07, 'Cartao', true, 'Guardanapo adicional', 584, 74);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-03', '15:46', 133.17, 'Cartao', false, 'Sem observações', 500, 94);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-17', '23:55', 109.72, 'Pix', false, 'Sem cebola', 713, 75);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-01', '16:44', 177.86, 'Dinheiro', true, 'Cliente fiel', 230, 16);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-20', '18:33', 37.27, 'Dinheiro', true, 'Ketchup adicional', 11, 66);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-02', '16:38', 105.02, 'Pix', false, 'Cliente fiel', 268, 176);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-18', '18:19', 48.75, 'Pix', false, 'Com pimenta', 631, 82);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-22', '12:59', 162.92, 'Cartao', false, 'Sem observações', 445, 65);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-19', '20:01', 76.81, 'Cartao', true, 'Sem cebola', 733, 112);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-07', '15:31', 48.13, 'Cartao', true, 'Para viagem', 312, 102);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-18', '21:22', 134.39, 'Pix', true, 'Com pimenta', 236, 115);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-01', '19:38', 47.04, 'Pix', false, 'Com pimenta', 629, 43);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-23', '20:14', 60.0, 'Cartao', false, 'Para viagem', 752, 182);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-07', '22:14', 141.6, 'Dinheiro', false, 'Sem cebola', 217, 95);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-27', '15:45', 162.8, 'Cartao', false, 'Sem cebola', 409, 32);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-14', '14:43', 93.17, 'Dinheiro', false, 'Guardanapo adicional', 93, 122);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-24', '14:45', 40.38, 'Dinheiro', false, 'Ketchup adicional', 131, 167);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-27', '16:41', 120.41, 'Pix', false, 'Para viagem', 313, 171);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-19', '17:28', 87.89, 'Cartao', false, 'Sem cebola', 197, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-16', '11:48', 168.33, 'Dinheiro', false, 'Sem molhos', 58, 52);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-11', '15:55', 174.31, 'Dinheiro', false, 'Sem cebola', 516, 96);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-19', '23:01', 60.31, 'Dinheiro', false, 'Sem picles', 332, 183);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-03', '19:21', 109.71, 'Pix', true, 'Ketchup adicional', 566, 75);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-11', '23:04', 39.99, 'Cartao', false, 'Sem observações', 297, 56);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-22', '16:52', 72.03, 'Pix', true, 'Sem molhos', 386, 41);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-11', '11:39', 35.3, 'Dinheiro', true, 'Sem observações', 390, 82);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-06', '22:14', 52.99, 'Pix', true, 'Cliente fiel', 8, 42);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-21', '16:21', 118.71, 'Pix', false, 'Para viagem', 672, 178);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-04', '22:28', 60.95, 'Dinheiro', true, 'Guardanapo adicional', 517, 139);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-31', '11:22', 99.3, 'Cartao', true, 'Sem observações', 408, 93);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-01', '21:54', 52.98, 'Dinheiro', true, 'Sem cebola', 69, 55);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-15', '12:40', 57.14, 'Cartao', false, 'Guardanapo adicional', 203, 128);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-14', '22:06', 81.27, 'Dinheiro', true, 'Guardanapo adicional', 292, 42);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-15', '17:01', 72.26, 'Cartao', false, 'Com pimenta', 89, 1);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-10', '20:39', 124.24, 'Dinheiro', true, 'Sem molhos', 306, 184);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-15', '17:49', 120.87, 'Pix', false, 'Para viagem', 41, 193);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-25', '12:05', 161.36, 'Dinheiro', false, 'Sem molhos', 386, 165);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-19', '18:13', 154.31, 'Cartao', true, 'Ketchup adicional', 8, 178);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-17', '17:38', 62.56, 'Dinheiro', true, 'Sem picles', 232, 150);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-11', '20:41', 169.11, 'Pix', false, 'Com pimenta', 536, 117);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-24', '22:55', 95.61, 'Dinheiro', true, 'Para viagem', 328, 137);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-15', '22:51', 104.82, 'Cartao', true, 'Cliente fiel', 35, 1);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-12', '12:11', 91.91, 'Dinheiro', true, 'Sem observações', 623, 49);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-07', '20:14', 177.99, 'Dinheiro', true, 'Com pimenta', 245, 12);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-26', '19:53', 178.24, 'Pix', true, 'Sem cebola', 225, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-03', '19:13', 161.09, 'Dinheiro', true, 'Sem picles', 208, 184);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-10', '22:47', 52.7, 'Cartao', false, 'Para viagem', 496, 101);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-14', '21:21', 138.26, 'Cartao', false, 'Com pimenta', 42, 45);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-12', '13:46', 44.51, 'Dinheiro', true, 'Guardanapo adicional', 676, 73);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-11', '11:51', 118.4, 'Cartao', true, 'Cliente fiel', 545, 28);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-19', '22:58', 73.64, 'Dinheiro', true, 'Para viagem', 106, 24);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-28', '11:55', 77.75, 'Dinheiro', true, 'Guardanapo adicional', 750, 54);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-03', '12:35', 102.79, 'Dinheiro', false, 'Com pimenta', 431, 143);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-06', '18:36', 198.16, 'Dinheiro', true, 'Sem observações', 180, 14);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-07', '11:43', 166.54, 'Pix', true, 'Para viagem', 173, 127);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-21', '13:41', 47.52, 'Cartao', false, 'Ketchup adicional', 521, 152);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-29', '16:24', 28.18, 'Pix', true, 'Para viagem', 565, 94);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-18', '20:56', 115.23, 'Dinheiro', false, 'Sem molhos', 624, 64);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-11', '20:44', 131.11, 'Pix', false, 'Sem picles', 707, 179);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-05', '12:04', 78.13, 'Dinheiro', false, 'Sem molhos', 143, 182);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-14', '17:10', 54.36, 'Pix', true, 'Para viagem', 487, 142);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-23', '19:51', 78.53, 'Dinheiro', false, 'Sem observações', 56, 38);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-08', '23:12', 60.12, 'Cartao', true, 'Ketchup adicional', 631, 161);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-20', '15:50', 120.26, 'Pix', false, 'Guardanapo adicional', 289, 63);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-07', '16:54', 90.71, 'Dinheiro', true, 'Sem observações', 648, 121);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-24', '17:14', 137.59, 'Dinheiro', false, 'Ketchup adicional', 58, 104);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-24', '21:48', 197.44, 'Dinheiro', true, 'Para viagem', 371, 128);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-29', '15:19', 122.92, 'Dinheiro', true, 'Sem molhos', 477, 52);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-03', '18:19', 43.33, 'Cartao', true, 'Ketchup adicional', 79, 191);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-18', '17:13', 87.39, 'Cartao', true, 'Sem cebola', 187, 106);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-08', '23:58', 143.62, 'Dinheiro', true, 'Sem molhos', 23, 200);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-18', '14:31', 190.61, 'Pix', true, 'Para viagem', 617, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-31', '18:05', 152.81, 'Pix', false, 'Sem picles', 478, 156);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-22', '18:48', 128.88, 'Dinheiro', false, 'Sem picles', 133, 77);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-08', '18:13', 61.02, 'Dinheiro', true, 'Sem observações', 678, 200);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-24', '19:46', 165.29, 'Pix', true, 'Guardanapo adicional', 35, 138);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-31', '20:19', 29.89, 'Cartao', true, 'Ketchup adicional', 424, 46);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-03', '11:05', 79.11, 'Cartao', true, 'Com pimenta', 626, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-12', '19:43', 101.55, 'Cartao', true, 'Para viagem', 120, 182);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-23', '11:56', 54.23, 'Cartao', false, 'Sem observações', 575, 26);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-17', '18:53', 195.78, 'Dinheiro', true, 'Cliente fiel', 331, 67);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-21', '23:31', 143.79, 'Cartao', true, 'Com pimenta', 438, 66);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-17', '20:17', 163.89, 'Pix', true, 'Com pimenta', 665, 19);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-22', '15:41', 196.46, 'Cartao', true, 'Sem cebola', 650, 78);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-25', '19:37', 128.22, 'Cartao', true, 'Sem observações', 7, 24);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-27', '19:27', 168.39, 'Cartao', false, 'Sem observações', 323, 187);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-31', '17:35', 102.11, 'Cartao', true, 'Sem cebola', 429, 34);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-23', '23:53', 180.18, 'Dinheiro', false, 'Sem picles', 233, 85);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-25', '14:48', 80.87, 'Cartao', true, 'Sem observações', 291, 132);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-01', '18:37', 142.66, 'Dinheiro', true, 'Ketchup adicional', 673, 184);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-04', '19:49', 111.18, 'Dinheiro', true, 'Para viagem', 538, 178);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-02', '23:31', 189.39, 'Pix', true, 'Sem observações', 441, 114);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-10', '13:36', 193.4, 'Dinheiro', false, 'Sem cebola', 497, 23);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-13', '21:06', 99.4, 'Dinheiro', false, 'Sem cebola', 395, 109);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-24', '17:15', 121.8, 'Cartao', true, 'Ketchup adicional', 88, 194);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-21', '11:15', 199.77, 'Cartao', false, 'Ketchup adicional', 183, 109);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-15', '14:42', 60.53, 'Dinheiro', false, 'Guardanapo adicional', 652, 107);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-31', '23:40', 80.44, 'Cartao', true, 'Ketchup adicional', 99, 23);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-19', '17:00', 169.64, 'Cartao', false, 'Guardanapo adicional', 321, 113);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-28', '22:20', 58.44, 'Cartao', false, 'Sem molhos', 109, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-22', '16:47', 40.08, 'Pix', false, 'Sem observações', 300, 50);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-08', '16:22', 130.85, 'Pix', true, 'Cliente fiel', 393, 171);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-01', '12:00', 167.49, 'Dinheiro', true, 'Sem molhos', 468, 187);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-10', '19:01', 38.75, 'Pix', true, 'Sem observações', 649, 118);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-02', '13:01', 129.72, 'Cartao', false, 'Sem picles', 489, 48);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-30', '16:17', 37.25, 'Dinheiro', false, 'Ketchup adicional', 439, 192);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-29', '12:51', 156.72, 'Pix', false, 'Com pimenta', 82, 190);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-03', '12:03', 105.51, 'Cartao', false, 'Sem picles', 709, 91);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-19', '21:13', 147.15, 'Cartao', true, 'Sem observações', 474, 116);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-12', '16:32', 93.16, 'Cartao', false, 'Para viagem', 138, 179);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-10', '19:32', 105.95, 'Pix', true, 'Sem picles', 124, 37);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-18', '23:56', 148.88, 'Pix', false, 'Com pimenta', 430, 148);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-11', '11:40', 168.31, 'Dinheiro', true, 'Sem picles', 202, 145);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-11', '12:34', 131.66, 'Cartao', false, 'Cliente fiel', 257, 190);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-28', '14:44', 43.36, 'Cartao', false, 'Com pimenta', 285, 94);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-04', '22:19', 61.68, 'Cartao', true, 'Para viagem', 563, 169);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-04', '19:24', 57.11, 'Dinheiro', false, 'Sem observações', 511, 41);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-11', '17:34', 138.82, 'Dinheiro', false, 'Cliente fiel', 579, 91);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-03', '20:17', 44.21, 'Pix', true, 'Sem picles', 12, 81);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-19', '11:06', 37.26, 'Dinheiro', true, 'Sem molhos', 560, 3);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-09', '15:33', 158.03, 'Pix', true, 'Guardanapo adicional', 470, 86);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-01', '14:09', 147.56, 'Dinheiro', false, 'Com pimenta', 651, 36);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-31', '19:19', 34.77, 'Pix', true, 'Com pimenta', 159, 161);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-11', '20:15', 69.41, 'Pix', true, 'Sem cebola', 452, 6);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-11', '20:02', 91.05, 'Pix', true, 'Para viagem', 349, 152);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-30', '15:08', 36.65, 'Cartao', false, 'Ketchup adicional', 34, 40);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-11', '20:25', 99.11, 'Pix', false, 'Sem picles', 348, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-03', '20:16', 65.89, 'Dinheiro', true, 'Guardanapo adicional', 69, 173);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-14', '12:49', 158.26, 'Cartao', false, 'Com pimenta', 575, 72);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-24', '18:15', 124.87, 'Dinheiro', true, 'Com pimenta', 43, 40);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-07', '15:54', 162.08, 'Cartao', true, 'Sem molhos', 555, 198);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-09', '23:19', 197.76, 'Dinheiro', false, 'Sem picles', 24, 143);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-17', '13:14', 128.31, 'Pix', false, 'Guardanapo adicional', 449, 66);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-05', '11:52', 188.5, 'Cartao', true, 'Guardanapo adicional', 697, 165);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-21', '20:31', 154.51, 'Cartao', false, 'Ketchup adicional', 202, 52);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-05', '21:17', 198.74, 'Cartao', false, 'Com pimenta', 447, 200);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-26', '17:13', 122.18, 'Pix', false, 'Sem picles', 404, 154);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-26', '11:14', 104.11, 'Cartao', false, 'Sem molhos', 411, 190);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-02', '13:38', 153.99, 'Dinheiro', true, 'Sem picles', 313, 46);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-10', '19:05', 187.23, 'Dinheiro', true, 'Cliente fiel', 407, 114);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-22', '23:51', 111.9, 'Pix', false, 'Ketchup adicional', 411, 139);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-28', '11:38', 64.56, 'Pix', false, 'Guardanapo adicional', 453, 49);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-09', '15:13', 51.37, 'Pix', false, 'Sem observações', 600, 73);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-02', '17:28', 181.83, 'Pix', true, 'Sem picles', 192, 113);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-20', '21:21', 137.66, 'Dinheiro', false, 'Sem molhos', 449, 84);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-29', '23:36', 166.86, 'Dinheiro', false, 'Sem molhos', 524, 69);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-19', '23:02', 55.03, 'Pix', true, 'Sem cebola', 561, 113);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-24', '21:54', 120.82, 'Pix', true, 'Cliente fiel', 148, 57);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-12', '18:56', 139.22, 'Cartao', false, 'Com pimenta', 616, 49);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-28', '20:30', 71.56, 'Pix', true, 'Ketchup adicional', 181, 175);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-22', '22:07', 186.86, 'Cartao', true, 'Ketchup adicional', 270, 170);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-22', '11:47', 94.74, 'Pix', false, 'Sem picles', 2, 14);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-13', '12:14', 97.48, 'Dinheiro', true, 'Sem cebola', 470, 73);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-01', '23:53', 198.88, 'Cartao', true, 'Ketchup adicional', 219, 12);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-22', '20:08', 103.07, 'Dinheiro', true, 'Sem observações', 5, 86);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-17', '23:33', 36.27, 'Pix', false, 'Com pimenta', 398, 141);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-23', '19:26', 83.67, 'Dinheiro', true, 'Ketchup adicional', 464, 86);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-18', '23:35', 64.5, 'Pix', false, 'Guardanapo adicional', 525, 142);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-27', '23:27', 162.01, 'Pix', true, 'Sem molhos', 4, 146);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-15', '22:23', 26.3, 'Cartao', false, 'Ketchup adicional', 292, 148);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-07', '16:00', 68.95, 'Dinheiro', false, 'Sem picles', 386, 116);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-02', '15:55', 133.34, 'Pix', false, 'Sem observações', 647, 177);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-24', '22:02', 88.09, 'Dinheiro', true, 'Sem picles', 660, 169);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-07', '18:52', 75.29, 'Pix', false, 'Cliente fiel', 579, 200);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-16', '16:33', 104.72, 'Dinheiro', true, 'Guardanapo adicional', 585, 55);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-29', '18:26', 133.61, 'Pix', false, 'Para viagem', 589, 23);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-08', '12:05', 184.21, 'Dinheiro', false, 'Sem picles', 239, 124);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-06', '21:07', 151.86, 'Dinheiro', true, 'Sem molhos', 632, 173);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-19', '16:21', 83.88, 'Pix', true, 'Guardanapo adicional', 487, 184);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-13', '20:16', 56.45, 'Dinheiro', true, 'Cliente fiel', 317, 170);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-16', '15:12', 172.69, 'Pix', false, 'Sem picles', 532, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-23', '15:58', 190.99, 'Cartao', true, 'Ketchup adicional', 343, 9);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-24', '12:54', 141.88, 'Cartao', false, 'Sem picles', 526, 114);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-09', '22:08', 199.45, 'Dinheiro', true, 'Guardanapo adicional', 606, 161);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-21', '21:24', 192.5, 'Dinheiro', false, 'Sem picles', 424, 111);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-27', '22:08', 195.96, 'Pix', false, 'Sem observações', 678, 143);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-16', '21:01', 196.62, 'Cartao', true, 'Sem picles', 256, 162);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-25', '15:04', 129.11, 'Dinheiro', true, 'Guardanapo adicional', 515, 131);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-29', '12:34', 153.76, 'Cartao', true, 'Ketchup adicional', 690, 3);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-14', '13:54', 48.8, 'Pix', false, 'Sem cebola', 236, 48);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-07', '14:49', 177.52, 'Pix', false, 'Com pimenta', 158, 7);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-25', '17:26', 167.73, 'Dinheiro', true, 'Para viagem', 629, 149);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-13', '12:48', 30.79, 'Dinheiro', false, 'Sem molhos', 644, 39);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-06', '20:03', 108.5, 'Cartao', true, 'Sem observações', 722, 6);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-02', '13:52', 32.59, 'Dinheiro', true, 'Guardanapo adicional', 556, 88);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-18', '22:13', 28.91, 'Dinheiro', true, 'Sem cebola', 188, 159);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-12', '14:33', 118.97, 'Dinheiro', true, 'Com pimenta', 111, 12);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-14', '15:38', 123.5, 'Pix', true, 'Sem molhos', 83, 155);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-03', '18:07', 74.15, 'Cartao', true, 'Sem picles', 567, 79);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-18', '21:16', 184.25, 'Dinheiro', true, 'Sem observações', 148, 136);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-19', '20:18', 51.26, 'Pix', false, 'Sem cebola', 694, 197);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-21', '14:33', 89.45, 'Dinheiro', false, 'Sem picles', 145, 130);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-29', '12:46', 164.3, 'Pix', false, 'Ketchup adicional', 621, 91);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-30', '17:41', 61.51, 'Cartao', true, 'Sem molhos', 718, 186);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-26', '18:37', 107.25, 'Dinheiro', true, 'Sem observações', 504, 80);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-07', '12:29', 72.9, 'Pix', false, 'Ketchup adicional', 240, 96);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-20', '17:52', 103.35, 'Cartao', true, 'Ketchup adicional', 255, 126);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-24', '13:32', 34.86, 'Pix', true, 'Sem molhos', 365, 186);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-10', '23:37', 119.58, 'Dinheiro', true, 'Ketchup adicional', 404, 127);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-23', '12:18', 151.88, 'Dinheiro', false, 'Cliente fiel', 258, 34);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-08', '22:34', 60.85, 'Cartao', false, 'Para viagem', 80, 13);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-21', '11:38', 109.36, 'Dinheiro', false, 'Sem picles', 386, 72);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-15', '16:22', 101.52, 'Dinheiro', true, 'Sem observações', 162, 7);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-20', '20:49', 125.34, 'Cartao', true, 'Sem cebola', 486, 181);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-05', '15:41', 60.88, 'Cartao', false, 'Cliente fiel', 440, 91);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-20', '22:57', 79.73, 'Dinheiro', true, 'Ketchup adicional', 216, 128);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-17', '11:35', 161.35, 'Pix', false, 'Sem cebola', 509, 127);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-07', '11:50', 189.28, 'Cartao', false, 'Cliente fiel', 63, 12);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-29', '23:43', 68.24, 'Dinheiro', true, 'Sem picles', 227, 98);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-15', '22:07', 157.37, 'Cartao', false, 'Com pimenta', 304, 128);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-26', '15:19', 63.91, 'Cartao', true, 'Para viagem', 216, 180);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-11', '16:37', 25.69, 'Cartao', false, 'Guardanapo adicional', 709, 43);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-10', '15:32', 119.16, 'Dinheiro', true, 'Ketchup adicional', 325, 136);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-04', '11:50', 90.11, 'Dinheiro', false, 'Sem molhos', 367, 3);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-18', '11:15', 128.26, 'Dinheiro', false, 'Guardanapo adicional', 78, 179);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-16', '21:09', 28.72, 'Dinheiro', false, 'Sem molhos', 515, 63);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-23', '11:02', 41.42, 'Cartao', true, 'Para viagem', 595, 164);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-26', '12:22', 126.9, 'Pix', false, 'Para viagem', 628, 23);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-05', '23:14', 102.68, 'Pix', false, 'Para viagem', 136, 192);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-19', '20:18', 70.0, 'Dinheiro', true, 'Guardanapo adicional', 484, 42);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-10', '11:00', 116.18, 'Cartao', true, 'Ketchup adicional', 658, 155);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-11', '13:31', 159.54, 'Dinheiro', false, 'Ketchup adicional', 284, 113);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-22', '19:10', 92.66, 'Dinheiro', false, 'Com pimenta', 184, 181);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-18', '12:48', 172.39, 'Dinheiro', true, 'Sem cebola', 444, 133);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-19', '14:36', 116.84, 'Dinheiro', true, 'Com pimenta', 65, 162);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-29', '23:29', 73.14, 'Dinheiro', false, 'Ketchup adicional', 700, 57);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-11', '23:32', 199.68, 'Cartao', false, 'Ketchup adicional', 529, 68);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-28', '20:55', 103.37, 'Pix', false, 'Sem picles', 423, 107);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-18', '14:35', 109.55, 'Cartao', false, 'Sem cebola', 333, 200);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-27', '17:27', 84.18, 'Dinheiro', false, 'Guardanapo adicional', 207, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-14', '21:17', 177.94, 'Pix', true, 'Sem molhos', 359, 76);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-23', '22:03', 114.88, 'Cartao', false, 'Sem molhos', 515, 193);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-29', '11:02', 50.36, 'Pix', true, 'Sem picles', 129, 107);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-08', '15:21', 143.17, 'Pix', true, 'Sem observações', 613, 153);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-26', '16:41', 43.83, 'Dinheiro', false, 'Sem molhos', 45, 152);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-13', '23:11', 153.59, 'Cartao', false, 'Cliente fiel', 518, 7);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-08', '23:01', 104.59, 'Dinheiro', true, 'Sem molhos', 603, 30);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-13', '17:33', 152.34, 'Pix', false, 'Cliente fiel', 404, 111);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-01', '20:22', 134.4, 'Cartao', true, 'Guardanapo adicional', 628, 42);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-24', '12:06', 114.85, 'Cartao', true, 'Sem molhos', 88, 154);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-05', '19:48', 105.31, 'Cartao', false, 'Guardanapo adicional', 172, 46);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-25', '20:08', 168.84, 'Cartao', false, 'Guardanapo adicional', 221, 107);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-24', '12:36', 144.49, 'Pix', false, 'Sem molhos', 6, 89);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-22', '16:32', 130.31, 'Pix', true, 'Sem cebola', 33, 62);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-31', '11:32', 106.81, 'Dinheiro', true, 'Cliente fiel', 471, 138);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-01', '20:18', 192.14, 'Cartao', false, 'Sem cebola', 510, 126);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-23', '19:16', 44.97, 'Pix', false, 'Cliente fiel', 743, 187);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-22', '22:45', 188.02, 'Cartao', false, 'Sem cebola', 320, 67);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-11', '19:39', 95.59, 'Pix', true, 'Ketchup adicional', 554, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-05', '15:49', 106.91, 'Pix', false, 'Sem cebola', 504, 28);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-16', '11:46', 88.92, 'Pix', false, 'Guardanapo adicional', 685, 28);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-19', '11:51', 197.04, 'Pix', false, 'Sem cebola', 355, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-23', '14:29', 101.18, 'Cartao', false, 'Cliente fiel', 312, 52);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-17', '21:57', 111.49, 'Cartao', true, 'Ketchup adicional', 517, 180);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-11', '12:31', 110.59, 'Pix', true, 'Sem cebola', 272, 182);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-11', '16:13', 30.34, 'Cartao', true, 'Cliente fiel', 247, 179);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-05', '19:08', 90.31, 'Pix', false, 'Ketchup adicional', 173, 77);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-28', '18:04', 59.91, 'Pix', true, 'Com pimenta', 306, 156);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-05', '23:27', 173.77, 'Dinheiro', true, 'Sem observações', 490, 181);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-18', '18:35', 191.56, 'Cartao', false, 'Cliente fiel', 320, 161);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-21', '19:46', 137.97, 'Cartao', false, 'Sem cebola', 333, 163);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-08', '19:21', 164.84, 'Cartao', true, 'Para viagem', 264, 115);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-04', '15:55', 152.45, 'Pix', true, 'Para viagem', 461, 88);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-03', '16:16', 165.66, 'Cartao', false, 'Cliente fiel', 224, 80);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-12', '16:50', 95.96, 'Pix', true, 'Ketchup adicional', 161, 24);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-08', '20:22', 72.83, 'Dinheiro', false, 'Sem observações', 165, 194);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-13', '17:39', 170.54, 'Cartao', true, 'Sem cebola', 659, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-22', '16:25', 113.1, 'Pix', true, 'Para viagem', 156, 158);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-03', '22:32', 136.45, 'Pix', false, 'Com pimenta', 494, 186);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-05', '17:58', 188.07, 'Pix', false, 'Sem cebola', 16, 181);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-02', '13:03', 142.34, 'Dinheiro', false, 'Guardanapo adicional', 145, 41);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-21', '13:44', 130.82, 'Pix', true, 'Para viagem', 353, 84);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-10', '20:13', 27.01, 'Dinheiro', false, 'Com pimenta', 629, 13);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-31', '17:58', 79.99, 'Cartao', true, 'Guardanapo adicional', 749, 62);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-05', '13:57', 75.54, 'Pix', false, 'Para viagem', 114, 192);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-07', '12:32', 56.92, 'Pix', true, 'Ketchup adicional', 155, 115);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-23', '21:50', 84.55, 'Dinheiro', true, 'Cliente fiel', 140, 18);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-23', '15:30', 50.1, 'Dinheiro', false, 'Sem observações', 201, 77);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-22', '16:34', 40.44, 'Dinheiro', false, 'Com pimenta', 84, 125);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-17', '20:56', 110.08, 'Cartao', false, 'Sem cebola', 325, 169);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-13', '22:08', 166.93, 'Cartao', true, 'Sem cebola', 693, 20);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-29', '11:58', 186.62, 'Dinheiro', true, 'Para viagem', 13, 85);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-10', '18:57', 112.92, 'Pix', false, 'Sem cebola', 601, 51);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-31', '17:22', 32.12, 'Cartao', true, 'Sem cebola', 102, 41);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-18', '11:31', 171.18, 'Pix', false, 'Com pimenta', 384, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-17', '15:32', 179.04, 'Cartao', false, 'Sem molhos', 359, 189);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-26', '15:48', 33.83, 'Pix', false, 'Sem molhos', 421, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-21', '12:33', 36.24, 'Dinheiro', false, 'Sem observações', 537, 129);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-28', '14:34', 34.03, 'Cartao', false, 'Sem molhos', 260, 56);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-09', '23:56', 156.7, 'Cartao', true, 'Sem cebola', 626, 11);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-28', '23:08', 143.04, 'Pix', true, 'Sem molhos', 696, 119);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-23', '11:35', 100.35, 'Cartao', true, 'Sem molhos', 353, 116);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-28', '13:03', 54.09, 'Cartao', false, 'Sem molhos', 617, 91);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-01', '18:35', 128.93, 'Cartao', true, 'Sem picles', 420, 174);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-04', '21:44', 107.85, 'Cartao', false, 'Sem picles', 737, 62);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-31', '23:22', 198.69, 'Pix', false, 'Para viagem', 106, 129);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-27', '17:20', 99.17, 'Pix', false, 'Para viagem', 646, 79);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-21', '14:46', 112.09, 'Cartao', true, 'Sem picles', 207, 66);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-14', '17:09', 118.12, 'Cartao', false, 'Sem observações', 393, 126);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-20', '17:49', 142.64, 'Pix', false, 'Ketchup adicional', 559, 179);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-17', '21:40', 132.41, 'Pix', true, 'Sem observações', 545, 16);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-20', '19:01', 176.95, 'Pix', true, 'Para viagem', 20, 113);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-30', '23:01', 50.3, 'Dinheiro', false, 'Ketchup adicional', 123, 149);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-30', '22:17', 154.48, 'Dinheiro', false, 'Sem cebola', 293, 71);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-28', '23:16', 134.99, 'Dinheiro', true, 'Sem picles', 577, 26);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-29', '15:35', 153.36, 'Cartao', false, 'Com pimenta', 474, 186);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-18', '22:10', 165.71, 'Dinheiro', false, 'Cliente fiel', 631, 73);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-17', '14:08', 78.96, 'Pix', true, 'Para viagem', 579, 100);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-02', '19:30', 32.52, 'Cartao', true, 'Sem molhos', 459, 40);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-02', '19:14', 90.84, 'Cartao', false, 'Sem molhos', 290, 24);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-24', '11:37', 50.12, 'Cartao', false, 'Sem observações', 386, 38);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-05', '20:12', 170.8, 'Pix', true, 'Sem picles', 443, 76);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-27', '21:54', 133.94, 'Dinheiro', false, 'Sem picles', 557, 181);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-27', '18:02', 165.23, 'Cartao', false, 'Sem molhos', 97, 32);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-24', '19:32', 60.61, 'Cartao', true, 'Sem observações', 644, 52);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-05', '18:28', 34.05, 'Dinheiro', true, 'Com pimenta', 372, 2);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-31', '17:35', 45.33, 'Cartao', true, 'Sem observações', 605, 115);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-16', '20:29', 158.95, 'Dinheiro', false, 'Ketchup adicional', 213, 200);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-19', '21:11', 112.69, 'Cartao', false, 'Sem cebola', 234, 148);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-13', '21:32', 87.15, 'Pix', true, 'Sem observações', 280, 191);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-19', '17:42', 160.52, 'Cartao', false, 'Para viagem', 534, 134);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-22', '14:13', 49.0, 'Pix', true, 'Sem picles', 155, 151);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-23', '23:26', 49.69, 'Cartao', false, 'Para viagem', 284, 21);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-14', '22:40', 32.73, 'Dinheiro', false, 'Com pimenta', 60, 20);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-14', '16:38', 188.45, 'Pix', true, 'Ketchup adicional', 156, 43);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-03', '14:24', 74.09, 'Pix', true, 'Sem cebola', 188, 152);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-12', '14:01', 141.5, 'Cartao', false, 'Sem picles', 746, 71);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-24', '17:16', 68.41, 'Cartao', true, 'Sem molhos', 508, 67);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-19', '12:27', 192.38, 'Dinheiro', true, 'Sem cebola', 169, 105);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-19', '13:22', 131.57, 'Pix', true, 'Sem picles', 659, 159);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-17', '13:32', 152.81, 'Pix', true, 'Guardanapo adicional', 554, 126);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-16', '21:36', 189.14, 'Dinheiro', false, 'Ketchup adicional', 197, 34);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-18', '13:59', 79.74, 'Dinheiro', true, 'Ketchup adicional', 487, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-26', '14:55', 73.16, 'Pix', true, 'Sem molhos', 536, 44);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-30', '22:36', 162.66, 'Pix', true, 'Com pimenta', 342, 67);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-01', '23:19', 39.87, 'Dinheiro', false, 'Sem observações', 194, 65);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-15', '17:51', 147.07, 'Pix', false, 'Sem picles', 478, 75);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-06', '18:50', 99.6, 'Pix', true, 'Ketchup adicional', 459, 81);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-21', '13:49', 163.49, 'Pix', false, 'Guardanapo adicional', 709, 8);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-17', '13:06', 55.42, 'Cartao', false, 'Com pimenta', 48, 153);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-18', '11:06', 58.42, 'Dinheiro', true, 'Sem molhos', 24, 85);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-11', '17:39', 89.85, 'Pix', false, 'Guardanapo adicional', 139, 47);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-31', '14:09', 176.6, 'Cartao', false, 'Com pimenta', 528, 53);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-17', '18:45', 30.83, 'Dinheiro', true, 'Cliente fiel', 706, 156);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-19', '18:26', 78.25, 'Pix', false, 'Com pimenta', 433, 184);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-15', '14:24', 185.02, 'Pix', false, 'Ketchup adicional', 435, 33);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-09', '16:53', 136.87, 'Pix', true, 'Com pimenta', 642, 2);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-08', '14:13', 109.76, 'Pix', false, 'Sem cebola', 326, 35);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-11', '23:05', 52.78, 'Pix', true, 'Sem picles', 371, 113);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-23', '20:40', 84.14, 'Dinheiro', false, 'Cliente fiel', 101, 149);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-08', '18:29', 43.35, 'Cartao', false, 'Sem molhos', 112, 186);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-27', '13:34', 133.78, 'Dinheiro', false, 'Sem molhos', 83, 90);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-22', '22:09', 47.6, 'Dinheiro', true, 'Sem molhos', 183, 52);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-30', '12:47', 30.29, 'Pix', false, 'Ketchup adicional', 13, 164);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-29', '18:24', 42.69, 'Pix', false, 'Sem molhos', 677, 14);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-08', '16:40', 33.68, 'Dinheiro', true, 'Sem picles', 131, 144);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-16', '13:52', 89.52, 'Cartao', true, 'Para viagem', 449, 146);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-27', '17:58', 171.78, 'Cartao', false, 'Cliente fiel', 128, 52);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-23', '12:10', 71.5, 'Dinheiro', false, 'Com pimenta', 41, 29);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-16', '16:37', 193.43, 'Dinheiro', true, 'Ketchup adicional', 454, 154);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-18', '21:27', 26.43, 'Cartao', false, 'Sem cebola', 115, 171);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-23', '19:51', 114.08, 'Cartao', true, 'Para viagem', 451, 51);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-23', '19:54', 126.29, 'Dinheiro', false, 'Sem molhos', 698, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-29', '13:26', 64.84, 'Cartao', true, 'Para viagem', 750, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-07', '21:26', 169.0, 'Pix', false, 'Sem cebola', 401, 88);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-03', '14:36', 120.17, 'Dinheiro', false, 'Para viagem', 547, 1);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-09', '11:53', 166.0, 'Cartao', true, 'Sem molhos', 259, 135);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-16', '15:06', 32.7, 'Dinheiro', true, 'Sem cebola', 59, 87);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-07', '21:26', 127.76, 'Dinheiro', false, 'Sem picles', 548, 105);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-07', '22:52', 67.5, 'Dinheiro', true, 'Cliente fiel', 650, 111);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-12', '21:13', 177.33, 'Pix', true, 'Para viagem', 646, 116);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-19', '20:19', 112.17, 'Pix', false, 'Com pimenta', 43, 2);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-29', '19:12', 42.59, 'Cartao', false, 'Cliente fiel', 94, 43);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-16', '14:25', 128.2, 'Pix', true, 'Cliente fiel', 681, 177);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-11', '11:21', 197.18, 'Pix', true, 'Sem picles', 52, 61);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-27', '17:47', 190.8, 'Pix', true, 'Sem observações', 302, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-02', '12:48', 87.83, 'Dinheiro', false, 'Ketchup adicional', 207, 10);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-03', '19:22', 43.79, 'Pix', true, 'Para viagem', 720, 195);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-09', '21:28', 182.89, 'Pix', false, 'Sem cebola', 254, 105);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-19', '14:39', 115.82, 'Dinheiro', true, 'Para viagem', 681, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-19', '16:16', 56.13, 'Pix', false, 'Com pimenta', 158, 109);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-25', '21:18', 143.62, 'Cartao', false, 'Sem cebola', 528, 29);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-30', '13:15', 188.63, 'Cartao', true, 'Sem picles', 9, 157);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-23', '21:39', 146.07, 'Dinheiro', true, 'Ketchup adicional', 553, 104);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-06', '22:42', 66.06, 'Cartao', false, 'Sem molhos', 109, 107);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-23', '11:39', 101.55, 'Pix', false, 'Para viagem', 465, 29);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-22', '22:45', 123.5, 'Cartao', true, 'Sem picles', 448, 20);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-21', '12:05', 154.49, 'Pix', true, 'Sem observações', 309, 5);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-29', '19:12', 151.36, 'Pix', false, 'Sem cebola', 388, 183);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-01', '16:18', 76.53, 'Dinheiro', true, 'Sem molhos', 384, 104);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-21', '17:06', 136.35, 'Cartao', false, 'Guardanapo adicional', 470, 116);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-20', '12:54', 188.84, 'Cartao', false, 'Cliente fiel', 96, 112);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-19', '18:28', 59.98, 'Pix', true, 'Sem molhos', 737, 188);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-18', '15:16', 68.25, 'Pix', false, 'Guardanapo adicional', 80, 158);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-28', '23:02', 187.48, 'Pix', true, 'Cliente fiel', 26, 1);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-02', '18:53', 73.09, 'Dinheiro', true, 'Com pimenta', 695, 54);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-14', '11:40', 177.63, 'Cartao', true, 'Cliente fiel', 74, 10);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-09', '23:51', 187.79, 'Pix', true, 'Sem molhos', 442, 191);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-04', '13:40', 181.46, 'Pix', false, 'Ketchup adicional', 426, 120);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-29', '12:46', 115.79, 'Pix', false, 'Guardanapo adicional', 169, 26);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-09', '20:54', 38.29, 'Cartao', false, 'Sem cebola', 129, 28);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-09', '18:49', 97.57, 'Cartao', false, 'Cliente fiel', 697, 112);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-11', '12:20', 188.0, 'Pix', true, 'Sem cebola', 201, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-22', '14:34', 176.59, 'Pix', true, 'Cliente fiel', 367, 158);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-16', '23:52', 63.97, 'Dinheiro', true, 'Guardanapo adicional', 526, 1);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-19', '21:07', 196.92, 'Pix', true, 'Guardanapo adicional', 23, 174);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-01', '20:54', 125.45, 'Cartao', false, 'Sem molhos', 235, 102);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-19', '13:46', 134.2, 'Cartao', false, 'Sem molhos', 708, 115);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-10', '17:48', 81.55, 'Dinheiro', true, 'Sem observações', 400, 192);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-02', '14:39', 66.05, 'Cartao', false, 'Sem cebola', 337, 73);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-15', '17:11', 189.78, 'Cartao', true, 'Sem cebola', 302, 91);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-09', '20:17', 161.43, 'Pix', true, 'Ketchup adicional', 655, 130);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-20', '14:46', 140.36, 'Dinheiro', true, 'Sem molhos', 168, 90);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-25', '22:39', 59.53, 'Cartao', true, 'Com pimenta', 263, 2);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-02', '22:56', 55.73, 'Pix', true, 'Sem molhos', 586, 26);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-03', '16:36', 104.26, 'Dinheiro', true, 'Sem picles', 41, 78);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-19', '13:43', 137.38, 'Cartao', false, 'Sem observações', 712, 117);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-03', '18:38', 185.09, 'Cartao', true, 'Cliente fiel', 60, 199);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-26', '15:07', 34.43, 'Dinheiro', true, 'Ketchup adicional', 597, 119);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-09', '15:17', 66.84, 'Cartao', false, 'Ketchup adicional', 187, 91);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-18', '12:40', 46.23, 'Pix', true, 'Sem picles', 583, 131);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-24', '20:43', 149.83, 'Cartao', true, 'Sem molhos', 605, 21);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-25', '16:05', 170.22, 'Pix', true, 'Sem observações', 711, 112);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-14', '17:44', 91.0, 'Cartao', false, 'Para viagem', 688, 43);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-13', '18:09', 106.73, 'Cartao', false, 'Sem observações', 621, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-11', '15:43', 65.35, 'Dinheiro', true, 'Sem picles', 608, 50);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-11', '22:53', 25.03, 'Pix', true, 'Sem molhos', 340, 174);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-17', '19:32', 37.36, 'Dinheiro', false, 'Com pimenta', 695, 120);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-27', '19:50', 52.8, 'Cartao', false, 'Guardanapo adicional', 167, 141);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-05', '23:58', 47.94, 'Pix', false, 'Com pimenta', 521, 177);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-17', '13:50', 146.52, 'Cartao', false, 'Cliente fiel', 395, 41);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-23', '21:14', 162.79, 'Dinheiro', true, 'Sem molhos', 680, 99);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-05', '19:11', 89.93, 'Cartao', true, 'Ketchup adicional', 228, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-06', '18:13', 170.91, 'Pix', false, 'Sem molhos', 453, 168);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-08', '14:48', 54.85, 'Pix', false, 'Sem picles', 380, 97);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-04', '20:20', 59.52, 'Cartao', true, 'Guardanapo adicional', 641, 163);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-04', '16:36', 171.4, 'Pix', false, 'Para viagem', 284, 105);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-26', '13:08', 79.84, 'Dinheiro', true, 'Ketchup adicional', 319, 172);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-30', '12:18', 27.79, 'Dinheiro', true, 'Para viagem', 41, 94);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-23', '17:04', 66.13, 'Dinheiro', false, 'Ketchup adicional', 680, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-08', '23:10', 181.41, 'Pix', true, 'Ketchup adicional', 447, 178);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-07', '15:00', 195.25, 'Pix', false, 'Sem picles', 670, 158);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-16', '17:31', 145.4, 'Pix', true, 'Cliente fiel', 374, 11);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-06', '12:08', 143.94, 'Cartao', false, 'Sem molhos', 86, 4);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-15', '12:57', 66.04, 'Cartao', false, 'Sem picles', 117, 97);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-06', '21:54', 76.67, 'Dinheiro', true, 'Sem picles', 731, 125);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-21', '21:10', 40.23, 'Cartao', false, 'Guardanapo adicional', 485, 4);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-23', '23:16', 42.94, 'Cartao', true, 'Para viagem', 556, 194);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-13', '12:21', 47.28, 'Cartao', true, 'Sem cebola', 429, 171);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-26', '13:58', 152.25, 'Cartao', false, 'Cliente fiel', 238, 169);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-23', '20:30', 139.78, 'Dinheiro', true, 'Ketchup adicional', 523, 42);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-27', '16:17', 140.36, 'Pix', true, 'Sem observações', 744, 78);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-05', '22:45', 60.71, 'Dinheiro', true, 'Ketchup adicional', 111, 32);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-04', '11:33', 44.43, 'Pix', true, 'Para viagem', 375, 167);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-19', '22:56', 197.56, 'Cartao', true, 'Sem observações', 79, 55);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-31', '20:55', 172.79, 'Cartao', false, 'Ketchup adicional', 149, 132);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-21', '16:07', 37.45, 'Cartao', false, 'Sem molhos', 315, 159);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-13', '23:29', 195.62, 'Dinheiro', false, 'Sem observações', 736, 83);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-08', '12:55', 170.56, 'Cartao', false, 'Sem cebola', 178, 134);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-22', '14:38', 74.61, 'Pix', false, 'Para viagem', 728, 161);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-24', '19:13', 154.32, 'Dinheiro', true, 'Com pimenta', 152, 89);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-12', '17:51', 111.95, 'Dinheiro', false, 'Sem cebola', 657, 91);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-16', '15:28', 177.39, 'Cartao', true, 'Sem molhos', 422, 51);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-16', '14:01', 49.75, 'Cartao', true, 'Ketchup adicional', 436, 174);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-27', '23:49', 96.24, 'Pix', false, 'Ketchup adicional', 628, 120);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-16', '18:32', 129.29, 'Cartao', true, 'Sem observações', 113, 45);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-24', '21:17', 138.21, 'Cartao', false, 'Sem picles', 555, 54);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-25', '17:04', 131.29, 'Cartao', false, 'Sem picles', 471, 37);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-23', '21:31', 30.15, 'Dinheiro', false, 'Guardanapo adicional', 36, 98);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-05', '20:40', 109.78, 'Pix', false, 'Guardanapo adicional', 96, 143);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-12', '16:46', 103.1, 'Pix', false, 'Com pimenta', 731, 95);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-21', '15:01', 160.21, 'Cartao', false, 'Guardanapo adicional', 681, 176);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-23', '13:15', 181.11, 'Pix', true, 'Sem picles', 445, 52);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-31', '12:39', 199.27, 'Cartao', true, 'Ketchup adicional', 378, 78);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-21', '15:23', 124.62, 'Pix', true, 'Ketchup adicional', 35, 47);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-18', '14:55', 128.23, 'Pix', true, 'Com pimenta', 508, 136);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-26', '18:26', 53.08, 'Dinheiro', false, 'Sem picles', 228, 79);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-20', '17:20', 40.32, 'Dinheiro', false, 'Sem picles', 204, 165);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-23', '23:41', 187.23, 'Cartao', true, 'Sem picles', 563, 144);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-06', '17:10', 93.06, 'Pix', true, 'Guardanapo adicional', 189, 22);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-09', '13:33', 99.0, 'Pix', true, 'Cliente fiel', 714, 103);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-08', '23:26', 113.79, 'Cartao', false, 'Cliente fiel', 536, 42);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-19', '15:08', 65.89, 'Pix', false, 'Ketchup adicional', 703, 73);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-07', '18:28', 153.09, 'Cartao', false, 'Sem molhos', 660, 89);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-21', '17:14', 136.22, 'Dinheiro', false, 'Sem molhos', 489, 135);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-05', '18:49', 55.37, 'Pix', true, 'Para viagem', 467, 122);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-15', '21:44', 138.87, 'Cartao', false, 'Para viagem', 624, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-04', '21:50', 171.04, 'Pix', true, 'Cliente fiel', 286, 85);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-11', '14:34', 69.37, 'Pix', false, 'Guardanapo adicional', 172, 117);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-08', '23:05', 195.99, 'Cartao', false, 'Sem observações', 225, 148);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-23', '21:32', 192.47, 'Pix', true, 'Sem molhos', 138, 178);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-06-01', '18:46', 174.63, 'Dinheiro', true, 'Sem observações', 273, 193);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-07', '20:52', 125.35, 'Cartao', false, 'Sem cebola', 177, 142);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-19', '22:24', 183.0, 'Dinheiro', true, 'Ketchup adicional', 136, 106);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-19', '17:52', 171.36, 'Dinheiro', false, 'Sem molhos', 344, 3);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-19', '11:51', 139.42, 'Dinheiro', false, 'Sem molhos', 331, 150);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-06', '17:24', 136.86, 'Pix', false, 'Para viagem', 303, 147);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-11', '14:27', 51.33, 'Pix', false, 'Sem picles', 735, 29);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-02', '17:02', 172.55, 'Pix', false, 'Ketchup adicional', 182, 122);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-25', '23:41', 44.29, 'Cartao', true, 'Sem cebola', 15, 132);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-18', '14:39', 27.41, 'Pix', false, 'Para viagem', 487, 159);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-19', '16:44', 198.62, 'Dinheiro', true, 'Sem picles', 321, 147);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-25', '17:25', 52.19, 'Cartao', false, 'Para viagem', 704, 89);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-21', '15:08', 27.82, 'Pix', false, 'Sem cebola', 493, 136);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-15', '23:32', 117.72, 'Pix', false, 'Cliente fiel', 304, 193);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-02', '21:20', 116.35, 'Dinheiro', false, 'Guardanapo adicional', 230, 92);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-27', '17:54', 176.68, 'Pix', false, 'Sem picles', 244, 160);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-23', '21:28', 84.54, 'Pix', true, 'Cliente fiel', 529, 129);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-08-12', '15:29', 53.96, 'Pix', false, 'Ketchup adicional', 194, 192);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-29', '20:16', 189.24, 'Cartao', false, 'Sem observações', 63, 113);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-18', '14:37', 182.48, 'Dinheiro', false, 'Sem observações', 594, 65);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-20', '16:08', 90.15, 'Pix', true, 'Cliente fiel', 207, 156);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-17', '20:55', 187.13, 'Pix', false, 'Sem observações', 246, 129);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-04-03', '16:34', 113.32, 'Dinheiro', true, 'Cliente fiel', 584, 118);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-28', '11:51', 38.52, 'Cartao', true, 'Para viagem', 680, 111);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-01', '11:35', 66.62, 'Cartao', false, 'Guardanapo adicional', 123, 39);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-05', '20:58', 33.49, 'Pix', true, 'Para viagem', 743, 76);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-07', '14:46', 195.36, 'Cartao', true, 'Sem molhos', 297, 110);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-15', '13:14', 134.9, 'Cartao', true, 'Sem cebola', 324, 147);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-10', '20:23', 188.62, 'Cartao', false, 'Ketchup adicional', 663, 25);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-02', '16:30', 194.38, 'Cartao', false, 'Sem molhos', 422, 31);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-26', '19:53', 164.94, 'Cartao', false, 'Sem cebola', 339, 107);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-02', '23:30', 178.32, 'Cartao', false, 'Com pimenta', 307, 80);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-06', '23:26', 155.55, 'Cartao', true, 'Sem molhos', 49, 13);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-03', '13:44', 149.11, 'Dinheiro', true, 'Com pimenta', 417, 54);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-21', '18:57', 86.11, 'Pix', false, 'Para viagem', 108, 167);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-29', '11:34', 109.9, 'Dinheiro', false, 'Guardanapo adicional', 267, 187);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-28', '12:26', 151.76, 'Cartao', true, 'Com pimenta', 362, 88);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-29', '17:38', 116.68, 'Dinheiro', true, 'Com pimenta', 407, 89);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-07-31', '19:36', 73.8, 'Pix', false, 'Cliente fiel', 553, 32);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-02', '23:07', 41.16, 'Dinheiro', false, 'Sem cebola', 96, 120);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-06-17', '11:17', 127.85, 'Cartao', false, 'Guardanapo adicional', 523, 167);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-10', '19:08', 29.91, 'Cartao', true, 'Sem molhos', 443, 56);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-22', '17:01', 29.02, 'Dinheiro', false, 'Cliente fiel', 231, 184);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-03-14', '17:24', 174.6, 'Dinheiro', false, 'Cliente fiel', 15, 13);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-22', '19:01', 85.33, 'Cartao', false, 'Guardanapo adicional', 398, 96);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-23', '16:06', 64.52, 'Pix', false, 'Sem cebola', 637, 140);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-11', '15:01', 131.35, 'Cartao', false, 'Guardanapo adicional', 594, 26);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-07', '23:04', 165.88, 'Pix', false, 'Com pimenta', 161, 154);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-12', '16:06', 77.16, 'Dinheiro', true, 'Com pimenta', 712, 74);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-25', '16:50', 44.79, 'Pix', false, 'Com pimenta', 211, 60);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-12-28', '15:56', 159.71, 'Cartao', true, 'Sem picles', 439, 4);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-10-04', '17:27', 89.96, 'Pix', false, 'Com pimenta', 45, 59);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-01-18', '21:54', 124.57, 'Cartao', false, 'Para viagem', 84, 73);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-11-16', '17:08', 175.83, 'Cartao', false, 'Com pimenta', 562, 77);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-08', '15:46', 45.61, 'Pix', false, 'Ketchup adicional', 159, 93);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-02-04', '16:51', 41.09, 'Cartao', false, 'Para viagem', 222, 144);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2025-05-26', '21:46', 102.27, 'Dinheiro', true, 'Cliente fiel', 175, 130);
-insert into MOCK_DATA (Data_pedido, Hora_pedido, Valor_total_pedido, Forma_pagamento, E_delivery, Observacao, Id_cliente, Id_func) values ('2024-09-28', '15:30', 119.79, 'Pix', true, 'Sem observações', 617, 139);
+    ('2024-12-12', '15:10', 133.95, 'Pix', true, 'Com pimenta', 130, 111),
+    ('2025-01-06', '18:07', 158.25, 'Cartao', true, 'Ketchup adicional', 385, 74),
+    ('2025-04-25', '17:46', 86.96, 'Pix', true, 'Guardanapo adicional', 626, 56),
+    ('2024-08-09', '12:55', 169.94, 'Pix', true, 'Sem cebola', 50, 156),
+    ('2024-12-23', '18:17', 159.49, 'Dinheiro', false, 'Sem molhos', 717, 57),
+    ('2024-08-26', '13:37', 85.32, 'Cartao', false, 'Cliente fiel', 363, 195),
+    ('2024-12-29', '11:23', 70.16, 'Cartao', true, 'Ketchup adicional', 626, 18),
+    ('2024-08-02', '19:46', 160.31, 'Cartao', false, 'Para viagem', 362, 10),
+    ('2025-01-18', '17:35', 98.25, 'Dinheiro', true, 'Guardanapo adicional', 452, 61),
+    ('2024-06-27', '17:11', 64.95, 'Pix', false, 'Com pimenta', 713, 80),
+    ('2025-04-14', '12:35', 32.72, 'Cartao', true, 'Cliente fiel', 718, 169),
+    ('2024-08-08', '23:19', 194.6, 'Dinheiro', true, 'Ketchup adicional', 110, 46),
+    ('2024-12-13', '19:48', 137.95, 'Dinheiro', true, 'Sem picles', 496, 134),
+    ('2024-08-02', '12:30', 144.56, 'Pix', false, 'Cliente fiel', 184, 118),
+    ('2024-08-04', '16:24', 111.82, 'Pix', true, 'Com pimenta', 282, 83),
+    ('2024-08-18', '13:04', 88.11, 'Pix', true, 'Sem molhos', 418, 15),
+    ('2025-05-20', '20:36', 154.32, 'Cartao', false, 'Para viagem', 227, 100),
+    ('2024-11-28', '17:04', 93.82, 'Dinheiro', true, 'Sem observações', 433, 3),
+    ('2025-04-29', '14:47', 26.2, 'Pix', false, 'Sem picles', 99, 27),
+    ('2025-05-15', '12:24', 28.03, 'Pix', false, 'Sem molhos', 341, 24),
+    ('2025-05-20', '20:26', 106.42, 'Dinheiro', true, 'Sem picles', 416, 140),
+    ('2024-07-19', '16:56', 185.05, 'Pix', false, 'Guardanapo adicional', 369, 183),
+    ('2024-11-07', '19:03', 177.36, 'Dinheiro', false, 'Sem molhos', 149, 49),
+    ('2025-02-22', '19:21', 113.45, 'Dinheiro', false, 'Para viagem', 178, 157),
+    ('2025-02-11', '21:15', 90.28, 'Cartao', true, 'Ketchup adicional', 308, 52),
+    ('2025-03-10', '15:14', 188.78, 'Dinheiro', false, 'Guardanapo adicional', 394, 77),
+    ('2025-06-06', '11:08', 27.15, 'Cartao', true, 'Sem observações', 522, 118),
+    ('2024-08-18', '20:48', 34.65, 'Cartao', true, 'Sem molhos', 301, 103),
+    ('2024-08-02', '19:46', 174.4, 'Cartao', false, 'Ketchup adicional', 625, 64),
+    ('2024-10-17', '13:28', 31.29, 'Cartao', true, 'Guardanapo adicional', 634, 59),
+    ('2024-08-31', '19:00', 95.07, 'Cartao', true, 'Ketchup adicional', 158, 85),
+    ('2024-11-18', '18:06', 127.78, 'Dinheiro', true, 'Sem molhos', 725, 94),
+    ('2025-01-28', '17:59', 139.34, 'Cartao', false, 'Com pimenta', 358, 118),
+    ('2025-03-18', '19:35', 116.22, 'Cartao', true, 'Para viagem', 308, 37),
+    ('2024-08-05', '16:08', 174.61, 'Pix', true, 'Cliente fiel', 428, 132),
+    ('2025-02-22', '22:23', 28.21, 'Cartao', true, 'Com pimenta', 51, 196),
+    ('2025-05-03', '18:04', 61.15, 'Cartao', true, 'Guardanapo adicional', 85, 140),
+    ('2024-10-30', '14:53', 102.93, 'Dinheiro', true, 'Para viagem', 498, 102),
+    ('2024-09-23', '23:46', 57.42, 'Cartao', true, 'Ketchup adicional', 235, 9),
+    ('2024-08-09', '20:25', 41.21, 'Pix', true, 'Sem observações', 200, 10),
+    ('2025-01-27', '16:31', 165.23, 'Pix', true, 'Sem molhos', 634, 186),
+    ('2025-04-10', '17:53', 148.62, 'Pix', false, 'Ketchup adicional', 711, 114),
+    ('2025-03-24', '17:27', 101.98, 'Cartao', false, 'Sem picles', 282, 80),
+    ('2025-06-16', '23:08', 76.17, 'Pix', false, 'Guardanapo adicional', 649, 26),
+    ('2024-10-25', '19:26', 86.24, 'Dinheiro', false, 'Guardanapo adicional', 196, 123),
+    ('2024-08-08', '20:49', 164.15, 'Cartao', true, 'Sem picles', 26, 160),
+    ('2024-08-13', '12:18', 84.92, 'Pix', false, 'Cliente fiel', 5, 106),
+    ('2024-08-08', '18:34', 77.16, 'Cartao', false, 'Com pimenta', 294, 82),
+    ('2024-07-09', '23:21', 42.34, 'Dinheiro', false, 'Cliente fiel', 614, 99),
+    ('2024-10-03', '17:19', 60.1, 'Pix', true, 'Com pimenta', 733, 182),
+    ('2025-03-16', '12:13', 108.28, 'Dinheiro', false, 'Para viagem', 140, 98),
+    ('2025-04-12', '15:54', 104.58, 'Dinheiro', false, 'Guardanapo adicional', 46, 190),
+    ('2025-02-16', '14:18', 63.39, 'Cartao', false, 'Sem cebola', 724, 104),
+    ('2024-11-07', '21:57', 165.58, 'Cartao', false, 'Cliente fiel', 35, 71),
+    ('2025-01-17', '18:09', 164.06, 'Dinheiro', false, 'Guardanapo adicional', 179, 127),
+    ('2025-05-24', '12:00', 168.36, 'Cartao', false, 'Ketchup adicional', 227, 45),
+    ('2024-11-15', '20:55', 94.97, 'Pix', false, 'Sem picles', 256, 116),
+    ('2025-02-07', '11:22', 113.03, 'Cartao', false, 'Sem observações', 97, 183),
+    ('2025-04-16', '16:22', 40.85, 'Cartao', true, 'Sem picles', 285, 153),
+    ('2025-03-24', '21:26', 157.94, 'Pix', false, 'Ketchup adicional', 182, 60),
+    ('2024-09-11', '16:20', 180.63, 'Cartao', false, 'Para viagem', 706, 63),
+    ('2024-09-15', '18:19', 40.05, 'Pix', true, 'Guardanapo adicional', 645, 194),
+    ('2024-12-02', '20:03', 125.73, 'Cartao', false, 'Guardanapo adicional', 74, 59),
+    ('2024-10-22', '15:20', 86.08, 'Cartao', true, 'Cliente fiel', 160, 3),
+    ('2024-08-30', '18:09', 154.11, 'Dinheiro', false, 'Sem molhos', 508, 4),
+    ('2025-01-07', '19:41', 120.62, 'Dinheiro', false, 'Sem molhos', 249, 129),
+    ('2025-04-03', '11:46', 46.63, 'Pix', true, 'Sem cebola', 248, 177),
+    ('2025-02-06', '15:16', 134.79, 'Cartao', false, 'Guardanapo adicional', 190, 63),
+    ('2024-06-28', '16:51', 180.4, 'Dinheiro', false, 'Com pimenta', 2, 132),
+    ('2024-08-28', '13:40', 150.33, 'Cartao', true, 'Sem cebola', 64, 17),
+    ('2024-07-18', '20:17', 141.25, 'Pix', false, 'Sem cebola', 739, 98),
+    ('2025-04-23', '11:14', 111.69, 'Pix', true, 'Com pimenta', 380, 60),
+    ('2024-10-12', '17:22', 197.42, 'Cartao', false, 'Sem cebola', 70, 140),
+    ('2024-11-05', '14:23', 29.69, 'Pix', true, 'Sem cebola', 46, 159),
+    ('2025-02-05', '16:07', 96.64, 'Dinheiro', true, 'Guardanapo adicional', 475, 116),
+    ('2024-09-28', '16:42', 162.85, 'Dinheiro', false, 'Com pimenta', 455, 159),
+    ('2024-11-01', '11:36', 106.38, 'Cartao', true, 'Sem cebola', 317, 35),
+    ('2024-07-02', '16:49', 166.89, 'Pix', false, 'Sem observações', 150, 59),
+    ('2024-07-14', '16:07', 77.34, 'Cartao', true, 'Cliente fiel', 358, 19),
+    ('2024-08-20', '13:40', 173.73, 'Cartao', false, 'Guardanapo adicional', 711, 116),
+    ('2024-09-08', '23:22', 31.79, 'Cartao', false, 'Cliente fiel', 138, 5),
+    ('2024-10-24', '20:08', 94.23, 'Cartao', true, 'Sem observações', 40, 168),
+    ('2025-05-13', '18:10', 93.22, 'Cartao', true, 'Sem observações', 662, 18),
+    ('2024-10-10', '12:11', 197.37, 'Dinheiro', false, 'Cliente fiel', 45, 15),
+    ('2025-01-28', '13:50', 177.49, 'Cartao', true, 'Sem observações', 458, 119),
+    ('2024-09-12', '23:17', 56.51, 'Cartao', true, 'Sem molhos', 720, 152),
+    ('2024-11-06', '11:15', 187.39, 'Pix', false, 'Sem cebola', 165, 141),
+    ('2025-01-05', '22:02', 145.79, 'Cartao', true, 'Sem molhos', 367, 28),
+    ('2024-12-06', '16:11', 169.54, 'Pix', true, 'Sem observações', 253, 22),
+    ('2024-10-17', '18:45', 109.64, 'Cartao', true, 'Com pimenta', 114, 134),
+    ('2024-07-26', '11:48', 169.52, 'Cartao', true, 'Ketchup adicional', 689, 22),
+    ('2025-01-22', '13:28', 25.09, 'Pix', false, 'Para viagem', 221, 197),
+    ('2025-01-23', '15:12', 122.33, 'Pix', true, 'Sem picles', 158, 193),
+    ('2025-05-05', '22:05', 149.48, 'Pix', false, 'Guardanapo adicional', 408, 45),
+    ('2025-05-15', '14:28', 33.64, 'Cartao', false, 'Com pimenta', 200, 187),
+    ('2025-02-25', '20:12', 42.7, 'Cartao', false, 'Sem molhos', 433, 90),
+    ('2025-05-03', '12:22', 125.46, 'Cartao', false, 'Com pimenta', 743, 28),
+    ('2024-09-15', '14:05', 47.93, 'Pix', true, 'Sem cebola', 316, 11),
+    ('2025-01-18', '19:29', 68.19, 'Pix', false, 'Cliente fiel', 80, 128),
+    ('2024-12-22', '13:18', 119.28, 'Cartao', false, 'Para viagem', 98, 143),
+    ('2024-06-22', '17:37', 111.18, 'Cartao', true, 'Sem cebola', 429, 29),
+    ('2024-10-02', '21:02', 180.01, 'Dinheiro', true, 'Guardanapo adicional', 611, 180),
+    ('2025-03-12', '12:06', 63.92, 'Cartao', false, 'Para viagem', 43, 63),
+    ('2024-09-14', '21:55', 137.38, 'Pix', true, 'Para viagem', 592, 150),
+    ('2025-04-24', '14:29', 183.65, 'Dinheiro', false, 'Sem picles', 328, 146),
+    ('2025-06-01', '15:26', 59.18, 'Dinheiro', true, 'Sem cebola', 236, 30),
+    ('2025-05-01', '16:41', 29.53, 'Pix', false, 'Sem molhos', 284, 23),
+    ('2025-03-03', '12:41', 32.24, 'Dinheiro', false, 'Sem cebola', 35, 164),
+    ('2024-07-14', '23:05', 94.46, 'Dinheiro', false, 'Sem cebola', 577, 102),
+    ('2024-07-16', '18:21', 42.46, 'Cartao', false, 'Com pimenta', 110, 50),
+    ('2025-03-22', '23:10', 37.21, 'Pix', false, 'Para viagem', 229, 56),
+    ('2024-11-06', '23:55', 169.7, 'Cartao', true, 'Para viagem', 525, 111),
+    ('2025-03-29', '11:50', 115.51, 'Dinheiro', true, 'Ketchup adicional', 297, 169),
+    ('2024-09-05', '18:49', 51.61, 'Cartao', false, 'Cliente fiel', 515, 111),
+    ('2024-12-22', '23:31', 171.71, 'Cartao', true, 'Cliente fiel', 706, 196),
+    ('2024-07-20', '16:29', 163.29, 'Dinheiro', false, 'Sem observações', 442, 25),
+    ('2025-02-01', '23:22', 183.64, 'Cartao', true, 'Sem observações', 594, 137),
+    ('2024-08-15', '16:37', 25.63, 'Cartao', false, 'Para viagem', 445, 185),
+    ('2025-04-24', '21:57', 95.68, 'Dinheiro', false, 'Sem cebola', 473, 110),
+    ('2024-09-04', '22:28', 168.7, 'Dinheiro', true, 'Com pimenta', 44, 157),
+    ('2024-10-01', '11:57', 141.33, 'Pix', true, 'Para viagem', 83, 165),
+    ('2024-10-16', '16:29', 180.48, 'Cartao', false, 'Com pimenta', 517, 96),
+    ('2025-03-11', '23:39', 178.76, 'Pix', false, 'Ketchup adicional', 661, 172),
+    ('2025-02-24', '19:02', 109.1, 'Pix', true, 'Sem picles', 129, 172),
+    ('2024-12-26', '12:19', 104.23, 'Cartao', false, 'Sem molhos', 343, 166),
+    ('2024-12-15', '14:34', 101.02, 'Cartao', false, 'Para viagem', 34, 144),
+    ('2025-03-21', '21:34', 87.37, 'Cartao', false, 'Sem cebola', 527, 175),
+    ('2024-12-26', '12:21', 139.18, 'Cartao', false, 'Sem observações', 547, 48),
+    ('2024-09-12', '20:46', 199.07, 'Cartao', true, 'Sem cebola', 211, 141),
+    ('2024-12-01', '12:22', 114.31, 'Cartao', false, 'Ketchup adicional', 579, 55),
+    ('2024-07-22', '17:33', 172.16, 'Cartao', false, 'Cliente fiel', 570, 96),
+    ('2024-07-28', '19:52', 76.72, 'Dinheiro', false, 'Para viagem', 279, 182),
+    ('2024-09-10', '15:57', 38.21, 'Pix', false, 'Guardanapo adicional', 34, 123),
+    ('2024-08-02', '22:38', 157.05, 'Cartao', true, 'Para viagem', 221, 99),
+    ('2025-06-19', '11:41', 175.27, 'Pix', false, 'Sem picles', 56, 69),
+    ('2024-09-27', '15:37', 31.69, 'Dinheiro', true, 'Sem molhos', 344, 194),
+    ('2025-01-21', '19:08', 71.56, 'Dinheiro', false, 'Ketchup adicional', 390, 162),
+    ('2025-04-27', '18:21', 53.36, 'Cartao', false, 'Guardanapo adicional', 663, 107),
+    ('2024-10-29', '17:43', 135.86, 'Dinheiro', false, 'Sem observações', 307, 37),
+    ('2025-01-01', '11:46', 173.87, 'Pix', false, 'Para viagem', 407, 31),
+    ('2025-05-28', '23:08', 89.18, 'Pix', false, 'Sem cebola', 171, 46),
+    ('2024-09-04', '11:59', 179.98, 'Cartao', false, 'Ketchup adicional', 700, 78),
+    ('2025-05-12', '15:44', 76.68, 'Dinheiro', false, 'Sem observações', 4, 91),
+    ('2025-06-06', '23:54', 114.0, 'Dinheiro', true, 'Ketchup adicional', 273, 17),
+    ('2024-12-29', '23:13', 45.56, 'Dinheiro', true, 'Guardanapo adicional', 88, 99),
+    ('2024-12-25', '12:23', 56.01, 'Cartao', true, 'Com pimenta', 217, 115),
+    ('2025-05-06', '16:54', 93.38, 'Pix', false, 'Guardanapo adicional', 60, 130),
+    ('2024-10-04', '23:20', 115.64, 'Pix', true, 'Guardanapo adicional', 43, 134),
+    ('2024-11-26', '22:15', 73.52, 'Cartao', true, 'Ketchup adicional', 449, 89),
+    ('2024-09-13', '11:09', 134.94, 'Pix', true, 'Cliente fiel', 183, 11),
+    ('2024-06-23', '16:27', 30.19, 'Dinheiro', true, 'Ketchup adicional', 124, 7),
+    ('2024-08-16', '21:21', 117.78, 'Dinheiro', true, 'Para viagem', 265, 49),
+    ('2025-03-08', '17:55', 184.08, 'Cartao', false, 'Cliente fiel', 645, 20),
+    ('2025-06-03', '21:19', 93.24, 'Pix', false, 'Sem cebola', 393, 30),
+    ('2025-02-27', '17:26', 76.5, 'Cartao', true, 'Para viagem', 233, 59),
+    ('2024-11-05', '12:49', 187.36, 'Pix', true, 'Ketchup adicional', 295, 133),
+    ('2024-11-02', '16:54', 179.06, 'Pix', false, 'Guardanapo adicional', 581, 175),
+    ('2025-05-06', '20:58', 95.42, 'Cartao', true, 'Sem observações', 565, 130),
+    ('2024-07-02', '18:55', 131.91, 'Pix', true, 'Para viagem', 571, 117),
+    ('2025-01-12', '20:41', 34.97, 'Dinheiro', true, 'Guardanapo adicional', 146, 182),
+    ('2024-06-17', '14:31', 63.54, 'Dinheiro', false, 'Com pimenta', 58, 126),
+    ('2024-09-01', '22:17', 83.6, 'Dinheiro', true, 'Guardanapo adicional', 274, 57),
+    ('2025-06-03', '13:58', 134.87, 'Dinheiro', true, 'Cliente fiel', 170, 43),
+    ('2025-01-25', '16:23', 194.71, 'Pix', false, 'Sem cebola', 416, 126),
+    ('2024-12-27', '11:42', 67.21, 'Pix', true, 'Sem observações', 713, 149),
+    ('2025-02-09', '23:09', 85.95, 'Cartao', true, 'Sem cebola', 266, 151),
+    ('2024-09-13', '17:22', 32.25, 'Pix', true, 'Com pimenta', 688, 143),
+    ('2024-11-30', '20:51', 42.03, 'Cartao', true, 'Para viagem', 195, 63),
+    ('2024-09-08', '20:33', 117.37, 'Dinheiro', false, 'Sem molhos', 1, 18),
+    ('2025-03-25', '20:27', 91.2, 'Cartao', true, 'Para viagem', 577, 116),
+    ('2024-08-29', '17:02', 53.68, 'Cartao', false, 'Sem observações', 573, 136),
+    ('2024-12-09', '12:42', 117.09, 'Dinheiro', true, 'Sem molhos', 500, 117),
+    ('2024-12-01', '19:05', 160.73, 'Cartao', true, 'Com pimenta', 226, 36),
+    ('2025-01-11', '18:00', 82.85, 'Cartao', false, 'Cliente fiel', 246, 137),
+    ('2024-12-29', '21:22', 97.57, 'Cartao', false, 'Guardanapo adicional', 123, 47),
+    ('2025-04-03', '13:29', 114.12, 'Dinheiro', true, 'Sem molhos', 102, 102),
+    ('2025-05-20', '17:13', 151.67, 'Pix', false, 'Cliente fiel', 660, 199),
+    ('2024-09-29', '12:55', 77.97, 'Dinheiro', false, 'Sem picles', 2, 60),
+    ('2024-06-15', '11:44', 135.5, 'Pix', true, 'Sem cebola', 583, 43),
+    ('2024-08-22', '14:23', 96.74, 'Pix', false, 'Sem observações', 452, 134),
+    ('2024-09-21', '21:29', 173.26, 'Cartao', true, 'Cliente fiel', 526, 198),
+    ('2024-12-03', '23:53', 102.82, 'Pix', true, 'Sem molhos', 695, 117),
+    ('2025-06-17', '13:11', 48.71, 'Cartao', false, 'Sem cebola', 32, 70),
+    ('2024-11-15', '15:15', 49.72, 'Dinheiro', true, 'Com pimenta', 187, 179),
+    ('2024-09-01', '11:24', 54.51, 'Cartao', true, 'Sem picles', 150, 55),
+    ('2025-05-27', '22:37', 154.96, 'Cartao', true, 'Sem cebola', 743, 96),
+    ('2025-03-27', '16:19', 132.68, 'Dinheiro', true, 'Ketchup adicional', 183, 107),
+    ('2025-03-13', '23:53', 147.29, 'Pix', true, 'Para viagem', 304, 59),
+    ('2025-05-31', '14:35', 197.58, 'Dinheiro', true, 'Para viagem', 349, 195),
+    ('2024-09-06', '17:20', 38.23, 'Cartao', true, 'Para viagem', 602, 65),
+    ('2025-05-09', '11:48', 52.98, 'Cartao', true, 'Sem picles', 604, 143),
+    ('2024-12-13', '23:16', 85.36, 'Cartao', true, 'Para viagem', 176, 164),
+    ('2025-03-29', '21:39', 40.49, 'Cartao', true, 'Cliente fiel', 72, 149),
+    ('2024-09-20', '22:19', 108.64, 'Dinheiro', false, 'Com pimenta', 416, 45),
+    ('2025-04-10', '20:39', 159.76, 'Dinheiro', true, 'Sem observações', 182, 88),
+    ('2025-05-24', '23:22', 198.35, 'Dinheiro', false, 'Sem observações', 726, 138),
+    ('2024-12-16', '12:38', 152.56, 'Dinheiro', false, 'Sem observações', 522, 21),
+    ('2024-08-23', '22:27', 104.38, 'Dinheiro', true, 'Ketchup adicional', 147, 139),
+    ('2025-03-14', '17:27', 107.87, 'Pix', true, 'Ketchup adicional', 721, 122),
+    ('2024-12-27', '21:05', 70.42, 'Cartao', false, 'Cliente fiel', 691, 85),
+    ('2024-11-13', '11:53', 73.04, 'Dinheiro', false, 'Sem molhos', 133, 23),
+    ('2024-07-09', '13:54', 41.3, 'Dinheiro', false, 'Com pimenta', 294, 135),
+    ('2024-10-17', '21:19', 183.1, 'Dinheiro', false, 'Cliente fiel', 385, 2),
+    ('2025-01-27', '20:09', 28.17, 'Cartao', false, 'Para viagem', 229, 108),
+    ('2024-06-17', '13:01', 110.57, 'Dinheiro', true, 'Sem observações', 39, 13),
+    ('2025-04-07', '21:37', 91.8, 'Dinheiro', false, 'Sem molhos', 66, 29),
+    ('2025-06-12', '20:52', 147.27, 'Cartao', true, 'Ketchup adicional', 691, 31),
+    ('2025-01-05', '23:45', 93.73, 'Cartao', false, 'Cliente fiel', 615, 197),
+    ('2024-07-13', '23:21', 27.05, 'Dinheiro', true, 'Para viagem', 24, 13),
+    ('2024-11-08', '19:39', 35.63, 'Cartao', true, 'Cliente fiel', 419, 184),
+    ('2024-09-08', '17:14', 138.28, 'Dinheiro', false, 'Sem molhos', 708, 99),
+    ('2024-07-13', '13:10', 44.69, 'Cartao', false, 'Sem molhos', 520, 193),
+    ('2024-08-02', '20:58', 26.47, 'Cartao', true, 'Cliente fiel', 489, 101),
+    ('2025-01-20', '15:54', 142.04, 'Cartao', false, 'Sem observações', 605, 100),
+    ('2025-05-03', '20:56', 111.74, 'Pix', true, 'Ketchup adicional', 392, 66),
+    ('2024-07-16', '19:39', 135.85, 'Dinheiro', true, 'Sem observações', 286, 153),
+    ('2024-08-14', '16:38', 66.07, 'Pix', true, 'Guardanapo adicional', 608, 172),
+    ('2024-07-12', '13:08', 47.97, 'Cartao', true, 'Sem observações', 624, 188),
+    ('2024-10-27', '15:07', 123.08, 'Dinheiro', true, 'Sem observações', 451, 140),
+    ('2025-02-04', '19:04', 120.51, 'Dinheiro', false, 'Cliente fiel', 710, 72),
+    ('2024-10-23', '19:31', 40.52, 'Cartao', true, 'Para viagem', 656, 132),
+    ('2025-03-18', '15:54', 50.54, 'Dinheiro', false, 'Com pimenta', 520, 110),
+    ('2025-05-11', '17:49', 175.45, 'Cartao', false, 'Sem picles', 511, 121),
+    ('2025-02-16', '13:53', 30.68, 'Dinheiro', false, 'Para viagem', 689, 74),
+    ('2025-02-26', '22:40', 102.43, 'Pix', true, 'Cliente fiel', 166, 110),
+    ('2025-04-30', '12:30', 39.61, 'Pix', true, 'Guardanapo adicional', 190, 184),
+    ('2025-02-14', '14:52', 84.59, 'Dinheiro', true, 'Ketchup adicional', 383, 137),
+    ('2024-12-24', '11:37', 162.98, 'Cartao', true, 'Sem observações', 145, 159),
+    ('2024-07-31', '15:12', 175.24, 'Dinheiro', true, 'Cliente fiel', 1, 189),
+    ('2025-03-04', '20:44', 156.42, 'Pix', true, 'Sem observações', 316, 195),
+    ('2025-02-10', '21:31', 49.57, 'Dinheiro', true, 'Sem molhos', 17, 29),
+    ('2025-06-14', '19:34', 100.39, 'Pix', false, 'Para viagem', 713, 2),
+    ('2025-06-02', '20:35', 108.52, 'Cartao', false, 'Cliente fiel', 597, 120),
+    ('2024-08-16', '22:20', 126.98, 'Dinheiro', false, 'Sem cebola', 425, 50),
+    ('2024-08-20', '22:58', 60.69, 'Pix', true, 'Cliente fiel', 693, 166),
+    ('2024-10-05', '18:41', 192.15, 'Pix', false, 'Para viagem', 46, 11),
+    ('2024-11-21', '19:36', 166.73, 'Dinheiro', false, 'Sem molhos', 479, 2),
+    ('2024-07-10', '22:03', 118.25, 'Cartao', true, 'Sem cebola', 225, 157),
+    ('2025-06-05', '20:13', 127.58, 'Dinheiro', true, 'Sem picles', 248, 150),
+    ('2024-12-03', '19:49', 155.65, 'Cartao', false, 'Cliente fiel', 277, 73),
+    ('2025-01-31', '19:58', 75.71, 'Dinheiro', false, 'Com pimenta', 424, 5),
+    ('2025-04-17', '11:03', 60.37, 'Dinheiro', false, 'Sem picles', 330, 129),
+    ('2024-08-24', '18:48', 79.06, 'Dinheiro', false, 'Com pimenta', 361, 188),
+    ('2025-06-16', '20:21', 116.4, 'Pix', true, 'Sem picles', 695, 74),
+    ('2025-01-23', '11:07', 186.65, 'Pix', false, 'Sem molhos', 660, 87),
+    ('2025-03-06', '18:59', 71.32, 'Dinheiro', false, 'Sem molhos', 488, 81),
+    ('2024-08-22', '18:06', 39.4, 'Cartao', false, 'Com pimenta', 511, 7),
+    ('2024-10-28', '16:47', 64.71, 'Cartao', true, 'Sem cebola', 440, 3),
+    ('2024-08-29', '15:26', 95.31, 'Pix', true, 'Guardanapo adicional', 625, 39),
+    ('2025-05-07', '12:09', 152.49, 'Dinheiro', false, 'Guardanapo adicional', 163, 66),
+    ('2025-01-29', '21:52', 174.73, 'Cartao', true, 'Para viagem', 562, 190),
+    ('2024-10-13', '20:08', 193.32, 'Pix', true, 'Para viagem', 203, 57),
+    ('2025-04-30', '23:07', 177.5, 'Pix', true, 'Sem observações', 546, 52),
+    ('2024-12-25', '11:35', 123.84, 'Cartao', true, 'Cliente fiel', 704, 64),
+    ('2025-01-08', '21:02', 175.81, 'Pix', true, 'Sem cebola', 144, 127),
+    ('2025-04-26', '15:40', 86.13, 'Pix', true, 'Sem molhos', 135, 78),
+    ('2024-07-15', '22:01', 124.56, 'Cartao', true, 'Ketchup adicional', 447, 141),
+    ('2025-01-18', '16:00', 84.91, 'Cartao', false, 'Para viagem', 490, 184),
+    ('2024-08-12', '18:34', 167.35, 'Cartao', true, 'Para viagem', 673, 71),
+    ('2024-12-31', '14:26', 198.77, 'Dinheiro', false, 'Sem cebola', 688, 163),
+    ('2024-12-24', '11:47', 159.51, 'Cartao', true, 'Sem molhos', 67, 131),
+    ('2024-12-22', '23:50', 95.79, 'Cartao', true, 'Guardanapo adicional', 650, 17),
+    ('2025-01-07', '11:50', 144.36, 'Cartao', true, 'Ketchup adicional', 488, 150),
+    ('2025-04-01', '16:43', 156.06, 'Pix', false, 'Ketchup adicional', 14, 69),
+    ('2024-07-03', '20:14', 49.83, 'Dinheiro', true, 'Com pimenta', 743, 139),
+    ('2024-11-13', '13:56', 94.13, 'Pix', true, 'Sem picles', 303, 15),
+    ('2025-04-06', '16:02', 155.2, 'Cartao', false, 'Sem picles', 94, 109),
+    ('2025-05-10', '18:28', 74.69, 'Pix', false, 'Sem cebola', 591, 180),
+    ('2025-02-08', '14:38', 184.66, 'Dinheiro', true, 'Sem picles', 240, 15),
+    ('2024-10-28', '11:49', 123.67, 'Cartao', false, 'Sem picles', 567, 142),
+    ('2025-02-21', '14:26', 134.96, 'Pix', true, 'Para viagem', 739, 178),
+    ('2025-01-14', '19:13', 120.79, 'Cartao', true, 'Para viagem', 544, 126),
+    ('2025-04-16', '14:46', 123.88, 'Cartao', true, 'Com pimenta', 503, 114),
+    ('2024-12-04', '17:08', 180.2, 'Pix', false, 'Com pimenta', 304, 146),
+    ('2025-03-18', '13:40', 90.83, 'Pix', false, 'Sem molhos', 280, 47),
+    ('2024-12-10', '20:46', 182.79, 'Dinheiro', false, 'Com pimenta', 663, 145),
+    ('2024-09-28', '22:05', 111.84, 'Pix', true, 'Sem cebola', 209, 99),
+    ('2025-03-14', '16:57', 86.28, 'Pix', false, 'Ketchup adicional', 511, 36),
+    ('2025-06-01', '15:19', 94.58, 'Cartao', true, 'Cliente fiel', 60, 30),
+    ('2024-11-12', '13:55', 32.27, 'Pix', false, 'Cliente fiel', 273, 186),
+    ('2025-04-30', '12:38', 103.75, 'Cartao', false, 'Com pimenta', 568, 172),
+    ('2024-12-21', '22:36', 46.74, 'Pix', false, 'Ketchup adicional', 719, 63),
+    ('2025-04-06', '12:58', 151.2, 'Cartao', false, 'Para viagem', 295, 165),
+    ('2024-11-05', '20:50', 157.68, 'Cartao', true, 'Para viagem', 484, 30),
+    ('2024-07-16', '20:29', 180.64, 'Pix', false, 'Cliente fiel', 302, 104),
+    ('2025-03-27', '12:25', 71.11, 'Cartao', true, 'Ketchup adicional', 604, 186),
+    ('2024-11-16', '19:26', 147.06, 'Dinheiro', true, 'Ketchup adicional', 413, 28),
+    ('2025-01-22', '17:22', 41.59, 'Pix', false, 'Cliente fiel', 392, 148),
+    ('2024-09-07', '19:35', 50.5, 'Cartao', false, 'Sem cebola', 32, 133),
+    ('2025-05-29', '18:34', 39.13, 'Cartao', false, 'Para viagem', 216, 94),
+    ('2024-06-22', '19:57', 181.99, 'Cartao', true, 'Sem observações', 484, 31),
+    ('2025-03-03', '21:16', 137.74, 'Dinheiro', true, 'Sem picles', 666, 33),
+    ('2025-01-03', '20:53', 27.64, 'Pix', false, 'Sem observações', 752, 185),
+    ('2024-10-14', '11:31', 168.46, 'Dinheiro', true, 'Para viagem', 389, 134),
+    ('2025-02-28', '17:34', 124.24, 'Dinheiro', true, 'Cliente fiel', 206, 196),
+    ('2024-07-27', '15:37', 162.55, 'Pix', false, 'Com pimenta', 634, 7),
+    ('2024-08-23', '21:27', 76.37, 'Cartao', false, 'Sem molhos', 683, 140),
+    ('2024-07-06', '13:28', 59.44, 'Dinheiro', true, 'Sem molhos', 234, 61),
+    ('2024-09-30', '19:22', 100.49, 'Cartao', true, 'Com pimenta', 422, 51),
+    ('2025-05-18', '14:39', 106.65, 'Cartao', true, 'Guardanapo adicional', 468, 121),
+    ('2024-11-22', '21:31', 32.03, 'Dinheiro', false, 'Sem picles', 21, 58),
+    ('2025-03-14', '15:28', 158.42, 'Pix', false, 'Com pimenta', 479, 66),
+    ('2024-06-18', '15:34', 57.89, 'Pix', true, 'Para viagem', 598, 174),
+    ('2024-08-31', '11:30', 40.51, 'Cartao', false, 'Para viagem', 317, 64),
+    ('2024-12-11', '12:40', 27.69, 'Dinheiro', true, 'Para viagem', 99, 59),
+    ('2024-12-15', '23:58', 114.59, 'Cartao', true, 'Ketchup adicional', 375, 126),
+    ('2025-01-18', '23:13', 170.02, 'Cartao', true, 'Guardanapo adicional', 192, 112),
+    ('2025-05-31', '23:54', 195.3, 'Dinheiro', false, 'Sem observações', 734, 199),
+    ('2024-08-28', '18:31', 187.28, 'Cartao', false, 'Para viagem', 106, 131),
+    ('2025-04-20', '17:20', 53.37, 'Pix', false, 'Sem picles', 718, 35),
+    ('2024-12-11', '16:19', 26.26, 'Pix', false, 'Sem molhos', 98, 85),
+    ('2025-01-04', '21:01', 172.15, 'Dinheiro', true, 'Com pimenta', 692, 62),
+    ('2025-03-15', '16:53', 137.71, 'Pix', true, 'Com pimenta', 447, 118),
+    ('2025-05-05', '19:55', 28.85, 'Pix', true, 'Ketchup adicional', 308, 38),
+    ('2025-05-14', '17:57', 66.27, 'Dinheiro', true, 'Guardanapo adicional', 185, 114),
+    ('2025-05-14', '19:49', 90.19, 'Cartao', true, 'Com pimenta', 86, 67),
+    ('2024-11-14', '20:36', 151.87, 'Pix', true, 'Sem molhos', 271, 48),
+    ('2024-10-05', '11:41', 77.45, 'Pix', true, 'Ketchup adicional', 346, 102),
+    ('2025-01-20', '21:07', 191.3, 'Dinheiro', true, 'Sem cebola', 48, 194),
+    ('2025-03-21', '21:18', 95.78, 'Pix', true, 'Guardanapo adicional', 98, 113),
+    ('2024-11-02', '18:48', 101.86, 'Cartao', false, 'Guardanapo adicional', 579, 149),
+    ('2024-12-07', '23:24', 175.49, 'Cartao', false, 'Com pimenta', 143, 96),
+    ('2025-05-20', '21:58', 184.68, 'Cartao', true, 'Sem observações', 686, 55),
+    ('2024-08-10', '11:24', 97.15, 'Pix', true, 'Sem molhos', 642, 50),
+    ('2024-12-27', '22:46', 59.87, 'Cartao', false, 'Guardanapo adicional', 225, 136),
+    ('2024-09-10', '19:21', 75.47, 'Pix', true, 'Sem observações', 673, 102),
+    ('2025-04-23', '20:17', 49.04, 'Cartao', false, 'Sem molhos', 620, 152),
+    ('2024-12-30', '13:51', 35.91, 'Pix', false, 'Com pimenta', 112, 167),
+    ('2025-04-06', '13:30', 108.51, 'Pix', false, 'Cliente fiel', 590, 92),
+    ('2025-04-04', '12:23', 160.77, 'Dinheiro', true, 'Sem observações', 113, 23),
+    ('2025-05-09', '23:07', 129.46, 'Pix', true, 'Para viagem', 109, 98),
+    ('2025-04-09', '18:42', 53.0, 'Cartao', false, 'Sem molhos', 206, 71),
+    ('2024-10-27', '21:49', 179.27, 'Pix', false, 'Cliente fiel', 513, 154),
+    ('2024-11-21', '15:58', 156.53, 'Dinheiro', false, 'Guardanapo adicional', 34, 97),
+    ('2024-09-26', '17:20', 171.53, 'Dinheiro', true, 'Cliente fiel', 628, 94),
+    ('2024-08-20', '21:31', 182.66, 'Cartao', true, 'Ketchup adicional', 21, 128),
+    ('2025-02-28', '20:05', 176.57, 'Pix', true, 'Ketchup adicional', 359, 92),
+    ('2025-02-20', '23:13', 196.93, 'Pix', true, 'Ketchup adicional', 101, 148),
+    ('2024-12-26', '22:23', 122.08, 'Cartao', false, 'Ketchup adicional', 281, 81),
+    ('2025-01-08', '11:20', 103.39, 'Pix', true, 'Com pimenta', 297, 86),
+    ('2025-06-15', '14:17', 171.81, 'Pix', false, 'Sem molhos', 751, 48),
+    ('2024-07-06', '12:06', 74.41, 'Pix', true, 'Com pimenta', 234, 58),
+    ('2024-11-25', '13:05', 57.61, 'Pix', true, 'Ketchup adicional', 18, 143),
+    ('2025-01-10', '18:25', 67.51, 'Pix', true, 'Ketchup adicional', 205, 28),
+    ('2025-01-11', '16:12', 121.4, 'Dinheiro', false, 'Para viagem', 394, 185),
+    ('2025-04-06', '11:56', 45.06, 'Dinheiro', true, 'Guardanapo adicional', 174, 88),
+    ('2024-07-03', '22:32', 147.76, 'Dinheiro', false, 'Sem molhos', 13, 137),
+    ('2024-12-06', '11:06', 160.82, 'Cartao', false, 'Guardanapo adicional', 278, 85),
+    ('2025-03-14', '18:41', 82.84, 'Cartao', true, 'Sem molhos', 321, 133),
+    ('2024-07-27', '21:53', 183.19, 'Cartao', false, 'Cliente fiel', 111, 181),
+    ('2024-08-17', '15:07', 140.88, 'Cartao', false, 'Sem molhos', 395, 47),
+    ('2025-04-08', '11:07', 43.73, 'Cartao', false, 'Ketchup adicional', 707, 39),
+    ('2024-07-15', '23:23', 146.68, 'Cartao', false, 'Com pimenta', 553, 108),
+    ('2024-12-14', '14:30', 197.69, 'Cartao', false, 'Sem picles', 385, 7),
+    ('2024-07-16', '15:04', 159.23, 'Cartao', false, 'Sem cebola', 701, 53),
+    ('2025-02-04', '19:14', 170.58, 'Pix', true, 'Sem picles', 297, 152),
+    ('2024-08-22', '18:17', 34.55, 'Cartao', false, 'Sem cebola', 677, 135),
+    ('2025-06-12', '11:44', 104.43, 'Pix', false, 'Sem picles', 648, 168),
+    ('2024-10-16', '15:40', 131.85, 'Dinheiro', true, 'Com pimenta', 45, 35),
+    ('2024-11-06', '15:16', 61.88, 'Dinheiro', false, 'Sem molhos', 726, 15),
+    ('2024-11-19', '18:54', 73.68, 'Dinheiro', false, 'Ketchup adicional', 502, 159),
+    ('2024-10-24', '11:33', 53.37, 'Cartao', false, 'Sem observações', 497, 84),
+    ('2024-12-05', '13:33', 53.49, 'Pix', false, 'Sem picles', 564, 63),
+    ('2024-06-16', '23:01', 121.97, 'Dinheiro', true, 'Ketchup adicional', 709, 86),
+    ('2025-01-17', '23:08', 28.77, 'Cartao', false, 'Para viagem', 734, 49),
+    ('2025-03-26', '18:22', 108.28, 'Dinheiro', true, 'Sem observações', 475, 23),
+    ('2025-03-13', '20:46', 102.86, 'Pix', true, 'Para viagem', 427, 128),
+    ('2025-05-11', '20:34', 102.19, 'Dinheiro', false, 'Com pimenta', 85, 123),
+    ('2024-10-05', '23:52', 128.9, 'Cartao', false, 'Sem observações', 544, 77),
+    ('2024-07-18', '17:47', 92.49, 'Dinheiro', false, 'Com pimenta', 461, 56),
+    ('2024-09-16', '21:16', 32.45, 'Pix', false, 'Sem picles', 436, 133),
+    ('2025-06-10', '23:27', 26.6, 'Cartao', true, 'Sem molhos', 750, 147),
+    ('2025-05-12', '18:25', 84.07, 'Pix', true, 'Guardanapo adicional', 568, 88),
+    ('2025-05-04', '20:02', 119.36, 'Pix', true, 'Cliente fiel', 657, 186),
+    ('2024-09-13', '22:42', 75.99, 'Dinheiro', false, 'Sem molhos', 409, 16),
+    ('2024-11-18', '20:36', 156.05, 'Dinheiro', true, 'Sem molhos', 747, 14),
+    ('2025-02-23', '11:55', 196.09, 'Cartao', false, 'Ketchup adicional', 226, 192),
+    ('2025-04-13', '14:50', 114.02, 'Dinheiro', true, 'Guardanapo adicional', 232, 102),
+    ('2025-01-08', '11:31', 123.14, 'Pix', true, 'Com pimenta', 640, 80),
+    ('2025-03-29', '17:09', 103.08, 'Dinheiro', false, 'Sem molhos', 448, 25),
+    ('2024-08-01', '22:13', 33.55, 'Pix', true, 'Ketchup adicional', 298, 134),
+    ('2025-04-28', '12:06', 73.21, 'Cartao', false, 'Sem molhos', 444, 155),
+    ('2024-07-16', '21:36', 93.29, 'Pix', true, 'Sem cebola', 721, 129),
+    ('2024-12-21', '19:12', 161.23, 'Cartao', true, 'Para viagem', 465, 10),
+    ('2024-11-04', '19:24', 28.73, 'Cartao', true, 'Para viagem', 197, 72),
+    ('2024-12-07', '14:34', 105.55, 'Dinheiro', true, 'Sem molhos', 143, 38),
+    ('2025-01-19', '16:27', 25.13, 'Pix', false, 'Com pimenta', 470, 155),
+    ('2024-12-13', '18:48', 41.91, 'Dinheiro', false, 'Com pimenta', 603, 107),
+    ('2025-02-23', '16:22', 44.78, 'Dinheiro', false, 'Para viagem', 189, 17),
+    ('2024-09-09', '23:25', 66.98, 'Dinheiro', true, 'Com pimenta', 104, 2),
+    ('2025-02-03', '13:52', 131.57, 'Dinheiro', false, 'Sem observações', 440, 124),
+    ('2025-02-01', '21:40', 86.75, 'Pix', true, 'Sem cebola', 492, 94),
+    ('2024-11-30', '18:59', 29.4, 'Dinheiro', false, 'Para viagem', 622, 137),
+    ('2024-12-21', '12:41', 188.66, 'Pix', false, 'Sem molhos', 75, 117),
+    ('2025-04-12', '20:47', 99.14, 'Cartao', false, 'Sem molhos', 96, 139),
+    ('2025-02-05', '22:07', 124.29, 'Pix', true, 'Para viagem', 712, 11),
+    ('2024-09-02', '17:00', 158.77, 'Cartao', true, 'Sem picles', 277, 124),
+    ('2025-01-02', '22:26', 88.19, 'Dinheiro', true, 'Sem observações', 625, 147),
+    ('2024-12-12', '14:26', 88.02, 'Pix', true, 'Sem cebola', 424, 95),
+    ('2025-04-20', '22:45', 55.0, 'Dinheiro', false, 'Sem picles', 251, 5),
+    ('2024-09-02', '23:14', 176.68, 'Cartao', false, 'Sem observações', 708, 61),
+    ('2025-04-14', '14:06', 179.55, 'Dinheiro', true, 'Sem cebola', 539, 125),
+    ('2025-04-13', '19:30', 110.18, 'Cartao', false, 'Ketchup adicional', 242, 56),
+    ('2024-12-30', '16:50', 165.17, 'Pix', false, 'Sem observações', 138, 189),
+    ('2025-01-11', '13:27', 90.06, 'Pix', false, 'Cliente fiel', 126, 78),
+    ('2024-09-26', '13:05', 64.24, 'Dinheiro', false, 'Para viagem', 73, 116),
+    ('2024-11-30', '21:35', 199.48, 'Pix', false, 'Cliente fiel', 534, 153),
+    ('2024-07-15', '12:46', 179.43, 'Dinheiro', false, 'Ketchup adicional', 670, 97),
+    ('2024-07-08', '19:56', 78.07, 'Dinheiro', false, 'Guardanapo adicional', 16, 104),
+    ('2025-05-31', '12:24', 164.99, 'Dinheiro', false, 'Sem observações', 675, 50),
+    ('2024-09-24', '11:17', 145.02, 'Dinheiro', false, 'Com pimenta', 659, 186),
+    ('2025-05-29', '21:47', 150.13, 'Cartao', true, 'Sem observações', 612, 106),
+    ('2024-12-24', '17:59', 27.52, 'Pix', true, 'Guardanapo adicional', 723, 12),
+    ('2025-03-12', '22:45', 103.9, 'Pix', false, 'Sem observações', 236, 77),
+    ('2025-02-05', '11:38', 57.94, 'Pix', true, 'Com pimenta', 333, 185),
+    ('2025-02-12', '14:28', 72.06, 'Cartao', false, 'Cliente fiel', 679, 68),
+    ('2025-03-08', '21:13', 53.1, 'Pix', false, 'Sem cebola', 132, 16),
+    ('2024-11-20', '20:11', 177.44, 'Pix', true, 'Para viagem', 428, 129),
+    ('2024-10-28', '12:16', 70.73, 'Cartao', false, 'Sem cebola', 30, 103),
+    ('2025-06-08', '13:58', 113.38, 'Dinheiro', false, 'Com pimenta', 743, 46),
+    ('2024-12-01', '11:15', 72.41, 'Cartao', false, 'Com pimenta', 285, 167),
+    ('2024-08-03', '16:25', 150.15, 'Pix', false, 'Para viagem', 421, 16),
+    ('2024-12-24', '20:25', 58.59, 'Pix', true, 'Sem picles', 588, 200),
+    ('2024-08-29', '12:48', 82.88, 'Cartao', false, 'Com pimenta', 191, 113),
+    ('2024-10-19', '17:35', 152.32, 'Dinheiro', true, 'Com pimenta', 724, 23),
+    ('2025-01-06', '13:15', 167.1, 'Cartao', false, 'Guardanapo adicional', 329, 83),
+    ('2024-09-12', '12:27', 197.15, 'Cartao', false, 'Ketchup adicional', 55, 46),
+    ('2024-12-16', '18:21', 105.6, 'Dinheiro', false, 'Com pimenta', 675, 103),
+    ('2025-06-16', '18:52', 106.34, 'Cartao', false, 'Sem cebola', 567, 46),
+    ('2024-11-24', '19:03', 164.02, 'Pix', true, 'Guardanapo adicional', 482, 144),
+    ('2025-03-01', '12:49', 42.26, 'Cartao', false, 'Com pimenta', 615, 120),
+    ('2024-07-05', '22:54', 176.55, 'Dinheiro', false, 'Para viagem', 710, 32),
+    ('2024-08-19', '14:29', 106.65, 'Cartao', false, 'Sem observações', 224, 91),
+    ('2024-07-27', '19:53', 55.24, 'Dinheiro', false, 'Sem observações', 329, 174),
+    ('2025-04-02', '14:35', 28.23, 'Dinheiro', true, 'Sem cebola', 148, 169),
+    ('2025-02-13', '11:30', 117.27, 'Pix', false, 'Com pimenta', 528, 175),
+    ('2024-07-10', '13:10', 174.33, 'Pix', false, 'Com pimenta', 302, 12),
+    ('2025-04-30', '11:19', 71.67, 'Pix', false, 'Guardanapo adicional', 394, 122),
+    ('2024-08-02', '14:46', 42.8, 'Dinheiro', true, 'Sem observações', 116, 173),
+    ('2025-05-08', '21:07', 100.67, 'Dinheiro', true, 'Com pimenta', 254, 196),
+    ('2025-03-22', '18:12', 53.64, 'Pix', true, 'Cliente fiel', 558, 181),
+    ('2024-10-17', '13:51', 63.41, 'Pix', false, 'Sem cebola', 631, 44),
+    ('2024-09-11', '13:41', 136.73, 'Dinheiro', false, 'Sem picles', 564, 40),
+    ('2024-11-17', '16:42', 123.32, 'Dinheiro', false, 'Sem picles', 554, 51),
+    ('2025-01-02', '15:41', 102.3, 'Cartao', true, 'Para viagem', 400, 182),
+    ('2025-03-22', '23:32', 138.32, 'Pix', true, 'Sem molhos', 195, 6),
+    ('2024-07-09', '15:40', 110.07, 'Dinheiro', true, 'Ketchup adicional', 703, 38),
+    ('2025-04-28', '12:20', 125.66, 'Dinheiro', true, 'Guardanapo adicional', 454, 107),
+    ('2024-08-06', '14:05', 82.17, 'Cartao', false, 'Cliente fiel', 632, 159),
+    ('2024-10-13', '16:04', 91.18, 'Pix', true, 'Guardanapo adicional', 672, 103),
+    ('2024-10-26', '14:43', 55.94, 'Cartao', true, 'Ketchup adicional', 251, 65),
+    ('2024-12-10', '11:30', 189.07, 'Cartao', true, 'Guardanapo adicional', 584, 74),
+    ('2025-03-03', '15:46', 133.17, 'Cartao', false, 'Sem observações', 500, 94),
+    ('2025-04-17', '23:55', 109.72, 'Pix', false, 'Sem cebola', 713, 75),
+    ('2025-06-01', '16:44', 177.86, 'Dinheiro', true, 'Cliente fiel', 230, 16),
+    ('2025-03-20', '18:33', 37.27, 'Dinheiro', true, 'Ketchup adicional', 11, 66),
+    ('2024-07-02', '16:38', 105.02, 'Pix', false, 'Cliente fiel', 268, 176),
+    ('2025-04-18', '18:19', 48.75, 'Pix', false, 'Com pimenta', 631, 82),
+    ('2024-11-22', '12:59', 162.92, 'Cartao', false, 'Sem observações', 445, 65),
+    ('2025-04-19', '20:01', 76.81, 'Cartao', true, 'Sem cebola', 733, 112),
+    ('2024-12-07', '15:31', 48.13, 'Cartao', true, 'Para viagem', 312, 102),
+    ('2024-06-18', '21:22', 134.39, 'Pix', true, 'Com pimenta', 236, 115),
+    ('2024-12-01', '19:38', 47.04, 'Pix', false, 'Com pimenta', 629, 43),
+    ('2024-10-23', '20:14', 60.0, 'Cartao', false, 'Para viagem', 752, 182),
+    ('2025-06-07', '22:14', 141.6, 'Dinheiro', false, 'Sem cebola', 217, 95),
+    ('2024-09-27', '15:45', 162.8, 'Cartao', false, 'Sem cebola', 409, 32),
+    ('2024-11-14', '14:43', 93.17, 'Dinheiro', false, 'Guardanapo adicional', 93, 122),
+    ('2025-03-24', '14:45', 40.38, 'Dinheiro', false, 'Ketchup adicional', 131, 167),
+    ('2024-06-27', '16:41', 120.41, 'Pix', false, 'Para viagem', 313, 171),
+    ('2024-08-19', '17:28', 87.89, 'Cartao', false, 'Sem cebola', 197, 31),
+    ('2025-04-16', '11:48', 168.33, 'Dinheiro', false, 'Sem molhos', 58, 52),
+    ('2025-03-11', '15:55', 174.31, 'Dinheiro', false, 'Sem cebola', 516, 96),
+    ('2025-03-19', '23:01', 60.31, 'Dinheiro', false, 'Sem picles', 332, 183),
+    ('2025-05-03', '19:21', 109.71, 'Pix', true, 'Ketchup adicional', 566, 75),
+    ('2024-12-11', '23:04', 39.99, 'Cartao', false, 'Sem observações', 297, 56),
+    ('2024-12-22', '16:52', 72.03, 'Pix', true, 'Sem molhos', 386, 41),
+    ('2025-05-11', '11:39', 35.3, 'Dinheiro', true, 'Sem observações', 390, 82),
+    ('2025-03-06', '22:14', 52.99, 'Pix', true, 'Cliente fiel', 8, 42),
+    ('2025-05-21', '16:21', 118.71, 'Pix', false, 'Para viagem', 672, 178),
+    ('2025-01-04', '22:28', 60.95, 'Dinheiro', true, 'Guardanapo adicional', 517, 139),
+    ('2024-12-31', '11:22', 99.3, 'Cartao', true, 'Sem observações', 408, 93),
+    ('2024-08-01', '21:54', 52.98, 'Dinheiro', true, 'Sem cebola', 69, 55),
+    ('2025-02-15', '12:40', 57.14, 'Cartao', false, 'Guardanapo adicional', 203, 128),
+    ('2024-10-14', '22:06', 81.27, 'Dinheiro', true, 'Guardanapo adicional', 292, 42),
+    ('2024-06-15', '17:01', 72.26, 'Cartao', false, 'Com pimenta', 89, 1),
+    ('2024-12-10', '20:39', 124.24, 'Dinheiro', true, 'Sem molhos', 306, 184),
+    ('2024-12-15', '17:49', 120.87, 'Pix', false, 'Para viagem', 41, 193),
+    ('2024-07-25', '12:05', 161.36, 'Dinheiro', false, 'Sem molhos', 386, 165),
+    ('2025-01-19', '18:13', 154.31, 'Cartao', true, 'Ketchup adicional', 8, 178),
+    ('2024-07-17', '17:38', 62.56, 'Dinheiro', true, 'Sem picles', 232, 150),
+    ('2025-01-11', '20:41', 169.11, 'Pix', false, 'Com pimenta', 536, 117),
+    ('2025-02-24', '22:55', 95.61, 'Dinheiro', true, 'Para viagem', 328, 137),
+    ('2025-06-15', '22:51', 104.82, 'Cartao', true, 'Cliente fiel', 35, 1),
+    ('2024-09-12', '12:11', 91.91, 'Dinheiro', true, 'Sem observações', 623, 49),
+    ('2024-10-07', '20:14', 177.99, 'Dinheiro', true, 'Com pimenta', 245, 12),
+    ('2024-08-26', '19:53', 178.24, 'Pix', true, 'Sem cebola', 225, 59),
+    ('2025-03-03', '19:13', 161.09, 'Dinheiro', true, 'Sem picles', 208, 184),
+    ('2025-02-10', '22:47', 52.7, 'Cartao', false, 'Para viagem', 496, 101),
+    ('2024-10-14', '21:21', 138.26, 'Cartao', false, 'Com pimenta', 42, 45),
+    ('2024-09-12', '13:46', 44.51, 'Dinheiro', true, 'Guardanapo adicional', 676, 73),
+    ('2025-02-11', '11:51', 118.4, 'Cartao', true, 'Cliente fiel', 545, 28),
+    ('2024-06-19', '22:58', 73.64, 'Dinheiro', true, 'Para viagem', 106, 24),
+    ('2025-05-28', '11:55', 77.75, 'Dinheiro', true, 'Guardanapo adicional', 750, 54),
+    ('2025-05-03', '12:35', 102.79, 'Dinheiro', false, 'Com pimenta', 431, 143),
+    ('2024-12-06', '18:36', 198.16, 'Dinheiro', true, 'Sem observações', 180, 14),
+    ('2025-01-07', '11:43', 166.54, 'Pix', true, 'Para viagem', 173, 127),
+    ('2024-07-21', '13:41', 47.52, 'Cartao', false, 'Ketchup adicional', 521, 152),
+    ('2024-06-29', '16:24', 28.18, 'Pix', true, 'Para viagem', 565, 94),
+    ('2024-10-18', '20:56', 115.23, 'Dinheiro', false, 'Sem molhos', 624, 64),
+    ('2025-01-11', '20:44', 131.11, 'Pix', false, 'Sem picles', 707, 179),
+    ('2025-03-05', '12:04', 78.13, 'Dinheiro', false, 'Sem molhos', 143, 182),
+    ('2024-09-14', '17:10', 54.36, 'Pix', true, 'Para viagem', 487, 142),
+    ('2025-02-23', '19:51', 78.53, 'Dinheiro', false, 'Sem observações', 56, 38),
+    ('2025-05-08', '23:12', 60.12, 'Cartao', true, 'Ketchup adicional', 631, 161),
+    ('2025-02-20', '15:50', 120.26, 'Pix', false, 'Guardanapo adicional', 289, 63),
+    ('2025-02-07', '16:54', 90.71, 'Dinheiro', true, 'Sem observações', 648, 121),
+    ('2024-07-24', '17:14', 137.59, 'Dinheiro', false, 'Ketchup adicional', 58, 104),
+    ('2024-11-24', '21:48', 197.44, 'Dinheiro', true, 'Para viagem', 371, 128),
+    ('2025-03-29', '15:19', 122.92, 'Dinheiro', true, 'Sem molhos', 477, 52),
+    ('2024-09-03', '18:19', 43.33, 'Cartao', true, 'Ketchup adicional', 79, 191),
+    ('2025-03-18', '17:13', 87.39, 'Cartao', true, 'Sem cebola', 187, 106),
+    ('2025-03-08', '23:58', 143.62, 'Dinheiro', true, 'Sem molhos', 23, 200),
+    ('2024-11-18', '14:31', 190.61, 'Pix', true, 'Para viagem', 617, 140),
+    ('2024-07-31', '18:05', 152.81, 'Pix', false, 'Sem picles', 478, 156),
+    ('2024-12-22', '18:48', 128.88, 'Dinheiro', false, 'Sem picles', 133, 77),
+    ('2025-06-08', '18:13', 61.02, 'Dinheiro', true, 'Sem observações', 678, 200),
+    ('2025-04-24', '19:46', 165.29, 'Pix', true, 'Guardanapo adicional', 35, 138),
+    ('2024-08-31', '20:19', 29.89, 'Cartao', true, 'Ketchup adicional', 424, 46),
+    ('2024-07-03', '11:05', 79.11, 'Cartao', true, 'Com pimenta', 626, 140),
+    ('2024-11-12', '19:43', 101.55, 'Cartao', true, 'Para viagem', 120, 182),
+    ('2024-10-23', '11:56', 54.23, 'Cartao', false, 'Sem observações', 575, 26),
+    ('2025-01-17', '18:53', 195.78, 'Dinheiro', true, 'Cliente fiel', 331, 67),
+    ('2024-11-21', '23:31', 143.79, 'Cartao', true, 'Com pimenta', 438, 66),
+    ('2025-03-17', '20:17', 163.89, 'Pix', true, 'Com pimenta', 665, 19),
+    ('2024-07-22', '15:41', 196.46, 'Cartao', true, 'Sem cebola', 650, 78),
+    ('2024-07-25', '19:37', 128.22, 'Cartao', true, 'Sem observações', 7, 24),
+    ('2025-05-27', '19:27', 168.39, 'Cartao', false, 'Sem observações', 323, 187),
+    ('2024-08-31', '17:35', 102.11, 'Cartao', true, 'Sem cebola', 429, 34),
+    ('2025-04-23', '23:53', 180.18, 'Dinheiro', false, 'Sem picles', 233, 85),
+    ('2025-01-25', '14:48', 80.87, 'Cartao', true, 'Sem observações', 291, 132),
+    ('2024-10-01', '18:37', 142.66, 'Dinheiro', true, 'Ketchup adicional', 673, 184),
+    ('2024-10-04', '19:49', 111.18, 'Dinheiro', true, 'Para viagem', 538, 178),
+    ('2025-06-02', '23:31', 189.39, 'Pix', true, 'Sem observações', 441, 114),
+    ('2024-09-10', '13:36', 193.4, 'Dinheiro', false, 'Sem cebola', 497, 23),
+    ('2024-07-13', '21:06', 99.4, 'Dinheiro', false, 'Sem cebola', 395, 109),
+    ('2024-08-24', '17:15', 121.8, 'Cartao', true, 'Ketchup adicional', 88, 194),
+    ('2025-03-21', '11:15', 199.77, 'Cartao', false, 'Ketchup adicional', 183, 109),
+    ('2025-05-15', '14:42', 60.53, 'Dinheiro', false, 'Guardanapo adicional', 652, 107),
+    ('2025-03-31', '23:40', 80.44, 'Cartao', true, 'Ketchup adicional', 99, 23),
+    ('2024-11-19', '17:00', 169.64, 'Cartao', false, 'Guardanapo adicional', 321, 113),
+    ('2024-10-28', '22:20', 58.44, 'Cartao', false, 'Sem molhos', 109, 140),
+    ('2025-01-22', '16:47', 40.08, 'Pix', false, 'Sem observações', 300, 50),
+    ('2024-07-08', '16:22', 130.85, 'Pix', true, 'Cliente fiel', 393, 171),
+    ('2024-11-01', '12:00', 167.49, 'Dinheiro', true, 'Sem molhos', 468, 187),
+    ('2025-04-10', '19:01', 38.75, 'Pix', true, 'Sem observações', 649, 118),
+    ('2025-03-02', '13:01', 129.72, 'Cartao', false, 'Sem picles', 489, 48),
+    ('2024-07-30', '16:17', 37.25, 'Dinheiro', false, 'Ketchup adicional', 439, 192),
+    ('2025-01-29', '12:51', 156.72, 'Pix', false, 'Com pimenta', 82, 190),
+    ('2024-08-03', '12:03', 105.51, 'Cartao', false, 'Sem picles', 709, 91),
+    ('2025-01-19', '21:13', 147.15, 'Cartao', true, 'Sem observações', 474, 116),
+    ('2025-03-12', '16:32', 93.16, 'Cartao', false, 'Para viagem', 138, 179),
+    ('2025-06-10', '19:32', 105.95, 'Pix', true, 'Sem picles', 124, 37),
+    ('2025-05-18', '23:56', 148.88, 'Pix', false, 'Com pimenta', 430, 148),
+    ('2025-05-11', '11:40', 168.31, 'Dinheiro', true, 'Sem picles', 202, 145),
+    ('2024-11-11', '12:34', 131.66, 'Cartao', false, 'Cliente fiel', 257, 190),
+    ('2024-06-28', '14:44', 43.36, 'Cartao', false, 'Com pimenta', 285, 94),
+    ('2024-11-04', '22:19', 61.68, 'Cartao', true, 'Para viagem', 563, 169),
+    ('2024-08-04', '19:24', 57.11, 'Dinheiro', false, 'Sem observações', 511, 41),
+    ('2025-05-11', '17:34', 138.82, 'Dinheiro', false, 'Cliente fiel', 579, 91),
+    ('2025-06-03', '20:17', 44.21, 'Pix', true, 'Sem picles', 12, 81),
+    ('2025-05-19', '11:06', 37.26, 'Dinheiro', true, 'Sem molhos', 560, 3),
+    ('2025-01-09', '15:33', 158.03, 'Pix', true, 'Guardanapo adicional', 470, 86),
+    ('2025-02-01', '14:09', 147.56, 'Dinheiro', false, 'Com pimenta', 651, 36),
+    ('2025-01-31', '19:19', 34.77, 'Pix', true, 'Com pimenta', 159, 161),
+    ('2025-03-11', '20:15', 69.41, 'Pix', true, 'Sem cebola', 452, 6),
+    ('2024-10-11', '20:02', 91.05, 'Pix', true, 'Para viagem', 349, 152),
+    ('2024-06-30', '15:08', 36.65, 'Cartao', false, 'Ketchup adicional', 34, 40),
+    ('2024-11-11', '20:25', 99.11, 'Pix', false, 'Sem picles', 348, 172),
+    ('2024-11-03', '20:16', 65.89, 'Dinheiro', true, 'Guardanapo adicional', 69, 173),
+    ('2025-03-14', '12:49', 158.26, 'Cartao', false, 'Com pimenta', 575, 72),
+    ('2024-09-24', '18:15', 124.87, 'Dinheiro', true, 'Com pimenta', 43, 40),
+    ('2025-01-07', '15:54', 162.08, 'Cartao', true, 'Sem molhos', 555, 198),
+    ('2025-06-09', '23:19', 197.76, 'Dinheiro', false, 'Sem picles', 24, 143),
+    ('2025-05-17', '13:14', 128.31, 'Pix', false, 'Guardanapo adicional', 449, 66),
+    ('2025-03-05', '11:52', 188.5, 'Cartao', true, 'Guardanapo adicional', 697, 165),
+    ('2025-01-21', '20:31', 154.51, 'Cartao', false, 'Ketchup adicional', 202, 52),
+    ('2025-01-05', '21:17', 198.74, 'Cartao', false, 'Com pimenta', 447, 200),
+    ('2025-04-26', '17:13', 122.18, 'Pix', false, 'Sem picles', 404, 154),
+    ('2024-11-26', '11:14', 104.11, 'Cartao', false, 'Sem molhos', 411, 190),
+    ('2025-03-02', '13:38', 153.99, 'Dinheiro', true, 'Sem picles', 313, 46),
+    ('2025-05-10', '19:05', 187.23, 'Dinheiro', true, 'Cliente fiel', 407, 114),
+    ('2024-06-22', '23:51', 111.9, 'Pix', false, 'Ketchup adicional', 411, 139),
+    ('2024-08-28', '11:38', 64.56, 'Pix', false, 'Guardanapo adicional', 453, 49),
+    ('2024-10-09', '15:13', 51.37, 'Pix', false, 'Sem observações', 600, 73),
+    ('2025-06-02', '17:28', 181.83, 'Pix', true, 'Sem picles', 192, 113),
+    ('2024-08-20', '21:21', 137.66, 'Dinheiro', false, 'Sem molhos', 449, 84),
+    ('2024-10-29', '23:36', 166.86, 'Dinheiro', false, 'Sem molhos', 524, 69),
+    ('2024-07-19', '23:02', 55.03, 'Pix', true, 'Sem cebola', 561, 113),
+    ('2024-08-24', '21:54', 120.82, 'Pix', true, 'Cliente fiel', 148, 57),
+    ('2025-06-12', '18:56', 139.22, 'Cartao', false, 'Com pimenta', 616, 49),
+    ('2025-03-28', '20:30', 71.56, 'Pix', true, 'Ketchup adicional', 181, 175),
+    ('2025-01-22', '22:07', 186.86, 'Cartao', true, 'Ketchup adicional', 270, 170),
+    ('2025-01-22', '11:47', 94.74, 'Pix', false, 'Sem picles', 2, 14),
+    ('2025-02-13', '12:14', 97.48, 'Dinheiro', true, 'Sem cebola', 470, 73),
+    ('2025-02-01', '23:53', 198.88, 'Cartao', true, 'Ketchup adicional', 219, 12),
+    ('2024-07-22', '20:08', 103.07, 'Dinheiro', true, 'Sem observações', 5, 86),
+    ('2025-05-17', '23:33', 36.27, 'Pix', false, 'Com pimenta', 398, 141),
+    ('2024-12-23', '19:26', 83.67, 'Dinheiro', true, 'Ketchup adicional', 464, 86),
+    ('2024-06-18', '23:35', 64.5, 'Pix', false, 'Guardanapo adicional', 525, 142),
+    ('2024-07-27', '23:27', 162.01, 'Pix', true, 'Sem molhos', 4, 146),
+    ('2024-12-15', '22:23', 26.3, 'Cartao', false, 'Ketchup adicional', 292, 148),
+    ('2024-10-07', '16:00', 68.95, 'Dinheiro', false, 'Sem picles', 386, 116),
+    ('2024-07-02', '15:55', 133.34, 'Pix', false, 'Sem observações', 647, 177),
+    ('2025-04-24', '22:02', 88.09, 'Dinheiro', true, 'Sem picles', 660, 169),
+    ('2025-03-07', '18:52', 75.29, 'Pix', false, 'Cliente fiel', 579, 200),
+    ('2024-11-16', '16:33', 104.72, 'Dinheiro', true, 'Guardanapo adicional', 585, 55),
+    ('2024-06-29', '18:26', 133.61, 'Pix', false, 'Para viagem', 589, 23),
+    ('2024-09-08', '12:05', 184.21, 'Dinheiro', false, 'Sem picles', 239, 124),
+    ('2024-10-06', '21:07', 151.86, 'Dinheiro', true, 'Sem molhos', 632, 173),
+    ('2025-06-19', '16:21', 83.88, 'Pix', true, 'Guardanapo adicional', 487, 184),
+    ('2025-04-13', '20:16', 56.45, 'Dinheiro', true, 'Cliente fiel', 317, 170),
+    ('2025-04-16', '15:12', 172.69, 'Pix', false, 'Sem picles', 532, 172),
+    ('2025-05-23', '15:58', 190.99, 'Cartao', true, 'Ketchup adicional', 343, 9),
+    ('2024-11-24', '12:54', 141.88, 'Cartao', false, 'Sem picles', 526, 114),
+    ('2024-08-09', '22:08', 199.45, 'Dinheiro', true, 'Guardanapo adicional', 606, 161),
+    ('2025-02-21', '21:24', 192.5, 'Dinheiro', false, 'Sem picles', 424, 111),
+    ('2024-06-27', '22:08', 195.96, 'Pix', false, 'Sem observações', 678, 143),
+    ('2024-09-16', '21:01', 196.62, 'Cartao', true, 'Sem picles', 256, 162),
+    ('2025-02-25', '15:04', 129.11, 'Dinheiro', true, 'Guardanapo adicional', 515, 131),
+    ('2024-09-29', '12:34', 153.76, 'Cartao', true, 'Ketchup adicional', 690, 3),
+    ('2024-12-14', '13:54', 48.8, 'Pix', false, 'Sem cebola', 236, 48),
+    ('2024-12-07', '14:49', 177.52, 'Pix', false, 'Com pimenta', 158, 7),
+    ('2025-01-25', '17:26', 167.73, 'Dinheiro', true, 'Para viagem', 629, 149),
+    ('2025-06-13', '12:48', 30.79, 'Dinheiro', false, 'Sem molhos', 644, 39),
+    ('2025-04-06', '20:03', 108.5, 'Cartao', true, 'Sem observações', 722, 6),
+    ('2024-08-02', '13:52', 32.59, 'Dinheiro', true, 'Guardanapo adicional', 556, 88),
+    ('2024-12-18', '22:13', 28.91, 'Dinheiro', true, 'Sem cebola', 188, 159),
+    ('2025-02-12', '14:33', 118.97, 'Dinheiro', true, 'Com pimenta', 111, 12),
+    ('2024-10-14', '15:38', 123.5, 'Pix', true, 'Sem molhos', 83, 155),
+    ('2024-10-03', '18:07', 74.15, 'Cartao', true, 'Sem picles', 567, 79),
+    ('2024-07-18', '21:16', 184.25, 'Dinheiro', true, 'Sem observações', 148, 136),
+    ('2024-11-19', '20:18', 51.26, 'Pix', false, 'Sem cebola', 694, 197),
+    ('2024-10-21', '14:33', 89.45, 'Dinheiro', false, 'Sem picles', 145, 130),
+    ('2024-08-29', '12:46', 164.3, 'Pix', false, 'Ketchup adicional', 621, 91),
+    ('2024-10-30', '17:41', 61.51, 'Cartao', true, 'Sem molhos', 718, 186),
+    ('2024-09-26', '18:37', 107.25, 'Dinheiro', true, 'Sem observações', 504, 80),
+    ('2024-09-07', '12:29', 72.9, 'Pix', false, 'Ketchup adicional', 240, 96),
+    ('2025-03-20', '17:52', 103.35, 'Cartao', true, 'Ketchup adicional', 255, 126),
+    ('2024-07-24', '13:32', 34.86, 'Pix', true, 'Sem molhos', 365, 186),
+    ('2025-03-10', '23:37', 119.58, 'Dinheiro', true, 'Ketchup adicional', 404, 127),
+    ('2024-11-23', '12:18', 151.88, 'Dinheiro', false, 'Cliente fiel', 258, 34),
+    ('2024-07-08', '22:34', 60.85, 'Cartao', false, 'Para viagem', 80, 13),
+    ('2025-04-21', '11:38', 109.36, 'Dinheiro', false, 'Sem picles', 386, 72),
+    ('2024-10-15', '16:22', 101.52, 'Dinheiro', true, 'Sem observações', 162, 7),
+    ('2025-03-20', '20:49', 125.34, 'Cartao', true, 'Sem cebola', 486, 181),
+    ('2025-04-05', '15:41', 60.88, 'Cartao', false, 'Cliente fiel', 440, 91),
+    ('2025-03-20', '22:57', 79.73, 'Dinheiro', true, 'Ketchup adicional', 216, 128),
+    ('2024-09-17', '11:35', 161.35, 'Pix', false, 'Sem cebola', 509, 127),
+    ('2025-05-07', '11:50', 189.28, 'Cartao', false, 'Cliente fiel', 63, 12),
+    ('2024-06-29', '23:43', 68.24, 'Dinheiro', true, 'Sem picles', 227, 98),
+    ('2024-06-15', '22:07', 157.37, 'Cartao', false, 'Com pimenta', 304, 128),
+    ('2025-01-26', '15:19', 63.91, 'Cartao', true, 'Para viagem', 216, 180),
+    ('2024-11-11', '16:37', 25.69, 'Cartao', false, 'Guardanapo adicional', 709, 43),
+    ('2024-11-10', '15:32', 119.16, 'Dinheiro', true, 'Ketchup adicional', 325, 136),
+    ('2025-02-04', '11:50', 90.11, 'Dinheiro', false, 'Sem molhos', 367, 3),
+    ('2024-12-18', '11:15', 128.26, 'Dinheiro', false, 'Guardanapo adicional', 78, 179),
+    ('2025-06-16', '21:09', 28.72, 'Dinheiro', false, 'Sem molhos', 515, 63),
+    ('2025-03-23', '11:02', 41.42, 'Cartao', true, 'Para viagem', 595, 164),
+    ('2025-02-26', '12:22', 126.9, 'Pix', false, 'Para viagem', 628, 23),
+    ('2024-10-05', '23:14', 102.68, 'Pix', false, 'Para viagem', 136, 192),
+    ('2025-06-19', '20:18', 70.0, 'Dinheiro', true, 'Guardanapo adicional', 484, 42),
+    ('2025-03-10', '11:00', 116.18, 'Cartao', true, 'Ketchup adicional', 658, 155),
+    ('2024-09-11', '13:31', 159.54, 'Dinheiro', false, 'Ketchup adicional', 284, 113),
+    ('2025-02-22', '19:10', 92.66, 'Dinheiro', false, 'Com pimenta', 184, 181),
+    ('2025-03-18', '12:48', 172.39, 'Dinheiro', true, 'Sem cebola', 444, 133),
+    ('2024-06-19', '14:36', 116.84, 'Dinheiro', true, 'Com pimenta', 65, 162),
+    ('2024-10-29', '23:29', 73.14, 'Dinheiro', false, 'Ketchup adicional', 700, 57),
+    ('2025-04-11', '23:32', 199.68, 'Cartao', false, 'Ketchup adicional', 529, 68),
+    ('2024-10-28', '20:55', 103.37, 'Pix', false, 'Sem picles', 423, 107),
+    ('2025-05-18', '14:35', 109.55, 'Cartao', false, 'Sem cebola', 333, 200),
+    ('2025-02-27', '17:27', 84.18, 'Dinheiro', false, 'Guardanapo adicional', 207, 172),
+    ('2024-08-14', '21:17', 177.94, 'Pix', true, 'Sem molhos', 359, 76),
+    ('2024-08-23', '22:03', 114.88, 'Cartao', false, 'Sem molhos', 515, 193),
+    ('2025-01-29', '11:02', 50.36, 'Pix', true, 'Sem picles', 129, 107),
+    ('2025-06-08', '15:21', 143.17, 'Pix', true, 'Sem observações', 613, 153),
+    ('2025-03-26', '16:41', 43.83, 'Dinheiro', false, 'Sem molhos', 45, 152),
+    ('2025-01-13', '23:11', 153.59, 'Cartao', false, 'Cliente fiel', 518, 7),
+    ('2024-12-08', '23:01', 104.59, 'Dinheiro', true, 'Sem molhos', 603, 30),
+    ('2025-01-13', '17:33', 152.34, 'Pix', false, 'Cliente fiel', 404, 111),
+    ('2024-07-01', '20:22', 134.4, 'Cartao', true, 'Guardanapo adicional', 628, 42),
+    ('2024-12-24', '12:06', 114.85, 'Cartao', true, 'Sem molhos', 88, 154),
+    ('2024-12-05', '19:48', 105.31, 'Cartao', false, 'Guardanapo adicional', 172, 46),
+    ('2024-11-25', '20:08', 168.84, 'Cartao', false, 'Guardanapo adicional', 221, 107),
+    ('2024-06-24', '12:36', 144.49, 'Pix', false, 'Sem molhos', 6, 89),
+    ('2025-04-22', '16:32', 130.31, 'Pix', true, 'Sem cebola', 33, 62),
+    ('2024-08-31', '11:32', 106.81, 'Dinheiro', true, 'Cliente fiel', 471, 138),
+    ('2024-10-01', '20:18', 192.14, 'Cartao', false, 'Sem cebola', 510, 126),
+    ('2024-12-23', '19:16', 44.97, 'Pix', false, 'Cliente fiel', 743, 187),
+    ('2025-03-22', '22:45', 188.02, 'Cartao', false, 'Sem cebola', 320, 67),
+    ('2024-10-11', '19:39', 95.59, 'Pix', true, 'Ketchup adicional', 554, 59),
+    ('2024-10-05', '15:49', 106.91, 'Pix', false, 'Sem cebola', 504, 28),
+    ('2024-08-16', '11:46', 88.92, 'Pix', false, 'Guardanapo adicional', 685, 28),
+    ('2025-02-19', '11:51', 197.04, 'Pix', false, 'Sem cebola', 355, 172),
+    ('2024-07-23', '14:29', 101.18, 'Cartao', false, 'Cliente fiel', 312, 52),
+    ('2024-09-17', '21:57', 111.49, 'Cartao', true, 'Ketchup adicional', 517, 180),
+    ('2024-09-11', '12:31', 110.59, 'Pix', true, 'Sem cebola', 272, 182),
+    ('2024-08-11', '16:13', 30.34, 'Cartao', true, 'Cliente fiel', 247, 179),
+    ('2025-06-05', '19:08', 90.31, 'Pix', false, 'Ketchup adicional', 173, 77),
+    ('2024-06-28', '18:04', 59.91, 'Pix', true, 'Com pimenta', 306, 156),
+    ('2025-01-05', '23:27', 173.77, 'Dinheiro', true, 'Sem observações', 490, 181),
+    ('2024-11-18', '18:35', 191.56, 'Cartao', false, 'Cliente fiel', 320, 161),
+    ('2024-06-21', '19:46', 137.97, 'Cartao', false, 'Sem cebola', 333, 163),
+    ('2024-07-08', '19:21', 164.84, 'Cartao', true, 'Para viagem', 264, 115),
+    ('2024-09-04', '15:55', 152.45, 'Pix', true, 'Para viagem', 461, 88),
+    ('2024-10-03', '16:16', 165.66, 'Cartao', false, 'Cliente fiel', 224, 80),
+    ('2025-04-12', '16:50', 95.96, 'Pix', true, 'Ketchup adicional', 161, 24),
+    ('2024-11-08', '20:22', 72.83, 'Dinheiro', false, 'Sem observações', 165, 194),
+    ('2024-11-13', '17:39', 170.54, 'Cartao', true, 'Sem cebola', 659, 31),
+    ('2024-07-22', '16:25', 113.1, 'Pix', true, 'Para viagem', 156, 158),
+    ('2024-10-03', '22:32', 136.45, 'Pix', false, 'Com pimenta', 494, 186),
+    ('2024-10-05', '17:58', 188.07, 'Pix', false, 'Sem cebola', 16, 181),
+    ('2025-05-02', '13:03', 142.34, 'Dinheiro', false, 'Guardanapo adicional', 145, 41),
+    ('2024-09-21', '13:44', 130.82, 'Pix', true, 'Para viagem', 353, 84),
+    ('2024-11-10', '20:13', 27.01, 'Dinheiro', false, 'Com pimenta', 629, 13),
+    ('2025-05-31', '17:58', 79.99, 'Cartao', true, 'Guardanapo adicional', 749, 62),
+    ('2024-08-05', '13:57', 75.54, 'Pix', false, 'Para viagem', 114, 192),
+    ('2025-02-07', '12:32', 56.92, 'Pix', true, 'Ketchup adicional', 155, 115),
+    ('2025-02-23', '21:50', 84.55, 'Dinheiro', true, 'Cliente fiel', 140, 18),
+    ('2025-05-23', '15:30', 50.1, 'Dinheiro', false, 'Sem observações', 201, 77),
+    ('2025-02-22', '16:34', 40.44, 'Dinheiro', false, 'Com pimenta', 84, 125),
+    ('2025-01-17', '20:56', 110.08, 'Cartao', false, 'Sem cebola', 325, 169),
+    ('2024-08-13', '22:08', 166.93, 'Cartao', true, 'Sem cebola', 693, 20),
+    ('2024-06-29', '11:58', 186.62, 'Dinheiro', true, 'Para viagem', 13, 85),
+    ('2025-03-10', '18:57', 112.92, 'Pix', false, 'Sem cebola', 601, 51),
+    ('2024-07-31', '17:22', 32.12, 'Cartao', true, 'Sem cebola', 102, 41),
+    ('2025-04-18', '11:31', 171.18, 'Pix', false, 'Com pimenta', 384, 172),
+    ('2025-06-17', '15:32', 179.04, 'Cartao', false, 'Sem molhos', 359, 189),
+    ('2024-07-26', '15:48', 33.83, 'Pix', false, 'Sem molhos', 421, 172),
+    ('2025-05-21', '12:33', 36.24, 'Dinheiro', false, 'Sem observações', 537, 129),
+    ('2024-08-28', '14:34', 34.03, 'Cartao', false, 'Sem molhos', 260, 56),
+    ('2024-10-09', '23:56', 156.7, 'Cartao', true, 'Sem cebola', 626, 11),
+    ('2025-01-28', '23:08', 143.04, 'Pix', true, 'Sem molhos', 696, 119),
+    ('2025-05-23', '11:35', 100.35, 'Cartao', true, 'Sem molhos', 353, 116),
+    ('2024-08-28', '13:03', 54.09, 'Cartao', false, 'Sem molhos', 617, 91),
+    ('2025-04-01', '18:35', 128.93, 'Cartao', true, 'Sem picles', 420, 174),
+    ('2024-10-04', '21:44', 107.85, 'Cartao', false, 'Sem picles', 737, 62),
+    ('2024-07-31', '23:22', 198.69, 'Pix', false, 'Para viagem', 106, 129),
+    ('2024-12-27', '17:20', 99.17, 'Pix', false, 'Para viagem', 646, 79),
+    ('2024-10-21', '14:46', 112.09, 'Cartao', true, 'Sem picles', 207, 66),
+    ('2025-06-14', '17:09', 118.12, 'Cartao', false, 'Sem observações', 393, 126),
+    ('2024-08-20', '17:49', 142.64, 'Pix', false, 'Ketchup adicional', 559, 179),
+    ('2024-11-17', '21:40', 132.41, 'Pix', true, 'Sem observações', 545, 16),
+    ('2024-09-20', '19:01', 176.95, 'Pix', true, 'Para viagem', 20, 113),
+    ('2025-01-30', '23:01', 50.3, 'Dinheiro', false, 'Ketchup adicional', 123, 149),
+    ('2024-07-30', '22:17', 154.48, 'Dinheiro', false, 'Sem cebola', 293, 71),
+    ('2024-12-28', '23:16', 134.99, 'Dinheiro', true, 'Sem picles', 577, 26),
+    ('2024-10-29', '15:35', 153.36, 'Cartao', false, 'Com pimenta', 474, 186),
+    ('2025-06-18', '22:10', 165.71, 'Dinheiro', false, 'Cliente fiel', 631, 73),
+    ('2024-06-17', '14:08', 78.96, 'Pix', true, 'Para viagem', 579, 100),
+    ('2024-10-02', '19:30', 32.52, 'Cartao', true, 'Sem molhos', 459, 40),
+    ('2025-03-02', '19:14', 90.84, 'Cartao', false, 'Sem molhos', 290, 24),
+    ('2024-09-24', '11:37', 50.12, 'Cartao', false, 'Sem observações', 386, 38),
+    ('2024-09-05', '20:12', 170.8, 'Pix', true, 'Sem picles', 443, 76),
+    ('2024-09-27', '21:54', 133.94, 'Dinheiro', false, 'Sem picles', 557, 181),
+    ('2025-05-27', '18:02', 165.23, 'Cartao', false, 'Sem molhos', 97, 32),
+    ('2024-06-24', '19:32', 60.61, 'Cartao', true, 'Sem observações', 644, 52),
+    ('2025-01-05', '18:28', 34.05, 'Dinheiro', true, 'Com pimenta', 372, 2),
+    ('2025-01-31', '17:35', 45.33, 'Cartao', true, 'Sem observações', 605, 115),
+    ('2024-08-16', '20:29', 158.95, 'Dinheiro', false, 'Ketchup adicional', 213, 200),
+    ('2025-06-19', '21:11', 112.69, 'Cartao', false, 'Sem cebola', 234, 148),
+    ('2024-08-13', '21:32', 87.15, 'Pix', true, 'Sem observações', 280, 191),
+    ('2024-06-19', '17:42', 160.52, 'Cartao', false, 'Para viagem', 534, 134),
+    ('2024-11-22', '14:13', 49.0, 'Pix', true, 'Sem picles', 155, 151),
+    ('2024-09-23', '23:26', 49.69, 'Cartao', false, 'Para viagem', 284, 21),
+    ('2024-12-14', '22:40', 32.73, 'Dinheiro', false, 'Com pimenta', 60, 20),
+    ('2024-07-14', '16:38', 188.45, 'Pix', true, 'Ketchup adicional', 156, 43),
+    ('2025-03-03', '14:24', 74.09, 'Pix', true, 'Sem cebola', 188, 152),
+    ('2025-05-12', '14:01', 141.5, 'Cartao', false, 'Sem picles', 746, 71),
+    ('2024-07-24', '17:16', 68.41, 'Cartao', true, 'Sem molhos', 508, 67),
+    ('2025-06-19', '12:27', 192.38, 'Dinheiro', true, 'Sem cebola', 169, 105),
+    ('2025-06-19', '13:22', 131.57, 'Pix', true, 'Sem picles', 659, 159),
+    ('2025-02-17', '13:32', 152.81, 'Pix', true, 'Guardanapo adicional', 554, 126),
+    ('2025-02-16', '21:36', 189.14, 'Dinheiro', false, 'Ketchup adicional', 197, 34),
+    ('2025-05-18', '13:59', 79.74, 'Dinheiro', true, 'Ketchup adicional', 487, 31),
+    ('2024-11-26', '14:55', 73.16, 'Pix', true, 'Sem molhos', 536, 44),
+    ('2024-09-30', '22:36', 162.66, 'Pix', true, 'Com pimenta', 342, 67),
+    ('2025-05-01', '23:19', 39.87, 'Dinheiro', false, 'Sem observações', 194, 65),
+    ('2024-08-15', '17:51', 147.07, 'Pix', false, 'Sem picles', 478, 75),
+    ('2024-11-06', '18:50', 99.6, 'Pix', true, 'Ketchup adicional', 459, 81),
+    ('2024-09-21', '13:49', 163.49, 'Pix', false, 'Guardanapo adicional', 709, 8),
+    ('2025-02-17', '13:06', 55.42, 'Cartao', false, 'Com pimenta', 48, 153),
+    ('2025-02-18', '11:06', 58.42, 'Dinheiro', true, 'Sem molhos', 24, 85),
+    ('2024-12-11', '17:39', 89.85, 'Pix', false, 'Guardanapo adicional', 139, 47),
+    ('2024-12-31', '14:09', 176.6, 'Cartao', false, 'Com pimenta', 528, 53),
+    ('2024-06-17', '18:45', 30.83, 'Dinheiro', true, 'Cliente fiel', 706, 156),
+    ('2024-08-19', '18:26', 78.25, 'Pix', false, 'Com pimenta', 433, 184),
+    ('2024-06-15', '14:24', 185.02, 'Pix', false, 'Ketchup adicional', 435, 33),
+    ('2024-11-09', '16:53', 136.87, 'Pix', true, 'Com pimenta', 642, 2),
+    ('2025-04-08', '14:13', 109.76, 'Pix', false, 'Sem cebola', 326, 35),
+    ('2025-06-11', '23:05', 52.78, 'Pix', true, 'Sem picles', 371, 113),
+    ('2024-07-23', '20:40', 84.14, 'Dinheiro', false, 'Cliente fiel', 101, 149),
+    ('2024-07-08', '18:29', 43.35, 'Cartao', false, 'Sem molhos', 112, 186),
+    ('2024-08-27', '13:34', 133.78, 'Dinheiro', false, 'Sem molhos', 83, 90),
+    ('2024-09-22', '22:09', 47.6, 'Dinheiro', true, 'Sem molhos', 183, 52),
+    ('2024-08-30', '12:47', 30.29, 'Pix', false, 'Ketchup adicional', 13, 164),
+    ('2024-06-29', '18:24', 42.69, 'Pix', false, 'Sem molhos', 677, 14),
+    ('2025-01-08', '16:40', 33.68, 'Dinheiro', true, 'Sem picles', 131, 144),
+    ('2024-08-16', '13:52', 89.52, 'Cartao', true, 'Para viagem', 449, 146),
+    ('2025-03-27', '17:58', 171.78, 'Cartao', false, 'Cliente fiel', 128, 52),
+    ('2025-01-23', '12:10', 71.5, 'Dinheiro', false, 'Com pimenta', 41, 29),
+    ('2025-04-16', '16:37', 193.43, 'Dinheiro', true, 'Ketchup adicional', 454, 154),
+    ('2025-02-18', '21:27', 26.43, 'Cartao', false, 'Sem cebola', 115, 171),
+    ('2025-02-23', '19:51', 114.08, 'Cartao', true, 'Para viagem', 451, 51),
+    ('2024-10-23', '19:54', 126.29, 'Dinheiro', false, 'Sem molhos', 698, 31),
+    ('2025-05-29', '13:26', 64.84, 'Cartao', true, 'Para viagem', 750, 140),
+    ('2025-06-07', '21:26', 169.0, 'Pix', false, 'Sem cebola', 401, 88),
+    ('2025-02-03', '14:36', 120.17, 'Dinheiro', false, 'Para viagem', 547, 1),
+    ('2025-04-09', '11:53', 166.0, 'Cartao', true, 'Sem molhos', 259, 135),
+    ('2024-10-16', '15:06', 32.7, 'Dinheiro', true, 'Sem cebola', 59, 87),
+    ('2024-08-07', '21:26', 127.76, 'Dinheiro', false, 'Sem picles', 548, 105),
+    ('2025-03-07', '22:52', 67.5, 'Dinheiro', true, 'Cliente fiel', 650, 111),
+    ('2025-02-12', '21:13', 177.33, 'Pix', true, 'Para viagem', 646, 116),
+    ('2024-12-19', '20:19', 112.17, 'Pix', false, 'Com pimenta', 43, 2),
+    ('2025-05-29', '19:12', 42.59, 'Cartao', false, 'Cliente fiel', 94, 43),
+    ('2024-09-16', '14:25', 128.2, 'Pix', true, 'Cliente fiel', 681, 177),
+    ('2024-10-11', '11:21', 197.18, 'Pix', true, 'Sem picles', 52, 61),
+    ('2024-10-27', '17:47', 190.8, 'Pix', true, 'Sem observações', 302, 31),
+    ('2024-12-02', '12:48', 87.83, 'Dinheiro', false, 'Ketchup adicional', 207, 10),
+    ('2025-03-03', '19:22', 43.79, 'Pix', true, 'Para viagem', 720, 195),
+    ('2024-07-09', '21:28', 182.89, 'Pix', false, 'Sem cebola', 254, 105),
+    ('2025-01-19', '14:39', 115.82, 'Dinheiro', true, 'Para viagem', 681, 31),
+    ('2024-12-19', '16:16', 56.13, 'Pix', false, 'Com pimenta', 158, 109),
+    ('2025-01-25', '21:18', 143.62, 'Cartao', false, 'Sem cebola', 528, 29),
+    ('2024-10-30', '13:15', 188.63, 'Cartao', true, 'Sem picles', 9, 157),
+    ('2025-02-23', '21:39', 146.07, 'Dinheiro', true, 'Ketchup adicional', 553, 104),
+    ('2024-12-06', '22:42', 66.06, 'Cartao', false, 'Sem molhos', 109, 107),
+    ('2024-10-23', '11:39', 101.55, 'Pix', false, 'Para viagem', 465, 29),
+    ('2024-10-22', '22:45', 123.5, 'Cartao', true, 'Sem picles', 448, 20),
+    ('2024-11-21', '12:05', 154.49, 'Pix', true, 'Sem observações', 309, 5),
+    ('2024-08-29', '19:12', 151.36, 'Pix', false, 'Sem cebola', 388, 183),
+    ('2025-03-01', '16:18', 76.53, 'Dinheiro', true, 'Sem molhos', 384, 104),
+    ('2024-12-21', '17:06', 136.35, 'Cartao', false, 'Guardanapo adicional', 470, 116),
+    ('2025-01-20', '12:54', 188.84, 'Cartao', false, 'Cliente fiel', 96, 112),
+    ('2025-02-19', '18:28', 59.98, 'Pix', true, 'Sem molhos', 737, 188),
+    ('2024-12-18', '15:16', 68.25, 'Pix', false, 'Guardanapo adicional', 80, 158),
+    ('2024-10-28', '23:02', 187.48, 'Pix', true, 'Cliente fiel', 26, 1),
+    ('2025-01-02', '18:53', 73.09, 'Dinheiro', true, 'Com pimenta', 695, 54),
+    ('2024-11-14', '11:40', 177.63, 'Cartao', true, 'Cliente fiel', 74, 10),
+    ('2024-11-09', '23:51', 187.79, 'Pix', true, 'Sem molhos', 442, 191),
+    ('2024-09-04', '13:40', 181.46, 'Pix', false, 'Ketchup adicional', 426, 120),
+    ('2024-10-29', '12:46', 115.79, 'Pix', false, 'Guardanapo adicional', 169, 26),
+    ('2025-05-09', '20:54', 38.29, 'Cartao', false, 'Sem cebola', 129, 28),
+    ('2024-11-09', '18:49', 97.57, 'Cartao', false, 'Cliente fiel', 697, 112),
+    ('2025-05-11', '12:20', 188.0, 'Pix', true, 'Sem cebola', 201, 59),
+    ('2024-09-22', '14:34', 176.59, 'Pix', true, 'Cliente fiel', 367, 158),
+    ('2024-10-16', '23:52', 63.97, 'Dinheiro', true, 'Guardanapo adicional', 526, 1),
+    ('2025-01-19', '21:07', 196.92, 'Pix', true, 'Guardanapo adicional', 23, 174),
+    ('2025-02-01', '20:54', 125.45, 'Cartao', false, 'Sem molhos', 235, 102),
+    ('2025-04-19', '13:46', 134.2, 'Cartao', false, 'Sem molhos', 708, 115),
+    ('2024-09-10', '17:48', 81.55, 'Dinheiro', true, 'Sem observações', 400, 192),
+    ('2025-05-02', '14:39', 66.05, 'Cartao', false, 'Sem cebola', 337, 73),
+    ('2024-10-15', '17:11', 189.78, 'Cartao', true, 'Sem cebola', 302, 91),
+    ('2025-01-09', '20:17', 161.43, 'Pix', true, 'Ketchup adicional', 655, 130),
+    ('2025-02-20', '14:46', 140.36, 'Dinheiro', true, 'Sem molhos', 168, 90),
+    ('2024-07-25', '22:39', 59.53, 'Cartao', true, 'Com pimenta', 263, 2),
+    ('2024-12-02', '22:56', 55.73, 'Pix', true, 'Sem molhos', 586, 26),
+    ('2025-03-03', '16:36', 104.26, 'Dinheiro', true, 'Sem picles', 41, 78),
+    ('2025-06-19', '13:43', 137.38, 'Cartao', false, 'Sem observações', 712, 117),
+    ('2024-11-03', '18:38', 185.09, 'Cartao', true, 'Cliente fiel', 60, 199),
+    ('2024-08-26', '15:07', 34.43, 'Dinheiro', true, 'Ketchup adicional', 597, 119),
+    ('2024-10-09', '15:17', 66.84, 'Cartao', false, 'Ketchup adicional', 187, 91),
+    ('2024-11-18', '12:40', 46.23, 'Pix', true, 'Sem picles', 583, 131),
+    ('2025-02-24', '20:43', 149.83, 'Cartao', true, 'Sem molhos', 605, 21),
+    ('2025-03-25', '16:05', 170.22, 'Pix', true, 'Sem observações', 711, 112),
+    ('2025-02-14', '17:44', 91.0, 'Cartao', false, 'Para viagem', 688, 43),
+    ('2024-12-13', '18:09', 106.73, 'Cartao', false, 'Sem observações', 621, 59),
+    ('2025-05-11', '15:43', 65.35, 'Dinheiro', true, 'Sem picles', 608, 50),
+    ('2025-04-11', '22:53', 25.03, 'Pix', true, 'Sem molhos', 340, 174),
+    ('2024-06-17', '19:32', 37.36, 'Dinheiro', false, 'Com pimenta', 695, 120),
+    ('2025-04-27', '19:50', 52.8, 'Cartao', false, 'Guardanapo adicional', 167, 141),
+    ('2024-07-05', '23:58', 47.94, 'Pix', false, 'Com pimenta', 521, 177),
+    ('2024-08-17', '13:50', 146.52, 'Cartao', false, 'Cliente fiel', 395, 41),
+    ('2024-12-23', '21:14', 162.79, 'Dinheiro', true, 'Sem molhos', 680, 99),
+    ('2024-09-05', '19:11', 89.93, 'Cartao', true, 'Ketchup adicional', 228, 140),
+    ('2025-03-06', '18:13', 170.91, 'Pix', false, 'Sem molhos', 453, 168),
+    ('2024-09-08', '14:48', 54.85, 'Pix', false, 'Sem picles', 380, 97),
+    ('2025-01-04', '20:20', 59.52, 'Cartao', true, 'Guardanapo adicional', 641, 163),
+    ('2024-12-04', '16:36', 171.4, 'Pix', false, 'Para viagem', 284, 105),
+    ('2025-04-26', '13:08', 79.84, 'Dinheiro', true, 'Ketchup adicional', 319, 172),
+    ('2024-12-30', '12:18', 27.79, 'Dinheiro', true, 'Para viagem', 41, 94),
+    ('2025-01-23', '17:04', 66.13, 'Dinheiro', false, 'Ketchup adicional', 680, 31),
+    ('2025-02-08', '23:10', 181.41, 'Pix', true, 'Ketchup adicional', 447, 178),
+    ('2025-04-07', '15:00', 195.25, 'Pix', false, 'Sem picles', 670, 158),
+    ('2025-02-16', '17:31', 145.4, 'Pix', true, 'Cliente fiel', 374, 11),
+    ('2025-01-06', '12:08', 143.94, 'Cartao', false, 'Sem molhos', 86, 4),
+    ('2025-03-15', '12:57', 66.04, 'Cartao', false, 'Sem picles', 117, 97),
+    ('2024-12-06', '21:54', 76.67, 'Dinheiro', true, 'Sem picles', 731, 125),
+    ('2024-12-21', '21:10', 40.23, 'Cartao', false, 'Guardanapo adicional', 485, 4),
+    ('2025-02-23', '23:16', 42.94, 'Cartao', true, 'Para viagem', 556, 194),
+    ('2024-11-13', '12:21', 47.28, 'Cartao', true, 'Sem cebola', 429, 171),
+    ('2024-08-26', '13:58', 152.25, 'Cartao', false, 'Cliente fiel', 238, 169),
+    ('2025-04-23', '20:30', 139.78, 'Dinheiro', true, 'Ketchup adicional', 523, 42),
+    ('2024-10-27', '16:17', 140.36, 'Pix', true, 'Sem observações', 744, 78),
+    ('2024-12-05', '22:45', 60.71, 'Dinheiro', true, 'Ketchup adicional', 111, 32),
+    ('2024-07-04', '11:33', 44.43, 'Pix', true, 'Para viagem', 375, 167),
+    ('2025-02-19', '22:56', 197.56, 'Cartao', true, 'Sem observações', 79, 55),
+    ('2024-07-31', '20:55', 172.79, 'Cartao', false, 'Ketchup adicional', 149, 132),
+    ('2024-10-21', '16:07', 37.45, 'Cartao', false, 'Sem molhos', 315, 159),
+    ('2025-01-13', '23:29', 195.62, 'Dinheiro', false, 'Sem observações', 736, 83),
+    ('2024-07-08', '12:55', 170.56, 'Cartao', false, 'Sem cebola', 178, 134),
+    ('2025-03-22', '14:38', 74.61, 'Pix', false, 'Para viagem', 728, 161),
+    ('2024-06-24', '19:13', 154.32, 'Dinheiro', true, 'Com pimenta', 152, 89),
+    ('2024-10-12', '17:51', 111.95, 'Dinheiro', false, 'Sem cebola', 657, 91),
+    ('2025-06-16', '15:28', 177.39, 'Cartao', true, 'Sem molhos', 422, 51),
+    ('2025-05-16', '14:01', 49.75, 'Cartao', true, 'Ketchup adicional', 436, 174),
+    ('2025-02-27', '23:49', 96.24, 'Pix', false, 'Ketchup adicional', 628, 120),
+    ('2025-06-16', '18:32', 129.29, 'Cartao', true, 'Sem observações', 113, 45),
+    ('2024-10-24', '21:17', 138.21, 'Cartao', false, 'Sem picles', 555, 54),
+    ('2024-09-25', '17:04', 131.29, 'Cartao', false, 'Sem picles', 471, 37),
+    ('2024-12-23', '21:31', 30.15, 'Dinheiro', false, 'Guardanapo adicional', 36, 98),
+    ('2024-10-05', '20:40', 109.78, 'Pix', false, 'Guardanapo adicional', 96, 143),
+    ('2025-04-12', '16:46', 103.1, 'Pix', false, 'Com pimenta', 731, 95),
+    ('2025-03-21', '15:01', 160.21, 'Cartao', false, 'Guardanapo adicional', 681, 176),
+    ('2024-08-23', '13:15', 181.11, 'Pix', true, 'Sem picles', 445, 52),
+    ('2024-07-31', '12:39', 199.27, 'Cartao', true, 'Ketchup adicional', 378, 78),
+    ('2024-11-21', '15:23', 124.62, 'Pix', true, 'Ketchup adicional', 35, 47),
+    ('2024-10-18', '14:55', 128.23, 'Pix', true, 'Com pimenta', 508, 136),
+    ('2024-08-26', '18:26', 53.08, 'Dinheiro', false, 'Sem picles', 228, 79),
+    ('2025-04-20', '17:20', 40.32, 'Dinheiro', false, 'Sem picles', 204, 165),
+    ('2025-05-23', '23:41', 187.23, 'Cartao', true, 'Sem picles', 563, 144),
+    ('2024-08-06', '17:10', 93.06, 'Pix', true, 'Guardanapo adicional', 189, 22),
+    ('2024-11-09', '13:33', 99.0, 'Pix', true, 'Cliente fiel', 714, 103),
+    ('2025-05-08', '23:26', 113.79, 'Cartao', false, 'Cliente fiel', 536, 42),
+    ('2025-06-19', '15:08', 65.89, 'Pix', false, 'Ketchup adicional', 703, 73),
+    ('2025-01-07', '18:28', 153.09, 'Cartao', false, 'Sem molhos', 660, 89),
+    ('2024-11-21', '17:14', 136.22, 'Dinheiro', false, 'Sem molhos', 489, 135),
+    ('2024-09-05', '18:49', 55.37, 'Pix', true, 'Para viagem', 467, 122),
+    ('2024-12-15', '21:44', 138.87, 'Cartao', false, 'Para viagem', 624, 140),
+    ('2024-09-04', '21:50', 171.04, 'Pix', true, 'Cliente fiel', 286, 85),
+    ('2025-02-11', '14:34', 69.37, 'Pix', false, 'Guardanapo adicional', 172, 117),
+    ('2024-10-08', '23:05', 195.99, 'Cartao', false, 'Sem observações', 225, 148),
+    ('2025-05-23', '21:32', 192.47, 'Pix', true, 'Sem molhos', 138, 178),
+    ('2025-06-01', '18:46', 174.63, 'Dinheiro', true, 'Sem observações', 273, 193),
+    ('2025-04-07', '20:52', 125.35, 'Cartao', false, 'Sem cebola', 177, 142),
+    ('2024-11-19', '22:24', 183.0, 'Dinheiro', true, 'Ketchup adicional', 136, 106),
+    ('2024-11-19', '17:52', 171.36, 'Dinheiro', false, 'Sem molhos', 344, 3),
+    ('2025-01-19', '11:51', 139.42, 'Dinheiro', false, 'Sem molhos', 331, 150),
+    ('2024-07-06', '17:24', 136.86, 'Pix', false, 'Para viagem', 303, 147),
+    ('2025-05-11', '14:27', 51.33, 'Pix', false, 'Sem picles', 735, 29),
+    ('2024-08-02', '17:02', 172.55, 'Pix', false, 'Ketchup adicional', 182, 122),
+    ('2025-04-25', '23:41', 44.29, 'Cartao', true, 'Sem cebola', 15, 132),
+    ('2025-04-18', '14:39', 27.41, 'Pix', false, 'Para viagem', 487, 159),
+    ('2024-09-19', '16:44', 198.62, 'Dinheiro', true, 'Sem picles', 321, 147),
+    ('2024-11-25', '17:25', 52.19, 'Cartao', false, 'Para viagem', 704, 89),
+    ('2024-12-21', '15:08', 27.82, 'Pix', false, 'Sem cebola', 493, 136),
+    ('2025-01-15', '23:32', 117.72, 'Pix', false, 'Cliente fiel', 304, 193),
+    ('2024-08-02', '21:20', 116.35, 'Dinheiro', false, 'Guardanapo adicional', 230, 92),
+    ('2025-05-27', '17:54', 176.68, 'Pix', false, 'Sem picles', 244, 160),
+    ('2025-05-23', '21:28', 84.54, 'Pix', true, 'Cliente fiel', 529, 129),
+    ('2024-08-12', '15:29', 53.96, 'Pix', false, 'Ketchup adicional', 194, 192),
+    ('2024-10-29', '20:16', 189.24, 'Cartao', false, 'Sem observações', 63, 113),
+    ('2025-01-18', '14:37', 182.48, 'Dinheiro', false, 'Sem observações', 594, 65),
+    ('2024-11-20', '16:08', 90.15, 'Pix', true, 'Cliente fiel', 207, 156),
+    ('2024-07-17', '20:55', 187.13, 'Pix', false, 'Sem observações', 246, 129),
+    ('2025-04-03', '16:34', 113.32, 'Dinheiro', true, 'Cliente fiel', 584, 118),
+    ('2025-02-28', '11:51', 38.52, 'Cartao', true, 'Para viagem', 680, 111),
+    ('2024-10-01', '11:35', 66.62, 'Cartao', false, 'Guardanapo adicional', 123, 39),
+    ('2025-05-05', '20:58', 33.49, 'Pix', true, 'Para viagem', 743, 76),
+    ('2025-03-07', '14:46', 195.36, 'Cartao', true, 'Sem molhos', 297, 110),
+    ('2024-07-15', '13:14', 134.9, 'Cartao', true, 'Sem cebola', 324, 147),
+    ('2024-09-10', '20:23', 188.62, 'Cartao', false, 'Ketchup adicional', 663, 25),
+    ('2024-09-02', '16:30', 194.38, 'Cartao', false, 'Sem molhos', 422, 31),
+    ('2024-10-26', '19:53', 164.94, 'Cartao', false, 'Sem cebola', 339, 107),
+    ('2025-02-02', '23:30', 178.32, 'Cartao', false, 'Com pimenta', 307, 80),
+    ('2025-01-06', '23:26', 155.55, 'Cartao', true, 'Sem molhos', 49, 13),
+    ('2025-01-03', '13:44', 149.11, 'Dinheiro', true, 'Com pimenta', 417, 54),
+    ('2025-05-21', '18:57', 86.11, 'Pix', false, 'Para viagem', 108, 167),
+    ('2024-11-29', '11:34', 109.9, 'Dinheiro', false, 'Guardanapo adicional', 267, 187),
+    ('2024-10-28', '12:26', 151.76, 'Cartao', true, 'Com pimenta', 362, 88),
+    ('2024-10-29', '17:38', 116.68, 'Dinheiro', true, 'Com pimenta', 407, 89),
+    ('2024-07-31', '19:36', 73.8, 'Pix', false, 'Cliente fiel', 553, 32),
+    ('2025-01-02', '23:07', 41.16, 'Dinheiro', false, 'Sem cebola', 96, 120),
+    ('2024-06-17', '11:17', 127.85, 'Cartao', false, 'Guardanapo adicional', 523, 167),
+    ('2025-03-10', '19:08', 29.91, 'Cartao', true, 'Sem molhos', 443, 56),
+    ('2024-09-22', '17:01', 29.02, 'Dinheiro', false, 'Cliente fiel', 231, 184),
+    ('2025-03-14', '17:24', 174.6, 'Dinheiro', false, 'Cliente fiel', 15, 13),
+    ('2024-11-22', '19:01', 85.33, 'Cartao', false, 'Guardanapo adicional', 398, 96),
+    ('2025-02-23', '16:06', 64.52, 'Pix', false, 'Sem cebola', 637, 140),
+    ('2024-11-11', '15:01', 131.35, 'Cartao', false, 'Guardanapo adicional', 594, 26),
+    ('2024-12-07', '23:04', 165.88, 'Pix', false, 'Com pimenta', 161, 154),
+    ('2025-02-12', '16:06', 77.16, 'Dinheiro', true, 'Com pimenta', 712, 74),
+    ('2024-09-25', '16:50', 44.79, 'Pix', false, 'Com pimenta', 211, 60),
+    ('2024-12-28', '15:56', 159.71, 'Cartao', true, 'Sem picles', 439, 4),
+    ('2024-10-04', '17:27', 89.96, 'Pix', false, 'Com pimenta', 45, 59),
+    ('2025-01-18', '21:54', 124.57, 'Cartao', false, 'Para viagem', 84, 73),
+    ('2024-11-16', '17:08', 175.83, 'Cartao', false, 'Com pimenta', 562, 77),
+    ('2024-09-08', '15:46', 45.61, 'Pix', false, 'Ketchup adicional', 159, 93),
+    ('2025-02-04', '16:51', 41.09, 'Cartao', false, 'Para viagem', 222, 144),
+    ('2025-05-26', '21:46', 102.27, 'Dinheiro', true, 'Cliente fiel', 175, 130),
+    ('2024-09-28', '15:30', 119.79, 'Pix', true, 'Sem observações', 617, 139),

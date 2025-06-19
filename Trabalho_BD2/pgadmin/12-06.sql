@@ -97,7 +97,7 @@ create table Cliente (--ok
      constraint ID_Cliente_ID primary key (Id_cliente),
      constraint CPF_client unique (CPF_client));
 
-create table Cozinha (--NÃO
+create table Cozinha (--ok
      Id_Amb numeric(5) not null,
      Quant_geladeira float(1) not null,
      Quant_chapas float(1) not null,
@@ -118,7 +118,7 @@ create table Estoque (--ok
      constraint ID_Estoque_ID primary key (Indice_estoq)
      );
 
-create table F_Vende_P (--NÃO
+create table F_Vende_P (--ok
      Id_franquia numeric(5) not null,
      Indice_prod numeric(5) not null,
      constraint ID_F_Vende_P_ID primary key (Indice_prod, Id_franquia));
@@ -157,9 +157,9 @@ create table Ingrediente (--ok
      Indice_estoq serial,
      constraint ID_Ingrediente_ID primary key (Id_ingred));
 
-create table L_Contem_I (--NÃO
-     Id_ingred numeric(5) not null,
+create table L_Contem_I (--ok
      Indice_prod numeric(5) not null,
+     Id_ingred numeric(5) not null,
      constraint ID_L_Contem_I_ID primary key (Id_ingred, Indice_prod));
 
 create table Lanche (--ok
@@ -194,7 +194,7 @@ create table Produto (--ok
      Acompanhamento boolean,
      constraint ID_Produto_ID primary key (Indice_prod));
 
-create table Salao (--NÃO
+create table Salao (--ok
      Id_Amb numeric(5) not null,
      Quant_cadeira float(1) not null,
      Quant_mesa float(1) not null,

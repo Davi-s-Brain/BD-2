@@ -65,4 +65,7 @@ INSERT INTO Ingrediente
     (57, 'Pão', 'Pão de Alho', 3.00, 0.12, 76),
     (58, 'Pão', 'Pão Sírio', 3.00, 0.10, 77),
     (59, 'Pão', 'Pão de Milho', 3.50, 0.12, 78),
-    (60, 'Pão', 'Pão de Centeio', 4.00, 0.11, 79);
+    (60, 'Pão', 'Pão de Centeio', 4.00, 0.11, 79),
+    (61, 'Carne', 'Pastrami', 6.00, 40, 37),
+    (62, 'Carne', 'Steak', 2.00, 10, 65),
+    (63, 'Pão', 'Pão de forma integral', 1.50, 30, 79);

@@ -64,7 +64,7 @@ create table Brinde (--ok
      constraint ID_Brinde_ID primary key (Id_brinde),
      constraint SID_Brind_Lanch_ID unique (Indice_prod));
 
-create table Ped_Escolhe_Prod (--NÃO
+create table Ped_Escolhe_Prod (--ok
      Id_Pedido serial, --TEM QUE SER UM INTEIRO NÉ?
      Indice_prod numeric(5) not null,
      Quantidade numeric(2) not null,

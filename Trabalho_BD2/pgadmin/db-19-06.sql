@@ -23,14 +23,13 @@
 -- Tables Section
 -- _____________ 
 
---Saritcha amor da minha vida
-create table Acompanhamento (--ok
+create table Acompanhamento (
      Indice_prod numeric(5) not null,
      Tipo_acompanhamento varchar(50) not null,
      Indice_estoq integer,
      constraint ID_Acomp_Produ_ID primary key (Indice_prod));
 
-create table Ambiente (--ok
+create table Ambiente (
      Id_Amb numeric(5) not null,
      Id_franquia numeric(5) not null,
      Tamanho_ambiente float(3)not null,
@@ -41,14 +40,14 @@ create table Ambiente (--ok
      Cozinha boolean,
      constraint Id_Ambiente_ID primary key (Id_Amb));
 
-create table Avaliacao (--ok
+create table Avaliacao (
      Indice_av numeric(5) not null,
      NPS float(1) not null,
      Campo_texto varchar(200) not null,
      Data_av date not null,
      constraint ID_Avaliacao_ID primary key (Indice_av));
 
-create table Bebida (--ok
+create table Bebida (
      Indice_prod numeric(5) not null,
      Marca varchar(50) not null,
      Sabor varchar(50) not null,
@@ -56,7 +55,7 @@ create table Bebida (--ok
      Indice_estoq integer,
      constraint ID_Bebid_Produ_ID primary key (Indice_prod));
 
-create table Brinde (--ok
+create table Brinde (
      Id_brinde numeric(5) not null,
      Indice_prod numeric(5) not null,
      Tipo_brinde varchar(20) not null,
@@ -64,20 +63,20 @@ create table Brinde (--ok
      constraint ID_Brinde_ID primary key (Id_brinde),
      constraint SID_Brind_Lanch_ID unique (Indice_prod));
 
-create table Ped_Escolhe_Prod (--ok
+create table Ped_Escolhe_Prod (
      Id_Pedido integer not null,
      Indice_prod numeric(5) not null,
      Quantidade numeric(2) not null,
      constraint ID_Ped_Escolhe_Prod_ID primary key (Id_Pedido, Indice_prod));
 
-create table C_Registra_A (--ok
+create table C_Registra_A (
      Id_pedido integer not null,
      Id_cliente numeric(11) not null,
      Indice_av numeric(5) not null,
      constraint ID_C_Reg_Pedid_ID primary key (Id_pedido, Id_cliente),
      constraint SID_C_Reg_Avali_ID unique (Indice_av));
 
-create table Cliente (--ok
+create table Cliente (
      Id_cliente numeric(11) not null,
      Primeiro_nome_client varchar(50) not null,
      Ultimo_nome_client varchar(50) not null,
@@ -95,7 +94,7 @@ create table Cliente (--ok
      constraint ID_Cliente_ID primary key (Id_cliente),
      constraint CPF_client unique (CPF_client));
 
-create table Cozinha (--ok
+create table Cozinha (
      Id_Amb numeric(5) not null,
      Quant_geladeira float(1) not null,
      Quant_chapas float(1) not null,
@@ -103,8 +102,7 @@ create table Cozinha (--ok
      Quant_fritadeira float(1) not null,
      constraint ID_Cozin_Ambie_ID primary key (Id_Amb));
 
---Rafa amor da vida da Sarah
-create table Estoque (--ok
+create table Estoque (
      Indice_estoq serial not null,
      Nome_produto varchar(50) not null,
      Quantidade float(1) not null,
@@ -115,12 +113,17 @@ create table Estoque (--ok
      Preco_compra_mercado float(1) not null,
      constraint ID_Estoque_ID primary key (Indice_estoq));
 
-create table F_Vende_P (--ok
+create table F_CompostaPor_A (
+     ID_Amb numeric(10) not null,
+     Id_franquia numeric(1) not null,
+     constraint ID_F_CompostaPor_A_ID primary key (Id_franquia, ID_Amb));
+
+create table F_Vende_P (
      Id_franquia numeric(5) not null,
      Indice_prod numeric(5) not null,
      constraint ID_F_Vende_P_ID primary key (Indice_prod, Id_franquia));
 
-create table Franquia (--ok
+create table Franquia (
      Id_franquia numeric(5) not null,
      Nome_franquia varchar(50) not null,
      CNPJ numeric(14) not null,
@@ -128,9 +131,8 @@ create table Franquia (--ok
      E_mail_franq varchar(50) not null,
      Data_inauguracao_franq date not null,
      constraint ID_Franquia_ID primary key (Id_franquia));
-     --alter table foreing key
 
-create table Funcionario (--ok
+create table Funcionario (
      Id_func numeric(5) not null,
      Nome_func varchar(50) not null,
      CPF numeric(11) not null,
@@ -145,7 +147,7 @@ create table Funcionario (--ok
      Senha_Func varchar(20) not null,
      constraint ID_Funcionario_ID primary key (Id_func));
 
-create table Ingrediente (--ok
+create table Ingrediente (
      Id_ingred numeric(5) not null,
      Tipo_ingred varchar(50) not null,
      Nome_ingred varchar(50) not null,
@@ -154,18 +156,18 @@ create table Ingrediente (--ok
      Indice_estoq integer,
      constraint ID_Ingrediente_ID primary key (Id_ingred));
 
-create table L_Contem_I (--ok
+create table L_Contem_I (
      Indice_prod numeric(5) not null,
      Id_ingred numeric(5) not null,
      constraint ID_L_Contem_I_ID primary key (Id_ingred, Indice_prod));
 
-create table Lanche (--ok
+create table Lanche (
      Indice_prod numeric(5) not null,
      Ingredientes varchar(100) not null,
      Tamanho_lanche varchar(20) not null,
      constraint ID_Lanch_Produ_ID primary key (Indice_prod));
 
-create table Pedido (--ok
+create table Pedido (
      Id_pedido serial not null,
      Data_pedido date not null,
      Hora_pedido varchar(5) not null,
@@ -177,7 +179,7 @@ create table Pedido (--ok
      Id_cliente numeric(11) not null,
      constraint ID_Pedido_ID primary key (Id_pedido));
 
-create table Produto (--ok
+create table Produto (
      Indice_prod numeric(5) not null,
      Nome_prod varchar(50) not null,
      Preco_prod float(1) not null,
@@ -191,7 +193,7 @@ create table Produto (--ok
      Acompanhamento boolean,
      constraint ID_Produto_ID primary key (Indice_prod));
 
-create table Salao (--ok
+create table Salao (
      Id_Amb numeric(5) not null,
      Quant_cadeira float(1) not null,
      Quant_mesa float(1) not null,
@@ -200,7 +202,7 @@ create table Salao (--ok
      Quant_lixeiras float(1) not null,
      constraint ID_Salao_Ambie_ID primary key (Id_Amb));
 
-create table Sobremesa (--ok
+create table Sobremesa (
      Indice_prod numeric(5) not null,
      Tipo_sobremesa varchar(50) not null,
      Sabor varchar(50) not null,
@@ -208,7 +210,6 @@ create table Sobremesa (--ok
      constraint ID_Sobre_Produ_ID primary key (Indice_prod));
 
 -- -- INSERTS SECTION
-DELETE FROM Acompanhamento;
 INSERT INTO Acompanhamento (
     Indice_prod,
     Tipo_acompanhamento,
@@ -221,7 +222,6 @@ INSERT INTO Acompanhamento (
     (55, 'Salada', 95),
     (56, 'Frito', 96);
 
-DELETE FROM Ambiente;
 INSERT INTO Ambiente(
         Id_Amb,
         Id_franquia,
@@ -273,10 +273,8 @@ INSERT INTO Ambiente(
         (39,20, 18.0, 1, 'Limpo', true, true, false),
         (40,20, 10.0, 2, 'Sujo', false, false, true);
 		
-DELETE FROM Avaliacao;
 INSERT INTO Avaliacao(
     Indice_av,
-    NPS,
     Campo_texto,
     Data_av)
 VALUES
@@ -2281,7 +2279,6 @@ VALUES
 (1999, 6.5, ' ', '2025-05-25'),
 (2000, 1.4, ' ', '2023-08-30');
 
-DELETE FROM Bebida;
 INSERT INTO Bebida (
         Indice_prod,
         Marca,
@@ -2310,14 +2307,12 @@ INSERT INTO Bebida (
         (19, 'Suco Del Valle', 'Uva', 19, FALSE),
         (20, 'Red Bull', 'Original', 20, FALSE);
 
-DELETE FROM Brinde;
 INSERT INTO Brinde (Id_brinde, Indice_prod, Tipo_brinde, Indice_estoq) VALUES
 (1, 30, 'carrinho', 97),
 (2, 31, 'boneca', 98),
 (3, 32, 'pelucia', 99),
 (4, 33, 'jogo', 100);
 
-DELETE FROM Cozinha;
 INSERT INTO Cozinha(
     Id_Amb,
     Quant_geladeira,
@@ -2346,7 +2341,6 @@ INSERT INTO Cozinha(
 (38,2,7,1,2),
 (40,2,3,4,2);
 
-DELETE FROM Estoque;
 INSERT INTO Estoque (
     Indice_estoq,
     Nome_produto,
@@ -2458,7 +2452,6 @@ INSERT INTO Estoque (
     (99,'Ursinho Puff', 20, 'un', '2025-01-01', '2027-12-31', 319, 2.00),
     (100,'Ioio', 20, 'un', '2025-01-01', '2027-12-31', 320, 2.00);
 
-DELETE FROM Franquia;
 INSERT INTO Franquia(
     Id_franquia,
     Nome_franquia,
@@ -2488,7 +2481,6 @@ INSERT INTO Franquia(
     (19, 'RanBurguer Vila Nova',     10221122334488, 'Rua Vila Nova, 333',          'vilanova@ranburguer.com',   '2022-02-17'),
     (20, 'RanBurguer Rodoviária',    11232233445599, 'Terminal Rodoviário, Box 3',  'rodoviaria@ranburguer.com', '2018-06-05');
 
-DELETE FROM Ingrediente;
 INSERT INTO Ingrediente 
     (Id_ingred,
     Tipo_ingred,
@@ -2561,8 +2553,6 @@ INSERT INTO Ingrediente
     (62, 'Carne', 'Steak', 2.00, 10, 65),
     (63, 'Pão', 'Pão de forma integral', 1.50, 30, 79);
 
-DELETE FROM Pedido;
---mapeando pra pedido-produto
 INSERT INTO Pedido (
     Id_pedido,
     Data_pedido,
@@ -6677,7 +6667,6 @@ INSERT INTO Pedido (
         (4099, '2024-09-30', '20:23', 54.62, 'Cartao', FALSE, 'Com pimenta', 249, 151),
         (4100, '2025-03-27', '21:58', 99.34, 'Dinheiro', TRUE, 'Sem molhos', 490, 87);
 
-DELETE FROM Cliente;
 INSERT INTO Cliente (
       Id_cliente,
       Primeiro_nome_client,
@@ -7447,7 +7436,6 @@ VALUES
 (751, 'Diego', 'Freitas', '1958-12-08', '50784362190', '81921894801', 'diego.freitas@gmail.com', '2022-10-07', 'M', 'senha1234', TRUE, FALSE, FALSE, TRUE),
 (752, 'João Vitor', 'Carvalho', '1987-03-19', '59412763034', '51938126683', 'joãovitor.carvalho@gmail.com', '2024-11-01', 'O', 'senha1234', FALSE, TRUE, FALSE, TRUE);
 
-DELETE FROM C_Registra_A;
 INSERT INTO C_Registra_A(
     Id_pedido,
     Id_cliente,
@@ -9420,7 +9408,6 @@ INSERT INTO C_Registra_A(
 (1834,26,1149),
 (1964,290,589);
 
-DELETE FROM Produto;
 INSERT INTO Produto (
     Indice_prod,
     Nome_prod,
@@ -9491,7 +9478,6 @@ INSERT INTO Produto (
         (55, 'Salada Fresca', 10.00, 80, 'gr','não', 'Salada', FALSE, FALSE, FALSE, TRUE),
         (56, 'Nuggets', 9.90, 80, 'gr','não', 'Frango', FALSE, FALSE, FALSE, TRUE);
 
-DELETE FROM Salao;
 INSERT INTO Salao(
     Id_Amb,
     Quant_cadeira,
@@ -9521,7 +9507,6 @@ INSERT INTO Salao(
 (37,2,7,1,2,2),
 (39,2,3,4,2,2);
 
-DELETE FROM Sobremesa;
 INSERT INTO Sobremesa (
     Indice_prod,
     Tipo_sobremesa,
@@ -9539,7 +9524,6 @@ INSERT INTO Sobremesa (
     (49,'Torta','Amora', 89),
     (50, 'Torta','Banana',90);
 
-DELETE FROM Lanche;
 INSERT INTO Lanche (
     Indice_prod,
     Ingredientes,
@@ -9566,7 +9550,6 @@ INSERT INTO Lanche (
     (39, 'Pão Brioche, Hambúrguer de Costela, Queijo Gorgonzola', 'Pequeno'),
     (40, 'Pão Brioche, Sanduíche de Bacon, Alface, Tomate', 'Médio');
 
-DELETE FROM L_Contem_I;
 INSERT INTO L_Contem_I(
     Indice_prod,
     Id_ingred
@@ -9642,7 +9625,6 @@ INSERT INTO L_Contem_I(
     (34, 8),
     (34, 9);
 
-DELETE FROM F_Vende_P;
 INSERT INTO F_Vende_P(
     Id_franquia,
     Indice_prod
@@ -10106,7 +10088,6 @@ INSERT INTO F_Vende_P(
 (16,25),
 (17,41);
 
-DELETE FROM Funcionario;
 INSERT INTO Funcionario(
     Id_func,
     Nome_func,
@@ -10322,7 +10303,6 @@ INSERT INTO Funcionario(
     (199, 'Miguel Caldeira', '91358207488', '1976-04-14', 'Gerente', 3735.46, '2025-02-23', 'Noite', 'Temporário', 'Ativo', 838194420, 'senha'),
     (200, 'Ana Sophia Araújo', '43815092698', '1966-08-14', 'Atendente', 1880.03, '2020-09-15', 'Tarde', 'CLT', 'Ativo', 249827706, 'senha');
 
-DELETE FROM Ped_Escolhe_Prod;
 INSERT INTO Ped_Escolhe_Prod(
      Id_Pedido,
      Indice_prod,
@@ -15254,31 +15234,28 @@ INSERT INTO Ped_Escolhe_Prod(
 -- -- Constraints Section
 -- -- ___________________ 
 
--- alter table Acompanhamento add constraint ID_Acomp_Produ_FK
---      foreign key (Indice_prod)
---      references Produto;
+alter table Acompanhamento add constraint ID_Acomp_Produ_FK
+     foreign key (Indice_prod)
+     references Produto;
 
--- alter table Acompanhamento add constraint REF_Acomp_Estoq_FK
---      foreign key (Indice_estoq)
---      references Estoque;
+alter table Acompanhamento add constraint REF_Acomp_Estoq_FK
+     foreign key (Indice_estoq)
+     references Estoque;
 
--- alter table Ambiente add constraint Id_Ambiente_CHK
---      check(exists(select * from F_CompostaPor_A
---                   where F_CompostaPor_A.Id_Amb = Id_Amb)); 
-
--- alter table Ambiente add constraint EXCL_Ambiente
---      check((Cozinha is not null and Salao is null and Indice_estoq is null)
---            or (Cozinha is null and Salao is not null and Indice_estoq is null)
---            or (Cozinha is null and Salao is null and Indice_estoq is not null)
---            or (Cozinha is null and Salao is null and Indice_estoq is null)); 
-
--- alter table Ambiente add constraint SId_Ambie_Estoq_FK
---      foreign key (Indice_estoq)
---      references Estoque;
+alter table Ambiente add constraint EXCL_Ambiente
+     check((Cozinha is TRUE and Salao is FALSE)
+           or (Cozinha is FALSE and Salao is TRUE)); 
 
 -- alter table Avaliacao add constraint ID_Avaliacao_CHK
 --      check(exists(select * from C_Registra_A
 --                   where C_Registra_A.Indice_av = Indice_av)); 
+
+               ALTER TABLE Avaliacao
+               ADD CONSTRAINT fk_avaliacao_registra
+               FOREIGN KEY (Indice_av) 
+               REFERENCES C_Registra_A (Indice_av)
+               ON DELETE CASCADE
+               ON UPDATE CASCADE;
 
 -- alter table Bebida add constraint ID_Bebid_Produ_FK
 --      foreign key (Indice_prod)

@@ -14,6 +14,7 @@ class FuncionarioBase(BaseModel):
     Tipo_de_contrato: str = Field(..., example="CLT")
     Status_func: str = Field(..., example="Ativo")
     Id_franquia: Optional[int] = Field(None, example=1)
+    Senha_func: Optional[str] = Field(None, example="senha")
 
 class FuncionarioCreate(FuncionarioBase):
     """Schema para criação de funcionário (Id_func é gerado pelo BD)."""
@@ -32,6 +33,8 @@ class FuncionarioUpdate(BaseModel):
     Tipo_de_contrato: Optional[str] = None
     Status_func: Optional[str] = None
     Id_franquia: Optional[int] = None
+    Senha_func: Optional[str] = None
+
 
 class FuncionarioOut(FuncionarioBase):
     """Schema de saída de funcionário, inclui o Id_func."""

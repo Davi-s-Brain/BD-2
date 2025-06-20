@@ -1,12 +1,15 @@
+from datetime import date
 from typing import List, Dict, Any
 
 from fastapi import APIRouter, Request, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 
+from Trabalho_BD2.IntegrationApplication.integration_api.core.totalizador import totalizador_diario
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.ingrediente_schemas import IngredienteOut, \
     IngredienteCreate, IngredienteUpdate
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate, ItemDelete
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder, GetOrder
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.pedido import PedidoCreate, PedidoUpdate, PedidoOut
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import UserLogin, Token, User
 from Trabalho_BD2.IntegrationApplication.integration_api.services.funcionario_service import FuncionarioService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.ingrediente_service import IngredienteService
@@ -18,6 +21,8 @@ from Trabalho_BD2.IntegrationApplication.integration_api.schemas.funcionario imp
     FuncionarioUpdate,
     FuncionarioOut,
 )
+from Trabalho_BD2.IntegrationApplication.integration_api.services.pedido import PedidoService
+
 service = ItemService()
 security = SecurityManager()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
@@ -213,6 +218,33 @@ async def login(request: Request, user_data: UserLogin):
         )
     access_token = security.create_access_token(data={"sub": user_data.username})
     return {"access_token": access_token, "token_type": "bearer"}
+@auth_router.get("/me", response_model=User)
+async def read_users_me(current_user: User = Depends(get_current_user)):
+    return current_user
+@auth_router.get("/{func_id}", response_model=Token)
+@limiter.limit("5/second")
+async def login_funcionario(request: Request, func_id: int, password):
+    func = funcService.get_by_id(func_id)
+    if not func:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Funcionário não encontrado"
+        )
+    if func.Senha_func != password:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    access_token = security.create_access_token(data={"sub": str(func_id)})
+    if not access_token:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    print("Requisicao de entrada com o token"+ access_token)
+    return {"access_token": access_token, "token_type": "bearer"}
 @auth_router.post("/register", response_model=Token)
 @limiter.limit("5/minute")
 async def register(request: Request, user_data: UserLogin):
@@ -261,9 +293,7 @@ async def login_with_form(request: Request, form_data: OAuth2PasswordRequestForm
     access_token = security.create_access_token(data={"sub": form_data.username})
     return {"access_token": access_token, "token_type": "bearer"}
 
-@auth_router.get("/me", response_model=User)
-async def read_users_me(current_user: User = Depends(get_current_user)):
-    return current_user
+
 
 # Integration endpoints
 @router.get("/")
@@ -294,3 +324,62 @@ async def update_item(
 ):
     service.update_item(item)
     return {"status": "received"}
+
+#################################### Pedidos ####################################
+
+pedidoService = PedidoService()
+
+
+@router.post("/pedido/", response_model=int, status_code=status.HTTP_201_CREATED)
+def criar_pedido(pedido: PedidoCreate):
+    pedido_id = pedidoService.criar_pedido(pedido.__dict__)
+
+    # Converte a string da data para objeto date se necessário
+    data_pedido = pedido.Data_pedido if isinstance(pedido.Data_pedido, date) else date.fromisoformat(str(pedido.Data_pedido))
+
+    totalizador_diario.adicionar_pedido(pedido.Valor_total_pedido, data_pedido)
+
+    return pedido_id
+
+
+@router.get("/pedido/", response_model=List[PedidoOut])
+def listar_pedidos():
+    return pedidoService.listar_pedidos()
+
+
+@router.get("/pedido/{pedido_id}", response_model=PedidoOut)
+def obter_pedido(pedido_id: int):
+    pedido = pedidoService.buscar_pedido_por_id(pedido_id)
+    if not pedido:
+        raise HTTPException(status_code=404, detail="Pedido não encontrado")
+    return pedido
+
+
+@router.put("/pedido/{pedido_id}", response_model=bool)
+def atualizar_pedido(pedido_id: int, dados: PedidoUpdate):
+    atualizado = pedidoService.atualizar_pedido(pedido_id, dados.dict(exclude_unset=True))
+    if not atualizado:
+        raise HTTPException(status_code=404, detail="Pedido não encontrado ou sem alterações")
+    return True
+
+
+@router.delete("/pedido/{pedido_id}", response_model=bool)
+def deletar_pedido(pedido_id: int):
+    deletado = pedidoService.deletar_pedido(pedido_id)
+    if not deletado:
+        raise HTTPException(status_code=404, detail="Pedido não encontrado")
+    return True
+@router.get("/pedido/total-hoje/")
+def obter_total_hoje():
+    return {"total": totalizador_diario.obter_total_hoje()}
+
+@router.get("/pedido/total-por-data/{data}")
+def obter_total_por_data(data: str):
+    try:
+        data_consulta = date.fromisoformat(data)
+        return {
+            "data": data,
+            "total": totalizador_diario.obter_total_por_data(data_consulta)
+        }
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Formato de data inválido. Use YYYY-MM-DD")

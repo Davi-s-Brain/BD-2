@@ -16,7 +16,8 @@ class Funcionario:
         Turno: str,
         Tipo_de_contrato: str,
         Status_func: str,
-        Id_franquia: int | None
+        Id_franquia: int,
+        Senha_func: str | None
     ):
         self.Id_func = Id_func
         self.Nome_func = Nome_func
@@ -29,6 +30,7 @@ class Funcionario:
         self.Tipo_de_contrato = Tipo_de_contrato
         self.Status_func = Status_func
         self.Id_franquia = Id_franquia
+        self.Senha_func = Senha_func
 
     @staticmethod
     def create(
@@ -41,7 +43,8 @@ class Funcionario:
         Turno: str,
         Tipo_de_contrato: str,
         Status_func: str,
-        Id_franquia: int | None = None
+        Id_franquia: int,
+        Senha_func: str| None = None
     ) -> int:
         """Insere um novo funcionário e retorna o id gerado."""
         with get_connection() as conn:
@@ -49,11 +52,11 @@ class Funcionario:
             cursor.execute("""
                 INSERT INTO funcionario (
                     Nome_func, CPF, Data_nasc_func, Cargo, Salario,
-                    Data_admissao, Turno, Tipo_de_contrato, Status_func, Id_franquia
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    Data_admissao, Turno, Tipo_de_contrato, Status_func, Id_franquia, Senha_func
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 Nome_func, CPF, Data_nasc_func, Cargo, Salario,
-                Data_admissao, Turno, Tipo_de_contrato, Status_func, Id_franquia
+                Data_admissao, Turno, Tipo_de_contrato, Status_func, Id_franquia, Senha_func
             ))
             return cursor.lastrowid
 
@@ -71,7 +74,23 @@ class Funcionario:
         """Busca um funcionário pelo ID."""
         with get_connection() as conn:
             cursor = conn.cursor()
-            cursor.execute("SELECT * FROM funcionario WHERE Id_func = ?", (Id_func,))
+            cursor.execute("""
+                SELECT 
+                    Id_func,
+                    Nome_func,
+                    CPF,
+                    Data_nasc_func,
+                    Cargo,
+                    Salario,
+                    Data_admissao,
+                    Turno,
+                    Tipo_de_contrato,
+                    Status_func,
+                    Id_franquia,
+                    Senha_func
+                FROM funcionario
+                WHERE Id_func = ?
+            """, (Id_func,))
             row = cursor.fetchone()
             return Funcionario(*row) if row else None
 

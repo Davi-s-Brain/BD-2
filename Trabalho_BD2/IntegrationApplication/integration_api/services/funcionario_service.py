@@ -11,7 +11,6 @@ class FuncionarioService:
     def create(self, data: FuncionarioCreate) -> int:
         """Insere um novo funcionário e retorna o id gerado."""
         return Funcionario.create(
-            Id_func = data.Id_func,
             Nome_func=data.Nome_func,
             CPF=data.CPF,
             Data_nasc_func=data.Data_nasc_func.isoformat(),
@@ -22,6 +21,7 @@ class FuncionarioService:
             Tipo_de_contrato=data.Tipo_de_contrato,
             Status_func=data.Status_func,
             Id_franquia=data.Id_franquia,
+            Senha_func = data.Senha_func
         )
 
     def get_all(self) -> List[Funcionario]:

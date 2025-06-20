@@ -4,9 +4,12 @@ import sqlite3
 from datetime import datetime, timedelta
 from typing import Optional, Dict
 from fastapi import Request, HTTPException
-from jose import JWTError, jwt
+from jose import JWTError, jwt, ExpiredSignatureError
 from starlette.status import HTTP_401_UNAUTHORIZED
+
 from Trabalho_BD2.IntegrationApplication.integration_api.core.secret_manager import SecretManager
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import User, UserLogin
+from Trabalho_BD2.IntegrationApplication.integration_api.services.funcionario_service import FuncionarioService
 
 
 class SecurityManager:
@@ -57,7 +60,9 @@ class SecurityManager:
 
     def get_current_user(self, token: str) -> Dict:
         """Get current user from token"""
+        print(token)
         payload = self.decode_token(token)
+        print(payload)
         if not payload:
             raise HTTPException(
                 status_code=HTTP_401_UNAUTHORIZED,
@@ -74,7 +79,12 @@ class SecurityManager:
         user = cursor.fetchone()
 
         if not user:
-            raise HTTPException(
+            functionService = FuncionarioService()
+            funcionario = functionService.get_by_id(username)
+            if funcionario:
+                return {"username": str(funcionario.Id_func), "password": funcionario.Senha_func}
+            if not user:
+                raise HTTPException(
                 status_code=HTTP_401_UNAUTHORIZED,
                 detail="User not found",
                 headers={"WWW-Authenticate": "Bearer"},
@@ -84,16 +94,49 @@ class SecurityManager:
 
     def create_access_token(self, data: dict) -> str:
         to_encode = data.copy()
-        expire = datetime.utcnow() + timedelta(minutes=self.ACCESS_TOKEN_EXPIRE_MINUTES)
-        to_encode.update({"exp": expire})
-        return jwt.encode(to_encode, self.SECRET_KEY, algorithm=self.ALGORITHM)
+        now = datetime.utcnow()
+        expire = now + timedelta(minutes=self.ACCESS_TOKEN_EXPIRE_MINUTES)
+
+        to_encode.update({
+            "exp": int(expire.timestamp()),
+            "iat": int(now.timestamp()),  # <- ajuda a garantir diferença
+        })
+
+        jwtencode = jwt.encode(to_encode, self.SECRET_KEY, algorithm=self.ALGORITHM)
+        print("O token gerado foi "+jwtencode)
+        return jwtencode
+
 
     def decode_token(self, token: str) -> Optional[Dict]:
         try:
+            # Decodifica o token usando a chave e algoritmo
             payload = jwt.decode(token, self.SECRET_KEY, algorithms=[self.ALGORITHM])
+
+            # Verifica se o campo 'sub' existe
+            subject = payload.get("sub")
+            if subject is None:
+                print("⚠️ Token inválido: campo 'sub' ausente.")
+                return None
+
+            # Se quiser logar o payload para debug
+            print(f"✅ Token decodificado com sucesso: {payload}")
+
+            # Verificação extra: opcional
+            exp = payload.get("exp")
+            if exp:
+                exp_datetime = datetime.fromtimestamp(exp)
+                print(f"🔒 Token expira em: {exp_datetime}")
+
             return payload
-        except JWTError:
+
+        except ExpiredSignatureError:
+            print("⛔ Token expirado.")
             return None
+        except JWTError as e:
+            print(f"⛔ Erro ao decodificar token JWT: {e}")
+            return None
+        except Exception as e:
+            print(f"⛔ Erro inesperado: {e}")
 
     def validate(self, request: Request):
         token = request.headers.get("Authorization")

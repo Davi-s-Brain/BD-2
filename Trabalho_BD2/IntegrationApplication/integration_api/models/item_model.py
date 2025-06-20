@@ -72,11 +72,12 @@ class ItemModel:
             cursor.execute(
                 """INSERT INTO funcionario
                 (Nome_func, CPF, Data_nasc_func, Cargo, Salario, 
-                Data_admissao, Turno, Tipo_de_contrato, Status_func, Id_franquia) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                Data_admissao, Turno, Tipo_de_contrato, Status_func, Id_franquia, Senha_func) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                 (data.Nome_func, data.CPF, data.Data_nasc_func, data.Cargo,
                  data.Salario, data.Data_admissao, data.Turno,
-                 data.Tipo_de_contrato, data.Status_func, data.Id_franquia)
+                 data.Tipo_de_contrato, data.Status_func, data.Id_franquia, data.Senha_func)
             )
+
             conn.commit()
             return cursor.lastrowid

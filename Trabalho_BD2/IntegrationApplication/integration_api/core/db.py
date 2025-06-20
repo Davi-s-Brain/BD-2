@@ -65,7 +65,8 @@ def init_db():
             Turno TEXT NOT NULL,
             Tipo_de_contrato TEXT NOT NULL,
             Status_func TEXT NOT NULL,
-            Id_franquia INTEGER
+            Id_franquia INTEGER,
+            Senha_func TEXT
         )
         """)
 

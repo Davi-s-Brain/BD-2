@@ -290,14 +290,6 @@ create table Sobremesa (--ok ok
 --      check(exists(select * from Ambiente
 --                   where Ambiente.Indice_estoq = Indice_estoq)); 
 
--- alter table F_CompostaPor_A add constraint EQU_F_Com_Franq
---      foreign key (Id_franquia)
---      references Franquia;
-
--- alter table F_CompostaPor_A add constraint EQU_F_Com_Ambie_FK
---      foreign key (Id_Amb)
---      references Ambiente;
-
 -- alter table F_Vende_P add constraint EQU_F_Ven_Produ
 --      foreign key (Indice_prod)
 --      references Produto;

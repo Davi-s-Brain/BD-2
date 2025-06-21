@@ -15257,41 +15257,37 @@ alter table Ambiente add constraint EXCL_Ambiente
                ON DELETE CASCADE
                ON UPDATE CASCADE;
 
--- alter table Bebida add constraint ID_Bebid_Produ_FK
---      foreign key (Indice_prod)
---      references Produto;
+alter table Bebida add constraint ID_Bebid_Produ_FK
+     foreign key (Indice_prod)
+     references Produto;
 
--- alter table Bebida add constraint REF_Bebid_Estoq_FK
---      foreign key (Indice_estoq)
---      references Estoque;
+alter table Bebida add constraint REF_Bebid_Estoq_FK
+     foreign key (Indice_estoq)
+     references Estoque;
 
--- alter table Brinde add constraint SID_Brind_Lanch_FK
---      foreign key (Indice_prod)
---      references Lanche;
+alter table Brinde add constraint SID_Brind_Lanch_FK
+     foreign key (Indice_prod)
+     references Lanche;
 
--- alter table Brinde add constraint REF_Brind_Estoq_FK
---      foreign key (Indice_estoq)
---      references Estoque;
+alter table Brinde add constraint REF_Brind_Estoq_FK
+     foreign key (Indice_estoq)
+     references Estoque;
 
--- alter table Ped_Escolhe_Prod add constraint REF_C_Esc_Produ
---      foreign key (Indice_prod)
---      references Produto;
+alter table Ped_Escolhe_Prod add constraint REF_C_Esc_Produ
+     foreign key (Indice_prod)
+     references Produto;
 
--- alter table Ped_Escolhe_Prod add constraint EQU_C_Esc_Clien_FK
---      foreign key (Id_cliente)
---      references Cliente;
+alter table C_Registra_A add constraint ID_C_Reg_Pedid_FK
+     foreign key (Id_pedido)
+     references Pedido;
 
--- alter table C_Registra_A add constraint ID_C_Reg_Pedid_FK
---      foreign key (Id_pedido)
---      references Pedido;
+alter table C_Registra_A add constraint SID_C_Reg_Clien_FK
+     foreign key (Id_cliente)
+     references Cliente;
 
--- alter table C_Registra_A add constraint SID_C_Reg_Clien_FK
---      foreign key (Id_cliente)
---      references Cliente;
-
--- alter table C_Registra_A add constraint SID_C_Reg_Avali_FK
---      foreign key (Indice_av)
---      references Avaliacao;
+alter table C_Registra_A add constraint SID_C_Reg_Avali_FK
+     foreign key (Indice_av)
+     references Avaliacao;
 
 -- alter table Cliente add constraint ID_Cliente_CHK
 --      check(exists(select * from C_Escolhe_P
@@ -15301,9 +15297,9 @@ alter table Ambiente add constraint EXCL_Ambiente
 --      check(exists(select * from Pedido
 --                   where Pedido.Id_cliente = Id_cliente)); 
 
--- alter table Cozinha add constraint ID_Cozin_Ambie_FK
---      foreign key (Id_Amb)
---      references Ambiente;
+alter table Cozinha add constraint ID_Cozin_Ambie_FK
+     foreign key (Id_Amb)
+     references Ambiente;
 
 -- alter table Estoque add constraint ID_Estoque_CHK
 --      check(exists(select * from Ambiente
@@ -15317,13 +15313,13 @@ alter table Ambiente add constraint EXCL_Ambiente
 --      foreign key (Id_Amb)
 --      references Ambiente;
 
--- alter table F_Vende_P add constraint EQU_F_Ven_Produ
---      foreign key (Indice_prod)
---      references Produto;
+alter table F_Vende_P add constraint EQU_F_Ven_Produ
+     foreign key (Indice_prod)
+     references Produto;
 
--- alter table F_Vende_P add constraint EQU_F_Ven_Franq_FK
---      foreign key (Id_franquia)
---      references Franquia;
+alter table F_Vende_P add constraint EQU_F_Ven_Franq_FK
+     foreign key (Id_franquia)
+     references Franquia;
 
 -- alter table Franquia add constraint ID_Franquia_CHK
 --      check(exists(select * from F_CompostaPor_A
@@ -15341,56 +15337,56 @@ alter table Ambiente add constraint EXCL_Ambiente
 --      foreign key (Id_franquia)
 --      references Franquia;
 
--- alter table Ingrediente add constraint REF_Ingre_Estoq_FK
---      foreign key (Indice_estoq)
---      references Estoque;
+alter table Ingrediente add constraint REF_Ingre_Estoq_FK
+     foreign key (Indice_estoq)
+     references Estoque;
 
--- alter table L_Contem_I add constraint EQU_L_Con_Lanch_FK
---      foreign key (Indice_prod)
---      references Lanche;
+alter table L_Contem_I add constraint EQU_L_Con_Lanch_FK
+     foreign key (Indice_prod)
+     references Lanche;
 
--- alter table L_Contem_I add constraint REF_L_Con_Ingre
---      foreign key (Id_ingred)
---      references Ingrediente;
+alter table L_Contem_I add constraint REF_L_Con_Ingre
+     foreign key (Id_ingred)
+     references Ingrediente;
 
 -- alter table Lanche add constraint ID_Lanch_Produ_CHK
 --      check(exists(select * from L_Contem_I
 --                   where L_Contem_I.Indice_prod = Indice_prod)); 
 
--- alter table Lanche add constraint ID_Lanch_Produ_FK
---      foreign key (Indice_prod)
---      references Produto;
+alter table Lanche add constraint ID_Lanch_Produ_FK
+     foreign key (Indice_prod)
+     references Produto;
 
--- alter table Pedido add constraint REF_Pedid_Funci_FK
---      foreign key (Id_func)
---      references Funcionario;
+alter table Pedido add constraint REF_Pedid_Funci_FK
+     foreign key (Id_func)
+     references Funcionario;
 
--- alter table Pedido add constraint EQU_Pedid_Clien_FK
---      foreign key (Id_cliente)
---      references Cliente;
+alter table Pedido add constraint EQU_Pedid_Clien_FK
+     foreign key (Id_cliente)
+     references Cliente;
 
 -- alter table Produto add constraint ID_Produto_CHK
 --      check(exists(select * from F_Vende_P
 --                   where F_Vende_P.Indice_prod = Indice_prod)); 
 
--- alter table Produto add constraint EXCL_Produto
---      check((Acompanhamento is not null and Sobremesa is null and Lanche is null and Bebida is null)
---            or (Acompanhamento is null and Sobremesa is not null and Lanche is null and Bebida is null)
---            or (Acompanhamento is null and Sobremesa is null and Lanche is not null and Bebida is null)
---            or (Acompanhamento is null and Sobremesa is null and Lanche is null and Bebida is not null)
---            or (Acompanhamento is null and Sobremesa is null and Lanche is null and Bebida is null)); 
+alter table Produto add constraint EXCL_Produto
+     check((Acompanhamento is TRUE and Sobremesa is FALSE and Lanche is FALSE and Bebida is FALSE)
+           or (Acompanhamento is FALSE and Sobremesa is TRUE and Lanche is FALSE and Bebida is FALSE)
+           or (Acompanhamento is FALSE and Sobremesa is FALSE and Lanche is TRUE and Bebida is FALSE)
+           or (Acompanhamento is FALSE and Sobremesa is FALSE and Lanche is FALSE and Bebida is TRUE)
+           or (Acompanhamento is FALSE and Sobremesa is FALSE and Lanche is FALSE and Bebida is FALSE)); 
 
--- alter table Salao add constraint ID_Salao_Ambie_FK
---      foreign key (Id_Amb)
---      references Ambiente;
+alter table Salao add constraint ID_Salao_Ambie_FK
+     foreign key (Id_Amb)
+     references Ambiente;
 
--- alter table Sobremesa add constraint REF_Sobre_Estoq_FK
---      foreign key (Indice_estoq)
---      references Estoque;
+alter table Sobremesa add constraint REF_Sobre_Estoq_FK
+     foreign key (Indice_estoq)
+     references Estoque;
 
--- alter table Sobremesa add constraint ID_Sobre_Produ_FK
---      foreign key (Indice_prod)
---      references Produto;
+alter table Sobremesa add constraint ID_Sobre_Produ_FK
+     foreign key (Indice_prod)
+     references Produto;
 
 
 -- -- Index Section

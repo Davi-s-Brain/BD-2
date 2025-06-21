@@ -125,3 +125,48 @@ alter table Produto add constraint EXCL_Produto
            or (Acompanhamento is FALSE and Sobremesa is FALSE and Lanche is FALSE and Bebida is FALSE));
 
 --
+ALTER TABLE C_Registra_A DROP CONSTRAINT IF EXISTS fk_avaliacao_registra;
+ALTER TABLE C_Registra_A
+ADD CONSTRAINT fk_avaliacao_registra
+FOREIGN KEY (Indice_av) 
+REFERENCES Avaliacao (Indice_av)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE F_Vende_P DROP CONSTRAINT IF EXISTS Indice_prod_fk;
+ALTER TABLE F_Vende_P
+ADD CONSTRAINT Indice_prod_fk
+FOREIGN KEY (Indice_prod) 
+REFERENCES Produto (Indice_prod)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE L_Contem_I DROP CONSTRAINT IF EXISTS Indice_prod_fk_l;
+ALTER TABLE L_Contem_I
+ADD CONSTRAINT Indice_prod_fk_l
+FOREIGN KEY (Indice_prod) 
+REFERENCES Produto (Indice_prod)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE F_Vende_P DROP CONSTRAINT IF EXISTS fk_fvendep;
+ALTER TABLE F_Vende_P
+ADD CONSTRAINT fk_fvendep
+FOREIGN KEY (Id_franquia) 
+REFERENCES Franquia (Id_franquia)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE F_Vende_P DROP CONSTRAINT IF EXISTS EQU_F_Ven_Produ;
+alter table F_Vende_P add constraint EQU_F_Ven_Produ
+     foreign key (Indice_prod)
+     references Produto;
+
+ALTER TABLE Pedido DROP CONSTRAINT IF EXISTS ID_Cliente_CHK;
+ALTER TABLE Pedido
+ADD CONSTRAINT ID_Cliente_CHK
+FOREIGN KEY (Id_cliente) 
+REFERENCES Cliente (Id_cliente)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+--

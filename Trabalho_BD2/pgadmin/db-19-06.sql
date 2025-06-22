@@ -275,6 +275,7 @@ INSERT INTO Ambiente(
 		
 INSERT INTO Avaliacao(
     Indice_av,
+    NPS,
     Campo_texto,
     Data_av)
 VALUES
@@ -2277,7 +2278,16 @@ VALUES
 (1997, 2.3, ' ', '2023-05-15'),
 (1998, 7.5, ' ', '2023-02-18'),
 (1999, 6.5, ' ', '2025-05-25'),
-(2000, 1.4, ' ', '2023-08-30');
+(2000, 1.4, ' ', '2023-08-30'),
+(2001, 2.0, 'Não gostei', '2023-01-21'),
+(2002, 6.4, 'Bom', '2023-08-04'),
+(2003, 5.7, 'Muito bom', '2024-10-05'),
+(2004, 8.9, 'Ruim', '2023-09-20'),
+(2005, 6.0, 'Péssimo', '2024-07-30'),
+(2006, 1.8, 'Razoável', '2023-02-15'),
+(2007, 2.9, 'OK', '2024-08-18'),
+(2008, 0.1, 'No', '2023-06-22'),
+(2009, 5.0, 'Si', '2023-11-14');
 
 INSERT INTO Bebida (
         Indice_prod,
@@ -9590,7 +9600,7 @@ INSERT INTO L_Contem_I(
     (23,56),
     (27,56),
     (23,26),
-    (23, 3),
+    (23,3),
     (24,17),
     (25,17),
     (32,17),
@@ -15231,159 +15241,159 @@ INSERT INTO Ped_Escolhe_Prod(
     (4411, 51, 2),
     (4133, 54, 3);
 
--- -- Constraints Section
--- -- ___________________ 
+-- -- -- Constraints Section
+-- -- -- ___________________ 
 
-alter table Acompanhamento add constraint ID_Acomp_Produ_FK
-     foreign key (Indice_prod)
-     references Produto;
+-- alter table Acompanhamento add constraint ID_Acomp_Produ_FK
+--      foreign key (Indice_prod)
+--      references Produto;
 
-alter table Acompanhamento add constraint REF_Acomp_Estoq_FK
-     foreign key (Indice_estoq)
-     references Estoque;
+-- alter table Acompanhamento add constraint REF_Acomp_Estoq_FK
+--      foreign key (Indice_estoq)
+--      references Estoque;
 
-alter table Ambiente add constraint EXCL_Ambiente
-     check((Cozinha is TRUE and Salao is FALSE)
-           or (Cozinha is FALSE and Salao is TRUE)); 
+-- alter table Ambiente add constraint EXCL_Ambiente
+--      check((Cozinha is TRUE and Salao is FALSE)
+--            or (Cozinha is FALSE and Salao is TRUE)); 
 
--- alter table Avaliacao add constraint ID_Avaliacao_CHK
---      check(exists(select * from C_Registra_A
---                   where C_Registra_A.Indice_av = Indice_av)); 
-               --o de cima virou isso aqui ó:
-               ALTER TABLE C_Registra_A
-               ADD CONSTRAINT fk_avaliacao_registra
-               FOREIGN KEY (Indice_av) 
-               REFERENCES Avaliacao (Indice_av)
-               ON DELETE CASCADE
-               ON UPDATE CASCADE;
+-- -- alter table Avaliacao add constraint ID_Avaliacao_CHK
+-- --      check(exists(select * from C_Registra_A
+-- --                   where C_Registra_A.Indice_av = Indice_av)); 
+--                --o de cima virou isso aqui ó:
+--                ALTER TABLE C_Registra_A
+--                ADD CONSTRAINT fk_avaliacao_registra
+--                FOREIGN KEY (Indice_av) 
+--                REFERENCES Avaliacao (Indice_av)
+--                ON DELETE CASCADE
+--                ON UPDATE CASCADE;
 
-alter table Bebida add constraint ID_Bebid_Produ_FK
-     foreign key (Indice_prod)
-     references Produto;
+-- alter table Bebida add constraint ID_Bebid_Produ_FK
+--      foreign key (Indice_prod)
+--      references Produto;
 
-alter table Bebida add constraint REF_Bebid_Estoq_FK
-     foreign key (Indice_estoq)
-     references Estoque;
+-- alter table Bebida add constraint REF_Bebid_Estoq_FK
+--      foreign key (Indice_estoq)
+--      references Estoque;
 
-alter table Brinde add constraint SID_Brind_Lanch_FK
-     foreign key (Indice_prod)
-     references Lanche;
+-- alter table Brinde add constraint SID_Brind_Lanch_FK
+--      foreign key (Indice_prod)
+--      references Lanche;
 
-alter table Brinde add constraint REF_Brind_Estoq_FK
-     foreign key (Indice_estoq)
-     references Estoque;
+-- alter table Brinde add constraint REF_Brind_Estoq_FK
+--      foreign key (Indice_estoq)
+--      references Estoque;
 
-alter table Ped_Escolhe_Prod add constraint REF_C_Esc_Produ
-     foreign key (Indice_prod)
-     references Produto;
+-- alter table Ped_Escolhe_Prod add constraint REF_C_Esc_Produ
+--      foreign key (Indice_prod)
+--      references Produto;
 
-alter table C_Registra_A add constraint ID_C_Reg_Pedid_FK
-     foreign key (Id_pedido)
-     references Pedido;
+-- alter table C_Registra_A add constraint ID_C_Reg_Pedid_FK
+--      foreign key (Id_pedido)
+--      references Pedido;
 
-alter table C_Registra_A add constraint SID_C_Reg_Clien_FK
-     foreign key (Id_cliente)
-     references Cliente;
+-- alter table C_Registra_A add constraint SID_C_Reg_Clien_FK
+--      foreign key (Id_cliente)
+--      references Cliente;
 
-alter table C_Registra_A add constraint SID_C_Reg_Avali_FK
-     foreign key (Indice_av)
-     references Avaliacao;
+-- alter table C_Registra_A add constraint SID_C_Reg_Avali_FK
+--      foreign key (Indice_av)
+--      references Avaliacao;
 
--- alter table Cliente add constraint ID_Cliente_CHK
---      check(exists(select * from Pedido
---                   where Pedido.Id_cliente = Id_cliente));
-               ALTER TABLE Pedido
-               ADD CONSTRAINT ID_Cliente_CHK
-               FOREIGN KEY (Id_cliente) 
-               REFERENCES Cliente (Id_cliente)
-               ON DELETE CASCADE
-               ON UPDATE CASCADE;
+-- -- alter table Cliente add constraint ID_Cliente_CHK
+-- --      check(exists(select * from Pedido
+-- --                   where Pedido.Id_cliente = Id_cliente));
+--                ALTER TABLE Pedido
+--                ADD CONSTRAINT ID_Cliente_CHK
+--                FOREIGN KEY (Id_cliente) 
+--                REFERENCES Cliente (Id_cliente)
+--                ON DELETE CASCADE
+--                ON UPDATE CASCADE;
 
-alter table Cozinha add constraint ID_Cozin_Ambie_FK
-     foreign key (Id_Amb)
-     references Ambiente;
+-- alter table Cozinha add constraint ID_Cozin_Ambie_FK
+--      foreign key (Id_Amb)
+--      references Ambiente;
 
-alter table F_Vende_P add constraint EQU_F_Ven_Produ
-     foreign key (Indice_prod)
-     references Produto;
+-- alter table F_Vende_P add constraint EQU_F_Ven_Produ
+--      foreign key (Indice_prod)
+--      references Produto;
 
-alter table F_Vende_P add constraint EQU_F_Ven_Franq_FK
-     foreign key (Id_franquia)
-     references Franquia;
+-- alter table F_Vende_P add constraint EQU_F_Ven_Franq_FK
+--      foreign key (Id_franquia)
+--      references Franquia;
 
--- alter table Franquia add constraint ID_Franquia_CHK
---      check(exists(select * from F_Vende_P
---                   where F_Vende_P.Id_franquia = Id_franquia)); 
-               ALTER TABLE F_Vende_P
-               ADD CONSTRAINT fk_fvendep
-               FOREIGN KEY (Id_franquia) 
-               REFERENCES Franquia (Id_franquia)
-               ON DELETE CASCADE
-               ON UPDATE CASCADE;
+-- -- alter table Franquia add constraint ID_Franquia_CHK
+-- --      check(exists(select * from F_Vende_P
+-- --                   where F_Vende_P.Id_franquia = Id_franquia)); 
+--                ALTER TABLE F_Vende_P
+--                ADD CONSTRAINT fk_fvendep
+--                FOREIGN KEY (Id_franquia) 
+--                REFERENCES Franquia (Id_franquia)
+--                ON DELETE CASCADE
+--                ON UPDATE CASCADE;
 
-alter table Ingrediente add constraint REF_Ingre_Estoq_FK
-     foreign key (Indice_estoq)
-     references Estoque;
+-- alter table Ingrediente add constraint REF_Ingre_Estoq_FK
+--      foreign key (Indice_estoq)
+--      references Estoque;
 
-alter table L_Contem_I add constraint EQU_L_Con_Lanch_FK
-     foreign key (Indice_prod)
-     references Lanche;
+-- alter table L_Contem_I add constraint EQU_L_Con_Lanch_FK
+--      foreign key (Indice_prod)
+--      references Lanche;
 
-alter table L_Contem_I add constraint REF_L_Con_Ingre
-     foreign key (Id_ingred)
-     references Ingrediente;
+-- alter table L_Contem_I add constraint REF_L_Con_Ingre
+--      foreign key (Id_ingred)
+--      references Ingrediente;
 
--- alter table Lanche add constraint ID_Lanch_Produ_CHK
---      check(exists(select * from L_Contem_I
---                   where L_Contem_I.Indice_prod = Indice_prod)); 
-               ALTER TABLE L_Contem_I
-               ADD CONSTRAINT Indice_prod_fk_l
-               FOREIGN KEY (Indice_prod) 
-               REFERENCES Produto (Indice_prod)
-               ON DELETE CASCADE
-               ON UPDATE CASCADE;
+-- -- alter table Lanche add constraint ID_Lanch_Produ_CHK
+-- --      check(exists(select * from L_Contem_I
+-- --                   where L_Contem_I.Indice_prod = Indice_prod)); 
+--                ALTER TABLE L_Contem_I
+--                ADD CONSTRAINT Indice_prod_fk_l
+--                FOREIGN KEY (Indice_prod) 
+--                REFERENCES Produto (Indice_prod)
+--                ON DELETE CASCADE
+--                ON UPDATE CASCADE;
 
-alter table Lanche add constraint ID_Lanch_Produ_FK
-     foreign key (Indice_prod)
-     references Produto;
+-- alter table Lanche add constraint ID_Lanch_Produ_FK
+--      foreign key (Indice_prod)
+--      references Produto;
 
-alter table Pedido add constraint REF_Pedid_Funci_FK
-     foreign key (Id_func)
-     references Funcionario;
+-- alter table Pedido add constraint REF_Pedid_Funci_FK
+--      foreign key (Id_func)
+--      references Funcionario;
 
-alter table Pedido add constraint EQU_Pedid_Clien_FK
-     foreign key (Id_cliente)
-     references Cliente;
+-- alter table Pedido add constraint EQU_Pedid_Clien_FK
+--      foreign key (Id_cliente)
+--      references Cliente;
 
--- alter table Produto add constraint ID_Produto_CHK
---      check(exists(select * from F_Vende_P
---                   where F_Vende_P.Indice_prod = Indice_prod)); 
-               --o de cima virou isso aqui
-               ALTER TABLE F_Vende_P
-               ADD CONSTRAINT Indice_prod_fk
-               FOREIGN KEY (Indice_prod) 
-               REFERENCES Produto (Indice_prod)
-               ON DELETE CASCADE
-               ON UPDATE CASCADE;
+-- -- alter table Produto add constraint ID_Produto_CHK
+-- --      check(exists(select * from F_Vende_P
+-- --                   where F_Vende_P.Indice_prod = Indice_prod));
+--                --o de cima virou isso aqui
+--                ALTER TABLE F_Vende_P
+--                ADD CONSTRAINT Indice_prod_fk
+--                FOREIGN KEY (Indice_prod) 
+--                REFERENCES Produto (Indice_prod)
+--                ON DELETE CASCADE
+--                ON UPDATE CASCADE;
 
-alter table Produto add constraint EXCL_Produto
-     check((Acompanhamento is TRUE and Sobremesa is FALSE and Lanche is FALSE and Bebida is FALSE)
-           or (Acompanhamento is FALSE and Sobremesa is TRUE and Lanche is FALSE and Bebida is FALSE)
-           or (Acompanhamento is FALSE and Sobremesa is FALSE and Lanche is TRUE and Bebida is FALSE)
-           or (Acompanhamento is FALSE and Sobremesa is FALSE and Lanche is FALSE and Bebida is TRUE)
-           or (Acompanhamento is FALSE and Sobremesa is FALSE and Lanche is FALSE and Bebida is FALSE)); 
+-- alter table Produto add constraint EXCL_Produto
+--      check((Acompanhamento is TRUE and Sobremesa is FALSE and Lanche is FALSE and Bebida is FALSE)
+--            or (Acompanhamento is FALSE and Sobremesa is TRUE and Lanche is FALSE and Bebida is FALSE)
+--            or (Acompanhamento is FALSE and Sobremesa is FALSE and Lanche is TRUE and Bebida is FALSE)
+--            or (Acompanhamento is FALSE and Sobremesa is FALSE and Lanche is FALSE and Bebida is TRUE)
+--            or (Acompanhamento is FALSE and Sobremesa is FALSE and Lanche is FALSE and Bebida is FALSE)); 
 
-alter table Salao add constraint ID_Salao_Ambie_FK
-     foreign key (Id_Amb)
-     references Ambiente;
+-- alter table Salao add constraint ID_Salao_Ambie_FK
+--      foreign key (Id_Amb)
+--      references Ambiente;
 
-alter table Sobremesa add constraint REF_Sobre_Estoq_FK
-     foreign key (Indice_estoq)
-     references Estoque;
+-- alter table Sobremesa add constraint REF_Sobre_Estoq_FK
+--      foreign key (Indice_estoq)
+--      references Estoque;
 
-alter table Sobremesa add constraint ID_Sobre_Produ_FK
-     foreign key (Indice_prod)
-     references Produto;
+-- alter table Sobremesa add constraint ID_Sobre_Produ_FK
+--      foreign key (Indice_prod)
+--      references Produto;
 
 
 -- -- Index Section

@@ -1,4 +1,6 @@
 # carrinho_schemas.py
+from typing import Dict
+
 from pydantic import BaseModel, Field, ConfigDict
 from datetime import datetime
 
@@ -9,6 +11,7 @@ class ItemCarrinhoSchema(BaseModel):
     preco: float = Field(..., description="Preço unitário do item", gt=0)
     quantidade: int = Field(1, description="Quantidade do item", gt=0)
     observacoes: str | None = Field(None, description="Observações sobre o item", max_length=200)
+    categoria: str = Field(None, description="Categoria do item", max_length=200)
 
 
 class CarrinhoCreateSchema(BaseModel):
@@ -40,7 +43,8 @@ class CarrinhoOutSchema(BaseModel):
                         "nome": "Hambúrguer Especial",
                         "preco": 25.90,
                         "quantidade": 2,
-                        "observacoes": "Sem cebola"
+                        "observacoes": "Sem cebola",
+                        "categoria" : "Outros"
                     }
                 ],
                 "data_criacao": "2023-01-01T12:00:00",
@@ -48,3 +52,5 @@ class CarrinhoOutSchema(BaseModel):
             }
         }
     )
+class ContagemCategoriasOutSchema(BaseModel):
+    categorias: Dict[str, int]  # {"categoria": quantidade}

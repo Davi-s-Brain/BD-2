@@ -7,6 +7,7 @@ class IngredienteBase(BaseModel):
     Preco_venda_cliente: float = Field(..., example=12.50)
     Peso_ingred: float = Field(..., example=180.0)
     Indice_estoq: int = Field(..., example=1)
+    Quantidade: int = Field(..., example=1)
 
 class IngredienteCreate(IngredienteBase):
     """Schema para criação de ingrediente (Id_ingred é gerado pelo BD)."""
@@ -19,6 +20,7 @@ class IngredienteUpdate(BaseModel):
     Preco_venda_cliente: Optional[float] = None
     Peso_ingred: Optional[float] = None
     Indice_estoq: Optional[int] = None
+    Quantidade: int
 
 class IngredienteOut(IngredienteBase):
     """Schema de saída de ingrediente, inclui o Id_ingred."""

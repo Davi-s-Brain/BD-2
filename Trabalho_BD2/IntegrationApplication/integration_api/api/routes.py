@@ -10,7 +10,7 @@ from Trabalho_BD2.IntegrationApplication.integration_api.core.totalizador import
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.carrinho_schemas import (
     ItemCarrinhoSchema,
     CarrinhoOutSchema,
-    CarrinhoUpdateSchema
+    CarrinhoUpdateSchema, ContagemCategoriasOutSchema
 )
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.funcionario import (
     FuncionarioCreate,
@@ -235,7 +235,8 @@ async def create_ingrediente(data: IngredienteCreate):
         Nome_ingred=data.Nome_ingred,
         Preco_venda_cliente=data.Preco_venda_cliente,
         Peso_ingred=data.Peso_ingred,
-        Indice_estoq=data.Indice_estoq
+        Indice_estoq=data.Indice_estoq,
+        Quantidade = data.Quantidade
     )
     return ingredienteService.get_by_id(new_id)
 
@@ -404,6 +405,29 @@ async def adicionar_item(
             detail=str(e)
         )
 
+
+@router_carrinho.get(
+    "/contagem-categorias",
+    response_model=ContagemCategoriasOutSchema,
+    summary="Obtém a contagem de itens por categoria no carrinho",
+    description="Retorna um JSON com as categorias e a quantidade de itens em cada uma"
+)
+async def obter_contagem_categorias(
+        current_user: User = Depends(get_current_user)
+):
+    """
+    Obtém a contagem de itens agrupados por categoria no carrinho do usuário atual
+    """
+    try:
+        cliente = cliente_service.obter_cliente_por_email(current_user.username)
+        contagem = service_carrinho.contar_itens_por_categoria(cliente.Id_cliente)
+
+        return {"categorias": contagem}
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
 @router_carrinho.delete("/item/{id_item}", response_model=CarrinhoOutSchema)
 async def remover_item(
     id_item: Annotated[int, Path(..., description="ID do item a ser removido")],
@@ -481,20 +505,21 @@ async def listar_estoque(request: Request):
 @limiter.limit("5/minute")
 async def alterar_estoque(request: Request, produto: str, acao: str, quantity: int):
     estoque = service.listar_estoque()
+    ingrediente_service = IngredienteService()
     if not estoque:
         raise HTTPException(status_code=400, detail="Estoque vazio")
-    if service.get_item(name=produto) is None:
+    if ingrediente_service.get_by_name(Nome_ingred=produto) is None:
         raise HTTPException(status_code=404, detail="Item inexistente")
     if acao == "adicionar":
-        service.alterar_estoque(produto, quantity)
+        ingrediente_service.alterar_estoque(produto, quantity)
     elif acao == "remover":
         if not estoque:
             raise HTTPException(status_code=400, detail="Estoque já está zerado")
-        service.alterar_estoque(produto, - quantity)
+        ingrediente_service.alterar_estoque(produto, - quantity)
     else:
         raise HTTPException(status_code=400, detail="Ação inválida")
 
-    return service.get_item(name=produto)
+    return ingrediente_service.get_by_name(Nome_ingred=produto)
 
 # Authentication endpoints
 @auth_router.post("/login", response_model=Token)
@@ -624,7 +649,7 @@ pedidoService = PedidoService()
 @router.post("/pedido/", response_model=int, status_code=status.HTTP_201_CREATED)
 def criar_pedido(pedido: PedidoCreate):
     pedido_id = pedidoService.criar_pedido(pedido.__dict__)
-
+    print(pedido)
     # Converte a string da data para objeto date se necessário
     data_pedido = pedido.Data_pedido if isinstance(pedido.Data_pedido, date) else date.fromisoformat(str(pedido.Data_pedido))
 

@@ -1,3 +1,4 @@
+from collections import defaultdict
 from typing import List, Dict, Optional
 from Trabalho_BD2.IntegrationApplication.integration_api.models.carrinho_model import CarrinhoModel
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.carrinho_schemas import CarrinhoOutSchema
@@ -15,7 +16,7 @@ class CarrinhoService:
             id_usuario=carrinho.id_usuario,
             itens=carrinho.itens,
             data_criacao=carrinho.data_criacao,
-            data_atualizacao=carrinho.data_atualizacao
+            data_atualizacao=carrinho.data_atualizacao,
         )
 
     def adicionar_item(self, id_usuario: int, item_data: Dict) -> CarrinhoOutSchema:
@@ -70,3 +71,29 @@ class CarrinhoService:
 
     def limpar_carrinho(self, id_usuario: int) -> bool:
         return CarrinhoModel.limpar_carrinho(id_usuario)
+
+    def contar_itens_por_categoria(self, id_usuario: int) -> Dict[str, int]:
+        """
+        Obtém o carrinho atual do usuário e conta a quantidade de itens por categoria.
+
+        Args:
+            id_usuario: ID do usuário para buscar o carrinho
+
+        Returns:
+            Um dicionário onde as chaves são os nomes das categorias e os valores
+            são as quantidades totais de itens em cada categoria
+        """
+        carrinho = self.obter_carrinho(id_usuario)
+        if not carrinho or not carrinho.itens:
+            return {}
+
+        contagem_categorias = defaultdict(int)
+
+        for item in carrinho.itens:
+            # Convertemos o item para dicionário se for um modelo Pydantic
+            item_dict = item if isinstance(item, dict) else item.dict()
+            categoria = item_dict.get('categoria', 'Sem categoria')
+            quantidade = item_dict.get('quantidade', 1)
+            contagem_categorias[categoria] += quantidade
+
+        return dict(contagem_categorias)

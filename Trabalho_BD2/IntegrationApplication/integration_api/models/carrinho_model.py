@@ -40,7 +40,7 @@ class CarrinhoModel:
                 return None
 
             cursor.execute("""
-                SELECT id_item, nome, preco, quantidade, observacoes
+                SELECT id_item, nome, preco, quantidade, observacoes, categoria
                 FROM Carrinho_Item
                 WHERE id_carrinho = ?
             """, (id_carrinho,))
@@ -52,7 +52,8 @@ class CarrinhoModel:
                     'nome': row[1],
                     'preco': row[2],
                     'quantidade': row[3],
-                    'observacoes': row[4]
+                    'observacoes': row[4],
+                    'categoria': row[5]
                 }
                 for row in itens_rows
             ]
@@ -90,6 +91,7 @@ class CarrinhoModel:
 
             # Insere os novos itens
             for item in itens:
+                print("A categoria eh >>" + item.get('categoria', 'outros'))
                 cursor.execute("""
                     INSERT INTO Carrinho_Item (
                         id_carrinho, 
@@ -97,15 +99,17 @@ class CarrinhoModel:
                         nome, 
                         preco, 
                         quantidade, 
-                        observacoes
-                    ) VALUES (?, ?, ?, ?, ?, ?)
+                        observacoes,
+                        categoria
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?)
                 """, (
                     id_carrinho,
                     item.get('id_item'),
                     item.get('nome'),
                     item.get('preco'),
                     item.get('quantidade', 1),  # Default para 1 se não especificado
-                    item.get('observacoes', '')  # Default para string vazia
+                    item.get('observacoes', ''), # Default para string vazia
+                    item.get('categoria', 'outros')  # Default para string vazia
                 ))
 
             # Atualiza data de atualização do carrinho

@@ -13,15 +13,15 @@ class IngredienteService:
 
     @staticmethod
     def create(Tipo_ingred: str, Nome_ingred: str, Preco_venda_cliente: float,
-               Peso_ingred: float, Indice_estoq: int) -> int:
+               Peso_ingred: float, Indice_estoq: int, Quantidade: int) -> int:
         """Cria um novo ingrediente e retorna o ID gerado."""
         with get_connection() as conn:
             cursor = conn.cursor()
             cursor.execute(
                 """INSERT INTO ingrediente 
-                (Tipo_ingred, Nome_ingred, Preco_venda_cliente, Peso_ingred, Indice_estoq)
-                VALUES (?, ?, ?, ?, ?)""",
-                (Tipo_ingred, Nome_ingred, Preco_venda_cliente, Peso_ingred, Indice_estoq)
+                (Tipo_ingred, Nome_ingred, Preco_venda_cliente, Peso_ingred, Indice_estoq, Quantidade)
+                VALUES (?, ?, ?, ?, ?, ?)""",
+                (Tipo_ingred, Nome_ingred, Preco_venda_cliente, Peso_ingred, Indice_estoq, Quantidade)
             )
             conn.commit()
             return cursor.lastrowid
@@ -33,7 +33,7 @@ class IngredienteService:
             cursor = conn.cursor()
             cursor.execute(
                 """SELECT Id_ingred, Tipo_ingred, Nome_ingred, 
-                Preco_venda_cliente, Peso_ingred, Indice_estoq 
+                Preco_venda_cliente, Peso_ingred, Indice_estoq, Quantidade 
                 FROM ingrediente"""
             )
             colunas = [col[0] for col in cursor.description]
@@ -46,9 +46,25 @@ class IngredienteService:
             cursor = conn.cursor()
             cursor.execute(
                 """SELECT Id_ingred, Tipo_ingred, Nome_ingred, 
-                Preco_venda_cliente, Peso_ingred, Indice_estoq 
+                Preco_venda_cliente, Peso_ingred, Indice_estoq, Quantidade
                 FROM ingrediente WHERE Id_ingred = ?""",
                 (ingrediente_id,)
+            )
+            row = cursor.fetchone()
+            if row:
+                colunas = [col[0] for col in cursor.description]
+                return dict(zip(colunas, row))
+            return None
+    @staticmethod
+    def get_by_name(Nome_ingred: str) -> Optional[Dict[str, Any]]:
+        """Busca um ingrediente pelo ID."""
+        with get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute(
+                """SELECT Id_ingred, Tipo_ingred, Nome_ingred, 
+                Preco_venda_cliente, Peso_ingred, Indice_estoq, Quantidade
+                FROM ingrediente WHERE Nome_ingred = ?""",
+                (Nome_ingred,)
             )
             row = cursor.fetchone()
             if row:
@@ -88,6 +104,45 @@ class IngredienteService:
             cursor.execute(
                 "DELETE FROM ingrediente WHERE Id_ingred = ?",
                 (ingrediente_id,)
+            )
+            conn.commit()
+            return cursor.rowcount > 0
+
+    @staticmethod
+    def alterar_estoque(nome_ingrediente: str, quantidade: int) -> bool:
+        """Altera a quantidade em estoque de um ingrediente.
+
+        Args:
+            nome_ingrediente: Nome do ingrediente a ser alterado
+            quantidade: Quantidade a ser adicionada (positiva) ou removida (negativa)
+
+        Returns:
+            bool: True se a operação foi bem sucedida, False caso contrário
+        """
+        with get_connection() as conn:
+            cursor = conn.cursor()
+
+            # Primeiro verifica se o ingrediente existe e pega a quantidade atual
+            cursor.execute(
+                "SELECT Quantidade FROM ingrediente WHERE Nome_ingred = ?",
+                (nome_ingrediente,)
+            )
+            result = cursor.fetchone()
+
+            if not result:
+                return False  # Ingrediente não encontrado
+
+            quantidade_atual = result[0]
+            nova_quantidade = quantidade_atual + quantidade
+
+            # Não permite estoque negativo
+            if nova_quantidade < 0:
+                return False
+
+            # Atualiza o estoque
+            cursor.execute(
+                "UPDATE ingrediente SET Quantidade = ? WHERE Nome_ingred = ?",
+                (nova_quantidade, nome_ingrediente)
             )
             conn.commit()
             return cursor.rowcount > 0

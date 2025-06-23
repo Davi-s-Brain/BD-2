@@ -73,6 +73,7 @@ def init_db():
             preco REAL NOT NULL,
             quantidade INTEGER NOT NULL,
             observacoes TEXT,
+            categoria,
             FOREIGN KEY (id_carrinho) REFERENCES Carrinho(id_carrinho)
         )
         """)
@@ -103,7 +104,8 @@ def init_db():
             Nome_ingred TEXT NOT NULL,
             Preco_venda_cliente REAL NOT NULL,
             Peso_ingred REAL NOT NULL,
-            Indice_estoq INTEGER NOT NULL
+            Indice_estoq INTEGER NOT NULL,
+            Quantidade INTEGER NOT NULL
         )
         """)
 

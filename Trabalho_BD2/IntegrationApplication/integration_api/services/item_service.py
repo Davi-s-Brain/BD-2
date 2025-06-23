@@ -29,7 +29,7 @@ class ItemService:
                 "tipo": item["Tipo_ingred"],
                 "preco": item["Preco_venda_cliente"],
                 "peso": item["Peso_ingred"],
-                "quantidade": item["Indice_estoq"]
+                "quantidade": item["Quantidade"]
             }
             for item in items
         ]

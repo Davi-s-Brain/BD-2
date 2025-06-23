@@ -29,7 +29,7 @@ class ItemModel:
         with get_connection() as conn:
             cursor = conn.cursor()
             cursor.execute(
-                "UPDATE items SET quantity = quantity + ? WHERE name = ?",
+                "UPDATE Ingrediente SET quantidade = quantidade + ? WHERE Nome_ingred = ?",
                 (quantity_delta, name)
             )
             conn.commit()

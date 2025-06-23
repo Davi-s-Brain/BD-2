@@ -33,23 +33,30 @@ BEGIN
             WHEN p.Bebida THEN b.E_Alcoolico 
             ELSE NULL 
         END AS e_alcoolico,
-        p.Preco_prod::DOUBLE PRECISION,  --  Cast obrigatório
-        p.Peso_prod::DOUBLE PRECISION,   -- Cast obrigatório
+        p.Preco_prod::DOUBLE PRECISION,
+        p.Peso_prod::DOUBLE PRECISION,
         p.Unidade_medida
     FROM Produto p
     LEFT JOIN Bebida b ON p.Indice_prod = b.Indice_prod
     WHERE 
+        -- Filtros de categoria e restrições
         (p_categorias IS NULL OR p.Categoria = ANY(p_categorias))
         AND (p_sem_gluten IS NULL OR (p_sem_gluten = TRUE AND p.Restricao_alimentar ILIKE '%sem glúten%'))
         AND (p_sem_lactose IS NULL OR (p_sem_lactose = TRUE AND p.Restricao_alimentar ILIKE '%sem lactose%'))
+
+        -- Lógica do filtro de bebida alcoólica:
         AND (
-            p.Bebida = FALSE 
-            OR p_e_alcoolico IS NULL 
-            OR (p_e_alcoolico IS NOT NULL AND b.E_Alcoolico = p_e_alcoolico)
+            -- Se p_e_alcoolico for NULL, ignora bebidas
+            (p_e_alcoolico IS NULL AND p.Bebida = FALSE)
+
+            -- Se p_e_alcoolico for TRUE ou FALSE, pega só bebidas com o valor correspondente
+            OR (p_e_alcoolico IS NOT NULL AND p.Bebida = TRUE AND b.E_Alcoolico = p_e_alcoolico)
         );
 END;
 $$ LANGUAGE plpgsql;
 
+-- Exemplo de uso da função com lnches da categoria 'Bovino' e bebidas alcoólicas:
+SELECT * FROM listar_produtos_com_filtros(NULL, NULL, NULL, NULL);
 
 
 -- Exemplo de uso da função com lnches da categoria 'Bovino' e bebidas alcoólicas:

@@ -1,3 +1,4 @@
+-- Função para retornar os produtos mais vendidos em um período específico
 CREATE OR REPLACE FUNCTION produtos_mais_vendidos_periodo(
     p_data_inicio DATE,
     p_data_fim DATE
@@ -34,6 +35,7 @@ BEGIN
     ORDER BY quantidade_vendida DESC;
 END;
 $$ LANGUAGE plpgsql;
--- Exemplos de uso:
+
+--Exemplos de uso:
 
 SELECT * FROM produtos_mais_vendidos_periodo('2024-06-01', '2024-06-10');

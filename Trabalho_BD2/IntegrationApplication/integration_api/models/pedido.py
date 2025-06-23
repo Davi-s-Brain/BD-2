@@ -47,7 +47,7 @@ class Pedido:
                 SELECT Id_pedido, Data_pedido, Hora_pedido, Valor_total_pedido,
                        Forma_pagamento, E_delivery, Observacao,
                        Id_cliente, Id_func
-                FROM pedido
+                FROM Pedido
             """)
             columns = [column[0] for column in cursor.description]
             return [dict(zip(columns, row)) for row in cursor.fetchall()]

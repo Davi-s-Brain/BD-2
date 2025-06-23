@@ -1,26 +1,38 @@
 from datetime import date
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Annotated
 
-from fastapi import APIRouter, Request, Depends, HTTPException, status
+from fastapi import APIRouter, Request, Depends, HTTPException, status, Path
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 
-from Trabalho_BD2.IntegrationApplication.integration_api.core.totalizador import totalizador_diario
-from Trabalho_BD2.IntegrationApplication.integration_api.schemas.ingrediente_schemas import IngredienteOut, \
-    IngredienteCreate, IngredienteUpdate
-from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate, ItemDelete
-from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder, GetOrder
-from Trabalho_BD2.IntegrationApplication.integration_api.schemas.pedido import PedidoCreate, PedidoUpdate, PedidoOut
-from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import UserLogin, Token, User
-from Trabalho_BD2.IntegrationApplication.integration_api.services.funcionario_service import FuncionarioService
-from Trabalho_BD2.IntegrationApplication.integration_api.services.ingrediente_service import IngredienteService
-from Trabalho_BD2.IntegrationApplication.integration_api.services.item_service import ItemService
 from Trabalho_BD2.IntegrationApplication.integration_api.core.limiter import limiter
 from Trabalho_BD2.IntegrationApplication.integration_api.core.security_manager import SecurityManager
+from Trabalho_BD2.IntegrationApplication.integration_api.core.totalizador import totalizador_diario
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.carrinho_schemas import (
+    ItemCarrinhoSchema,
+    CarrinhoOutSchema,
+    CarrinhoUpdateSchema, ContagemCategoriasOutSchema
+)
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.funcionario import (
     FuncionarioCreate,
     FuncionarioUpdate,
     FuncionarioOut,
 )
+from Trabalho_BD2.IntegrationApplication.integration_api.services.cliente_service import ClienteService
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.cliente_schemas import (
+    ClienteCreate,
+    ClienteUpdate,
+    ClienteOut
+)
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.ingrediente_schemas import IngredienteOut, \
+    IngredienteCreate, IngredienteUpdate
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate, ItemDelete
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.pedido import PedidoCreate, PedidoUpdate, PedidoOut
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import UserLogin, Token, User
+from Trabalho_BD2.IntegrationApplication.integration_api.services.carrinho_service import CarrinhoService
+from Trabalho_BD2.IntegrationApplication.integration_api.services.funcionario_service import FuncionarioService
+from Trabalho_BD2.IntegrationApplication.integration_api.services.ingrediente_service import IngredienteService
+from Trabalho_BD2.IntegrationApplication.integration_api.services.item_service import ItemService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.pedido import PedidoService
 
 service = ItemService()
@@ -45,12 +57,177 @@ ingrediente_router = APIRouter(
 
 
 ingredienteService = IngredienteService()
+# Configuração do router
+cliente_router = APIRouter(
+    prefix="/clientes",
+    tags=["Clientes"],
+)
 
+cliente_service = ClienteService()
+
+
+@cliente_router.post(
+    "/",
+    response_model=Token,
+    status_code=status.HTTP_201_CREATED
+)
+@limiter.limit("5/minute")
+async def criar_cliente(request: Request, cliente: ClienteCreate):
+    """
+    Cria um novo cliente
+    """
+    try:
+        db_cliente = cliente_service.criar_cliente(cliente)
+        security.create_user(str(db_cliente.E_mail_client),db_cliente.Senha_cliente)
+        access_token = security.create_access_token(data={"sub": db_cliente.E_mail_client})
+        print("O token gerado foi" + access_token)
+        return {"access_token": access_token, "token_type": "bearer"}
+    except HTTPException as http_exc:
+        raise http_exc  # já é estruturado, pode propagar
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Erro interno ao criar cliente"
+        )
+
+
+
+@cliente_router.get(
+    "/",
+    response_model=List[ClienteOut]
+)
+@limiter.limit("10/minute")
+async def listar_clientes(request: Request):
+    """Lista todos os clientes"""
+    return cliente_service.listar_clientes()
+
+
+@cliente_router.get(
+    "/{cliente_id}",
+    response_model=ClienteOut
+)
+@limiter.limit("10/minute")
+async def obter_cliente(
+        request: Request,
+        cliente_id: Annotated[int, Path(..., description="ID do cliente")]
+):
+    """Obtém um cliente específico pelo ID"""
+    cliente = cliente_service.obter_cliente(cliente_id)
+    if not cliente:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Cliente não encontrado"
+        )
+    return cliente
+
+@auth_router.get(
+    "/email/{email}",
+    response_model=ClienteOut
+)
+@limiter.limit("10/minute")
+async def obter_cliente(
+        request: Request,
+        email: Annotated[str, Path(..., description="Email do cliente")]
+):
+    """Obtém um cliente específico pelo email"""
+    cliente = cliente_service.obter_cliente_por_email(email)
+    if not cliente:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Cliente não encontrado"
+        )
+    return cliente
+
+
+@cliente_router.put(
+    "/{cliente_id}",
+    response_model=ClienteOut
+)
+@limiter.limit("5/minute")
+async def atualizar_cliente(
+        request: Request,
+        cliente_id: Annotated[int, Path(..., description="ID do cliente")],
+        cliente_data: ClienteUpdate,
+        current_user: User = Depends(security.get_current_user)
+):
+    """Atualiza um cliente existente"""
+    try:
+        # Verifica se o usuário está atualizando seu próprio perfil
+        if current_user['Id_cliente'] != cliente_id and not current_user.get('is_admin', False):
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Você só pode atualizar seu próprio perfil"
+            )
+
+        atualizado = cliente_service.atualizar_cliente(cliente_id, cliente_data)
+        if not atualizado:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Cliente não encontrado"
+            )
+        return cliente_service.obter_cliente(cliente_id)
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+
+
+@cliente_router.delete(
+    "/{cliente_id}",
+    status_code=status.HTTP_204_NO_CONTENT
+)
+@limiter.limit("5/minute")
+async def remover_cliente(
+        request: Request,
+        cliente_id: Annotated[int, Path(..., description="ID do cliente")],
+        current_user: User = Depends(security.get_current_user)
+):
+    """Remove um cliente"""
+    try:
+        # Verifica se o usuário é admin ou está removendo seu próprio perfil
+        if current_user['Id_cliente'] != cliente_id and not current_user.get('is_admin', False):
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Você não tem permissão para remover este cliente"
+            )
+
+        removido = cliente_service.remover_cliente(cliente_id)
+        if not removido:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Cliente não encontrado"
+            )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+
+
+@cliente_router.get(
+    "/me",
+    response_model=ClienteOut
+)
+@limiter.limit("10/minute")
+async def obter_meu_perfil(
+        request: Request,
+        current_user: User = Depends(security.get_current_user)
+):
+    """Obtém o perfil do cliente logado"""
+    cliente = cliente_service.obter_cliente(current_user['Id_cliente'])
+    if not cliente:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Cliente não encontrado"
+        )
+    return cliente
 @ingrediente_router.post(
     "/",
     response_model=IngredienteOut,
     status_code=status.HTTP_201_CREATED
 )
+
 async def create_ingrediente(data: IngredienteCreate):
     """Cria um novo ingrediente"""
     new_id = ingredienteService.create(
@@ -58,7 +235,8 @@ async def create_ingrediente(data: IngredienteCreate):
         Nome_ingred=data.Nome_ingred,
         Preco_venda_cliente=data.Preco_venda_cliente,
         Peso_ingred=data.Peso_ingred,
-        Indice_estoq=data.Indice_estoq
+        Indice_estoq=data.Indice_estoq,
+        Quantidade = data.Quantidade
     )
     return ingredienteService.get_by_id(new_id)
 
@@ -158,7 +336,7 @@ async def update_funcionario(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Funcionário não encontrado"
         )
-    return service.get_by_id(func_id)
+    return funcService.get_by_id(func_id)
 
 @func_router.delete(
     "/{func_id}",
@@ -181,6 +359,143 @@ async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
             headers={"WWW-Authenticate": "Bearer"},
         )
     return User(**user)
+
+
+router_carrinho = APIRouter(prefix="/carrinho", tags=["Carrinho"])
+service_carrinho = CarrinhoService()
+
+@router_carrinho.get("/", response_model=CarrinhoOutSchema)
+async def obter_carrinho(token: str = Depends(oauth2_scheme), current_user: User = Depends(get_current_user)):
+    """
+    Obtém o carrinho do usuário atual
+    """
+    print(current_user.username)
+    try:
+        cliente = cliente_service.obter_cliente_por_email(current_user.username)
+        print(current_user.username)
+        carrinho = service_carrinho.obter_carrinho(cliente.Id_cliente)
+
+        if not carrinho or not cliente:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Carrinho ou cliente não encontrados"
+            )
+        return carrinho
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+
+@router_carrinho.post("/item", response_model=CarrinhoOutSchema)
+async def adicionar_item(
+    item: ItemCarrinhoSchema,
+    current_user: User = Depends(get_current_user)
+):
+    """
+    Adiciona um item ao carrinho
+    """
+    cliente = cliente_service.obter_cliente_por_email(current_user.username)
+    try:
+
+        return service_carrinho.adicionar_item(cliente.Id_cliente, item.model_dump())
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+
+
+@router_carrinho.get(
+    "/contagem-categorias",
+    response_model=ContagemCategoriasOutSchema,
+    summary="Obtém a contagem de itens por categoria no carrinho",
+    description="Retorna um JSON com as categorias e a quantidade de itens em cada uma"
+)
+async def obter_contagem_categorias(
+        current_user: User = Depends(get_current_user)
+):
+    """
+    Obtém a contagem de itens agrupados por categoria no carrinho do usuário atual
+    """
+    try:
+        cliente = cliente_service.obter_cliente_por_email(current_user.username)
+        contagem = service_carrinho.contar_itens_por_categoria(cliente.Id_cliente)
+
+        return {"categorias": contagem}
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+@router_carrinho.delete("/item/{id_item}", response_model=CarrinhoOutSchema)
+async def remover_item(
+    id_item: Annotated[int, Path(..., description="ID do item a ser removido")],
+    current_user: User = Depends(get_current_user)
+):
+    """
+    Remove um item do carrinho
+    """
+    cliente = cliente_service.obter_cliente_por_email(current_user.username)
+    try:
+        return service_carrinho.remover_item(cliente.Id_cliente, id_item)
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+
+@router_carrinho.put("/item/{id_item}", response_model=CarrinhoOutSchema)
+async def atualizar_quantidade_item(
+    id_item: Annotated[int, Path(..., description="ID do item a ser atualizado")],
+    quantidade: Annotated[int, Path(..., gt=0, description="Nova quantidade")],
+    current_user: User = Depends(get_current_user)
+):
+    """
+    Atualiza a quantidade de um item no carrinho
+    """
+    cliente = cliente_service.obter_cliente_por_email(current_user.username)
+    try:
+        return service_carrinho.atualizar_item(cliente.Id_cliente, id_item, quantidade)
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+
+@router_carrinho.put("/", response_model=CarrinhoOutSchema)
+async def atualizar_carrinho(
+    carrinho_data: CarrinhoUpdateSchema,
+    current_user: User = Depends(get_current_user)
+):
+    """
+    Atualiza todo o carrinho
+    """
+
+    try:
+        return service_carrinho.atualizar_carrinho_completo(
+            current_user.id,
+            [item.model_dump() for item in carrinho_data.itens]
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+
+@router_carrinho.delete("/limpar", status_code=status.HTTP_204_NO_CONTENT)
+async def limpar_carrinho(current_user: User = Depends(get_current_user)):
+    cliente = cliente_service.obter_cliente_por_email(current_user.username)
+    """
+    Limpa todos os itens do carrinho
+    """
+    try:
+        service_carrinho.limpar_carrinho(cliente.Id_cliente)
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
 @router.get("/estoque")
 @limiter.limit("10/minute")
 async def listar_estoque(request: Request):
@@ -190,20 +505,21 @@ async def listar_estoque(request: Request):
 @limiter.limit("5/minute")
 async def alterar_estoque(request: Request, produto: str, acao: str, quantity: int):
     estoque = service.listar_estoque()
+    ingrediente_service = IngredienteService()
     if not estoque:
         raise HTTPException(status_code=400, detail="Estoque vazio")
-    if service.get_item(name=produto) is None:
+    if ingrediente_service.get_by_name(Nome_ingred=produto) is None:
         raise HTTPException(status_code=404, detail="Item inexistente")
     if acao == "adicionar":
-        service.alterar_estoque(produto, quantity)
+        ingrediente_service.alterar_estoque(produto, quantity)
     elif acao == "remover":
         if not estoque:
             raise HTTPException(status_code=400, detail="Estoque já está zerado")
-        service.alterar_estoque(produto, - quantity)
+        ingrediente_service.alterar_estoque(produto, - quantity)
     else:
         raise HTTPException(status_code=400, detail="Ação inválida")
 
-    return service.get_item(name=produto)
+    return ingrediente_service.get_by_name(Nome_ingred=produto)
 
 # Authentication endpoints
 @auth_router.post("/login", response_model=Token)
@@ -333,7 +649,7 @@ pedidoService = PedidoService()
 @router.post("/pedido/", response_model=int, status_code=status.HTTP_201_CREATED)
 def criar_pedido(pedido: PedidoCreate):
     pedido_id = pedidoService.criar_pedido(pedido.__dict__)
-
+    print(pedido)
     # Converte a string da data para objeto date se necessário
     data_pedido = pedido.Data_pedido if isinstance(pedido.Data_pedido, date) else date.fromisoformat(str(pedido.Data_pedido))
 

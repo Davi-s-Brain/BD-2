@@ -97,3 +97,22 @@ class CarrinhoService:
             contagem_categorias[categoria] += quantidade
 
         return dict(contagem_categorias)
+    def contar_itens_por_categoria_global(self) -> Dict[str, int]:
+        """
+        Conta os itens por categoria em todos os carrinhos.
+        """
+        carrinhos = CarrinhoModel.buscar_todos()
+        contagem_categorias = defaultdict(int)
+
+        for carrinho in carrinhos:
+            carrinho_out = self.obter_carrinho(carrinho.id_usuario)
+            if not carrinho_out or not carrinho_out.itens:
+                continue
+
+            for item in carrinho_out.itens:
+                item_dict = item if isinstance(item, dict) else item.dict()
+                categoria = item_dict.get('categoria', 'Sem categoria')
+                quantidade = item_dict.get('quantidade', 1)
+                contagem_categorias[categoria] += quantidade
+
+        return dict(contagem_categorias)

@@ -784,8 +784,7 @@ INSERT INTO Pedido (
         (772, '2024-09-12', '20:05', 90.00, 'Dinheiro', TRUE, 'Pedido extra', 73, 30),
         (773, '2024-09-12', '21:15', 60.00, 'Cartao', FALSE, 'Pedido normal', 93, 41),
         (774, '2024-09-12', '22:25', 120.00, 'Cartão', TRUE, 'Pedido delivery', 113, 2),
-        (775, '2024-09-12', '23:35', 45.00, 'Dinheiro', FALSE, 'Pedido rápido', 133, 13)
-        ,
+        (775, '2024-09-12', '23:35', 45.00, 'Dinheiro', FALSE, 'Pedido rápido', 133, 13),
         (776, '2024-09-12', '23:50', 120.00, 'Cartao', TRUE, 'Pedido noturno', 143, 24),
         (777, '2024-09-13', '08:10', 130.00, 'Cartão', FALSE, 'Pedido matinal', 153, 35),
         (778, '2024-09-13', '09:20', 140.00, 'Dinheiro', TRUE, 'Pedido delivery', 163, 46),
@@ -835,8 +834,7 @@ INSERT INTO Pedido (
         (822, '2024-09-15', '21:20', 95.00, 'Pix', TRUE, 'Pedido delivery', 105, 10),
         (823, '2024-09-15', '22:30', 110.00, 'Dinheiro', FALSE, 'Pedido rápido', 115, 21),
         (824, '2024-09-15', '23:40', 125.00, 'Cartao', TRUE, 'Pedido especial', 125, 32),
-        (825, '2024-09-16', '08:15', 140.00, 'Pix', FALSE, 'Pedido matinal', 135, 43)
-        ,
+        (825, '2024-09-16', '08:15', 140.00, 'Pix', FALSE, 'Pedido matinal', 135, 43),
         (826, '2024-09-16', '09:25', 45.00, 'Dinheiro', TRUE, 'Pedido delivery', 145, 4),
         (827, '2024-09-16', '10:35', 120.00, 'Cartao', FALSE, 'Pedido rápido', 155, 15),
         (828, '2024-09-16', '11:45', 38.00, 'Pix', TRUE, 'Pedido especial', 165, 26),

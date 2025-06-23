@@ -39,7 +39,7 @@ $$ LANGUAGE plpgsql;
 
 --Exemplos de uso:
 
-SELECT * FROM produtos_mais_vendidos_periodo('2024-06-01', '2024-06-10');
+SELECT * FROM produtos_mais_vendidos_periodo('2022-06-01', '2025-06-10');
 
 -- -- Função para retornar os produtos mais vendidos em um período específico
 -- CREATE OR REPLACE FUNCTION produtos_mais_vendidos_periodo(

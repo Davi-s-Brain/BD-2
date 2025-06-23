@@ -14,7 +14,7 @@ BEGIN
     WITH produtos_pedidos AS (
         SELECT pe.Indice_prod, p.Id_pedido
         FROM Ped_Escolhe_Prod pe
-        JOIN Pedido p ON pe.Id_pedido = p.Id_pedido
+        JOIN Pedido p ON pe.Id_pedido = p.Id_pedido  
         WHERE p.Data_pedido BETWEEN p_data_inicio AND p_data_fim
     )
     

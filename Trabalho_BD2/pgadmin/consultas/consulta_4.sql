@@ -25,7 +25,7 @@ $$ LANGUAGE plpgsql;
 
 --Exemplos de uso:
 
-SELECT * FROM resumo_balanco_geral('2024-06-01', '2024-06-10');
+SELECT * FROM resumo_balanco_geral('2022-06-01', '2024-06-10');
 
 -- --Função que serve a consulta de exibir, dentro de um período, o total de pedidos, total de vendas e o ticket médio.
 -- CREATE OR REPLACE FUNCTION resumo_balanco_geral(

@@ -1,17 +1,19 @@
 --A segunda consulta se relaciona aos campos de busca por nome do produto e filtros implementados no site, como foi visto nas imagens da seção 2. O usuário pode buscar por termos contidos ou iguais ao nome do produto desejado, como “salada” em acompanhamentos ou “maionese” em lançamentos (sanduíches)
 
 
+DROP function if exists buscar_por_termo;
+
 CREATE OR REPLACE FUNCTION buscar_por_termo(
     p_termo_busca TEXT
 )
 RETURNS TABLE (
-    id_produto INT,
-    nome_produto TEXT,
-    categoria TEXT,
-    tipo_produto TEXT,
-    preco NUMERIC,
-    peso NUMERIC,
-    unidade TEXT
+    id_produto NUMERIC,
+    nome_produto VARCHAR,
+    categoria VARCHAR,
+    tipo_produto text,
+    preco NUMERIC(10,2),
+    peso NUMERIC(10,2),
+    unidade VARCHAR
 ) AS $$
 BEGIN
     RETURN QUERY
@@ -43,8 +45,8 @@ BEGIN
                 WHEN p.Acompanhamento THEN 'Acompanhamento'
                 ELSE 'Outro'
             END AS tipo_produto,
-            p.Preco_prod,
-            p.Peso_prod,
+            p.Preco_prod::NUMERIC(10,2),
+        	p.Peso_prod::NUMERIC(10,2),
             p.Unidade_medida
         FROM Produto p
 

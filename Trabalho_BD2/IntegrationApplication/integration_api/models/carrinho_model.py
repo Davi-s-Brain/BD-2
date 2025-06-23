@@ -140,3 +140,51 @@ class CarrinhoModel:
             """, (datetime.now().isoformat(), id_carrinho))
             conn.commit()
             return True
+    @classmethod
+    def buscar_todos(cls) -> List['CarrinhoModel']:
+        """Busca todos os carrinhos com seus respectivos itens"""
+        carrinhos = []
+
+        with get_connection() as conn:
+            cursor = conn.cursor()
+
+            # Buscar todos os carrinhos
+            cursor.execute("""
+                SELECT id_carrinho, id_usuario, data_criacao, data_atualizacao
+                FROM Carrinho
+            """)
+            carrinho_rows = cursor.fetchall()
+
+            for carrinho_row in carrinho_rows:
+                id_carrinho = carrinho_row[0]
+
+                # Buscar itens do carrinho atual
+                cursor.execute("""
+                    SELECT id_item, nome, preco, quantidade, observacoes, categoria
+                    FROM Carrinho_Item
+                    WHERE id_carrinho = ?
+                """, (id_carrinho,))
+                itens_rows = cursor.fetchall()
+
+                itens = [
+                    {
+                        'id_item': row[0],
+                        'nome': row[1],
+                        'preco': row[2],
+                        'quantidade': row[3],
+                        'observacoes': row[4],
+                        'categoria': row[5]
+                    }
+                    for row in itens_rows
+                ]
+
+                carrinho = cls(
+                    id_carrinho=id_carrinho,
+                    id_usuario=carrinho_row[1],
+                    itens=itens,
+                    data_criacao=datetime.fromisoformat(carrinho_row[2]),
+                    data_atualizacao=datetime.fromisoformat(carrinho_row[3])
+                )
+                carrinhos.append(carrinho)
+
+        return carrinhos

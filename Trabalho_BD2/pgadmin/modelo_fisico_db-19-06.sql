@@ -12,8 +12,8 @@
 -- Database Section
 -- ________________ 
 
---DROP database if exists RanBurguer;
---create database RanBurguer;
+DROP database if exists RanBurguer;
+create database RanBurguer;
 
 
 -- DBSpace Section

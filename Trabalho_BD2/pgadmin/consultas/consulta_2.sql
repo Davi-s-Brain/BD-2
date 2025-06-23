@@ -1,68 +1,109 @@
---2ª CONSULTA--------------------------------------------------------------------
---selecionar os produtos do pedido
-    --selecionar os lanches dos produtos
-            --selecionar os ingredientes dos lanches
-                    --verificar no estoque
-    --selecionar as bebidas
-    --selecionar as sobremesas
-    
--- Ingredientes dos lanches do pedido e sua disponibilidade
--- Essas três partes te dão todos os itens do pedido que estão sem estoque.
--- Se nenhuma linha for retornada, então tudo está disponível.
-SELECT
-    p.Id_pedido,
-    pe.Indice_prod,
-    i.Nome_ingred,
-    e.Quantidade AS quantidade_estoque
-FROM Produto AS p
-    JOIN L_Contem_I AS lci ON lci.Indice_prod = p.Indice_prod
-    JOIN Ingrediente AS i ON i.Id_ingred = lci.Id_ingred
-    JOIN Estoque AS e ON e.Indice_estoq = i.Indice_estoq
-WHERE e.Quantidade <= 0;
 
--- Bebidas do pedido e sua disponibilidade
-SELECT
-    p.Id_pedido,
-    pe.Indice_prod,
-    b.Marca,
-    e.Quantidade AS quantidade_estoque
-FROM Pedido AS p
-    JOIN Bebida AS b ON b.Indice_prod = p.Indice_prod
-    JOIN Estoque AS e ON e.Indice_estoq = b.Indice_estoq
-WHERE e.Quantidade <= 0;
+DROP function if exists verificar_disponibilidade_combo_mensagem;
+-- CRIA UM FUNÇÃO O QUAL RECEBE OS PRODUTOS ESCOLHIDOS PELO CLIENTE PARA VERIFICAR A DISPONIBILIDADE
+CREATE OR REPLACE FUNCTION verificar_disponibilidade_combo_mensagem(
+    p_id_lanche numeric DEFAULT NULL,
+    p_id_bebida numeric DEFAULT NULL,
+    p_id_sobremesa numeric DEFAULT NULL,
+    p_id_acompanhamento numeric DEFAULT NULL
+)
+RETURNS TABLE (
+    item varchar,
+    quantidade_estoque real,
+    mensagem varchar
+) AS $$
+DECLARE
+    itens_faltando varchar;
+BEGIN
+    RETURN QUERY
+    -- Ingredientes do lanche consultando a tabela de relacionamento L_Contem_I
+    WITH Ingredientes_Lanche AS (
+        SELECT
+            lci.Indice_prod,
+            i.Nome_ingred,
+            i.Indice_estoq
+        FROM L_Contem_I lci
+        JOIN Ingrediente i ON i.Id_ingred = lci.Id_ingred
+        WHERE p_id_lanche IS NOT NULL AND lci.Indice_prod = p_id_lanche
+    ),
+    -- Bebida é um item simples, pega direto pelo nome do produto
+    Itens_Bebida AS (
+        SELECT 
+            b.Indice_prod,
+            b.Nome_prod AS Nome_ingred
+        FROM Produto b
+        WHERE p_id_bebida IS NOT NULL AND b.Indice_prod = p_id_bebida
+    ),
+    -- Sobremesa é um item simples, pega direto pelo nome do produto
+    Itens_Sobremesa AS (
+        SELECT 
+            s.Indice_prod,
+            s.Nome_prod AS Nome_ingred
+        FROM Produto s
+        WHERE p_id_sobremesa IS NOT NULL AND s.Indice_prod = p_id_sobremesa
+    ),
+    -- Acompanhemento é um item simples, pega direto pelo nome do produto
+    Itens_Acompanhamento AS (
+        SELECT 
+            a.Indice_prod,
+            a.Nome_prod AS Nome_ingred
+        FROM  Produto a
+        WHERE p_id_acompanhamento IS NOT NULL AND a.Indice_prod = p_id_acompanhamento
+    ),
 
--- Sobremesas do pedido e sua disponibilidade
-SELECT
-    p.Id_pedido,
-    pe.Indice_prod,
-    s.Sabor,
-    e.Quantidade AS quantidade_estoque
-FROM Pedido p
-    JOIN Sobremesa s ON s.Indice_prod = p.Indice_prod
-    JOIN Estoque e ON e.Indice_estoq = s.Indice_estoq
-WHERE e.Quantidade <= 0;
+    --Junta todos os itens escolhidos pelo cliente em uma tabela unica
+    Itens_Combo AS (
+        SELECT Indice_prod, Nome_ingred FROM Ingredientes_Lanche
+        UNION ALL
+        SELECT Indice_prod, Nome_ingred FROM Itens_Bebida
+        UNION ALL
+        SELECT Indice_prod, Nome_ingred FROM Itens_Sobremesa
+        UNION ALL
+        SELECT Indice_prod, Nome_ingred FROM Itens_Acompanhamento
+    ),
 
+    -- Verifica a quantidade dos itens escolhidos no estoque
+    Disponibilidade_Combo AS (
+        SELECT
+            ic.Nome_ingred,
+            e.Quantidade AS quantidade_estoque
+        FROM Itens_Combo ic
+        JOIN Estoque e 
+            ON e.Nome_produto = ic.Nome_ingred
+    ),
 
---segunda consulta parte 1
---
-UPDATE Estoque e
-SET Quantidade = Quantidade - 1
-FROM Ingrediente i
-JOIN L_Contem_I lci ON lci.Id_ingred = i.Id_ingred
-JOIN Ped_Escolhe_Prod pep ON pep.Indice_prod = lci.Indice_prod
-WHERE i.Indice_estoq = e.Indice_estoq
-  AND pep.Id_pedido = <ID_DO_PEDIDO>;
+    -- Verifica a quantidade dos itens escolhidos no estoque é maior que 0
+    Itens_Faltando AS (
+        SELECT 
+            Nome_ingred
+        FROM Disponibilidade_Combo AS d
+        WHERE d.quantidade_estoque <= 0
+    ),
 
-UPDATE Estoque e
-SET Quantidade = Quantidade - pep.Quantidade
-FROM Bebida b
-JOIN Ped_Escolhe_Prod pep ON pep.Indice_prod = b.Indice_prod
-WHERE b.Indice_estoq = e.Indice_estoq
-  AND pep.Id_pedido = <ID_DO_PEDIDO>;
+Status_Combo AS (
+        SELECT 
+            CASE 
+                WHEN EXISTS (SELECT 1 FROM Itens_Faltando) THEN 
+                    'Faltam: ' || (
+                        SELECT string_agg(Nome_ingred, ', ') 
+                        FROM Itens_Faltando
+                    )
+                ELSE 'Combo disponível'
+            END AS mensagem
+    )
 
-UPDATE Estoque e
-SET Quantidade = Quantidade - pep.Quantidade
-FROM Sobremesa s
-JOIN Ped_Escolhe_Prod pep ON pep.Indice_prod = s.Indice_prod
-WHERE s.Indice_estoq = e.Indice_estoq
-  AND pep.Id_pedido = <ID_DO_PEDIDO>;
+    SELECT 
+        d.Nome_ingred AS item,
+        d.quantidade_estoque,
+        s.mensagem::varchar AS mensagem
+    FROM Disponibilidade_Combo d
+    CROSS JOIN Status_Combo s
+    ORDER BY d.Nome_ingred;
+
+END;
+$$ LANGUAGE plpgsql;
+
+--exemplo de aplicação
+SELECT * FROM verificar_disponibilidade_combo_mensagem(
+    21, null, null , null
+);

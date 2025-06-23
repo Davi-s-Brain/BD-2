@@ -1,66 +1,130 @@
--- Função para listar produtos com filtros opcionais
--- Esta função permite filtrar produtos por categoria, restrições alimentares e se são bebidas alco
-CREATE OR REPLACE FUNCTION listar_produtos_com_filtros(
-    p_categorias TEXT[] DEFAULT NULL,
-    p_sem_gluten BOOLEAN DEFAULT NULL,
-    p_sem_lactose BOOLEAN DEFAULT NULL,
-    p_e_alcoolico BOOLEAN DEFAULT NULL
+DROP FUNCTION IF EXISTS processar_pedido_com_quantidade;
+
+CREATE OR REPLACE FUNCTION processar_pedido_com_quantidade(
+    p_id_lanche NUMERIC DEFAULT NULL,
+    p_qtd_lanche INT DEFAULT 0,
+    p_id_bebida NUMERIC DEFAULT NULL,
+    p_qtd_bebida INT DEFAULT 0,
+    p_id_sobremesa NUMERIC DEFAULT NULL,
+    p_qtd_sobremesa INT DEFAULT 0,
+    p_id_acompanhamento NUMERIC DEFAULT NULL,
+    p_qtd_acompanhamento INT DEFAULT 0
 )
 RETURNS TABLE (
-    nome_produto VARCHAR,
-    categoria VARCHAR,
-    restricao VARCHAR,
-    tipo_produto TEXT,
-    e_alcoolico BOOLEAN,
-    preco DOUBLE PRECISION,
-    peso DOUBLE PRECISION,
-    unidade VARCHAR
+    item VARCHAR,
+    estoque_antigo REAL,
+    estoque_atual REAL,
+    mensagem TEXT
 ) AS $$
+DECLARE
+    itens_em_falta INT;
 BEGIN
+    --  Tabela temporária dos itens do combo
+    CREATE TEMP TABLE temp_itens_combo AS
+    SELECT * FROM (
+        SELECT 
+            lci.Indice_prod,
+            i.Nome_ingred,
+            i.Indice_estoq,
+            p_qtd_lanche AS quantidade
+        FROM L_Contem_I lci
+        JOIN Ingrediente i ON i.Id_ingred = lci.Id_ingred
+        WHERE p_id_lanche IS NOT NULL AND p_qtd_lanche > 0 AND lci.Indice_prod = p_id_lanche
+
+        UNION ALL
+
+        SELECT 
+            b.Indice_prod,
+            b.Nome_prod AS Nome_ingred,
+            NULL::NUMERIC AS Indice_estoq,
+            p_qtd_bebida
+        FROM Produto b
+        WHERE p_id_bebida IS NOT NULL AND p_qtd_bebida > 0 AND b.Indice_prod = p_id_bebida
+
+        UNION ALL
+
+        SELECT 
+            s.Indice_prod,
+            s.Nome_prod AS Nome_ingred,
+            NULL::NUMERIC AS Indice_estoq,
+            p_qtd_sobremesa
+        FROM Produto s
+        WHERE p_id_sobremesa IS NOT NULL AND p_qtd_sobremesa > 0 AND s.Indice_prod = p_id_sobremesa
+
+        UNION ALL
+
+        SELECT 
+            a.Indice_prod,
+            a.Nome_prod AS Nome_ingred,
+            NULL::NUMERIC AS Indice_estoq,
+            p_qtd_acompanhamento
+        FROM Produto a
+        WHERE p_id_acompanhamento IS NOT NULL AND p_qtd_acompanhamento > 0 AND a.Indice_prod = p_id_acompanhamento
+    ) AS itens;
+
+    --  Consulta estoque atual dos itens antes da atualização
+    CREATE TEMP TABLE temp_disponibilidade AS
+    SELECT
+        ic.Nome_ingred,
+        e.Quantidade AS estoque_antigo,
+        COALESCE(ic.Indice_estoq, e.Indice_estoq) AS Indice_estoq,
+        ic.quantidade AS quantidade_solicitada
+    FROM temp_itens_combo ic
+    JOIN Estoque e ON 
+        (ic.Indice_estoq IS NOT NULL AND e.Indice_estoq = ic.Indice_estoq)
+        OR (ic.Indice_estoq IS NULL AND e.Nome_produto = ic.Nome_ingred);
+
+    --  Verifica itens em falta
+    SELECT COUNT(*) INTO itens_em_falta
+    FROM temp_disponibilidade as td
+    WHERE td.estoque_antigo < quantidade_solicitada;
+
+    --  Atualiza estoque se disponível
+    IF itens_em_falta = 0 THEN
+        UPDATE Estoque e
+        SET Quantidade = e.Quantidade - d.quantidade_solicitada
+        FROM temp_disponibilidade d
+        WHERE 
+            (d.Indice_estoq IS NOT NULL AND e.Indice_estoq = d.Indice_estoq)
+            OR (d.Indice_estoq IS NULL AND e.Nome_produto = d.Nome_ingred);
+    END IF;
+
+    --  Consulta o estoque atualizado
     RETURN QUERY
     SELECT 
-        p.Nome_prod,
-        p.Categoria,
-        p.Restricao_alimentar,
+        d.Nome_ingred AS item,
+        d.estoque_antigo,
+        e.Quantidade AS estoque_atual,
         CASE 
-            WHEN p.Lanche THEN 'Lanche'
-            WHEN p.Bebida THEN 'Bebida'
-            WHEN p.Sobremesa THEN 'Sobremesa'
-            WHEN p.Acompanhamento THEN 'Acompanhamento'
-            ELSE 'Outro'
-        END AS tipo_produto,
-        CASE 
-            WHEN p.Bebida THEN b.E_Alcoolico 
-            ELSE NULL 
-        END AS e_alcoolico,
-        p.Preco_prod::DOUBLE PRECISION,
-        p.Peso_prod::DOUBLE PRECISION,
-        p.Unidade_medida
-    FROM Produto p
-    LEFT JOIN Bebida b ON p.Indice_prod = b.Indice_prod
-    WHERE 
-        -- Filtros de categoria e restrições
-        (p_categorias IS NULL OR p.Categoria = ANY(p_categorias))
-        AND (p_sem_gluten IS NULL OR (p_sem_gluten = TRUE AND p.Restricao_alimentar ILIKE '%sem glúten%'))
-        AND (p_sem_lactose IS NULL OR (p_sem_lactose = TRUE AND p.Restricao_alimentar ILIKE '%sem lactose%'))
+            WHEN itens_em_falta = 0 THEN 'Combo disponível'
+            ELSE 
+                'Faltam: ' || (
+                    SELECT string_agg(Nome_ingred, ', ') 
+                    FROM temp_disponibilidade as td
+                    WHERE td.estoque_antigo < quantidade_solicitada
+                )
+        END AS mensagem
+    FROM temp_disponibilidade d
+    JOIN Estoque e ON 
+        (d.Indice_estoq IS NOT NULL AND e.Indice_estoq = d.Indice_estoq)
+        OR (d.Indice_estoq IS NULL AND e.Nome_produto = d.Nome_ingred)
+    ORDER BY d.Nome_ingred;
 
-        -- Lógica do filtro de bebida alcoólica:
-        AND (
-            -- Se p_e_alcoolico for NULL, ignora bebidas
-            (p_e_alcoolico IS NULL AND p.Bebida = FALSE)
+    --  Limpa tabelas temporárias
+    DROP TABLE temp_itens_combo;
+    DROP TABLE temp_disponibilidade;
 
-            -- Se p_e_alcoolico for TRUE ou FALSE, pega só bebidas com o valor correspondente
-            OR (p_e_alcoolico IS NOT NULL AND p.Bebida = TRUE AND b.E_Alcoolico = p_e_alcoolico)
-        );
 END;
 $$ LANGUAGE plpgsql;
 
--- Exemplo de uso da função com lnches da categoria 'Bovino' e bebidas alcoólicas:
-SELECT * FROM listar_produtos_com_filtros(NULL, NULL, NULL, NULL);
 
+SELECT * FROM processar_pedido_com_quantidade(
+    21, 3, -- lanche id 21, quantidade 3
+    1, 2,  -- bebida id 1, quantidade 2
+    NULL, 0, -- sem sobremesa
+    NULL, 0  -- sem acompanhamento
+);
 
--- Exemplo de uso da função com lnches da categoria 'Bovino' e bebidas alcoólicas:
-SELECT * FROM listar_produtos_com_filtros(NULL, NULL, NULL, TRUE);
-
-SELECT * FROM listar_produtos_com_filtros(ARRAY['Bovino','Suíno'], NULL, NULL, TRUE);
---aaaa cmit
+SELECT * FROM verificar_disponibilidade_combo_mensagem(
+    21, null, null , null
+);

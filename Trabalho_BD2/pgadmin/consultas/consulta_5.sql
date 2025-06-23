@@ -1,84 +1,66 @@
--- Função para retornar os produtos mais vendidos em um período específico
-CREATE OR REPLACE FUNCTION produtos_mais_vendidos_periodo(
-    p_data_inicio DATE,
-    p_data_fim DATE
+-- Função para listar produtos com filtros opcionais
+-- Esta função permite filtrar produtos por categoria, restrições alimentares e se são bebidas alco
+CREATE OR REPLACE FUNCTION listar_produtos_com_filtros(
+    p_categorias TEXT[] DEFAULT NULL,
+    p_sem_gluten BOOLEAN DEFAULT NULL,
+    p_sem_lactose BOOLEAN DEFAULT NULL,
+    p_e_alcoolico BOOLEAN DEFAULT NULL
 )
 RETURNS TABLE (
-    id_produto INTEGER,
-    nome_produto TEXT,
+    nome_produto VARCHAR,
+    categoria VARCHAR,
+    restricao VARCHAR,
     tipo_produto TEXT,
-    quantidade_vendida INTEGER
+    e_alcoolico BOOLEAN,
+    preco DOUBLE PRECISION,
+    peso DOUBLE PRECISION,
+    unidade VARCHAR
 ) AS $$
 BEGIN
     RETURN QUERY
-    WITH produtos_pedidos AS (
-        SELECT pe.Indice_prod, p.Id_pedido
-        FROM Ped_Escolhe_Prod pe
-        JOIN Pedido p ON pe.Id_pedido = p.Id_pedido  
-        WHERE p.Data_pedido BETWEEN p_data_inicio AND p_data_fim
-    )
-    
     SELECT 
-        pr.Indice_prod::INTEGER AS id_produto,
-        pr.Nome_prod::TEXT AS nome_produto,  -- << Cast aqui
+        p.Nome_prod,
+        p.Categoria,
+        p.Restricao_alimentar,
         CASE 
-            WHEN pr.Lanche THEN 'Lanche'
-            WHEN pr.Bebida THEN 'Bebida'
-            WHEN pr.Sobremesa THEN 'Sobremesa'
-            WHEN pr.Acompanhamento THEN 'Acompanhamento'
+            WHEN p.Lanche THEN 'Lanche'
+            WHEN p.Bebida THEN 'Bebida'
+            WHEN p.Sobremesa THEN 'Sobremesa'
+            WHEN p.Acompanhamento THEN 'Acompanhamento'
             ELSE 'Outro'
         END AS tipo_produto,
-        COUNT(*)::INTEGER AS quantidade_vendida
-    FROM produtos_pedidos pp
-    JOIN Produto pr ON pr.Indice_prod = pp.Indice_prod
-    GROUP BY pr.Indice_prod, pr.Nome_prod, pr.Lanche, pr.Bebida, pr.Sobremesa, pr.Acompanhamento
-    ORDER BY quantidade_vendida DESC;
+        CASE 
+            WHEN p.Bebida THEN b.E_Alcoolico 
+            ELSE NULL 
+        END AS e_alcoolico,
+        p.Preco_prod::DOUBLE PRECISION,
+        p.Peso_prod::DOUBLE PRECISION,
+        p.Unidade_medida
+    FROM Produto p
+    LEFT JOIN Bebida b ON p.Indice_prod = b.Indice_prod
+    WHERE 
+        -- Filtros de categoria e restrições
+        (p_categorias IS NULL OR p.Categoria = ANY(p_categorias))
+        AND (p_sem_gluten IS NULL OR (p_sem_gluten = TRUE AND p.Restricao_alimentar ILIKE '%sem glúten%'))
+        AND (p_sem_lactose IS NULL OR (p_sem_lactose = TRUE AND p.Restricao_alimentar ILIKE '%sem lactose%'))
+
+        -- Lógica do filtro de bebida alcoólica:
+        AND (
+            -- Se p_e_alcoolico for NULL, ignora bebidas
+            (p_e_alcoolico IS NULL AND p.Bebida = FALSE)
+
+            -- Se p_e_alcoolico for TRUE ou FALSE, pega só bebidas com o valor correspondente
+            OR (p_e_alcoolico IS NOT NULL AND p.Bebida = TRUE AND b.E_Alcoolico = p_e_alcoolico)
+        );
 END;
 $$ LANGUAGE plpgsql;
 
+-- Exemplo de uso da função com lnches da categoria 'Bovino' e bebidas alcoólicas:
+SELECT * FROM listar_produtos_com_filtros(NULL, NULL, NULL, NULL);
 
---Exemplos de uso:
 
-SELECT * FROM produtos_mais_vendidos_periodo('2022-06-01', '2025-06-10');
+-- Exemplo de uso da função com lnches da categoria 'Bovino' e bebidas alcoólicas:
+SELECT * FROM listar_produtos_com_filtros(NULL, NULL, NULL, TRUE);
 
--- -- Função para retornar os produtos mais vendidos em um período específico
--- CREATE OR REPLACE FUNCTION produtos_mais_vendidos_periodo(
---     p_data_inicio DATE,
---     p_data_fim DATE
--- )
--- RETURNS TABLE (
---     id_produto INT,
---     nome_produto TEXT,
---     tipo_produto TEXT,
---     quantidade_vendida INT
--- ) AS $$
--- BEGIN
---     RETURN QUERY
---     WITH produtos_pedidos AS (
---         SELECT pe.Indice_prod, p.Id_pedido
---         FROM Ped_Escolhe_Prod pe
---         JOIN Pedido p ON pe.Id_pedido = p.Id_pedido  
---         WHERE p.Data_pedido BETWEEN p_data_inicio AND p_data_fim
---     )
-    
---     SELECT 
---         pr.Indice_prod AS id_produto,
---         pr.Nome_prod,
---         CASE 
---             WHEN pr.Lanche THEN 'Lanche'
---             WHEN pr.Bebida THEN 'Bebida'
---             WHEN pr.Sobremesa THEN 'Sobremesa'
---             WHEN pr.Acompanhamento THEN 'Acompanhamento'
---             ELSE 'Outro'
---         END AS tipo_produto,
---         COUNT(*) AS quantidade_vendida
---     FROM produtos_pedidos pp
---     JOIN Produto pr ON pr.Indice_prod = pp.Indice_prod
---     GROUP BY pr.Indice_prod, pr.Nome_prod, pr.Lanche, pr.Bebida, pr.Sobremesa, pr.Acompanhamento
---     ORDER BY quantidade_vendida DESC;
--- END;
--- $$ LANGUAGE plpgsql;
-
--- --Exemplos de uso:
-
--- SELECT * FROM produtos_mais_vendidos_periodo('2024-06-01', '2024-06-10');
+SELECT * FROM listar_produtos_com_filtros(ARRAY['Bovino','Suíno'], NULL, NULL, TRUE);
+--aaaa cmit

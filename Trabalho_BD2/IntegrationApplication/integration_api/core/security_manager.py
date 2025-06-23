@@ -1,3 +1,4 @@
+import hashlib
 import logging
 import os
 import sqlite3
@@ -8,7 +9,6 @@ from jose import JWTError, jwt, ExpiredSignatureError
 from starlette.status import HTTP_401_UNAUTHORIZED
 
 from Trabalho_BD2.IntegrationApplication.integration_api.core.secret_manager import SecretManager
-from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import User, UserLogin
 from Trabalho_BD2.IntegrationApplication.integration_api.services.funcionario_service import FuncionarioService
 
 
@@ -26,9 +26,9 @@ class SecurityManager:
         # Cria a tabela se não existir
         with self._users_db as conn:
             conn.execute('''CREATE TABLE IF NOT EXISTS users 
-                (username TEXT PRIMARY KEY, password TEXT)''')
-            conn.execute('''INSERT OR IGNORE INTO users (username, password) 
-                VALUES ('admin', 'admin')''')
+                (username TEXT PRIMARY KEY, password TEXT, id INTEGER)''')
+            conn.execute('''INSERT OR IGNORE INTO users (username, password, id) 
+                VALUES ('admin', 'admin', 1)''')
 
     def create_user(self, username: str, password: str):
         try:
@@ -42,17 +42,27 @@ class SecurityManager:
             print(f"Erro ao criar usuário: {e}")
             return None
 
+    import hashlib
+
     def authenticate_user(self, username: str, password: str) -> Optional[Dict]:
         try:
+            self._users_db.row_factory = sqlite3.Row
             cursor = self._users_db.cursor()
+
             cursor.execute(
-                "SELECT username, password FROM users WHERE username = ?",
+                "SELECT E_mail_client, Senha_cliente FROM Cliente WHERE E_mail_client = ?",
                 (username,)
             )
+
             user = cursor.fetchone()
 
-            if user and user['password'] == password:
-                return {"username": user['username'], "password": user['password']}
+            if user:
+                senha_hash = hashlib.sha256(password.encode()).hexdigest()
+                print("Hash digitado:", senha_hash)
+                print("Hash do banco:", user["Senha_cliente"])
+
+                if user["Senha_cliente"] == senha_hash:
+                    return {"username": user["E_mail_client"]}
             return None
         except Exception as e:
             print(f"Erro na autenticação: {e}")

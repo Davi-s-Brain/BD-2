@@ -1,6 +1,8 @@
 from Trabalho_BD2.IntegrationApplication.integration_api.models.item_model import ItemModel
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder
+from Trabalho_BD2.IntegrationApplication.integration_api.services.ingrediente_service import IngredienteService
+
 
 class ItemService:
     def __init__(self):
@@ -18,17 +20,19 @@ class ItemService:
         self.model.update(item.name, item.description, item.quantity, item.value)
 
     def listar_estoque(self):
-        items = self.model.get_all()
+        ingredienteService = IngredienteService ()
+        items = ingredienteService.get_all()
         return [
             {
-                "name": item[0],
-                "description": item[1],
-                "quantity": item[2],
-                "value" : item[3]
+                "id": item["Id_ingred"],
+                "nome": item["Nome_ingred"],
+                "tipo": item["Tipo_ingred"],
+                "preco": item["Preco_venda_cliente"],
+                "peso": item["Peso_ingred"],
+                "quantidade": item["Indice_estoq"]
             }
             for item in items
         ]
-
     def alterar_estoque(self, product, quantity_delta):
         self.model.alterar_estoque(product, quantity_delta)
 

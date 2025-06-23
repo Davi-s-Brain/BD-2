@@ -5,6 +5,8 @@ DB_NAME = "local.db"
 def init_db():
     with sqlite3.connect(DB_NAME) as conn:
         cursor = conn.cursor()
+
+        # Tabela de Items
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS items (
             name TEXT NOT NULL PRIMARY KEY,
@@ -13,7 +15,6 @@ def init_db():
             value REAL NOT NULL
         )
         """)
-
 
         # Tabela de Bebidas
         cursor.execute("""
@@ -25,6 +26,7 @@ def init_db():
             E_Alcolico BOOLEAN NOT NULL
         )
         """)
+
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS orders (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -33,6 +35,7 @@ def init_db():
             quantity INTEGER NOT NULL
         )
         """)
+
         # Tabela de Cliente
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS Cliente (
@@ -48,7 +51,29 @@ def init_db():
             E_intolerante_lactose BOOLEAN NOT NULL,
             E_celiaco BOOLEAN NOT NULL,
             E_vegetariano BOOLEAN NOT NULL,
-            E_vegano BOOLEAN NOT NULL
+            E_vegano BOOLEAN NOT NULL,
+            Senha_cliente TEXT NOT NULL
+        )
+        """)
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS Carrinho (
+            id_carrinho INTEGER PRIMARY KEY AUTOINCREMENT,
+            id_usuario INTEGER NOT NULL,
+            data_criacao TEXT NOT NULL,
+            data_atualizacao TEXT NOT NULL
+        )
+        """)
+
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS Carrinho_Item (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            id_carrinho INTEGER NOT NULL,
+            id_item INTEGER NOT NULL,
+            nome TEXT NOT NULL,
+            preco REAL NOT NULL,
+            quantidade INTEGER NOT NULL,
+            observacoes TEXT,
+            FOREIGN KEY (id_carrinho) REFERENCES Carrinho(id_carrinho)
         )
         """)
 
@@ -125,7 +150,7 @@ def init_db():
         )
         """)
 
-        # Tabela de Pedido_Produto (relacionamento entre Pedido e Produto)
+        # Tabela de Pedido_Produto
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS Pedido_Produto (
             Id_pedido INTEGER,
@@ -151,8 +176,7 @@ def init_db():
         )
         """)
 
-
-        # Tabela de Ingredientes_Lanche (relacionamento entre Ingrediente e Lanche)
+        # Ingredientes_Lanche
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS Ingredientes_Lanche (
             Id_lanche INTEGER,
@@ -165,6 +189,7 @@ def init_db():
         """)
 
         conn.commit()
+
 
 def get_connection():
     return sqlite3.connect(DB_NAME)

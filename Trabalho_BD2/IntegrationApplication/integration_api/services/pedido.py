@@ -11,7 +11,7 @@ class PedidoService:
         """Cria um novo pedido e retorna o ID gerado."""
         return self.pedido_model.create(data)
 
-    def listar_pedidos(self) -> List[Tuple]:
+    def listar_pedidos(self) -> list[dict]:
         """Retorna todos os pedidos cadastrados."""
         return self.pedido_model.get_all()
 

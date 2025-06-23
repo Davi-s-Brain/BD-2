@@ -1,6 +1,4 @@
---A segunda consulta se relaciona aos campos de busca por nome do produto e filtros implementados no site, como foi visto nas imagens da seção 2. O usuário pode buscar por termos contidos ou iguais ao nome do produto desejado, como “salada” em acompanhamentos ou “maionese” em lançamentos (sanduíches)
-
-
+-- CRIA UM FUNÇÃO A QUAL RECEBE UM TERMO DE BUSCA E RETORNA OS PRODUTOS QUE CONTENHAM ESSE TERMO NO NOME, INGREDIENTES OU DESCRIÇÃO
 DROP function if exists buscar_por_termo;
 
 CREATE OR REPLACE FUNCTION buscar_por_termo(

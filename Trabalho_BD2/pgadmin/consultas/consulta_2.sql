@@ -1,3 +1,5 @@
+
+DROP function if exists verificar_disponibilidade_combo_mensagem;
 -- CRIA UM FUNÇÃO O QUAL RECEBE OS PRODUTOS ESCOLHIDOS PELO CLIENTE PARA VERIFICAR A DISPONIBILIDADE
 CREATE OR REPLACE FUNCTION verificar_disponibilidade_combo_mensagem(
     p_id_lanche numeric DEFAULT NULL,
@@ -7,7 +9,7 @@ CREATE OR REPLACE FUNCTION verificar_disponibilidade_combo_mensagem(
 )
 RETURNS TABLE (
     item varchar,
-    quantidade_estoque float,
+    quantidade_estoque real,
     mensagem varchar
 ) AS $$
 DECLARE
@@ -18,7 +20,8 @@ BEGIN
     WITH Ingredientes_Lanche AS (
         SELECT
             lci.Indice_prod,
-            i.Nome_ingred
+            i.Nome_ingred,
+            i.Indice_estoq
         FROM L_Contem_I lci
         JOIN Ingrediente i ON i.Id_ingred = lci.Id_ingred
         WHERE p_id_lanche IS NOT NULL AND lci.Indice_prod = p_id_lanche
@@ -92,7 +95,7 @@ Status_Combo AS (
     SELECT 
         d.Nome_ingred AS item,
         d.quantidade_estoque,
-        s.mensagem
+        s.mensagem::varchar AS mensagem
     FROM Disponibilidade_Combo d
     CROSS JOIN Status_Combo s
     ORDER BY d.Nome_ingred;
@@ -102,5 +105,5 @@ $$ LANGUAGE plpgsql;
 
 --exemplo de aplicação
 SELECT * FROM verificar_disponibilidade_combo_mensagem(
-    21, 83, 84, 91
+    21, null, null , null
 );

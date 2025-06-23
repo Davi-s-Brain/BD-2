@@ -1,17 +1,17 @@
 -- CRIA UM FUNÇÃO O QUAL RECEBE OS PRODUTOS ESCOLHIDOS PELO CLIENTE PARA VERIFICAR A DISPONIBILIDADE
 CREATE OR REPLACE FUNCTION verificar_disponibilidade_combo_mensagem(
-    p_id_lanche INT DEFAULT NULL,
-    p_id_bebida INT DEFAULT NULL,
-    p_id_sobremesa INT DEFAULT NULL,
-    p_id_acompanhamento INT DEFAULT NULL
+    p_id_lanche numeric DEFAULT NULL,
+    p_id_bebida numeric DEFAULT NULL,
+    p_id_sobremesa numeric DEFAULT NULL,
+    p_id_acompanhamento numeric DEFAULT NULL
 )
 RETURNS TABLE (
-    item TEXT,
-    quantidade_estoque NUMERIC,
-    mensagem TEXT
+    item varchar,
+    quantidade_estoque float,
+    mensagem varchar
 ) AS $$
 DECLARE
-    itens_faltando TEXT;
+    itens_faltando varchar;
 BEGIN
     RETURN QUERY
     -- Ingredientes do lanche consultando a tabela de relacionamento L_Contem_I
@@ -27,24 +27,24 @@ BEGIN
     Itens_Bebida AS (
         SELECT 
             b.Indice_prod,
-            b.Nome AS Nome_ingred
-        FROM Bebida b
+            b.Nome_prod AS Nome_ingred
+        FROM Produto b
         WHERE p_id_bebida IS NOT NULL AND b.Indice_prod = p_id_bebida
     ),
     -- Sobremesa é um item simples, pega direto pelo nome do produto
     Itens_Sobremesa AS (
         SELECT 
             s.Indice_prod,
-            s.Nome AS Nome_ingred
-        FROM Sobremesa s
+            s.Nome_prod AS Nome_ingred
+        FROM Produto s
         WHERE p_id_sobremesa IS NOT NULL AND s.Indice_prod = p_id_sobremesa
     ),
     -- Acompanhemento é um item simples, pega direto pelo nome do produto
     Itens_Acompanhamento AS (
         SELECT 
             a.Indice_prod,
-            a.Nome AS Nome_ingred
-        FROM Acompanhamento a
+            a.Nome_prod AS Nome_ingred
+        FROM  Produto a
         WHERE p_id_acompanhamento IS NOT NULL AND a.Indice_prod = p_id_acompanhamento
     ),
 
@@ -66,26 +66,27 @@ BEGIN
             e.Quantidade AS quantidade_estoque
         FROM Itens_Combo ic
         JOIN Estoque e 
-            ON e.Nome_ingred = ic.Nome_ingred
+            ON e.Nome_produto = ic.Nome_ingred
     ),
 
     -- Verifica a quantidade dos itens escolhidos no estoque é maior que 0
     Itens_Faltando AS (
         SELECT 
             Nome_ingred
-        FROM Disponibilidade_Combo
-        WHERE quantidade_estoque <= 0
+        FROM Disponibilidade_Combo AS d
+        WHERE d.quantidade_estoque <= 0
     ),
 
-    Status_Combo AS (
+Status_Combo AS (
         SELECT 
             CASE 
-                WHEN EXISTS (SELECT 1 FROM Itens_Faltando) 
-                THEN 'Faltam: ' || string_agg(Nome_ingred, ', ')
+                WHEN EXISTS (SELECT 1 FROM Itens_Faltando) THEN 
+                    'Faltam: ' || (
+                        SELECT string_agg(Nome_ingred, ', ') 
+                        FROM Itens_Faltando
+                    )
                 ELSE 'Combo disponível'
             END AS mensagem
-        FROM Itens_Combo ic
-        JOIN Disponibilidade_Combo d ON d.Nome_ingred = ic.Nome_ingred
     )
 
     SELECT 
@@ -98,3 +99,8 @@ BEGIN
 
 END;
 $$ LANGUAGE plpgsql;
+
+--exemplo de aplicação
+SELECT * FROM verificar_disponibilidade_combo_mensagem(
+    21, 83, 84, 91
+);

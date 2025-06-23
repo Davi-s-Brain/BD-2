@@ -34,8 +34,6 @@ BEGIN
     ORDER BY quantidade_vendida DESC;
 END;
 $$ LANGUAGE plpgsql;
-✔️ Exemplos de uso:
-sql
-Copiar
-Editar
+-- Exemplos de uso:
+
 SELECT * FROM produtos_mais_vendidos_periodo('2024-06-01', '2024-06-10');

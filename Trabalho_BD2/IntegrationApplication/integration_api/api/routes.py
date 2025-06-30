@@ -1,3 +1,4 @@
+import sqlite3
 from datetime import date
 from typing import List, Dict, Any, Annotated
 
@@ -7,33 +8,38 @@ from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from Trabalho_BD2.IntegrationApplication.integration_api.core.limiter import limiter
 from Trabalho_BD2.IntegrationApplication.integration_api.core.security_manager import SecurityManager
 from Trabalho_BD2.IntegrationApplication.integration_api.core.totalizador import totalizador_diario
+from Trabalho_BD2.IntegrationApplication.integration_api.db.database_acess import DatabaseAccess
+from Trabalho_BD2.IntegrationApplication.integration_api.models.combo_model import ComboModel
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.carrinho_schemas import (
     ItemCarrinhoSchema,
     CarrinhoOutSchema,
     CarrinhoUpdateSchema, ContagemCategoriasOutSchema
+)
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.cliente_schemas import (
+    ClienteCreate,
+    ClienteUpdate,
+    ClienteOut
 )
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.funcionario import (
     FuncionarioCreate,
     FuncionarioUpdate,
     FuncionarioOut,
 )
-from Trabalho_BD2.IntegrationApplication.integration_api.services.cliente_service import ClienteService
-from Trabalho_BD2.IntegrationApplication.integration_api.schemas.cliente_schemas import (
-    ClienteCreate,
-    ClienteUpdate,
-    ClienteOut
-)
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.generics import ComboDisponibilidadeResponse, \
+    ComboDisponibilidadeRequest
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.ingrediente_schemas import IngredienteOut, \
     IngredienteCreate, IngredienteUpdate
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemCreate, ItemUpdate, ItemDelete
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.pedido import PedidoCreate, PedidoUpdate, PedidoOut
-from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import UserLogin, Token, User
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import UserLogin, Token, User, UserCreate, UserOut
 from Trabalho_BD2.IntegrationApplication.integration_api.services.carrinho_service import CarrinhoService
+from Trabalho_BD2.IntegrationApplication.integration_api.services.cliente_service import ClienteService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.funcionario_service import FuncionarioService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.ingrediente_service import IngredienteService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.item_service import ItemService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.pedido import PedidoService
+from Trabalho_BD2.IntegrationApplication.integration_api.services.user_service import UserService
 
 service = ItemService()
 security = SecurityManager()
@@ -65,32 +71,98 @@ cliente_router = APIRouter(
 
 cliente_service = ClienteService()
 
+import logging
 
-@cliente_router.post(
-    "/",
-    response_model=Token,
-    status_code=status.HTTP_201_CREATED
+logger = logging.getLogger(__name__)
+combo_router = APIRouter(prefix="/combos", tags=["Combos"])
+
+
+@combo_router.post(
+    "/verificar-disponibilidade",
+    response_model=ComboDisponibilidadeResponse,
+    status_code=status.HTTP_200_OK
 )
-@limiter.limit("5/minute")
-async def criar_cliente(request: Request, cliente: ClienteCreate):
+@limiter.limit("10/minute")
+async def verificar_disponibilidade_combo(
+        request: Request,
+        combo_data: ComboDisponibilidadeRequest):
     """
-    Cria um novo cliente
+    Verifica a disponibilidade de um combo de produtos no estoque.
+
+    Parâmetros:
+    - id_lanche: ID do lanche (opcional)
+    - id_bebida: ID da bebida (opcional)
+    - id_sobremesa: ID da sobremesa (opcional)
+    - id_acompanhamento: ID do acompanhamento (opcional)
+
+    Retorna:
+    - Lista de itens com suas quantidades em estoque
+    - Mensagem de status geral
+    - Flag indicando se o combo está totalmente disponível
+    - Timestamp da verificação
     """
     try:
-        db_cliente = cliente_service.criar_cliente(cliente)
-        security.create_user(str(db_cliente.E_mail_client),db_cliente.Senha_cliente)
-        access_token = security.create_access_token(data={"sub": db_cliente.E_mail_client})
-        print("O token gerado foi" + access_token)
-        return {"access_token": access_token, "token_type": "bearer"}
-    except HTTPException as http_exc:
-        raise http_exc  # já é estruturado, pode propagar
-    except Exception as e:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Erro interno ao criar cliente"
+        combo_model = ComboModel()
+        resultados = combo_model.verificar_disponibilidade(
+            id_lanche=combo_data.id_lanche,
+            id_bebida=combo_data.id_bebida,
+            id_sobremesa=combo_data.id_sobremesa,
+            id_acompanhamento=combo_data.id_acompanhamento
         )
 
+        disponivel = all(item.quantidade_estoque > 0 for item in resultados)
+        status_geral = "Combo disponível" if disponivel else "Alguns itens estão indisponíveis"
 
+        return {
+            "itens": resultados,
+            "status_geral": status_geral,
+            "disponivel": disponivel
+        }
+
+    except Exception as e:
+        logger.error(f"Erro ao verificar disponibilidade: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Erro ao verificar disponibilidade do combo: {str(e)}"
+        )
+@limiter.limit("5/minute")
+@cliente_router.post(
+    "/clientes",
+    status_code=status.HTTP_201_CREATED,
+    summary="Cria um novo cliente", response_model = Token)  # Use o schema Pydantic aqui
+
+async def criar_cliente(request: Request, cliente_data: ClienteCreate):
+    """
+    Cria um novo cliente
+
+    - **Nome_cliente**: Nome completo do cliente
+    - **E_mail_client**: E-mail único do cliente
+    - **Telefone_client**: Telefone para contato
+    - **Senha_cliente**: Senha (será hasheada)
+    """
+    cliente_service.criar_cliente(cliente_data)
+    try:
+        # Autentica usando SecurityManager que verifica clientes e funcionários
+        user_info = security.authenticate_user(str(cliente_data.E_mail_client), cliente_data.Senha_cliente)
+        if not user_info:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Credenciais inválidas",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+        # Gera token com informações do usuário
+        access_token = security.create_access_token(user_info)
+        return {"access_token": access_token, "token_type": "bearer"}
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Erro no login: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Erro interno durante autenticação"
+        )
 
 @cliente_router.get(
     "/",
@@ -230,31 +302,24 @@ async def obter_meu_perfil(
 
 async def create_ingrediente(data: IngredienteCreate):
     """Cria um novo ingrediente"""
-    new_id = ingredienteService.create(
-        Tipo_ingred=data.Tipo_ingred,
-        Nome_ingred=data.Nome_ingred,
-        Preco_venda_cliente=data.Preco_venda_cliente,
-        Peso_ingred=data.Peso_ingred,
-        Indice_estoq=data.Indice_estoq,
-        Quantidade = data.Quantidade
-    )
-    return ingredienteService.get_by_id(new_id)
+    new_id = ingredienteService.create(data)
+    return ingredienteService.obter_por_id(new_id.Id_ingred)
 
 @ingrediente_router.get(
     "/",
-    response_model=List[Dict[str, Any]]
+    response_model= List[IngredienteOut]
 )
 async def list_ingredientes():
     """Lista todos os ingredientes"""
-    return ingredienteService.get_all()
+    return ingredienteService.obter_todos()
 
 @ingrediente_router.get(
     "/{ingrediente_id}",
-    response_model=Dict[str, Any]
+    response_model=IngredienteOut
 )
 async def get_ingrediente(ingrediente_id: int):
     """Obtém um ingrediente específico pelo ID"""
-    ingrediente = ingredienteService.get_by_id(ingrediente_id)
+    ingrediente = ingredienteService.obter_por_id(ingrediente_id)
     if not ingrediente:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -271,14 +336,13 @@ async def update_ingrediente(
     data: IngredienteUpdate
 ):
     """Atualiza um ingrediente existente"""
-    dados_atualizacao = {k: v for k, v in data.dict(exclude_unset=True).items()}
-    atualizado = ingredienteService.update(ingrediente_id, dados_atualizacao)
+    atualizado = ingredienteService.atualizar_ingrediente(ingrediente_id, data)
     if not atualizado:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Ingrediente não encontrado"
         )
-    return ingredienteService.get_by_id(ingrediente_id)
+    return ingredienteService.obter_por_id(ingrediente_id)
 
 @ingrediente_router.delete(
     "/{ingrediente_id}",
@@ -286,7 +350,7 @@ async def update_ingrediente(
 )
 async def delete_ingrediente(ingrediente_id: int):
     """Remove um ingrediente"""
-    deleted = ingredienteService.delete(ingrediente_id)
+    deleted = ingredienteService.remover_ingrediente(ingrediente_id)
     if not deleted:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -299,8 +363,7 @@ async def delete_ingrediente(ingrediente_id: int):
     status_code=status.HTTP_201_CREATED
 )
 async def create_funcionario(data: FuncionarioCreate):
-    new_id = service.create(data)
-    return funcService.get_by_id(new_id)
+    return funcService.create(data)
 
 @func_router.get(
     "/",
@@ -350,22 +413,40 @@ async def delete_funcionario(func_id: int):
             detail="Funcionário não encontrado"
         )
 
-async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
-    user = security.get_current_user(token)
-    if user is None:
+async def get_current_user(request: Request, token: str = Depends(oauth2_scheme)) -> User:
+    payload = security.get_current_user(request)
+    if payload is None:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid authentication credentials",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    return User(**user)
+
+    return security.get_current_user(request)
+
+
+def get_db_access() -> DatabaseAccess:
+    """Factory que retorna uma instância de DatabaseAccess"""
+
+    def get_connection():
+        conn = sqlite3.connect('data.sqlite')
+        # Configurações adicionais para SQLite
+        conn.row_factory = sqlite3.Row
+        return conn
+
+    return DatabaseAccess(get_connection)  # Retorna INSTÂNCIA de DatabaseAccess
 
 
 router_carrinho = APIRouter(prefix="/carrinho", tags=["Carrinho"])
-service_carrinho = CarrinhoService()
+
+# Cria a instância CORRETA
+db_access_instance = get_db_access()
+
+# Passa para o serviço
+service_carrinho = CarrinhoService(db_access=db_access_instance)
 
 @router_carrinho.get("/", response_model=CarrinhoOutSchema)
-async def obter_carrinho(token: str = Depends(oauth2_scheme), current_user: User = Depends(get_current_user)):
+async def obter_carrinho(current_user: User = Depends(get_current_user)):
     """
     Obtém o carrinho do usuário atual
     """
@@ -373,6 +454,7 @@ async def obter_carrinho(token: str = Depends(oauth2_scheme), current_user: User
     try:
         cliente = cliente_service.obter_cliente_por_email(current_user.username)
         print(current_user.username)
+        print(cliente.Id_cliente)
         carrinho = service_carrinho.obter_carrinho(cliente.Id_cliente)
 
         if not carrinho or not cliente:
@@ -474,8 +556,8 @@ async def atualizar_carrinho(
 
     try:
         return service_carrinho.atualizar_carrinho_completo(
-            current_user.id,
-            [item.model_dump() for item in carrinho_data.itens]
+            cliente_service.obter_cliente_por_email(current_user.username).Id_cliente,
+            [item for item in carrinho_data.itens]
         )
     except Exception as e:
         raise HTTPException(
@@ -508,82 +590,174 @@ async def alterar_estoque(request: Request, produto: str, acao: str, quantity: i
     ingrediente_service = IngredienteService()
     if not estoque:
         raise HTTPException(status_code=400, detail="Estoque vazio")
-    if ingrediente_service.get_by_name(Nome_ingred=produto) is None:
+    if ingrediente_service.get_by_name(nome_ingred=produto) is None:
         raise HTTPException(status_code=404, detail="Item inexistente")
     if acao == "adicionar":
-        ingrediente_service.alterar_estoque(produto, quantity)
+        ingrediente_service.ajustar_estoque(produto, quantity)
     elif acao == "remover":
         if not estoque:
             raise HTTPException(status_code=400, detail="Estoque já está zerado")
-        ingrediente_service.alterar_estoque(produto, - quantity)
+        ingrediente_service.ajustar_estoque(produto, - quantity)
     else:
         raise HTTPException(status_code=400, detail="Ação inválida")
 
-    return ingrediente_service.get_by_name(Nome_ingred=produto)
+    return ingrediente_service.get_by_name(nome_ingred=produto)
+
 
 # Authentication endpoints
 @auth_router.post("/login", response_model=Token)
 @limiter.limit("5/minute")
-async def login(request: Request, user_data: UserLogin):
-    user = security.authenticate_user(user_data.username, user_data.password)
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid credentials",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    access_token = security.create_access_token(data={"sub": user_data.username})
-    return {"access_token": access_token, "token_type": "bearer"}
-@auth_router.get("/me", response_model=User)
-async def read_users_me(current_user: User = Depends(get_current_user)):
-    return current_user
-@auth_router.get("/{func_id}", response_model=Token)
-@limiter.limit("5/second")
-async def login_funcionario(request: Request, func_id: int, password):
-    func = funcService.get_by_id(func_id)
-    if not func:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Funcionário não encontrado"
-        )
-    if func.Senha_func != password:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid credentials",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    access_token = security.create_access_token(data={"sub": str(func_id)})
-    if not access_token:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Invalid credentials",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    print("Requisicao de entrada com o token"+ access_token)
-    return {"access_token": access_token, "token_type": "bearer"}
-@auth_router.post("/register", response_model=Token)
-@limiter.limit("5/minute")
-async def register(request: Request, user_data: UserLogin):
-    # Verifica se o usuário já existe no banco de dados
-    existing_user = security.authenticate_user(user_data.username,user_data.password)
-    if existing_user:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Usuário já existe",
-        )
+async def login(
+        request: Request,
+        user_data: UserLogin
+):
+    """
+    Autentica um usuário (cliente ou funcionário) e retorna token JWT
 
-    # Cria o novo usuário no banco de dados
-    new_user = security.create_user(user_data.username, user_data.password)
-    if not new_user:
+    - **username**: E-mail do usuário
+    - **password**: Senha do usuário
+    """
+    try:
+        # Autentica usando SecurityManager que verifica clientes e funcionários
+        user_info = security.authenticate_user(user_data.username, user_data.password)
+        if not user_info:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Credenciais inválidas",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+        # Gera token com informações do usuário
+        access_token = security.create_access_token(user_info)
+        return {"access_token": access_token, "token_type": "bearer"}
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Erro no login: {str(e)}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Erro ao criar usuário",
+            detail="Erro interno durante autenticação"
         )
 
-    # Autentica o novo usuário (opcional, mas útil para já retornar o token)
-    access_token = security.create_access_token(data={"sub": user_data.username})
-    return {"access_token": access_token, "token_type": "bearer"}
 
+@auth_router.get("/me", response_model=UserOut)
+async def read_users_me(
+        current_user: Dict = Depends(security.get_current_user)
+) -> UserOut:
+    """
+    Retorna informações do usuário autenticado
+    """
+    return UserOut(username=current_user.get("sub"), id = current_user.get("user_id"))
+
+
+@auth_router.get("/funcionarios/login", response_model=Token)
+@limiter.limit("5/second")
+async def login_funcionario(
+        request: Request,
+        id_pass: int,
+        password: str,
+):
+    """
+    Autentica um funcionário por e-mail e senha
+
+    - **email**: E-mail do funcionário
+    - **password**: Senha do funcionário
+    """
+    try:
+        # Tenta autenticar como funcionário
+        user_info = security.authenticate_user(str(id_pass), password)
+
+        if not user_info:
+            logger.warning(f"Falha na autenticação para funcionário: {id_pass}")
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Credenciais de funcionário inválidas",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+        # Verifica explicitamente o tipo de usuário
+        if user_info.get("user_type") != "funcionario":
+            logger.warning(
+                f"Tentativa de login como funcionário com credenciais de cliente: {id_pass}"
+            )
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Credenciais de funcionário inválidas",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+        # Gera o token de acesso
+        access_token = security.create_access_token(user_info)
+
+        if not access_token:
+            logger.error(f"Falha ao gerar token para funcionário: {id_pass}")
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Erro interno ao gerar token de acesso"
+            )
+
+        # Retorna no formato correto para o schema Token
+        return {
+            "access_token": access_token,
+            "token_type": "bearer"
+        }
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Erro no login de funcionário: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Erro interno durante autenticação de funcionário"
+        )
+
+
+@auth_router.post("/register", response_model=Token)
+@limiter.limit("5/minute")
+async def register(
+        request: Request,
+        user_data: UserLogin):
+    """
+    Registra um novo usuário administrador
+
+    - **username**: Nome de usuário
+    - **password**: Senha
+    """
+    user_service = UserService()
+    try:
+        # Verifica se usuário já existe
+        if user_service.get_user(user_data.username):
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="Usuário já existe",
+            )
+
+        # Cria novo usuário
+        created_user = user_service.create_user(UserCreate(
+            username=user_data.username,
+            password=user_data.password
+        ))
+
+        # Prepara informações para token
+        user_info = {
+            "username": created_user.username,
+            "user_type": "admin",
+            "user_id": created_user.id
+        }
+
+        # Gera token
+        access_token = security.create_access_token(user_info)
+        return {"access_token": access_token, "token_type": "bearer"}
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Erro no registro: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Erro interno ao registrar usuário"
+        )
 
 @router.post("/order/create")
 @limiter.limit("5/minute")
@@ -598,16 +772,41 @@ async def register(request: Request):
 
 @auth_router.post("/token", response_model=Token)
 @limiter.limit("5/minute")
-async def login_with_form(request: Request, form_data: OAuth2PasswordRequestForm = Depends()):
-    user = security.authenticate_user(form_data.username, form_data.password)
-    if not user:
+async def login_with_form(
+        request: Request,
+        form_data: OAuth2PasswordRequestForm = Depends()):
+    """
+    Autentica um usuário usando formulário OAuth2 e retorna token JWT
+
+    - **username**: E-mail do usuário
+    - **password**: Senha do usuário
+    """
+    try:
+        # Autentica o usuário (verifica cliente e funcionário)
+        user_info = security.authenticate_user(form_data.username, form_data.password)
+
+        if not user_info:
+            logger.warning(f"Falha na autenticação para: {form_data.username}")
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Credenciais inválidas",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+        # Gera token com informações completas do usuário
+        access_token = security.create_access_token(user_info)
+        logger.info(f"Token gerado para: {form_data.username} ({user_info['user_type']})")
+
+        return {"access_token": access_token, "token_type": "bearer"}
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Erro na autenticação via formulário: {str(e)}", exc_info=True)
         raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid credentials",
-            headers={"WWW-Authenticate": "Bearer"},
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Erro interno durante autenticação"
         )
-    access_token = security.create_access_token(data={"sub": form_data.username})
-    return {"access_token": access_token, "token_type": "bearer"}
 
 
 
@@ -628,7 +827,7 @@ async def get_item(request: Request, item: ItemDelete):
 @limiter.limit("5/minute")
 async def create_item(
     request: Request,
-    item: ItemCreate, 
+    item: ItemCreate,
 ):
     service.create_item(item)
     return {"status": "received"}
@@ -636,7 +835,7 @@ async def create_item(
 @limiter.limit("5/minute")
 async def update_item(
     request: Request,
-    item: ItemUpdate, 
+    item: ItemUpdate,
 ):
     service.update_item(item)
     return {"status": "received"}
@@ -648,14 +847,14 @@ pedidoService = PedidoService()
 
 @router.post("/pedido/", response_model=int, status_code=status.HTTP_201_CREATED)
 def criar_pedido(pedido: PedidoCreate):
-    pedido_id = pedidoService.criar_pedido(pedido.__dict__)
-    print(pedido)
+    pedido_id = pedidoService.criar_pedido(pedido)
+    print(pedido_id)
     # Converte a string da data para objeto date se necessário
     data_pedido = pedido.Data_pedido if isinstance(pedido.Data_pedido, date) else date.fromisoformat(str(pedido.Data_pedido))
 
     totalizador_diario.adicionar_pedido(pedido.Valor_total_pedido, data_pedido)
 
-    return pedido_id
+    return pedido_id.Id_pedido
 
 
 @router.get("/pedido/", response_model=List[PedidoOut])
@@ -673,7 +872,7 @@ def obter_pedido(pedido_id: int):
 
 @router.put("/pedido/{pedido_id}", response_model=bool)
 def atualizar_pedido(pedido_id: int, dados: PedidoUpdate):
-    atualizado = pedidoService.atualizar_pedido(pedido_id, dados.dict(exclude_unset=True))
+    atualizado = pedidoService.atualizar_pedido(pedido_id, dados.model_dump(exclude_unset=True))
     if not atualizado:
         raise HTTPException(status_code=404, detail="Pedido não encontrado ou sem alterações")
     return True

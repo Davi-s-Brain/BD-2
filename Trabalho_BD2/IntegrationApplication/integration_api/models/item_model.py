@@ -1,83 +1,135 @@
+from __future__ import annotations
+from typing import List, Optional
 from Trabalho_BD2.IntegrationApplication.integration_api.core.db import get_connection
+from Trabalho_BD2.IntegrationApplication.integration_api.db.database_acess import DatabaseAccess
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import ItemOut
+
 
 class ItemModel:
-    def insert(self, name, description, quantity, value):
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                "INSERT INTO items (name, description, quantity, value) VALUES (?, ?, ?, ?)",
-                (name, description, quantity, value)
-            )
-            conn.commit()
+    def __init__(self, db_access: DatabaseAccess = None):
+        self.db = db_access or DatabaseAccess(get_connection)
 
-    def get_all(self):
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute("SELECT name, description, quantity, value FROM items")
-            return cursor.fetchall()
+    def insert(self, name: str, description: str, quantity: int, value: float) -> bool:
+        """
+        Insere um novo item no banco de dados (mantido o nome original)
 
-    def update(self, names, description, quantity, value):
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                "UPDATE items SET description = ?, quantity = ?, value = ? WHERE name = ?",
-                (description, quantity, value, names)
-            )
-            conn.commit()
+        Args:
+            name: Nome do item
+            description: Descrição do item
+            quantity: Quantidade em estoque
+            value: Valor do item
 
-    def alterar_estoque(self, name, quantity_delta):
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                "UPDATE Ingrediente SET quantidade = quantidade + ? WHERE Nome_ingred = ?",
-                (quantity_delta, name)
-            )
-            conn.commit()
+        Returns:
+            bool: True se inserido com sucesso
+        """
+        item_data = {
+            'name': name,
+            'description': description,
+            'quantity': quantity,
+            'value': value
+        }
+        self.db.add("items", item_data)
+        return True
 
-    def get_item(self, name):
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                "SELECT name, description, quantity FROM items WHERE name = ?",
-                (name,)
-            )
-            return cursor.fetchone()
-    def create_order(self, name, product_id, product, quantity):
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                "INSERT INTO orders (name, id, product, quantity) VALUES (?, ?, ?, ?)",
-                (name, product_id, product, quantity)
-            )
-            conn.commit()
+    def get_all(self) -> List[ItemOut]:
+        """
+        Retorna todos os itens (mantido o nome original)
 
-    def delete_item(self, item):
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                "DELETE FROM items WHERE name = ?",
-                (item,)
-            )
-        pass
+        Returns:
+            List[ItemOut]: Lista de todos os itens
+        """
+        rows = self.db.get("items")
+        return [ItemOut(**row) for row in rows]
 
-    def get_all_orders(self):
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute("SELECT name, product, quantity FROM orders")
-            return cursor.fetchall()
+    def update(self, name: str, description: str, quantity: int, value: float) -> bool:
+        """
+        Atualiza um item (mantido o nome original)
 
-    def create_func(self, data):
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                """INSERT INTO funcionario
-                (Nome_func, CPF, Data_nasc_func, Cargo, Salario, 
-                Data_admissao, Turno, Tipo_de_contrato, Status_func, Id_franquia, Senha_func) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-                (data.Nome_func, data.CPF, data.Data_nasc_func, data.Cargo,
-                 data.Salario, data.Data_admissao, data.Turno,
-                 data.Tipo_de_contrato, data.Status_func, data.Id_franquia, data.Senha_func)
-            )
+        Args:
+            name: Nome do item a ser atualizado
+            description: Nova descrição
+            quantity: Nova quantidade
+            value: Novo valor
 
-            conn.commit()
-            return cursor.lastrowid
+        Returns:
+            bool: True se atualizado com sucesso
+        """
+        update_data = {
+            'description': description,
+            'quantity': quantity,
+            'value': value
+        }
+        return self.db.update("items", update_data, {"name": name})
+
+    def alterar_estoque(self, name: str, quantity_delta: int) -> bool:
+        """
+        Altera o estoque de um item (mantido o nome original)
+
+        Args:
+            name: Nome do item
+            quantity_delta: Valor a ser adicionado/subtraído
+
+        Returns:
+            bool: True se atualizado com sucesso
+        """
+        # Primeiro obtemos o valor atual
+        current = self.get_item(name)
+        if not current:
+            return False
+
+        # Calculamos o novo valor
+        new_quantity = current.quantity + quantity_delta
+
+        # Atualizamos usando o método padrão
+        return self.db.update(
+            "items",
+            {"quantity": new_quantity},
+            {"name": name}
+        )
+
+    def get_item(self, name: str) -> Optional[ItemOut]:
+        """
+        Obtém um item pelo nome (mantido o nome original)
+
+        Args:
+            name: Nome do item
+
+        Returns:
+            ItemOut se encontrado, None caso contrário
+        """
+        row = self.db.get_one("items", conditions={"name": name})
+        return ItemOut(**row) if row else None
+
+    def create_order(self, name: str, product_id: int, product: str, quantity: int) -> bool:
+        """
+        Cria um novo pedido (mantido o nome original)
+
+        Args:
+            name: Nome do cliente
+            product_id: ID do produto
+            product: Nome do produto
+            quantity: Quantidade
+
+        Returns:
+            bool: True se criado com sucesso
+        """
+        order_data = {
+            'name': name,
+            'id': product_id,
+            'product': product,
+            'quantity': quantity
+        }
+        self.db.add("orders", order_data)
+        return True
+
+    def delete_item(self, name: str) -> bool:
+        """
+        Deleta um item (mantido o nome original)
+
+        Args:
+            name: Nome do item a ser deletado
+
+        Returns:
+            bool: True se deletado com sucesso
+        """
+        return self.db.delete("items", {"name": name})

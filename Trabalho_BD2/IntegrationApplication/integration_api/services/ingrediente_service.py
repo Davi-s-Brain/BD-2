@@ -1,148 +1,163 @@
-from Trabalho_BD2.IntegrationApplication.integration_api.core.db import get_connection
 from typing import List, Optional, Dict, Any
+from fastapi import HTTPException, status
+from tensorflow.python.keras.layers.core import ClassMethod
+
+from Trabalho_BD2.IntegrationApplication.integration_api.models.ingrediente_model import IngredienteModel
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.ingrediente_schemas import IngredienteCreate, \
+    IngredienteOut, IngredienteUpdate
 
 
 class IngredienteService:
-    def __init__(self):
-        self.id: Optional[int] = None
-        self.Tipo_ingred: Optional[str] = None
-        self.Nome_ingred: Optional[str] = None
-        self.Preco_venda_cliente: Optional[float] = None
-        self.Peso_ingred: Optional[float] = None
-        self.Indice_estoq: Optional[int] = None
-
     @staticmethod
-    def create(Tipo_ingred: str, Nome_ingred: str, Preco_venda_cliente: float,
-               Peso_ingred: float, Indice_estoq: int, Quantidade: int) -> int:
-        """Cria um novo ingrediente e retorna o ID gerado."""
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                """INSERT INTO ingrediente 
-                (Tipo_ingred, Nome_ingred, Preco_venda_cliente, Peso_ingred, Indice_estoq, Quantidade)
-                VALUES (?, ?, ?, ?, ?, ?)""",
-                (Tipo_ingred, Nome_ingred, Preco_venda_cliente, Peso_ingred, Indice_estoq, Quantidade)
-            )
-            conn.commit()
-            return cursor.lastrowid
-
-    @staticmethod
-    def get_all() -> List[Dict[str, Any]]:
-        """Retorna todos os ingredientes."""
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                """SELECT Id_ingred, Tipo_ingred, Nome_ingred, 
-                Preco_venda_cliente, Peso_ingred, Indice_estoq, Quantidade 
-                FROM ingrediente"""
-            )
-            colunas = [col[0] for col in cursor.description]
-            return [dict(zip(colunas, row)) for row in cursor.fetchall()]
-
-    @staticmethod
-    def get_by_id(ingrediente_id: int) -> Optional[Dict[str, Any]]:
-        """Busca um ingrediente pelo ID."""
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                """SELECT Id_ingred, Tipo_ingred, Nome_ingred, 
-                Preco_venda_cliente, Peso_ingred, Indice_estoq, Quantidade
-                FROM ingrediente WHERE Id_ingred = ?""",
-                (ingrediente_id,)
-            )
-            row = cursor.fetchone()
-            if row:
-                colunas = [col[0] for col in cursor.description]
-                return dict(zip(colunas, row))
-            return None
-    @staticmethod
-    def get_by_name(Nome_ingred: str) -> Optional[Dict[str, Any]]:
-        """Busca um ingrediente pelo ID."""
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                """SELECT Id_ingred, Tipo_ingred, Nome_ingred, 
-                Preco_venda_cliente, Peso_ingred, Indice_estoq, Quantidade
-                FROM ingrediente WHERE Nome_ingred = ?""",
-                (Nome_ingred,)
-            )
-            row = cursor.fetchone()
-            if row:
-                colunas = [col[0] for col in cursor.description]
-                return dict(zip(colunas, row))
-            return None
-
-    @staticmethod
-    def update(ingrediente_id: int, dados: Dict[str, Any]) -> bool:
-        """Atualiza um ingrediente existente."""
-        campos = []
-        valores = []
-        for campo, valor in dados.items():
-            if valor is not None:
-                campos.append(f"{campo} = ?")
-                valores.append(valor)
-
-        if not campos:
-            return False
-
-        valores.append(ingrediente_id)
-        query = f"""UPDATE ingrediente 
-                   SET {', '.join(campos)}
-                   WHERE Id_ingred = ?"""
-
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(query, valores)
-            conn.commit()
-            return cursor.rowcount > 0
-
-    @staticmethod
-    def delete(ingrediente_id: int) -> bool:
-        """Remove um ingrediente pelo ID."""
-        with get_connection() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                "DELETE FROM ingrediente WHERE Id_ingred = ?",
-                (ingrediente_id,)
-            )
-            conn.commit()
-            return cursor.rowcount > 0
-
-    @staticmethod
-    def alterar_estoque(nome_ingrediente: str, quantidade: int) -> bool:
-        """Altera a quantidade em estoque de um ingrediente.
+    def create(ingrediente_data: IngredienteCreate) -> IngredienteOut:
+        """
+        Cria um novo ingrediente no banco de dados.
 
         Args:
-            nome_ingrediente: Nome do ingrediente a ser alterado
-            quantidade: Quantidade a ser adicionada (positiva) ou removida (negativa)
+            ingrediente_data: Dados do ingrediente a ser criado
 
         Returns:
-            bool: True se a operação foi bem sucedida, False caso contrário
+            IngredienteOut: Ingrediente criado com ID
+
+        Raises:
+            HTTPException: Se ocorrer erro na criação
         """
-        with get_connection() as conn:
-            cursor = conn.cursor()
-
-            # Primeiro verifica se o ingrediente existe e pega a quantidade atual
-            cursor.execute(
-                "SELECT Quantidade FROM ingrediente WHERE Nome_ingred = ?",
-                (nome_ingrediente,)
+        try:
+            ingrediente = IngredienteModel.create(**ingrediente_data.model_dump())
+            if not ingrediente:
+                raise ValueError("Falha ao criar ingrediente")
+            return IngredienteOut.model_validate(ingrediente.to_dict())
+        except ValueError as e:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=str(e)
             )
-            result = cursor.fetchone()
-
-            if not result:
-                return False  # Ingrediente não encontrado
-
-            quantidade_atual = result[0]
-            nova_quantidade = quantidade_atual + quantidade
-
-            # Não permite estoque negativo
-            if nova_quantidade < 0:
-                return False
-
-            # Atualiza o estoque
-            cursor.execute(
-                "UPDATE ingrediente SET Quantidade = ? WHERE Nome_ingred = ?",
-                (nova_quantidade, nome_ingrediente)
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Erro interno ao criar ingrediente: {str(e)}"
             )
-            conn.commit()
-            return cursor.rowcount > 0
+
+    @staticmethod
+    def obter_todos() -> List[IngredienteOut]:
+        """Retorna todos os ingredientes cadastrados"""
+        try:
+            ingredientes = IngredienteModel.get_all()
+            return [IngredienteOut.model_validate(i.to_dict()) for i in ingredientes]
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Erro ao buscar ingredientes: {str(e)}"
+            )
+
+    @staticmethod
+    def obter_por_id(ingrediente_id: int) -> Optional[IngredienteOut]:
+        """Obtém um ingrediente pelo seu ID"""
+        try:
+            ingrediente = IngredienteModel.get_by_id(ingrediente_id)
+            if not ingrediente:
+                return None
+            return IngredienteOut.model_validate(ingrediente.to_dict())
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Erro ao buscar ingrediente: {str(e)}"
+            )
+
+    @staticmethod
+    def atualizar_ingrediente(
+            ingrediente_id: int,
+            update_data: IngredienteUpdate
+    ) -> IngredienteOut:
+        """
+        Atualiza um ingrediente existente
+
+        Args:
+            ingrediente_id: ID do ingrediente a ser atualizado
+            update_data: Dados parciais para atualização
+
+        Returns:
+            IngredienteOut: Ingrediente atualizado
+        """
+        try:
+            # Remove campos não informados (None)
+            update_values = {k: v for k, v in update_data.model_dump().items() if v is not None}
+
+            if not update_values:
+                raise ValueError("Nenhum dado válido fornecido para atualização")
+
+            ingrediente = IngredienteModel.get_by_id(ingrediente_id)
+            if not ingrediente:
+                raise ValueError("Ingrediente não encontrado")
+
+            if not IngredienteModel.update(ingrediente_id, **update_values):
+                raise ValueError("Falha ao atualizar ingrediente")
+
+            # Retorna o ingrediente atualizado
+            ingrediente_atualizado = IngredienteModel.get_by_id(ingrediente_id)
+            return IngredienteOut.model_validate(ingrediente_atualizado.to_dict())
+
+        except ValueError as e:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=str(e)
+            )
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Erro ao atualizar ingrediente: {str(e)}"
+            )
+
+    @staticmethod
+    def remover_ingrediente(ingrediente_id: int) -> bool:
+        """Remove um ingrediente pelo ID"""
+        ingredienteModel = IngredienteModel()
+        try:
+            if not IngredienteModel.delete(ingredienteModel):
+                raise ValueError("Ingrediente não encontrado ou já removido")
+            return True
+        except ValueError as e:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=str(e)
+            )
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Erro ao remover ingrediente: {str(e)}"
+            )
+    @staticmethod
+    def get_by_name(nome_ingred: str) -> Optional[Dict[str, Any]]:
+        ingrediente = IngredienteModel.get_by_name(nome_ingred)
+        return ingrediente.to_dict() if ingrediente else None
+
+    @staticmethod
+    def ajustar_estoque(nome_ingrediente: str, quantidade: int) -> IngredienteOut:
+        """
+        Ajusta a quantidade em estoque de um ingrediente
+
+        Args:
+            nome_ingrediente: Nome do ingrediente
+            quantidade: Valor a ser adicionado (positivo) ou removido (negativo)
+
+        Returns:
+            IngredienteOut: Ingrediente com estoque atualizado
+        """
+        try:
+            if not IngredienteModel.alterar_estoque(nome_ingrediente, quantidade):
+                raise ValueError("Falha ao ajustar estoque")
+
+            ingrediente = IngredienteModel.get_by_name(nome_ingrediente)
+            return IngredienteOut.model_validate(ingrediente.to_dict())
+
+        except ValueError as e:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=str(e)
+            )
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Erro ao ajustar estoque: {str(e)}"
+            )
+

@@ -1,49 +1,61 @@
+from pydantic import BaseModel, Field, field_validator, EmailStr
 from datetime import date, datetime
 from typing import Optional
+import re
 
-from pydantic import BaseModel, EmailStr
-from pydantic.v1 import validator
-
-
-class ClienteBase(BaseModel):
+class ClienteCreate(BaseModel):
     Id_cliente: int
-    Primeiro_nome_client: str
-    Ultimo_nome_client: str
+    Primeiro_nome_client: str = Field(..., max_length=50)
+    Ultimo_nome_client: str = Field(..., max_length=50)
     Data_nascimento_client: date
-    CPF_client: str
-    Telefone_client: str
+    CPF_client: int = Field(...)
+    Telefone_client: int = Field(...)
     E_mail_client: EmailStr
-    Genero_client: str
-    E_intolerante_lactose: bool = False
-    E_celiaco: bool = False
-    E_vegetariano: bool = False
-    E_vegano: bool = False
+    Genero_client: str = Field(..., max_length=10)
+    Senha_cliente: str = Field(..., min_length=8, max_length=20)
+    E_intolerante_lactose: bool
+    E_celiaco: bool
+    E_vegetariano: bool
+    E_vegano: bool
 
-class ClienteCreate(ClienteBase):
-    Senha_cliente: str
-
-    @validator('CPF_client')
-    def validate_cpf(cls, v):
-        if not v.isdigit() or len(v) != 11:
-            raise ValueError('CPF deve conter exatamente 11 dígitos numéricos')
-        return v
 
 class ClienteUpdate(BaseModel):
-    Primeiro_nome_client: Optional[str] = None
-    Ultimo_nome_client: Optional[str] = None
-    Data_nascimento_client: Optional[date] = None
-    Telefone_client: Optional[str] = None
-    E_mail_client: Optional[EmailStr] = None
-    Genero_client: Optional[str] = None
+    Primeiro_nome_client: Optional[str] = Field(None, max_length=50)
+    Ultimo_nome_client: Optional[str] = Field(None, max_length=50)
+    Telefone_client: Optional[str] = Field(None, min_length=10, max_length=11)
+    Genero_client: Optional[str] = Field(None, max_length=10)
+    Senha_cliente: Optional[str] = Field(None, min_length=8, max_length=20)
     E_intolerante_lactose: Optional[bool] = None
     E_celiaco: Optional[bool] = None
     E_vegetariano: Optional[bool] = None
     E_vegano: Optional[bool] = None
-    Senha_cliente: Optional[str] = None
 
-class ClienteOut(ClienteBase):
-    Id_cliente: int
-    Data_cadastro_client: datetime
+    @field_validator('Telefone_client')
+    def validate_telefone(cls, v):
+        if v and not v.isdigit():
+            raise ValueError('Telefone deve conter apenas números')
+        return v
 
-    class Config:
-        orm_mode = True
+class ClienteOut(BaseModel):
+    Id_cliente: int | None
+    Primeiro_nome_client: str
+    Ultimo_nome_client: str
+    Data_nascimento_client: date
+    CPF_client: int | None
+    Telefone_client: int
+    E_mail_client: str
+    Data_cadastro_client: date
+    Genero_client: str
+    E_intolerante_lactose: bool
+    E_celiaco: bool
+    E_vegetariano: bool
+    E_vegano: bool
+    Senha_cliente: str
+
+    @field_validator('Data_cadastro_client', mode='before')
+    def convert_datetime(cls, value):
+        if isinstance(value, datetime):
+            return value.date()
+        return value
+class ClientePass(ClienteOut):
+    pass

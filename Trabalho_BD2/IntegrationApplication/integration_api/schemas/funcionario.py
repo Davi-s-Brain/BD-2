@@ -1,11 +1,14 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from typing import Optional
 from datetime import date
 
+from pydantic.v1 import validator
+
+
 class FuncionarioBase(BaseModel):
-    Id_func : str = Field (..., example= 1)
+    Id_func : int | None = Field (..., example= 1)
     Nome_func: str = Field(..., example="João Silva")
-    CPF: str = Field(..., example="123.456.789-00")
+    CPF: int = Field(..., example="123.456.789-00")
     Data_nasc_func: date = Field(..., example="1990-05-20")
     Cargo: str = Field(..., example="Atendente")
     Salario: float = Field(..., example=2500.50)
@@ -14,31 +17,25 @@ class FuncionarioBase(BaseModel):
     Tipo_de_contrato: str = Field(..., example="CLT")
     Status_func: str = Field(..., example="Ativo")
     Id_franquia: Optional[int] = Field(None, example=1)
-    Senha_func: Optional[str] = Field(None, example="senha")
+    Senha_Func: Optional[str] = Field(None, example="senha")
 
 class FuncionarioCreate(FuncionarioBase):
-    """Schema para criação de funcionário (Id_func é gerado pelo BD)."""
     pass
 
 class FuncionarioUpdate(BaseModel):
-    """Schema para atualização parcial de funcionário."""
-    Id_func : Optional[str] = None
-    Nome_func: Optional[str] = None
-    CPF: Optional[str] = None
+    Nome_func: Optional[str] = Field(None, max_length=50)
+    CPF: Optional[int] = None
     Data_nasc_func: Optional[date] = None
-    Cargo: Optional[str] = None
+    Cargo: Optional[str] = Field(None, max_length=20)
     Salario: Optional[float] = None
     Data_admissao: Optional[date] = None
-    Turno: Optional[str] = None
-    Tipo_de_contrato: Optional[str] = None
-    Status_func: Optional[str] = None
+    Turno: Optional[str] = Field(None, max_length=20)
+    Tipo_de_contrato: Optional[str] = Field(None, max_length=20)
+    Status_func: Optional[str] = Field(None, max_length=20)
     Id_franquia: Optional[int] = None
-    Senha_func: Optional[str] = None
-
+    E_mail_func: Optional[str] = Field(None, max_length=50)
+    Senha_Func: Optional[str] = Field(None, min_length=6, max_length=20)
 
 class FuncionarioOut(FuncionarioBase):
-    """Schema de saída de funcionário, inclui o Id_func."""
-    Id_func: int = Field(..., example=1)
-
     class Config:
         orm_mode = True

@@ -21,15 +21,15 @@ class ItemService:
 
     def listar_estoque(self):
         ingredienteService = IngredienteService ()
-        items = ingredienteService.get_all()
+        items = ingredienteService.obter_todos()
         return [
             {
-                "id": item["Id_ingred"],
-                "nome": item["Nome_ingred"],
-                "tipo": item["Tipo_ingred"],
-                "preco": item["Preco_venda_cliente"],
-                "peso": item["Peso_ingred"],
-                "quantidade": item["Quantidade"]
+                "id": item.Id_ingred,
+                "nome": item.Nome_ingred,
+                "tipo": item.Tipo_ingred,
+                "preco": item.Preco_venda_cliente,
+                "peso": item.Peso_ingred,
+                "quantidade": item.Quantidade
             }
             for item in items
         ]
@@ -43,7 +43,4 @@ class ItemService:
         self.model.delete_item(item)
 
     def get_orders(self):
-        return self.model.get_all_orders()
-
-    def create(self, data):
-        return self.model.create_func(data)
+        return self.model.get_all()

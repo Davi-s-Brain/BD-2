@@ -1,20 +1,23 @@
+# main.py (ou integration_application.py)
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from Trabalho_BD2.IntegrationApplication.integration_api.api.routes import router as integration_router, auth_router, \
-    func_router, ingrediente_router, router_carrinho, cliente_router  # Adicionando auth_router
-from Trabalho_BD2.IntegrationApplication.integration_api.core.db import init_db
-from Trabalho_BD2.IntegrationApplication.integration_api.core.error_handlers import register_handlers
-from Trabalho_BD2.IntegrationApplication.integration_api.core.limiter import limiter
-from Trabalho_BD2.IntegrationApplication.integration_api.core.security_manager import SecurityManager
+from .api.routes import router as integration_router, auth_router, func_router, ingrediente_router, router_carrinho, \
+    cliente_router, combo_router
+from .core.db import DatabaseManager  # Importe o DatabaseManager
+from .core.error_handlers import register_handlers
+from .core.limiter import limiter
+from .core.security_manager import SecurityManager
 from slowapi.middleware import SlowAPIMiddleware
+import traceback
 
-# Configuração do SecurityManager
 SECURITY = SecurityManager()
+
 
 def create_app() -> FastAPI:
     app = FastAPI(title="Integration API")
-    # Configuração CORS mais completa
+
+    # Configuração CORS
     origins = [
         "http://localhost:5500",
         "http://localhost:3000",
@@ -33,22 +36,24 @@ def create_app() -> FastAPI:
         expose_headers=["*"]
     )
 
-    # Middleware
     app.state.limiter = limiter
     app.add_middleware(SlowAPIMiddleware)
 
-    # Incluir os routers
     app.include_router(integration_router)
+    app.include_router(combo_router)
     app.include_router(func_router)
     app.include_router(router_carrinho)
     app.include_router(ingrediente_router)
     app.include_router(cliente_router)
-    app.include_router(auth_router)  # Adicionando o router de autenticação
+    app.include_router(auth_router)
     register_handlers(app)
 
-    # Inicializar o banco de dados
-    init_db()
-
+    @app.on_event("startup")
+    def init_database():
+        db_manager = DatabaseManager()
+        db_manager.init_db()
+        print("Banco de dados inicializado com sucesso")
     return app
+
 
 app = create_app()

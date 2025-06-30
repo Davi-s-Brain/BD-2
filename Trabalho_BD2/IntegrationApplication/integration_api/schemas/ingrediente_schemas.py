@@ -2,6 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Optional
 
 class IngredienteBase(BaseModel):
+    Id_ingred: int = Field(..., example= 110)
     Tipo_ingred: str = Field(..., example="Proteína")
     Nome_ingred: str = Field(..., example="Hambúrguer de Carne")
     Preco_venda_cliente: float = Field(..., example=12.50)
@@ -24,7 +25,7 @@ class IngredienteUpdate(BaseModel):
 
 class IngredienteOut(IngredienteBase):
     """Schema de saída de ingrediente, inclui o Id_ingred."""
-    Id_ingred: int = Field(..., example=1)
+    Id_ingred: int  = Field(..., example=1)
 
     class Config:
         orm_mode = True

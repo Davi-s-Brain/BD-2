@@ -1,15 +1,20 @@
 import sqlite3
 from datetime import date
-from typing import List, Dict, Any, Annotated
+from typing import List, Dict, Any, Annotated, Optional
 
-from fastapi import APIRouter, Request, Depends, HTTPException, status, Path
+from fastapi import APIRouter, Request, Depends, HTTPException, status, Path, Query
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 
+from Trabalho_BD2.IntegrationApplication.integration_api.core.db import get_connection
 from Trabalho_BD2.IntegrationApplication.integration_api.core.limiter import limiter
 from Trabalho_BD2.IntegrationApplication.integration_api.core.security_manager import SecurityManager
 from Trabalho_BD2.IntegrationApplication.integration_api.core.totalizador import totalizador_diario
 from Trabalho_BD2.IntegrationApplication.integration_api.db.database_acess import DatabaseAccess
 from Trabalho_BD2.IntegrationApplication.integration_api.models.combo_model import ComboModel
+from Trabalho_BD2.IntegrationApplication.integration_api.models.generics import buscar_produtos_mais_vendidos_periodo
+from Trabalho_BD2.IntegrationApplication.integration_api.models.totalizador import resumo_balanco_geral
+from Trabalho_BD2.IntegrationApplication.integration_api.schemas.ambiente import AmbienteOutSchema, \
+    AmbienteUpdateSchema, AmbienteCreateSchema, LimpezaUpdateSchema, AmbienteCountByTypeSchema
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.carrinho_schemas import (
     ItemCarrinhoSchema,
     CarrinhoOutSchema,
@@ -33,6 +38,7 @@ from Trabalho_BD2.IntegrationApplication.integration_api.schemas.item import Ite
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.order import CreateOrder
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.pedido import PedidoCreate, PedidoUpdate, PedidoOut
 from Trabalho_BD2.IntegrationApplication.integration_api.schemas.user import UserLogin, Token, User, UserCreate, UserOut
+from Trabalho_BD2.IntegrationApplication.integration_api.services.ambiente_service import AmbienteService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.carrinho_service import CarrinhoService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.cliente_service import ClienteService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.funcionario_service import FuncionarioService
@@ -40,7 +46,16 @@ from Trabalho_BD2.IntegrationApplication.integration_api.services.ingrediente_se
 from Trabalho_BD2.IntegrationApplication.integration_api.services.item_service import ItemService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.pedido import PedidoService
 from Trabalho_BD2.IntegrationApplication.integration_api.services.user_service import UserService
+def get_db_access() -> DatabaseAccess:
+    """Factory que retorna uma instância de DatabaseAccess"""
 
+    def get_connection():
+        conn = sqlite3.connect('data.sqlite')
+        # Configurações adicionais para SQLite
+        conn.row_factory = sqlite3.Row
+        return conn
+
+    return DatabaseAccess(get_connection)  # Retorna INSTÂNCIA de DatabaseAccess
 service = ItemService()
 security = SecurityManager()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
@@ -76,12 +91,296 @@ import logging
 logger = logging.getLogger(__name__)
 combo_router = APIRouter(prefix="/combos", tags=["Combos"])
 
+ambiente_router = APIRouter(
+    prefix="/ambiente",
+    tags=["Ambiente"],
+)
 
+# Initialize rate limiter
+ambiente_service = AmbienteService(db_access= get_db_access())
+
+
+@router.get(
+    "/pedido/resumo-balanco/",
+    summary="Obtém resumo do balanço geral (total pedidos, vendas e ticket médio)",
+    description="Retorna métricas consolidadas de pedidos, com opção de filtrar por período"
+)
+@limiter.limit("10/minute")
+async def obter_resumo_balanco(
+        request: Request,
+        data_inicio: Optional[date] = None,
+        data_fim: Optional[date] = None,
+        db: DatabaseAccess = Depends(get_db_access)
+):
+    """
+    Retorna resumo do balanço geral com opção de filtro por data
+
+    Parâmetros:
+    - data_inicio: Data inicial no formato YYYY-MM-DD (opcional)
+    - data_fim: Data final no formato YYYY-MM-DD (opcional)
+
+    Retorna:
+    {
+        "total_pedidos": int,
+        "total_vendas": float,
+        "ticket_medio": float
+    }
+    """
+    try:
+        # Converte as datas para string no formato YYYY-MM-DD se existirem
+        data_inicio_str = data_inicio.isoformat() if data_inicio else None
+        data_fim_str = data_fim.isoformat() if data_fim else None
+
+        # Chama a função que criamos anteriormente
+        resumo = resumo_balanco_geral(db, data_inicio_str, data_fim_str)
+
+        return resumo
+
+    except ValueError as ve:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Formato de data inválido: {str(ve)}"
+        )
+    except Exception as e:
+        logger.error(f"Erro ao calcular resumo do balanço: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Erro interno ao processar resumo do balanço"
+        )
+@ambiente_router.post(
+    "/",
+    response_model=AmbienteOutSchema,
+    status_code=status.HTTP_201_CREATED
+)
+@limiter.limit("5/minute")
+async def criar_ambiente(
+        request: Request,
+        ambiente_data: AmbienteCreateSchema,
+        token: str = Depends(oauth2_scheme)
+):
+    """
+    Cria um novo ambiente
+
+    - **Id_franquia**: ID da franquia associada (obrigatório)
+    - **Tamanho_ambiente**: Tamanho em m² (obrigatório)
+    - **Quantidade_desse_ambiente**: Quantidade deste tipo (obrigatório)
+    - **Nivel_limpeza**: ['limpo', 'sujo', 'em limpeza', 'em manutenção'] (obrigatório)
+    - **Detetizado**: Booleano (default False)
+    - **Salao**: Booleano opcional
+    - **Cozinha**: Booleano opcional
+    """
+    try:
+        # Verify token and permissions
+        security.decode_token(token)
+        if not security.get_current_user(request):
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Permissão negada"
+            )
+
+        return ambiente_service.criar_ambiente(ambiente_data)
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Erro ao criar ambiente: {str(e)}"
+        )
+
+
+@ambiente_router.get(
+    "/",
+    response_model=List[AmbienteOutSchema]
+)
+@limiter.limit("10/minute")
+async def listar_ambientes(
+        request: Request,
+        franquia_id: Optional[int] = None
+):
+    """
+    Lista todos os ambientes ou filtra por franquia
+
+    Parâmetros opcionais:
+    - franquia_id: ID da franquia para filtrar
+    """
+    try:
+        if franquia_id:
+            return ambiente_service.listar_todos_os_ambientes()
+        return []
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Erro ao listar ambientes: {str(e)}"
+        )
+
+
+@ambiente_router.get(
+    "/{ambiente_id}",
+    response_model=AmbienteOutSchema
+)
+@limiter.limit("10/minute")
+async def obter_ambiente(
+        request: Request,
+        ambiente_id: int = Path(..., description="ID do ambiente")
+):
+    """Obtém um ambiente específico pelo ID"""
+    ambiente = ambiente_service.obter_ambiente(ambiente_id)
+    if not ambiente:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Ambiente não encontrado"
+        )
+    return ambiente
+
+
+@ambiente_router.put(
+    "/{ambiente_id}",
+    response_model=AmbienteOutSchema
+)
+@limiter.limit("5/minute")
+async def atualizar_ambiente(
+        request: Request,
+        ambiente_id: int,
+        ambiente_data: AmbienteUpdateSchema,
+        token: str = Depends(oauth2_scheme)
+):
+    """
+    Atualiza um ambiente existente
+
+    Todos os campos são opcionais
+    """
+    try:
+        token = security.decode_token(token)
+        if not security.get_current_cliente(request) or not token:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Permissão negada"
+            )
+
+        updated = ambiente_service.atualizar_ambiente(ambiente_id, ambiente_data)
+        if not updated:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Ambiente não encontrado"
+            )
+        return updated
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Erro ao atualizar ambiente: {str(e)}"
+        )
+
+
+@ambiente_router.patch(
+    "/{ambiente_id}/limpeza",
+    response_model=AmbienteOutSchema
+)
+@limiter.limit("5/minute")
+async def atualizar_limpeza(
+        request: Request,
+        ambiente_id: int,
+        limpeza_data: LimpezaUpdateSchema,
+        token: str = Depends(oauth2_scheme)
+):
+    """
+    Atualiza apenas informações de limpeza do ambiente
+
+    - **Nivel_limpeza**: Novo nível de limpeza
+    - **Detetizado**: Status de detetização
+    """
+    try:
+        if not security.decode_token(token):
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Permissão negada"
+            )
+
+        updated = ambiente_service.atualizar_limpeza(
+            ambiente_id,
+            limpeza_data.Nivel_limpeza,
+            limpeza_data.Detetizado
+        )
+        if not updated:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Ambiente não encontrado"
+            )
+        return updated
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Erro ao atualizar limpeza: {str(e)}"
+        )
+
+
+@ambiente_router.get(
+    "/contagem-por-tipo/{franquia_id}",
+    response_model=AmbienteCountByTypeSchema
+)
+@limiter.limit("10/minute")
+async def contar_ambientes_por_tipo(
+        request: Request,
+        franquia_id: int
+):
+    """Conta ambientes por tipo (Salão, Cozinha, Outros) para uma franquia"""
+    try:
+        return ambiente_service.contar_ambientes_por_tipo(franquia_id)
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Erro ao contar ambientes: {str(e)}"
+        )
+
+
+@ambiente_router.delete(
+    "/{ambiente_id}",
+    status_code=status.HTTP_204_NO_CONTENT
+)
+@limiter.limit("5/minute")
+async def remover_ambiente(
+        request: Request,
+        ambiente_id: int,
+        token: str = Depends(oauth2_scheme)
+):
+    """Remove um ambiente (requer permissão)"""
+    try:
+        if not security.decode_token(token):
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Permissão negada"
+            )
+
+        if not ambiente_service.remover_ambiente(ambiente_id):
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Ambiente não encontrado"
+            )
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Erro ao remover ambiente: {str(e)}"
+        )
 @combo_router.post(
     "/verificar-disponibilidade",
     response_model=ComboDisponibilidadeResponse,
     status_code=status.HTTP_200_OK
 )
+@router.get("/mais-vendidos", response_model=List[Dict])
+def get_produtos_mais_vendidos(
+    data_inicio: str = Query(..., description="Data de início no formato YYYY-MM-DD"),
+    data_fim: str = Query(..., description="Data de fim no formato YYYY-MM-DD")
+):
+    """
+    Retorna os produtos mais vendidos entre duas datas.
+    """
+    db = get_db_access()
+    return buscar_produtos_mais_vendidos_periodo(db, data_inicio, data_fim)
 @limiter.limit("10/minute")
 async def verificar_disponibilidade_combo(
         request: Request,
@@ -425,16 +724,7 @@ async def get_current_user(request: Request, token: str = Depends(oauth2_scheme)
     return security.get_current_user(request)
 
 
-def get_db_access() -> DatabaseAccess:
-    """Factory que retorna uma instância de DatabaseAccess"""
 
-    def get_connection():
-        conn = sqlite3.connect('data.sqlite')
-        # Configurações adicionais para SQLite
-        conn.row_factory = sqlite3.Row
-        return conn
-
-    return DatabaseAccess(get_connection)  # Retorna INSTÂNCIA de DatabaseAccess
 
 
 router_carrinho = APIRouter(prefix="/carrinho", tags=["Carrinho"])
@@ -641,7 +931,7 @@ async def login(
         )
 
 
-@auth_router.get("/me", response_model=UserOut)
+@auth_router.get("/me", response_model=Token)
 async def read_users_me(
         current_user: Dict = Depends(security.get_current_user)
 ) -> UserOut:

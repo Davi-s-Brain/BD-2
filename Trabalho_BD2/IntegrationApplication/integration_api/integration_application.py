@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
 from .api.routes import router as integration_router, auth_router, func_router, ingrediente_router, router_carrinho, \
-    cliente_router, combo_router
+    cliente_router, combo_router, ambiente_router
 from .core.db import DatabaseManager  # Importe o DatabaseManager
 from .core.error_handlers import register_handlers
 from .core.limiter import limiter
@@ -45,6 +45,7 @@ def create_app() -> FastAPI:
     app.include_router(router_carrinho)
     app.include_router(ingrediente_router)
     app.include_router(cliente_router)
+    app.include_router(ambiente_router)
     app.include_router(auth_router)
     register_handlers(app)
 

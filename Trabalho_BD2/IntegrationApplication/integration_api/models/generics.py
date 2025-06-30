@@ -99,3 +99,38 @@ def verificar_disponibilidade_combo_mensagem(db: DatabaseAccess,
         resultado['mensagem'] = mensagem
 
     return resultados
+
+def buscar_produtos_mais_vendidos_periodo(db: DatabaseAccess, data_inicio: str, data_fim: str) -> List[Dict]:
+    """
+    Retorna os produtos mais vendidos em um período específico, com nome, tipo e quantidade vendida.
+
+    Args:
+        db: Instância de DatabaseAccess
+        data_inicio: Data de início no formato 'YYYY-MM-DD'
+        data_fim: Data de fim no formato 'YYYY-MM-DD'
+
+    Returns:
+        Lista de dicionários com id_produto, nome_produto, tipo_produto e quantidade_vendida
+    """
+    query = """
+        SELECT 
+            pr.Indice_prod AS id_produto,
+            pr.Nome_prod AS nome_produto,
+        CASE 
+            WHEN pr.Lanche IS TRUE THEN 'Lanche'
+            WHEN pr.Bebida IS TRUE THEN 'Bebida'
+            WHEN pr.Sobremesa IS TRUE THEN 'Sobremesa'
+            WHEN pr.Acompanhamento IS TRUE THEN 'Acompanhamento'
+            ELSE 'Outro'
+        END AS tipo_produto,
+            COUNT(*) AS quantidade_vendida
+        FROM Ped_Escolhe_Prod pe
+        JOIN Pedido p ON pe.Id_pedido = p.Id_pedido  
+        JOIN Produto pr ON pr.Indice_prod = pe.Indice_prod
+        WHERE DATE(p.Data_pedido) BETWEEN DATE(?) AND DATE(?)
+        GROUP BY pr.Indice_prod, pr.Nome_prod, pr.Lanche, pr.Bebida, pr.Sobremesa, pr.Acompanhamento
+        ORDER BY quantidade_vendida DESC
+    """
+
+    resultados = db.execute_raw_query(query, (data_inicio, data_fim))
+    return resultados

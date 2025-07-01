@@ -366,11 +366,7 @@ async def remover_ambiente(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Erro ao remover ambiente: {str(e)}"
         )
-@combo_router.post(
-    "/verificar-disponibilidade",
-    response_model=ComboDisponibilidadeResponse,
-    status_code=status.HTTP_200_OK
-)
+
 @router.get("/mais-vendidos", response_model=List[Dict])
 def get_produtos_mais_vendidos(
     data_inicio: str = Query(..., description="Data de início no formato YYYY-MM-DD"),
@@ -381,6 +377,11 @@ def get_produtos_mais_vendidos(
     """
     db = get_db_access()
     return buscar_produtos_mais_vendidos_periodo(db, data_inicio, data_fim)
+@combo_router.post(
+    "/verificar-disponibilidade",
+    response_model=ComboDisponibilidadeResponse,
+    status_code=status.HTTP_200_OK
+)
 @limiter.limit("10/minute")
 async def verificar_disponibilidade_combo(
         request: Request,

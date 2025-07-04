@@ -25,7 +25,7 @@ Sistema que utiliza FastAPI para controle de estoque, cadastro de usuários e au
 
 1. **Instale as dependências** (no diretório do projeto):
     ```bash
-    pip install fastapi sqlalchemy python-jose[cryptography] starlette slowapi pydantic wrapt python-multipart
+    pip install -r requirements.txt
     ```
 
 2. **Inicie o servidor**:
